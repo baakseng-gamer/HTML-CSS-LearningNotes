@@ -276,7 +276,7 @@ h5、h6标签在网页中不经常使用。
 
 注：一般情况下，删除文本都是和插入文本配合使用的。
 
-
+实例： [index.html](2020Web HTML CSS\01-012 文件修饰标签\index.html) 
 
 
 
@@ -287,6 +287,8 @@ src : 引入图片的地址。
 alt : 当图片出现问题的时候，可以显示一段友好的提示文字。
 title : 提示信息
 width、height : 图片的大小
+
+实例： [index.html](2020Web HTML CSS\01-013 图片标签与图片属性\index.html) 
 
 
 
@@ -829,6 +831,8 @@ stylesheet 文档的外部样式表。
 link和@import区别：
 
 https://www.cnblogs.com/my--sunshine/p/6872224.html 作者：my~sunshine
+
+实例： [index.html](2020Web HTML CSS\01-030 外部样式及两种写法\index.html) 
 
 
 
@@ -1658,13 +1662,13 @@ tag 1
 
 
 
-实例： [index.html](2020Web HTML CSS\01-055层次的优先级\index.html) 
+实例： [index.html](2020Web HTML CSS\01-055 层次的优先级\index.html) 
 
 
 
 ## 01-056CSS盒子模型
 
-![20200511081748](\2020Web HTML CSS\01-056CSS盒子模型\20200511081748.png)
+![20200511081748](\2020Web HTML CSS\01-056 CSS盒子模型\20200511081748.png)
 
 组成 : content -> padding -> border -> margin
 
@@ -1702,7 +1706,7 @@ padding-bottom
 
 padding-left
 
-实例： [index1.html](2020Web HTML CSS\01-056CSS盒子模型\index1.html) 
+实例： [index1.html](2020Web HTML CSS\01-056 CSS盒子模型\index1.html) 
 
 
 
@@ -1714,7 +1718,7 @@ padding-left
 
 长宽不在盒子内，只是盒子与另一个盒子的距离
 
-实例： [index2.html](2020Web HTML CSS\01-056CSS盒子模型\index2.html) 
+实例： [index2.html](2020Web HTML CSS\01-056 CSS盒子模型\index2.html) 
 
 
 
@@ -2078,7 +2082,7 @@ none  此元素不会被显示
 </body>
 ```
 
-![20200512093849](E:\WEB\STUDYING\学习笔记\2020Web HTML CSS\01-065 display显示框类型\20200512093849.png)
+![20200512093849](2020Web HTML CSS\01-065 display显示框类型\20200512093849.png)
 
 实例： [index.html](2020Web HTML CSS\01-065 display显示框类型\index.html) 
 
@@ -3042,7 +3046,7 @@ margin-top: - (子元素高度的一半)
 
 margin-left: - (子元素宽度的一半)
 
-实例： [index.html](2020Web HTML CSS\01-088定位实现居中和装饰点\index.html) 
+实例： [index.html](2020Web HTML CSS\01-088 定位实现居中和装饰点\index.html) 
 
 
 
@@ -3050,9 +3054,9 @@ margin-left: - (子元素宽度的一半)
 
 在CSS里的\#main ul li 一行改动
 
-原版本： [02_新浪的小结构.html](2020Web HTML CSS\01-088定位实现居中和装饰点\02_新浪的小结构.html) 
+原版本： [02_新浪的小结构.html](2020Web HTML CSS\01-088 定位实现居中和装饰点\02_新浪的小结构.html) 
 
-改完后： [index1.html](2020Web HTML CSS\01-088定位实现居中和装饰点\index1.html)   添加了:before{...}
+改完后： [index1.html](2020Web HTML CSS\01-088 定位实现居中和装饰点\index1.html)   添加了:before{...}
 
 
 
@@ -3513,7 +3517,7 @@ bdo 标签用来覆盖默认的文本方向。
 bdo 标签必须配合 dir 属性使用。
 bdo 标签有 ltr 和 rtl 两个属性值，分别表示：从左到右显示文本和从右到左显示文本。
 
-实例： [ruby rt与bdo.html](2020Web HTML CSS\01-120文字注解与文字方法\ruby rt与bdo.html) 
+实例： [ruby rt与bdo.html](2020Web HTML CSS\01-120 文字注解与文字方法\ruby rt与bdo.html) 
 
 
 
@@ -3650,5 +3654,533 @@ mark : 带有记号的文本
 
 
 
+## 01-127 表单扩展之美化控件
+
+美化表单控件：   
+
+1.label + :checked    
+
+```
+<style>
+        label input{
+            display: none;
+        }
+        label input:checked + div{
+            background-position: 0 0;
+        }
+        label div{
+            width: 28px;
+            height: 28px;
+            background: url(./img/checkbox.png) 0 -28px;
+        }
+    </style>
+    
+    <body>
+    <label>
+        <input type="checkbox">
+        <div></div>
+    </label>
+	</body>
+```
+
+![01-127 01](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 01.png)
+
+![01-127 02](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 02.png)
+
+实例： [form1.html](2020Web HTML CSS\01-127 表单扩展之美化控件\form1.html) 
 
 
+
+2.position + opacity
+
+以下无采用position + opacity
+
+```
+    <style>
+        label input{display: none;}
+        label div{
+            width: 86px;
+            height: 34px;
+            background: url(./img/upload.png) no-repeat;
+        }
+        label div:active{
+            width: 86px;
+            height: 34px;
+            box-shadow: 2px 2px 5px gray;
+        }
+    </style>
+</head>
+<body>
+    <label>
+        <input type="file">
+        <div></div>
+    </label>
+</body>
+```
+
+
+
+![01-127 03](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 03.png)
+
+![01-127 04](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 04.png)
+
+但是鼠标移入【上传】按钮无显示“未选择任何文件”
+
+实例： [form2-1.html](2020Web HTML CSS\01-127 表单扩展之美化控件\form2-1.html) 
+
+
+
+```
+    <style>
+        .upload{
+            width: 86px;
+            height: 34px;
+            position: relative;
+        }
+        .upload div{
+            width: 100%;
+            height: 100%;
+            background: url(./img/upload.png);
+        }
+        .upload input{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0; /* 透明度 */
+        }
+    </style>
+</head>
+<body>
+    <div class="upload">
+        <input type="file">
+        <div></div>
+    </div>
+</body>
+```
+
+![01-127 05](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 05.png)
+
+鼠标移入【上传】按钮能显示“未选择任何文件”
+
+实例： [form2-2.html](2020Web HTML CSS\01-127 表单扩展之美化控件\form2-2.html) 
+
+
+
+## 01-128 表单扩展之新input控件
+
+新的input控件
+email  :  电子邮件地址输入框
+
+![01](2020Web HTML CSS\01-128 表单扩展之新input控件\01.png)
+
+
+
+url  :  网址输入框
+
+以下为格式不正确：
+
+![url01](2020Web HTML CSS\01-128 表单扩展之新input控件\url01.png)
+
+![url02](2020Web HTML CSS\01-128 表单扩展之新input控件\url02.png)
+
+格式正确如下图：
+
+![url03](2020Web HTML CSS\01-128 表单扩展之新input控件\url03.png)
+
+![url04](2020Web HTML CSS\01-128 表单扩展之新input控件\url04.png)
+
+
+
+number  :  数值输入框
+
+字母键盘无法输入，而且有箭头键用来加减数字
+
+
+
+range  :  滑动条
+
+```
+<input type="range" min="0" max="10" value="2">
+```
+
+![range](2020Web HTML CSS\01-128 表单扩展之新input控件\range.png)
+
+
+
+date / month / week  :  日期控件
+
+![date month week](2020Web HTML CSS\01-128 表单扩展之新input控件\date month week.png)
+
+​	
+
+search  :  搜索框
+
+输入字符 框内右侧会显示叉号
+
+```
+<input type="search" placeholder="your keyword">
+```
+
+![search](2020Web HTML CSS\01-128 表单扩展之新input控件\search.png)
+
+
+
+color  :  颜色控件
+
+![color](2020Web HTML CSS\01-128 表单扩展之新input控件\color.png)
+
+
+
+
+
+tel  :  电话号码输入框  ( 在移动端会默认调起数字键盘 )
+
+
+
+time  :  时间控件
+
+![time](2020Web HTML CSS\01-128 表单扩展之新input控件\time.png)
+
+
+
+**注意：**以上控件在不同浏览器或不同版本 显示有所区别
+
+参考链接：https://www.w3cschool.cn/htmltags/att-input-type.html
+
+实例： [form_new1.html](2020Web HTML CSS\01-128 表单扩展之新input控件\form_new1.html) 
+
+
+
+## 01-129 表单扩展之新属性
+
+表单属性：
+autocomplete  :  自动完成  默认 on  /  off
+
+```
+<input type="text" name="username" >
+```
+
+添加name="username"会出现下图所示：
+
+![autocomplete](2020Web HTML CSS\01-129 表单扩展之新属性\autocomplete.png)
+
+
+
+```
+<input type="text" name="username" autocomplete="off">
+```
+
+添加autocomplete="off"后不会出现。
+
+
+
+autofocus  :  获取焦点
+
+打开页面或刷新页面光标第一时间出现在有设autocomplete的框
+
+```
+        <input type="text" name="username" autocomplete="off" >
+        <input type="text" name="username" autocomplete="off" autofocus>
+        <input type="text" name="username" autocomplete="off">
+        <input type="submit">
+```
+
+![autofocus](2020Web HTML CSS\01-129 表单扩展之新属性\autofocus.png)
+
+required  :  不能为空
+
+空框提交会出现提示
+
+![required](2020Web HTML CSS\01-129 表单扩展之新属性\required.png)
+
+
+
+pattern  :  正则验证
+
+```
+<input type="text" name="username" autocomplete="off" autofocus required pattern="[a-z]+">
+```
+
+\d 匹配一个数字0~9 
+
+\d+表示1个或多个数字
+
+[a-z]+ 26个字母里选1个或多个
+
+输入提交后如不符合格式会出现提示
+
+可参考链接：https://www.w3cschool.cn/rxoyts/或者其它
+
+实例： [form_new2.html](2020Web HTML CSS\01-129 表单扩展之新属性\form_new2.html) 
+
+
+
+## 01-130 表单扩展之数据传输
+
+method  :  数据传输方式
+
+```
+<form action="./data.php" method="GET|POST">
+```
+
+| 值   | 描述                                                         |
+| :--- | :----------------------------------------------------------- |
+| get  | 默认。将表单数据（form-data）以名称/值对的形式附加到 URL 中：URL?name=value&name=value。 |
+| post | 以 HTTP post 事务的形式发送表单数据（form-data）。           |
+
+enctype  :  数据传输类型
+name / value  :  数据的键值对
+
+实例： [form_new3.html](2020Web HTML CSS\01-130 表单扩展之数据传输\form_new3.html) 
+
+
+
+## 01-131 表单扩展之标签
+
+fieldset  :  表单内元素分组 
+legend  :  为fieldset元素定义标题
+
+```
+    <fieldset>
+        <legend>登录</legend>
+        <p>
+            用户名：<input type="text">
+        </p>
+        <p>
+            密码：<input type="pasword">
+        </p>
+    </fieldset>
+```
+
+![fieldset legend](2020Web HTML CSS\01-131 表单扩展之标签\fieldset legend.png)
+
+
+
+optgroup  :  定义选项组
+
+```
+    <select name="" id="">
+        <optgroup label="水果"></optgroup>
+        <option value="">苹果</option>
+        <option value="">香蕉</option>
+        <option value="">雪梨</option>
+        <option value="">猕猴桃</option>
+        <optgroup label="蔬菜"></optgroup>
+        <option value="">白菜</option>
+        <option value="">黄瓜</option>
+        <option value="">南瓜</option>
+        <option value="">茄子</option>
+    </select>
+```
+
+![optgroup](2020Web HTML CSS\01-131 表单扩展之标签\optgroup.png)
+
+实例： [form_new4.html](2020Web HTML CSS\01-131 表单扩展之标签\form_new4.html) 
+
+
+
+
+
+## 01-132 BFC规范
+
+Formatting context(格式化上下文) 是 W3C CSS2.1 规范中的一个概念。它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。
+
+BFC 即 Block Formatting Contexts (块级格式化上下文) ，它属于上述中的其中一种规范。具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 BFC 具有普通容器所没有的一些特性。
+
+触发BFC规范的元素，可以形成一个独立的容器。不受到外界的影响，从而解决一些布局问题。
+
+触发BFC
+
+浮动元素：float 除 none 以外的值
+绝对定位元素：position (absolute、fixed) 
+display 为 inline-block、table-cells、flex
+overflow 除了 visible 以外的值 (hidden、auto、scroll)
+
+
+
+
+
+解决margin叠加问题
+
+```
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            margin-bottom: 30px;
+        }
+        .div2{
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            margin-top: 30px;
+        }
+    </style>
+    
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+```
+
+![BFC](2020Web HTML CSS\01-132 BFC规范\BFC.png)
+
+红块设置了margin-bottom 30px 蓝块设置了margin-top 30px，可是两块纵向距离却不是30px+30px=60px，而是选取最大的30px
+
+ [BFC1.html](2020Web HTML CSS\01-132 BFC规范\BFC1.html) 
+
+解决方法：
+
+style部分添加
+
+```
+.box{
+            overflow: hidden;/* 溢出隐藏 */
+        }
+```
+
+```
+<body>
+    <div class="box">
+        <div class="div1"></div>
+    </div>
+    <div class="box">
+        <div class="div2"></div>
+    </div>
+</body>
+```
+
+ [BFC2.html](2020Web HTML CSS\01-132 BFC规范\BFC2.html) 
+
+
+
+另一个方法：
+
+```
+.box{
+            display: flex;
+        }
+```
+
+ [BFC3.html](2020Web HTML CSS\01-132 BFC规范\BFC3.html) 
+
+
+
+
+
+解决margin传递问题
+
+```
+    <style>
+        .div1{
+            width: 200px;
+            height: 200px;
+            background: royalblue;
+        }
+        .div2{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2"></div>
+    </div>
+</body>
+```
+
+![BFC4](2020Web HTML CSS\01-132 BFC规范\BFC4.png)
+
+本来想把小块在大块里向下移动50px，却连带大块也移下50px
+
+
+
+解决方法：父元素添加overflow:hidden
+
+或者父元素添加position:relative,子元素添加position absolute
+
+ [BFC4.html](2020Web HTML CSS\01-132 BFC规范\BFC4.html) 
+
+
+
+解决浮动问题
+
+```
+    <style>
+        .div1{
+            width: 200px;
+            border: 1px gray solid;
+        }
+        .div2{
+            width: 100px;
+            height: 100px;
+            background: royalblue;
+            float: left;
+        }
+    </style>
+    
+<body>
+    <div class="div1">
+        <div class="div2"></div>
+    </div>
+</body>
+```
+
+![BFC5](2020Web HTML CSS\01-132 BFC规范\BFC5.png)
+
+无设高度的div1不能被已设float:left的div2撑满
+
+解决方法：
+
+1.父元素添加overflow:hidden
+
+2.或者添加float:left
+
+3.又或者添加display:inline-block
+
+![BFC5-1](2020Web HTML CSS\01-132 BFC规范\BFC5-1.png)
+
+ [BFC5.html](2020Web HTML CSS\01-132 BFC规范\BFC5.html) 
+
+
+
+
+
+解决覆盖问题
+
+```
+<style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            background: lightseagreen;
+            float: left;
+        }
+        .div2{
+            height: 400px;
+            background: seagreen;
+        }
+    </style>
+    
+    
+<body>
+    <div class="div1"></div>
+    <div class="div2">Start by building basic shelter, then dig for ore and other resources. </div>
+</body>
+```
+
+![BFC6](2020Web HTML CSS\01-132 BFC规范\BFC6.png)
+
+小绿块把大绿块覆盖了
+
+解决方法：
+
+给div2添加overflow:hidden
+
+ [BFC6.html](2020Web HTML CSS\01-132 BFC规范\BFC6.html) 
