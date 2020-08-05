@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr{
+            background: lightgray;
+            height: 1px;
+            border: none;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            background: tomato;
+        }
+        /* 默认样式 */
+
+        div:hover{
+            background: lightskyblue;
+        }
+        /* 鼠标移入时的样式 */
+        
+        div:active{
+            width: 290px;
+            height: 290px;
+            background: lightseagreen;
+            border: 5px solid seagreen;
+        }
+        /* 鼠标按下时的样式 */
+
+        a:link{
+            
+            color: tomato;
+            text-decoration: none;
+        }
+        a:visited{
+            color: gray;
+        }
+        a:hover{
+            font-size: 18px;
+            color: red;
+        }
+        a:active{
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <hr>
+    <a href="#6676">这是一个链接一个链接</a>
+</body>
+</html>

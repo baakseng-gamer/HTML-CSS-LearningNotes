@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .box-big{
+            width: 500px;
+            height: 500px;
+            border: 2px dashed lightgray;
+            margin: 0 auto;
+            position: relative;
+            /* 设置后 middle箱子子相对big箱子进行定位 */
+        }
+        .box-middle{
+            width: 250px;
+            height: 250px;
+            background: tomato;
+            border: 1px dashed black;
+            box-sizing: border-box;
+            position: absolute;
+            top: 100px;
+            left: 30px;
+        }
+        .box-middle2{
+            width: 180px;
+            height: 180px;
+            background: brown;
+            border: 1px dashed black;
+            box-sizing: border-box;
+
+            position: absolute;
+            top: 200px;
+            left: 250px;
+            /* 相对于父元素进行定位，不跟兄弟 */
+        }
+        .box-little{
+            width: 50px;
+            height: 50px;
+            background: wheat;
+
+            top: 100px;
+            left: 30px;
+            position: absolute;
+            /* 相对于父元素 */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box-big">
+        <div class="box-middle">
+            <div class="box-little">
+                小箱
+            </div>
+        </div>
+        <div class="box-middle2"></div>
+    </div>
+</body>
+</html>

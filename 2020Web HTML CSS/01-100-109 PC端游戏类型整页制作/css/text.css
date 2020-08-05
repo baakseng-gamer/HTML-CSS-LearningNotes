@@ -1,0 +1,99 @@
+*{ margin:0; padding:0;}
+ul,ol{ list-style: none;margin: 0;}
+img{ display: block;margin: 0;}
+a{ text-decoration: none; }
+a:visited{color: inherit;}
+a:hover{color: red;}
+body{background: white;}
+.display-none{
+    display: none;
+}
+.l95{margin-left: -95px;}
+.l190{margin-left: -190px;}
+.l285{margin-left: -285px;}
+.l380{margin-left: -380px;}
+
+h1,h2,h3{ font-size:16px;}
+body{ font-family: Arial;}
+
+.l{ float:left;}
+.r{ float:right;}
+.clear:after{ content:""; display: block; clear:both;}
+.container-fluid{ width:100%;}
+
+#wrap{
+    width: 516px;
+    height: 283px;
+    margin: 0 auto;
+    /* border: 1px solid lightgray; */
+}
+#wrap .wrap-news{
+    width: 516px;
+    height: 283px;
+}
+#wrap .wrap-news h2{
+    width: 478px;
+    font-size: 22px;
+    font-weight: bold;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 16px;
+    border-bottom: 1px solid lightgray;
+    box-sizing: border-box;
+}
+#wrap .wrap-news h2 .daxie{
+    font-size: 6px;
+    margin-left: 5px
+}
+#wrap .wrap-news h2 .xiaoxie{
+    font-size: 12px;
+    color: #8a8a8a;
+    float: right;
+}
+#wrap .wrap-news .wrap-news-box{
+    margin-left: 16px;
+    width: 478px;
+    height: 238px;
+}
+#wrap .wrap-news .wrap-news-box .wrap-news-box-tit{
+    display: block;
+    float: left;
+    width: 95px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    height: 38px;
+    line-height: 38px;
+    cursor: default;
+}
+
+
+#wrap .wrap-news .wrap-news-box .wrap-news-box-tit .item{ 
+    width: 478px;
+    height: 200px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+    background: white;
+}
+#wrap .wrap-news .wrap-news-box .wrap-news-box-tit:hover{
+    color: #ff3052;
+    background: url(../img/biaotou.png) no-repeat;
+}
+#wrap .wrap-news .wrap-news-box .wrap-news-box-tit:hover .item{
+    display: block;
+}
+#wrap .wrap-news .wrap-news-box .wrap-news-box-tit .item h3{
+    color: #ff3052;
+    text-align: center;
+    height: 40px;
+    font-size: 18px;
+}
+#wrap .wrap-news .wrap-news-box .wrap-news-box-tit .item .wrap-news-box-list li{
+    height: 25px;
+    line-height: 25px;
+    color: 		#3C3C3C;
+}
+#wrap .wrap-news .wrap-news-box .wrap-news-box-tit .item .wrap-news-box-list li span{
+    color: #ADADAD;
+}

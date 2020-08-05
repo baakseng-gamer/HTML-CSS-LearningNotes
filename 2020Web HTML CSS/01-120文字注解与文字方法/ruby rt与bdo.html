@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ruby{
+            font-size: 30px;
+        }
+        span{
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+    </style>
+</head>
+<body>
+    <ruby>
+        汉 <rp>(</rp><rt>Hàn</rt><rp>)</rp>
+        字 <rp>(</rp><rt>Zì</rt><rp>)</rp>
+    </ruby>
+    <p>以上来自w3cschool实例</p>
+    <hr>
+    <ruby>
+        汉<rt>hàn</rt>
+        字<rt>zì</rt>
+    </ruby>
+    <p>以上来自千锋实例</p>
+    <hr>
+    <p>该段落文字从左到右显示。</p>
+    <p><bdo dir="rtl">该段落文字从右到左显示。</bdo></p> 
+    <hr>
+    <p>
+        里奥雷乌斯就是雄火龙。
+        <span>里奥雷乌斯</span>就是雄火龙
+    </p>
+    以上使用用了CSS
+</body>
+</html>

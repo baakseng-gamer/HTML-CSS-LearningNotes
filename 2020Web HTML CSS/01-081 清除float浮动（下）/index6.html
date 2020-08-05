@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+
+            border: 2px solid darkgray;
+        }
+        .box2{
+            width: 100px;
+            height: 200px;
+            background: darkseagreen;
+            float: left;
+        }
+        .clear:after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1 clear">
+        <div class="box2"></div>
+    </div>
+    aaa
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{
+            list-style: none;
+        }
+        #menu{
+            width: 100px;
+            height: 30px;
+            margin: 20px auto;
+            border: 1px black solid;
+            position: relative;
+        }
+        #menu ul{
+            width: 100px;
+            border: 1px black solid;
+            position: absolute;
+            left: -1px;
+            top: 30px;
+            background: white;
+            display: none;
+        }
+        #menu:hover ul{
+            display: block;
+        }
+        #menu ul li:hover{
+            background: lightgray;
+        }
+        p{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="menu">
+        千牛卖家中心
+        <ul>
+            <li>免费开店</li>
+            <li>已卖出的宝贝</li>
+            <li>出售中的宝贝</li>
+            <li>卖家服务市场</li>
+            <li>卖家培训中心</li>
+            <li>体验中心</li>
+            <li>问商友</li>
+        </ul>
+    </div>
+    <p>段落段落段落段落段落段落段落段落段落段落段落</p>
+</body>
+</html>
