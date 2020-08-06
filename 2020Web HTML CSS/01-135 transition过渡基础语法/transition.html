@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+        }
+        .box:hover{
+            width: 200px;
+            height: 200px;
+            background: royalblue;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: lightseagreen;
+            transition-property: width; /* 只设宽度过渡 */
+            transition-duration: 1s;    /* 过渡所花时长 */
+        }
+        .box1:hover{
+            width: 200px;
+            height: 200px;
+            background: seagreen;
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            transition-property: all; /* 宽高都设过渡 */
+            transition-duration: 2s;
+        }
+        .box2:hover{
+            width: 200px;
+            height: 200px;
+            background: brown;
+            border-radius: 20px;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background: gold;
+            transition-property: all;
+            transition-duration: 2s;
+            transition-delay: 2s;   /* 设置了延时所花时间 */
+
+            /* 可缩写为 */
+            /* transition: all 2s 2s;  */
+
+        }
+        .box3:hover{
+            width: 200px;
+            height: 200px;
+            background: goldenrod;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">no transition</div>
+    <br>
+    <div class="box1">1property:width</div>
+    <br>
+    <div class="box2">2proderty:all</div>
+    <br>
+    <div class="box3">3delay:2s 延时2秒 也可以设负数为提前</div>
+
+</body>
+</html>

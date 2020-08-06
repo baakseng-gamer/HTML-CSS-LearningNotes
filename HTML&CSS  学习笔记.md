@@ -2707,7 +2707,7 @@ psd图片的切图流程：
 
 
 
-### 01-077 企业中的切图流程
+## 01-077 企业中的切图流程
 
 利用工具快速获取样式
 
@@ -3871,6 +3871,34 @@ time  :  时间控件
 
 **注意：**以上控件在不同浏览器或不同版本 显示有所区别
 
+
+
+| 值                | 描述                                                         |
+| :---------------- | :----------------------------------------------------------- |
+| button            | 定义可点击的按钮（通常与 JavaScript 一起使用来启动脚本）。   |
+| checkbox          | 定义复选框。                                                 |
+| colorNew          | 定义拾色器。                                                 |
+| dateNew           | 定义 date 控件（包括年、月、日，不包括时间）。               |
+| datetimeNew       | 定义 date 和 time 控件（包括年、月、日、时、分、秒、几分之一秒，基于 UTC 时区）。 |
+| datetime-localNew | 定义 date 和 time 控件（包括年、月、日、时、分、秒、几分之一秒，不带时区）。 |
+| emailNew          | 定义用于 e-mail 地址的字段。                                 |
+| file              | 定义文件选择字段和 "浏览..." 按钮，供文件上传。              |
+| hidden            | 定义隐藏输入字段。                                           |
+| image             | 定义图像作为提交按钮。                                       |
+| monthNew          | 定义 month 和 year 控件（不带时区）。                        |
+| numberNew         | 定义用于输入数字的字段。                                     |
+| password          | 定义密码字段（字段中的字符会被遮蔽）。                       |
+| radio             | 定义单选按钮。                                               |
+| rangeNew          | 定义用于精确值不重要的输入数字的控件（比如 slider 控件）。   |
+| reset             | 定义重置按钮（重置所有的表单值为默认值）。                   |
+| searchNew         | 定义用于输入搜索字符串的文本字段。                           |
+| submit            | 定义提交按钮。                                               |
+| telNew            | 定义用于输入电话号码的字段。                                 |
+| text              | 默认。定义一个单行的文本字段（默认宽度为 20 个字符）。       |
+| timeNew           | 定义用于输入时间的控件（不带时区）。                         |
+| urlNew            | 定义用于输入 URL 的字段。                                    |
+| weekNew           | 定义 week 和 year 控件（不带时区）。                         |
+
 参考链接：https://www.w3cschool.cn/htmltags/att-input-type.html
 
 实例： [form_new1.html](2020Web HTML CSS\01-128 表单扩展之新input控件\form_new1.html) 
@@ -4208,3 +4236,191 @@ style部分添加
 给div2添加overflow:hidden
 
  [BFC6.html](2020Web HTML CSS\01-132 BFC规范\BFC6.html) 
+
+
+
+## 01-134 浏览器内核与浏览器前缀
+
+浏览器厂商以前就一直在实施CSS3，但它还未成为真正的标准。为此，当有一些CSS3样式语法还在波动的时候，他们提出了针对浏览器的前缀。
+
+CSS3去兼容不同的浏览器，针对旧的浏览器做兼容，新浏览器基本不需要添加前缀。
+
+| **浏览器**            | **内核** | **前缀** |
+| --------------------- | -------- | -------- |
+| **IE**                | Trident  | -ms-     |
+| **Firefox**           | Gecko    | -moz-    |
+| **Opera**             | Presto   | -o-      |
+| **Chrome**            | Webkit   | -webkit- |
+| **Safari**            | Webkit   | -webkit- |
+| **Opera**、**Chrome** | Blink    |          |
+
+```
+    <style>
+        div{
+            width: 200px;height: 200px;background: tomato;
+            -webkit-animation: 2s move;
+        }
+
+        @-webkit-keyframes move{
+            0%{ opacity: 0;}
+            100%{ opacity: 1;}
+        }
+    </style>
+```
+
+在前缀为-webkit-的浏览器（chrome safari等）打开或刷新会以2秒缓慢展现，但是在非-webkit-浏览器（如IE opera等)不会有这种动画展现
+
+![01](2020Web HTML CSS\01-134 浏览器内核与浏览器前缀\01.png)
+
+实例： [vendor-prefixe.html](2020Web HTML CSS\01-134 浏览器内核与浏览器前缀\vendor-prefixe.html) 
+
+
+
+## 01-135 transition过渡基础语法
+
+transition-property  :  规定设置过渡效果的CSS属性的名称。
+transition-duration  :  规定完成过渡效果需要多少秒或毫秒。
+transition-delay  :  定义过渡效果何时开始。
+
+```
+        .box3{
+            width: 100px;
+            height: 100px;
+            background: gold;
+            transition-property: all;
+            transition-duration: 2s;
+            transition-delay: 2s; 
+        }
+```
+
+![gifhome_640x360_20s](2020Web HTML CSS\01-135 transition过渡基础语法\gifhome_640x360_20s.gif)
+
+实例： [transition.html](2020Web HTML CSS\01-135 transition过渡基础语法\transition.html) 
+
+可缩写为
+
+```
+transition: all 2s 2s;
+```
+
+
+
+
+
+transition-timing-function  :  规定速度效果的速度曲线。
+
+| 值                            | 描述                                                         |
+| :---------------------------- | :----------------------------------------------------------- |
+| linear                        | 规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。 |
+| ease                          | 规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。**默认** |
+| ease-in                       | 规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。  |
+| ease-out                      | 规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。  |
+| ease-in-out                   | 规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。 |
+| cubic-bezier(*n*,*n*,*n*,*n*) | 在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。 |
+
+![01](2020Web HTML CSS\01-135 transition过渡基础语法\01.png)
+
+实例： [transition-timing-function.html](2020Web HTML CSS\01-135 transition过渡基础语法\transition-timing-function.html) 
+
+![02](2020Web HTML CSS\01-135 transition过渡基础语法\02.png)
+
+![gifhome_640x360_8s](2020Web HTML CSS\01-135 transition过渡基础语法\gifhome_640x360_8s.gif)
+
+在线工具：https://cubic-bezier.com/
+
+**注**：不要加到hover上
+
+
+
+## 01-136 transition实例之过渡导航
+
+![gifhome_640x360_6s](2020Web HTML CSS\01-136 transition实例之过渡导航\gifhome_640x360_6s.gif)
+
+实例： [transition-index.html](2020Web HTML CSS\01-136 transition实例之过渡导航\transition-index.html) 
+
+
+
+练习列表边框收缩效果：
+
+from:http://www.neusoft.edu.cn/
+
+![test](2020Web HTML CSS\01-136 transition实例之过渡导航\test.gif)
+
+练习： [test.html](2020Web HTML CSS\01-136 transition实例之过渡导航\test.html) 
+
+![test](2020Web HTML CSS\01-136 transition实例之过渡导航\test.png)
+
+
+
+
+
+
+
+## 01-137 transform位移与缩放
+
+transform变形
+
+translate  :  位移
+
+translateX()
+translateY()
+translateZ()   ( 3d )
+
+```
+    <style>
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid gray;
+            margin: 30px auto;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            transition: 1s;
+        }
+        .box1:hover .box2{
+            background: skyblue;
+            transform: translate(100px,20px);
+        }
+    </style>
+```
+
+![translate](2020Web HTML CSS\01-137 transform位移与缩放\translate.gif)
+
+
+
+translate可设负数，transform: translate(-100px,20px);但会跨出父元素边框
+
+![translate1](2020Web HTML CSS\01-137 transform位移与缩放\translate1.gif)
+
+实例： [translate.html](2020Web HTML CSS\01-137 transform位移与缩放\translate.html) 
+
+
+
+scale  :  缩放
+
+scaleX()
+scaleY()
+scaleZ()   (3d)
+
+值是一个比例值，正常大小就是1，会已当前元素中心点进行缩放
+
+```
+        .box1:hover .box2{
+            background: skyblue;
+            /* transform: translate(-100px,20px); */
+            transform: scale(2,2);
+        }
+```
+
+![scale1](2020Web HTML CSS\01-137 transform位移与缩放\scale1.gif)
+
+
+
+scale(2,.5)
+
+![scale2](2020Web HTML CSS\01-137 transform位移与缩放\scale2.gif)
+
+实例： [scale.html](2020Web HTML CSS\01-137 transform位移与缩放\scale.html) 
