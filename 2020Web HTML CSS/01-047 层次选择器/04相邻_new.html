@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div + h2{
+            background: tomato;
+        }
+    </style>
+</head>
+<body>
+    <h2>可惜这不是兄弟，前面木有div</h2>
+    <div>div</div>
+    <p>这是一个段落</p>
+    <h2>这是标题2，但是前面隔着P标签，无法使用css</h2>
+    <div>div</div>
+    <h2>我才是兄弟，因为前面紧邻div</h2>
+    <hr>
+    <div>div
+        <h2>这是标题2，在div里</h2>
+    </div>
+    <h2>我也才是兄弟</h2>
+</body>
+</html>

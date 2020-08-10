@@ -15,7 +15,7 @@
             border: 2px dashed lightgray;
             margin: 0 auto;
             position: relative;
-            /* 设置后 middle箱子子相对big箱子进行定位 */
+            /* 设置后 middle箱子相对big箱子进行定位 */
         }
         .box-middle{
             width: 250px;
@@ -26,6 +26,7 @@
             position: absolute;
             top: 100px;
             left: 30px;
+            /* 相对于父元素.box-big进行定位*/
         }
         .box-middle2{
             width: 180px;
@@ -37,7 +38,7 @@
             position: absolute;
             top: 200px;
             left: 250px;
-            /* 相对于父元素进行定位，不跟兄弟 */
+            /* 相对于父元素.box-big进行定位，不跟兄弟 */
         }
         .box-little{
             width: 50px;
@@ -45,9 +46,9 @@
             background: wheat;
 
             top: 100px;
-            left: 30px;
+            left: 0px;
             position: absolute;
-            /* 相对于父元素 */
+            /* 相对于父元素.box-middle */
             
         }
     </style>

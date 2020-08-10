@@ -71,6 +71,23 @@ CSS 概述
 - 外部样式表通常存储在 **CSS 文件**中
 - 多个样式定义可**层叠**为一
 
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello world
+</body>
+</html>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+hello world
+
 
 
 实例： [index.html](2020Web HTML CSS\01-002 什么是 HTML和 CSS\index.html) 
@@ -144,6 +161,42 @@ CSS：样式
 
 JavaScript：行为
 
+```
+<style>
+    div{
+        color: red;
+        font-style: italic;
+    }
+</style>
+<div>HTML+CSS系列教程</div>
+
+<script>
+    let div = document.querySelector('div');
+    let timer = null;
+    let flag = true;
+    div.onmouseover = function(){
+        timer = setInterval(() => {
+            if(flag){
+                div.style.color = 'blue';
+                div.style.fontStyle = 'normal';
+            }else{
+                div.style.color = 'red';
+                div.style.fontStyle = 'italic';
+            }
+            flag = !flag;
+        }, 100);
+    };
+    div.onmouseout = function(){
+        clearInterval(timer);
+    };
+</script>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01](2020Web HTML CSS\01-006 web前端三大核心技术\01.gif)
+
+
 实例： [index.html](2020Web HTML CSS\01-006 web前端三大核心技术\index.html) 
 
 
@@ -175,6 +228,26 @@ HTML常见标签：http://www.html5star.com/manual/html5label-meaning/
 标签的属性：来修饰标签的，设置当前标签的一些功能。
 
 <标签 属性="值" 属性2="值2">
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>&#9787;</h1>
+    <p>&lt;html&gt;</p>
+    <p>hello&nbsp;world¶</p>
+</body>
+</html>
+```
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+<h1>&#9787;</h1>
+<p>&lt;html&gt;</p>
+<p>hello&nbsp;world¶</p>
 
 实例： [index.html](2020Web HTML CSS\01-007 基本结构与属性\index.html) 
 
@@ -229,11 +302,24 @@ HTML常见标签：http://www.html5star.com/manual/html5label-meaning/
 
 2.shift + alt + a  块注释
 
+
+
+```
+<body>
+    <!-- hello world -->
+    <div>abc</div>  6666
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01](2020Web HTML CSS\01-009 HTML中的注释\01.png)
+
 实例： [index.html](2020Web HTML CSS\01-009 HTML中的注释\index.html) 
 
 
 
-## 01-10 HTML语义化
+## 01-010 HTML语义化
 
 所谓HTML语义化指的是，根据网页中内容的结构，选择适合的HTML标签进行编写。	
 好处：
@@ -260,23 +346,75 @@ h5、h6标签在网页中不经常使用。
 
 段落 -> 双标签 : <p></p>
 
-实例：
 
- [index.html](2020Web HTML CSS\01-011 标题与段落\index.html) 
 
- [01_标题与段落.html](2020Web HTML CSS\01-011 标题与段落\01_标题与段落.html) 
+```
+<body>
+    <h1>标题</h1>
+    <h2>标题</h2>
+    <h3>标题</h3>
+    <h4>标题</h4>
+    <h5>标题</h5>
+    <h6>标题</h6>
+    <p>这是一个段落</p>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01](2020Web HTML CSS\01-011 标题与段落\01.png)
+
+实例： [index.html](2020Web HTML CSS\01-011 标题与段落\index.html) 
+
+
+
+
+
+```
+        <h1>Angelababy简介</h1>
+
+        <h2>基本信息</h2>
+        
+        <p>杨颖（Angelababy），1989年2月28日出生于上海，13岁时移居香港，中国影视女演员。</p>
+        
+        <p>2009年主演电影《全城热恋》。2012年，凭借爱情片《第一次》获得第十三届华语电影传媒大奖“最受瞩目女演员奖”。2013年1月，《南都娱乐周刊》举办新生代四小花旦的评选活动，杨颖以总分70分的综合得分与刘诗诗、杨幂、倪妮共同当选为新一代“四小花旦”；同年在徐克导演的影片《狄仁杰之神都龙王》中担任女主角，并且获得第21届北京大学生电影节最受欢迎女演员奖；4月，Angelababy主演电视剧《大汉情缘之云中歌》。2014年加盟综艺节目《奔跑吧兄弟》并主演电影版；同年主演顾长卫导演的电影《微爱之渐入佳境》，票房突破2.8亿。2015年5月参演好莱坞电影《独立日2》；7月，主演电影《摆渡人》。</p>
+        
+        <h2>早年经历</h2>
+        
+        <p>1989年2月28日，Angelababy出生在上海，中文名杨颖。杨颖自小随家人到上海定居，在上海的演艺学校学演戏及跳舞。13岁时，杨颖回香港加入了Talent Bang，还担任Viva Club Disney主持。</p>
+        
+        <h2>个人生活</h2>
+        
+        <p>2015年5月27日，黄晓明和Angelababy（杨颖）在青岛民政局领证完婚。</p>
+        
+        <p>2015年10月8日，黄晓明和Angelababy在上海展览中心正式举办婚礼。上午8点，Angelababy工作室曝光了一两人的婚纱照，照片中，两人以巴黎地标建筑为背景，浪漫亲吻。</p>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![02](2020Web HTML CSS\01-011 标题与段落\02.png)
+
+ 实例：[01_标题与段落.html](2020Web HTML CSS\01-011 标题与段落\01_标题与段落.html) 
 
 
 
 ## 01-012 文件修饰标签
 
-强调 -> 双标签 : ``<strong></strong>``、``<em></em>``
+强调 -> 双标签 :
+
+ ``<strong></strong>``
+
+<strong>这是一段需要强调的文本</strong>
+
+``<em></em>``
+
+<em>这是一段需要强调的文本</em>
 
 区别：
 
-1. 写法和展示效果是有区别的，一个加粗、一个斜体
+1.写法和展示效果是有区别的，一个加粗、一个斜体
 
-2. strong的强调性更强，em的强调性稍弱。
+2.strong的强调性更强，em的强调性稍弱。
 
 
 
@@ -286,6 +424,14 @@ h5、h6标签在网页中不经常使用。
 
 下标 : ``<sub></sub>``
 
+```
+a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>H<sub>2</sub>O
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>H<sub>2</sub>O
+
 
 
 删除文本 : ``<del></del>``
@@ -293,6 +439,16 @@ h5、h6标签在网页中不经常使用。
 插入文本 :``<ins></ins>``
 
 注：一般情况下，删除文本都是和插入文本配合使用的。
+
+```
+促销： 原价<del>300</del>,现价<ins>100</ins>。
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+促销： 原价<del>300</del>,现价<ins>100</ins>。
+
+
 
 实例： [index.html](2020Web HTML CSS\01-012 文件修饰标签\index.html) 
 
@@ -305,6 +461,21 @@ src : 引入图片的地址。
 alt : 当图片出现问题的时候，可以显示一段友好的提示文字。
 title : 提示信息
 width、height : 图片的大小
+
+```
+<body>
+    <p>第一个段落</p>
+    <img src="img/088ef28c2a85f606a255d7969360c17d571c42ed.jpg" alt="风景" width="1000px" height="auto" title="风景">
+    <p>第二个段落</p>
+    <hr />
+
+    <img src="img/088ef28c2a85f606a255d7969360c17d571c42.jpg" alt="白垩宫，位于普隆德拉水池右侧。（记者赛依连拍摄）">
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-013](2020Web HTML CSS\01-013 图片标签与图片属性\01-013.png)
 
 实例： [index.html](2020Web HTML CSS\01-013 图片标签与图片属性\index.html) 
 
@@ -350,7 +521,22 @@ base -> 单标签 ：作用就是改变链接的默认行为的。
 
 实例：
 
- [index.html](2020Web HTML CSS\01-015 跳转连接\index.html) 
+```
+    <a href="http://www.baidu.com">访问百度</a>
+    <a href="http://www.taobao.com" target="_blank"><!--target="_blank"为新窗口打开-->
+    <img src="./img/dog.jpg" alt="" >
+    </a>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-015](2020Web HTML CSS\01-015 跳转连接\01-015.gif)
+
+实例： [index.html](2020Web HTML CSS\01-015 跳转连接\index.html) 
+
+
+
+还有其它实例：
 
  [index2.html](2020Web HTML CSS\01-015 跳转连接\index2.html) 
 
@@ -376,17 +562,31 @@ base -> 单标签 ：作用就是改变链接的默认行为的。
 <a href="#html">HTML</a>
 <a href="#css">CSS</a>
 <a href="#javascript">JavaScript</a>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
 .
 .
 .
-<h2 id="html">HTML基础</h2>
+<h2 id="html">HTML基础</h2><a href="#top">返回顶端</a>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
 .
 .
-<h2 id="css">CSS层叠样式表</h2>
+<h2 id="css">CSS层叠样式表</h2><a href="#top">返回顶端</a>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
 .
 .
-<h2 class="javascript">JavaScript基础</h2>
+<h2 id="javascript">JavaScript基础</h2><a href="#top">返回顶端</a>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
 ```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-016-1](2020Web HTML CSS\01-016 跳转锚点\01-016-01.gif)
+
+实例： [index.html](2020Web HTML CSS\01-016 跳转锚点\index.html) 
 
 
 
@@ -396,27 +596,33 @@ base -> 单标签 ：作用就是改变链接的默认行为的。
 <a href="#html">HTML</a>
 <a href="#css">CSS</a>
 <a href="#javascript">JavaScript</a>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
 .
 .
 .
 <a name="html"></a>
-<h2>HTML基础</h2>
+<h2>HTML基础</h2><a href="#top">返回顶端</a>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
 .
 .
 <a name="css"></a>
-<h2>CSS层叠样式表</h2>
+<h2>CSS层叠样式表</h2><a href="#top">返回顶端</a>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
 .
 .
 <a name="javascript"></a>
-<h2>JavaScript基础</h2>
+<h2>JavaScript基础</h2><a href="#top">返回顶端</a>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
+<p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
 
 ```
 
-实例：
 
- [index.html](2020Web HTML CSS\01-016 跳转锚点\index.html) 
 
- [index1.html](2020Web HTML CSS\01-016 跳转锚点\index1.html) 
+实例： [index1.html](2020Web HTML CSS\01-016 跳转锚点\index1.html) 
 
 
 
@@ -443,6 +649,8 @@ base -> 单标签 ：作用就是改变链接的默认行为的。
 
 3.``&lt; &gt; &nbsp;``
 
+更多的内容参考网上。
+
 实例： [index.html](2020Web HTML CSS\01-017 特殊符号\index.html) 
 
 
@@ -459,13 +667,65 @@ type属性 : 改变前面标记的样式( 一般都是用CSS去控制 )
 | circle | 空心圆。         |
 | square | 实心方块。       |
 
+```
+<body>
+    <!-- 正确写法 -->
+    <ul type="circle">
+        <li>第一项</li>
+        <li>第二项</li>
+        <li>第三项</li>
+        <li>第四项</li>
+        <li>第五项</li>
+    </ul>
+
+    <!-- 错误写法 -->
+    <!-- <ul>
+        <p>
+            <li></li>
+        </p>
+    </ul> -->
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-018-01](2020Web HTML CSS\01-018 无序列表\01-018-01.png)
+
+实例： [index.html](2020Web HTML CSS\01-018 无序列表\index.html) 
 
 
-实例：
 
- [index.html](2020Web HTML CSS\01-018 无序列表\index.html) 
+```
+    <style>
+        a{
+            font-family: "微软雅黑";
+            text-decoration: none;
+            color: #3C3C3C;
+        }
+        a:hover{
+            color: #FF5151;
+        }
+        ul{
+            color: #BEBEBE;
+        }
+    </style>
+    
+    <body>
+    <ul>
+        <li><a href=""><strong>6月底前支付房租有压力 可申请多提一次住房公积金</strong></a></li>
+        <li><a href="">2000元变10万元，这一步没做，企业遭“加码罚款”</a></li>
+        <li><a href="">白云机场第二高速南段拟开始拆卸工程，2021年通车</a></li>
+        <li><a href="">机构宣称提供代孕服务 卫生监督部门：公司已被查封</a></li>
+        <li><a href="">多区取消小学新生面谈 家长再也不用担心“毛坯娃”</a></li>
+    </ul>
+</body>
+```
 
- [test1.html](2020Web HTML CSS\01-018 无序列表\test1.html) 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-018-02](2020Web HTML CSS\01-018 无序列表\01-018-02.gif)
+
+实例： [test1.html](2020Web HTML CSS\01-018 无序列表\test1.html) 
 
 
 
@@ -493,11 +753,78 @@ type属性 : 改变前面标记的样式( 一般都是用CSS去控制 )
 | i    | 罗马字母，小写。（i, ii, iii, iv）             |
 | I    | 罗马字母，大写。（I, II, III, IV）             |
 
-实例：
+```
+<ol type="A"> 
+        <li>第1项</li>
+        <li>第2项</li>
+        <li>第3项</li>
+        <li>第4项</li>
+        <li>第5项</li>
+        <li>第1项</li>
+        <li>第2项</li>
+        <li>第3项</li>
+        <li>第4项</li>
+        <li>第5项</li>
+        <li>第1项</li>
+        <li>第2项</li>
+        <li>第3项</li>
+        <li>第4项</li>
+        <li>第5项</li>
+        <li>第1项</li>
+        <li>第2项</li>
+        <li>第3项</li>
+        <li>第4项</li>
+        <li>第5项</li>
+        <li>第1项</li>
+        <li>第2项</li>
+        <li>第3项</li>
+        <li>第4项</li>
+        <li>第5项</li>
+        <li>第1项</li>
+        <li>第2项</li>
+        <li>第3项</li>
+        <li>第4项</li>
+        <li>第5项</li>
+    </ol>
+```
 
- [index.html](2020Web HTML CSS\01-019 有序列表\index.html) 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
 
- [test.html](2020Web HTML CSS\01-019 有序列表\test.html) 
+![01-019-01](2020Web HTML CSS\01-019 有序列表\01-019-01.png)
+
+实例： [index.html](2020Web HTML CSS\01-019 有序列表\index.html) 
+
+
+
+```
+<style>
+        a{
+            text-decoration: none;
+            color:#3C3C3C;
+        }
+        a:hover{
+            color: red;
+            font-size: 18px;
+            text-shadow: 5px 5px 10px brown;
+        }
+    </style>
+    
+    <body>
+    <ol>
+        <li><a href="">都说</a></li>
+        <li><a href="">我的祖国</a></li>
+        <li><a href="">夜空中最亮的星</a></li>
+        <li><a href="">大海</a></li>
+        <li><a href="">青花瓷</a></li>
+    </ol>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-019-02](2020Web HTML CSS\01-019 有序列表\01-019-02.gif)
+
+实例： [test.html](2020Web HTML CSS\01-019 有序列表\test.html) 
 
 
 
@@ -520,6 +847,10 @@ type属性 : 改变前面标记的样式( 一般都是用CSS去控制 )
         <dd>jQuery</dd>
     </dl>
 ```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-020-01](2020Web HTML CSS\01-020 定义列表\01-020-01.png)
 
 实例： [index.html](2020Web HTML CSS\01-020 定义列表\index.html) 
 
@@ -578,7 +909,11 @@ type属性 : 改变前面标记的样式( 一般都是用CSS去控制 )
     </ul>
 ```
 
- [index.html](2020Web HTML CSS\01-021 嵌套列表\index.html) 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-021-01](2020Web HTML CSS\01-021 嵌套列表\01-021-01.png)
+
+实例： [index.html](2020Web HTML CSS\01-021 嵌套列表\index.html) 
 
 
 
@@ -609,9 +944,19 @@ type属性 : 改变前面标记的样式( 一般都是用CSS去控制 )
     </dl>
 ```
 
- [index1.html](2020Web HTML CSS\01-021 嵌套列表\index1.html) 
 
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-021-02](2020Web HTML CSS\01-021 嵌套列表\01-021-02.png)
+
+实例： [index1.html](2020Web HTML CSS\01-021 嵌套列表\index1.html) 
+
+
+
+
+
+![01-021-03](2020Web HTML CSS\01-021 嵌套列表\01-021-03.png)
 
 练习： [test.html](2020Web HTML CSS\01-021 嵌套列表\test.html) 
 
@@ -631,6 +976,39 @@ align : left、center、right
 
 valign : top、middle、bottom
 
+
+
+```
+    <table>
+        <caption>天气预报</caption>
+        <thead>
+            <tr>
+                <th>日期</th>
+                <th>天气情况</th>
+                <th>出行情况</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2020年5月7日</td>
+                <td><img src="./img/tianqi_1.png" alt=""></td>
+                <td>适合出行</td>
+            </tr>
+            <tr>
+                <td>2020年5月8日</td>
+                <td><img src="./img/tianqi_2.png" alt=""></td>
+                <td>需带伞</td>
+            </tr>
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-022](2020Web HTML CSS\01-022 表格标签\01-022.png)
+
 实例： [index.html](2020Web HTML CSS\01-022 表格标签\index.html) 
 
 
@@ -649,13 +1027,62 @@ valign : top、middle、bottom
 
    cellspacing ： 单元格之间的空间
 
-   rowspan ： 合并行
+```
+<table border="1px" cellpadding="30px" cellspacing="30">
+```
 
-   colspan ： 合并列
 
-   align ： 左右对齐方式
 
-   valign ：上下对齐方式	
+rowspan ： 合并行
+
+colspan ： 合并列
+
+```
+    <table  border="1px">
+        <caption>标题</caption>
+        <thead>
+            <tr>
+                <th colspan="2">日期</th> <!-- 合并列 -->
+                <td>天气情况</td>
+                <td>备注</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">5月6日</td> <!--合并行-->
+                <td>白天</td>
+                <td>晴</td>
+                <td>无需带伞</td>
+            </tr>
+            <tr>
+                <td>晚上</td>
+                <td>小雨</td>
+                <td>需要带伞</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>天气预报</td>
+            </tr>
+        </tfoot>
+    </table>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-023-01](2020Web HTML CSS\01-023 表格属性\01-023-01.png)
+
+实例： [index1.html](2020Web HTML CSS\01-023 表格属性\index1.html) 
+
+
+
+align ： 左右对齐方式
+
+valign ：上下对齐方式	
+
+```
+<tr align="right" valign="top"> 
+```
 
 实例： [index.html](2020Web HTML CSS\01-023 表格属性\index.html) 
 
@@ -668,6 +1095,15 @@ valign : top、middle、bottom
 ### 关于border-collapse
 
 设置表格极细边框border-collapse: collapse;
+
+```
+        table{
+            border-collapse: collapse;
+        }
+        table, th, td{
+            border: 1px solid #E0E0E0;
+        }
+```
 
 练习: [test.html](2020Web HTML CSS\01-023 表格属性\test.html) 
 
@@ -712,6 +1148,10 @@ valign : top、middle、bottom
     </form>
 ```
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-024-01](2020Web HTML CSS\01-024 表单input标签\01-024-01.png)
+
 实例： [index.html](2020Web HTML CSS\01-024 表单input标签\index.html) 
 
 
@@ -727,39 +1167,74 @@ input(单标签)标签有一个type属性，决定是什么控件。
 
 还有一些常见的属性： checked、disabled、name、for ...
 
+select属性
+
+| 属性                                                         | 值        | 描述                                               |
+| :----------------------------------------------------------- | :-------- | :------------------------------------------------- |
+| [autofocus](https://www.w3cschool.cn/htmltags/att-select-autofocus.html)New | autofocus | 规定在页面加载时下拉列表自动获得焦点。             |
+| [disabled](https://www.w3cschool.cn/htmltags/att-select-disabled.html) | disabled  | 当该属性为 true 时，会禁用下拉列表。               |
+| [form](https://www.w3cschool.cn/htmltags/att-select-form.html)New | *form_id* | 定义 select 字段所属的一个或多个表单。             |
+| [multiple](https://www.w3cschool.cn/htmltags/att-select-multiple.html) | multiple  | 当该属性为 true 时，可选择多个选项。               |
+| [name](https://www.w3cschool.cn/htmltags/att-select-name.html) | *name*    | 定义下拉列表的名称。                               |
+| [required](https://www.w3cschool.cn/htmltags/att-select-required.html)New | required  | 规定用户在提交表单前必须选择一个下拉列表中的选项。 |
+| [size](https://www.w3cschool.cn/htmltags/att-select-size.html) | *number*  | 规定下拉列表中可见选项的数目。                     |
+
+
+
+option属性
+
+| 属性                                                         | 值       | 描述                                             |
+| :----------------------------------------------------------- | :------- | :----------------------------------------------- |
+| [disabled](https://www.w3cschool.cn/htmltags/att-option-disabled.html) | disabled | 规定此选项应在首次加载时被禁用。                 |
+| [label](https://www.w3cschool.cn/htmltags/att-option-label.html) | text     | 定义当使用 <optgroup> 时所使用的标注。           |
+| [selected](https://www.w3cschool.cn/htmltags/att-option-selected.html) | selected | 规定选项（在首次显示在列表中时）表现为选中状态。 |
+| [value](https://www.w3cschool.cn/htmltags/att-option-value.html) | text     | 定义送往服务器的选项值。                         |
+
+
+
 ```
-<h2>多行文本框</h2>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <h2>下拉菜单</h2>
-        <select name="" id="" >
+<form action="http://www.baidu.com">
+	<h2>多行文本框</h2>
+
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+	<h2>下拉菜单</h2>
+
+	<select name="" id="" >
             <option value="" selected disabled>请选择</option>
             <option value="">北京</option>
             <option value="">上海</option>
             <option value="">深圳</option>
             <option value="">杭州</option>
             <!-- selected设置为默认显示 -->
-        </select>
-        <select name="" id="" size="3">
+    </select>
+
+    <select name="" id="" size="3">
             <option value="">北京</option>
             <option value="">上海</option>
             <option value="">深圳</option>
             <option value="">杭州</option>
             <!-- size为显示多少个 -->
-        </select>
-        <select name="" id="" multiple>
+    </select>
+
+    <select name="" id="" multiple>
             <option value="">北京</option>
             <option value="">上海</option>
             <option value="">深圳</option>
             <option value="">杭州</option>
             <!--multiple 可选择多个选项 Ctrl+左键 -->
-        </select>
+    </select>
+        
         <input type="file" multiple>
-
+    </br>
         <input type="radio" name="gender" id="man"><label for="man">男</label>
         <input type="radio" name="gender" id="woman"><label for="woman">女</label>
+    </form>
 ```
 
 实例： [index.html](2020Web HTML CSS\01-025 表单相关标签\index.html) 
+
+
 
 
 
@@ -787,6 +1262,40 @@ input(单标签)标签有一个type属性，决定是什么控件。
 
 
 ## 01-026 表格表单组合实例
+
+```
+    <form action="" method="http;//www.abc.com">
+        <table border="1" cellpadding="30px">
+            <tr>
+                <td rowspan="4">总体信息</td>
+                <td colspan="2" align="center">用户注册</td>
+            </tr>
+            <tr>
+                <td align="right">用户名：</td>
+                <td>
+                    <input type="text" name="user" placeholder="请输入用户名">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">密码：</td>
+                <td>
+                    <input type="password" name="pwd" placeholder="请输入密码">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="提交">
+                    &nbsp;
+                    <input type="reset" value="重置">
+                </td>
+            </tr>
+        </table>
+    </form>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-026-01](2020Web HTML CSS\01-026 表格表单组合实例\01-026-01.png)
 
 实例： [index.html](2020Web HTML CSS\01-026 表格表单组合实例\index.html) 
 
@@ -826,7 +1335,27 @@ CSS注释：/*  CSS注释的内容  */
 
 内联（行内、行间）样式在html标签上添加style属性来实现的
 
+```
+<div style="width: 100px;height:100px;background-color: brown;">这是一个块</div>
+```
+
+
+
+
+
 内部样式在<style>标签内添加的样式  优点：可以复用代码
+
+```
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color: royalblue;
+        }
+    </style>
+    
+    <div class="div1">这是一个块</div>
+```
 
 区别：内部样式的代码可以复用、复合W3C的规范标准，进行让结构和样式分开处理。
 
@@ -844,7 +1373,21 @@ rel 属性规定当前文档与被链接文档之间的关系。
 
 stylesheet 文档的外部样式表。
 
+```
+<link rel="stylesheet" href="common.css">
+```
+
+
+
 @import 注：这种方式有很多问题，不建议使用。
+
+```
+    <style>
+        @import url('./common.css');
+    </style>
+```
+
+
 
 link和@import区别：
 
@@ -910,11 +1453,92 @@ scroll : 默认值  ( 背景位置是按照当前元素进行偏移的 )
 
 fixed ( 背景位置是按照浏览器进行偏移的 )
 
-实例：
 
- [index.html](2020Web HTML CSS\01-032 背景样式\index.html) 
 
- [index2.html](2020Web HTML CSS\01-032 背景样式\index2.html) 
+**总结：**
+
+| 值                                                           | 说明                                             | CSS  |
+| :----------------------------------------------------------- | :----------------------------------------------- | :--- |
+| *[background-color](https://www.w3cschool.cn/cssref/pr-background-color.html)* | 指定要使用的背景颜色                             | 1    |
+| *[background-position](https://www.w3cschool.cn/cssref/pr-background-position.html)* | 指定背景图像的位置                               | 1    |
+| *[background-size](https://www.w3cschool.cn/cssref/css3-pr-background-size.html)* | 指定背景图片的大小                               | 3    |
+| *[background-repeat](https://www.w3cschool.cn/cssref/pr-background-repeat.html)* | 指定如何重复背景图像                             | 1    |
+| *[background-origin](https://www.w3cschool.cn/cssref/css3-pr-background-origin.html)* | 指定背景图像的定位区域                           | 3    |
+| *[background-clip](https://www.w3cschool.cn/cssref/css3-pr-background-clip.html)* | 指定背景图像的绘画区域                           | 3    |
+| *[background-attachment](https://www.w3cschool.cn/cssref/pr-background-attachment.html)* | 设置背景图像是否固定或者随着页面的其余部分滚动。 | 1    |
+| *[background-image](https://www.w3cschool.cn/cssref/pr-background-image.html)* | 指定要使用的一个或多个背景图像                   | 1    |
+
+
+
+```
+    <style>
+        .d1{
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+            background-image: url('./img/dog.jpg');
+            background-repeat: repeat-x;
+        }
+        .d2{
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+            background-image: url('./img/dog.jpg');
+            background-repeat: repeat-y;
+        }
+        .d3{
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+            background-image: url('./img/dog.jpg');
+            background-repeat: no-repeat;
+            /* background-position: 110px 50px; */
+            background-position: 50% 50%;
+        }
+    </style>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-032-01](2020Web HTML CSS\01-032 背景样式\01-032-01.png)
+
+实例： [index.html](2020Web HTML CSS\01-032 背景样式\index.html) 
+
+
+
+
+
+
+
+```
+    <style>
+        body{
+            margin: 0;
+            height: 2000px;
+        }
+        .d1{
+            width: 1440px;
+            height: 800px;
+            background-color: brown;
+            background-image: url('./img/dog.jpg');
+            background-repeat: no-repeat;
+            background-position: 50% 20%;
+            background-attachment: fixed;
+        }
+    </style>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+小窗口:
+
+![01-032-02](2020Web HTML CSS\01-032 背景样式\01-032-02.png)
+
+大窗口：
+
+![01-032-03](2020Web HTML CSS\01-032 背景样式\01-032-03.png)
+
+实例： [index2.html](2020Web HTML CSS\01-032 背景样式\index2.html) 
 
 
 
@@ -922,9 +1546,45 @@ fixed ( 背景位置是按照浏览器进行偏移的 )
 
 参考网站：http://www.divups.com/
 
+设置元素高度，然后采用background-attachment: fixed;
 
+```
+     <style>
+        #div1{
+            width: 1400px;
+            height: 800px;
+            background-image: url(./img/1.jpg);
+            background-attachment: fixed;
+            
+        }
+        #div2{
+            width: 1400px;
+            height: 800px;
+            background-image: url(./img/2.jpg);
+            background-attachment: fixed;
+        }
+        #div3{
+            width: 1400px;
+            height: 800px;
+            background-image: url(./img/3.jpg);
+            /* background-attachment: fixed; */
+        }
+    </style>
+    
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+</body>
+```
 
-实例： [index.html](2020Web HTML CSS\01-033 背景实现视觉差效果\index.html) 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-033-01](2020Web HTML CSS\01-033 背景实现视觉差效果\01-033-01.gif)
+
+实例： [test.html](2020Web HTML CSS\01-033 背景实现视觉差效果\test.html) 
+
+ [index.html](2020Web HTML CSS\01-033 背景实现视觉差效果\index.html) 
 
 
 
@@ -962,6 +1622,59 @@ border-right-style等等
 
 简写border: 5px solid brown
 
+
+
+```
+    <style>
+        .d1{
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            border-style: dashed;
+            border-color: black;
+            border-width: 5px;
+        }
+        .d2{
+            width: 200px;
+            height: 200px;
+            background-color: royalblue;
+            border-left-style: dashed;
+            border-color: black;
+            border-width: 5px;
+        }
+        .d3{
+            width: 200px;
+            height: 200px;
+            background-color: seagreen;
+            border-style: dotted;
+            border-color: black;
+            border-width: 10px;
+            border-bottom: none;
+        }
+        .d4{
+            width: 200px;
+            height: 200px;
+            background: lightsalmon;
+            border: 5px solid brown;
+            border-top: 10px dashed black;
+        }
+    </style>
+    
+    <body>
+    <div class="d1">1</div>
+    <hr>
+    <div class="d2">2</div>
+    <hr>
+    <div class="d3">3</div>
+    <hr>
+    <div class="d4">4</div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-034-01](2020Web HTML CSS\01-034 CSS边框样式\01-034-01.png)
+
 实例： [index.html](2020Web HTML CSS\01-034 CSS边框样式\index.html) 
 
 
@@ -971,6 +1684,25 @@ border-right-style等等
 ### transparent
 
 background-color:transparent 无颜色，即透明
+
+
+
+```
+    <style>
+        div{
+            width: 0;
+            height: 00px;
+            border-top: 100px solid transparent;
+            border-right: 100px solid brown;
+            border-bottom: 100px solid transparent;
+            border-left: 100px solid transparent;
+        }
+    </style>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-035-01](2020Web HTML CSS\01-035 边框实现三角形\01-035-01.png)
 
 实例： [index.html](2020Web HTML CSS\01-035 边框实现三角形\index.html) 
 
@@ -998,7 +1730,7 @@ font-family：字体类型
 
 衬线体与非衬线体
 
-![20200508203000](\2020Web HTML CSS\01-036 family字体类型\20200508203000.png)
+![20200508203000](2020Web HTML CSS\01-036 family字体类型\20200508203000.png)
 
 注意事项：
 
@@ -1083,22 +1815,63 @@ color:brown或#000000或rgb()
 
 ## 01-038-042 文本
 
-| 属性                                                         | 描述                                                        |
-| :----------------------------------------------------------- | :---------------------------------------------------------- |
-| [color](https://www.w3school.com.cn/cssref/pr_text_color.asp) | 设置文本颜色                                                |
-| [direction](https://www.w3school.com.cn/cssref/pr_text_direction.asp) | 设置文本方向。                                              |
-| [line-height](https://www.w3school.com.cn/cssref/pr_dim_line-height.asp) | 设置行高。                                                  |
-| [letter-spacing](https://www.w3school.com.cn/cssref/pr_text_letter-spacing.asp) | 设置字符间距。                                              |
-| [text-align](https://www.w3school.com.cn/cssref/pr_text_text-align.asp) | 对齐元素中的文本。                                          |
-| [text-decoration](https://www.w3school.com.cn/cssref/pr_text_text-decoration.asp) | 向文本添加修饰。                                            |
-| [text-indent](https://www.w3school.com.cn/cssref/pr_text_text-indent.asp) | 缩进元素中文本的首行。                                      |
-| text-shadow                                                  | 设置文本阴影。CSS2 包含该属性，但是 CSS2.1 没有保留该属性。 |
-| [text-transform](https://www.w3school.com.cn/cssref/pr_text_text-transform.asp) | 控制元素中的字母。                                          |
-| unicode-bidi                                                 | 设置文本方向。                                              |
-| [white-space](https://www.w3school.com.cn/cssref/pr_text_white-space.asp) | 设置元素中空白的处理方式。                                  |
-| [word-spacing](https://www.w3school.com.cn/cssref/pr_text_word-spacing.asp) | 设置字间距。                                                |
+**css文本效果**
 
-https://www.w3school.com.cn/css/css_text.asp
+| 属性                                                         | 描述                     |
+| :----------------------------------------------------------- | :----------------------- |
+| [color](https://www.w3cschool.cn/cssref/pr-text-color.html)  | 设置文本颜色             |
+| [direction](https://www.w3cschool.cn/cssref/pr-text-direction.html) | 设置文本方向。           |
+| [letter-spacing](https://www.w3cschool.cn/cssref/pr-text-letter-spacing.html) | 设置字符间距             |
+| [line-height](https://www.w3cschool.cn/cssref/pr-dim-line-height.html) | 设置行高                 |
+| [text-align](https://www.w3cschool.cn/cssref/pr-text-text-align.html) | 对齐元素中的文本         |
+| [text-decoration](https://www.w3cschool.cn/cssref/pr-text-text-decoration.html) | 向文本添加修饰           |
+| [text-indent](https://www.w3cschool.cn/cssref/pr-text-text-indent.html) | 缩进元素中文本的首行     |
+| [text-shadow](https://www.w3cschool.cn/cssref/css3-pr-text-shadow.html) | 设置文本阴影             |
+| [text-transform](https://www.w3cschool.cn/cssref/pr-text-text-transform.html) | 控制元素中的字母         |
+| [unicode-bidi](https://www.w3cschool.cn/cssref/pr-text-unicode-bidi.html) | 设置或返回文本是否被重写 |
+| [vertical-align](https://www.w3cschool.cn/cssref/pr-pos-vertical-align.html) | 设置元素的垂直对齐       |
+| [white-space](https://www.w3cschool.cn/cssref/pr-text-white-space.html) | 设置元素中空白的处理方式 |
+| [word-spacing](https://www.w3cschool.cn/cssref/pr-text-word-spacing.html) | 设置字间距               |
+
+参考：https://www.w3cschool.cn/css/css-text.html
+
+### direction
+
+文本方向/书写方向。
+
+ltr:默认。文本方向从左到右。
+
+rtl:文本方向从右到左。
+
+
+
+### letter-spacing 
+
+增加或减少字符间的空白（字符间距）
+
+normal:默认。规定字符间没有额外的空间。
+
+length:定义字符间的固定空间（允许使用负值）。
+
+
+
+### line-height
+
+定义行高
+
+什么是行高，一行文字的高度，上边距和下边距的等价关系。
+
+默认行高：不是固定值，而是变化的。根据当前字体的大小再不断的变化。
+
+取值：1. number( px )   |  scale ( 比例值 , 跟文字大小成比例的 )   |  length 设置固定的行间距。
+
+![图片1](2020Web HTML CSS\01-038-042 文本\图片1.png)
+
+###  text-align
+
+文本对齐方式
+
+对齐方式 : left 、right、center、justify（两端点对齐）
 
 
 
@@ -1118,20 +1891,6 @@ https://www.w3school.com.cn/css/css_text.asp
 
 
 
-### text-transform
-
-针对英文段落
-
-文本大小写
-
-小写：lowercase
-
-大写：uppercase
-
-只针对首字母大写：capitalize
-
-
-
 ###  text-indent
 
 文本缩进 首行缩进
@@ -1140,31 +1899,69 @@ em单位：相对单位，1em永远都是跟字体大小相同
 
 
 
-###  text-align
+### text-transform
 
-文本对齐方式
+针对英文段落 文本大小写
 
-对齐方式 : left 、right、center、justify（两端点对齐）
+lowercase:定义仅有小写
 
+uppercase:定义仅有大写
 
-
-### line-height
-
-定义行高
-
-什么是行高，一行文字的高度，上边距和下边距的等价关系。
-
-默认行高：不是固定值，而是变化的。根据当前字体的大小再不断的变化。
-
-取值：1. number( px )   |  scale ( 比例值 , 跟文字大小成比例的 )   |  length 设置固定的行间距。
-
-![图片1](\2020Web HTML CSS\01-038-042 文本\图片1.png)
+capitalize:文本中的每个单词以大写字母开头。
 
 
 
-### letter-spacing
+### unicode-bidi
 
- 字之间的间距
+设置或返回文本是否被重写 
+
+官方文档的描述看不懂
+
+引用他人博客详细解释:https://www.cnblogs.com/dolphinX/p/4087816.html
+
+本地链接： [direction和unicode-bidi - 谦行 - 博客园.html](2020Web HTML CSS\01-038-042 文本\direction和unicode-bidi - 谦行 - 博客园.html) 
+
+
+
+### vertical-align
+
+设置一个元素的垂直对齐。
+
+baseline:默认。元素放置在父元素的基线上。
+
+sub:垂直对齐文本的下标。
+
+super:垂直对齐文本的上标
+
+top:把元素的顶端与行中最高元素的顶端对齐
+
+text-top:把元素的顶端与父元素字体的顶端对齐
+
+middle:把此元素放置在父元素的中部。
+
+bottom:把元素的顶端与行中最低的元素的顶端对齐。
+
+text-bottom:把元素的底端与父元素字体的底端对齐。
+
+length
+
+% 使用 "line-height" 属性的百分比值来排列此元素。允许使用负值。
+
+
+
+### white-space
+
+指定元素内的空白怎样处理。
+
+normal:默认。空白会被浏览器忽略。                                
+
+pre:空白会被浏览器保留。其行为方式类似 HTML 中的 pre 标签。 
+
+nowrap:文本不会换行，文本会在在同一行上继续，直到遇到 br 标签为止。
+
+pre-wrap:保留空白符序列，但是正常地进行换行。                      
+
+pre-line:合并空白符序列，但是保留换行符。                         
 
 
 
@@ -1172,13 +1969,130 @@ em单位：相对单位，1em永远都是跟字体大小相同
 
 词之间的间距  ( 针对英文段落的 )
 
+normal:默认。定义单词间的标准空间。
+
+length:定义单词间的固定空间。
+
+
+
+**CSS3 文本效果**
+
+| 属性                                                         | 描述                                                     | CSS  |
+| :----------------------------------------------------------- | :------------------------------------------------------- | :--- |
+| [hanging-punctuation](https://www.w3cschool.cn/cssref/css3-pr-hanging-punctuation.html) | 规定标点字符是否位于线框之外。                           | 3    |
+| [punctuation-trim](https://www.w3cschool.cn/cssref/css3-pr-punctuation-trim.html) | 规定是否对标点字符进行修剪。                             | 3    |
+| [text-align-last](https://www.w3cschool.cn/cssref/css3-pr-text-align-last.html) | 设置如何对齐最后一行或紧挨着强制换行符之前的行。         | 3    |
+| text-emphasis                                                | 向元素的文本应用重点标记以及重点标记的前景色。           | 3    |
+| [text-justify](https://www.w3cschool.cn/cssref/css3-pr-text-justify.html) | 规定当  text-align 设置为 "justify" 时所使用的对齐方法。 | 3    |
+| [text-outline](https://www.w3cschool.cn/cssref/css3-pr-text-outline.html) | 规定文本的轮廓。                                         | 3    |
+| [text-overflow](https://www.w3cschool.cn/cssref/css3-pr-text-overflow.html) | 规定当文本溢出包含元素时发生的事情。                     | 3    |
+| [text-shadow](https://www.w3cschool.cn/cssref/css3-pr-text-shadow.html) | 向文本添加阴影。                                         | 3    |
+| [text-wrap](https://www.w3cschool.cn/cssref/css3-pr-text-wrap.html) | 规定文本的换行规则。                                     | 3    |
+| [word-break](https://www.w3cschool.cn/cssref/css3-pr-word-break.html) | 规定非中日韩文本的换行规则。                             | 3    |
+| [word-wrap](https://www.w3cschool.cn/cssref/css3-pr-word-wrap.html) | 允许对长的不可分割的单词进行分割并换行到下一行。         | 3    |
+
+参考：https://www.w3cschool.cn/css3/ov693flj.html
+
+
+
+hanging-punctuation
+
+指定一个标点符号是否会在启动或在结束时文本行框以外。
+
+目前浏览器都不支持 2333
+
+
+
+punctuation-trim
+
+是否应修饰，当它出现在一条线，或相邻的另一个全形标点符号字符开头或结束标点字符。
+
+目前浏览器都不支持 2333
+
+
+
+text-align-last
+
+规定如何对齐文本的最后一行。
+
+**注意：**text-align-last 属性只有在 text-align 属性设置为 "justify" 时才起作用。
+
+只支持chrome和IE
+
+
+
+text-justify
+
+文本对齐设置为"justify"的理据。
+
+此属性指定应怎样对齐文本以及对齐间距。
+
+只支持IE 2333
+
+
+
+text-outline
+
+文本-轮廓 文字大纲。
+
+都不支持2333
+
+
+
+### text-overflow
+
+文本溢出包含它的元素，应该发生的事情。
+
+clip:修剪文本。
+
+ellipsis:显示省略符号来代表被修剪的文本。
+
+string:使用给定的字符串来代表被修剪的文本。
+
+
+
+### text-shadow
+
+```
+text-shadow: h-shadow v-shadow blur color;
+```
+
+给文本添加阴影。
+
+h-shadow:必需。水平阴影的位置。允许负值。
+v-shadow:必需。垂直阴影的位置。允许负值。
+blur:可选。模糊的距离。
+color:可选。阴影的颜色。参阅 [CSS 颜色值](https://www.w3cschool.cn/cssref/css-colors-legal.html)。
+
+
+
+text-wrap
+
+文本换行规则。
+
+任何浏览器都不支持2333
+
 
 
 ### word-break
 
-word-break : break-all; (非常强烈的折行)
+word-break属性指定非CJK脚本的断行规则。
 
-word-wrap : break-word;(不是那么强烈的折行 ，会产生一些空白区域)  
+**提示:**CJK脚本是中国，日本和韩国（"中日韩"）脚本。
+
+normal:使用浏览器默认的换行规则。
+
+break-all:允许在单词内换行 (非常强烈的折行)
+
+keep-all:只能在半角空格或连字符处换行。
+
+
+
+### word-wrap 
+
+允许长的内容可以自动换行。
+
+break-word:(不是那么强烈的折行 ，会产生一些空白区域)  
 
 
 
@@ -1187,6 +2101,8 @@ word-wrap : break-word;(不是那么强烈的折行 ，会产生一些空白区�
 练习： [test.html](2020Web HTML CSS\01-038-042 文本\test.html) 
 
 使用PS测量 取色等
+
+
 
 
 
@@ -1216,7 +2132,28 @@ weight style size/line-height family √
 
 注：如果非要混合去写的话，那么要先写复合样式，再写单一样式，这样样式才不会被覆盖掉。
 
+```
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: brown;  /* 被下面属性覆盖 */
+            background: url(./img/dog.jpg) no-repeat center;
+            /* background-color: brown; */
+            border: 5px solid royalblue;
+            border-right: none;
+            font: bold italic 20px 宋体 ;
+            /* weight style size family  √ */
+            /* style weight size family  √ */
+            /* weight style size/line-height family √ */
+            color: lightgray;
+        }
+    </style>
+```
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-043-01](2020Web HTML CSS\01-043 CSS复合样式\01-043-01.png)
 
 实例： [index.html](2020Web HTML CSS\01-043 CSS复合样式\index.html) 
 
@@ -1230,7 +2167,7 @@ ID选择器
 
 CSS:#elem{}
 
-heml:id="elem"
+html:id="elem"
 
 注：
 
@@ -1254,7 +2191,7 @@ class选择器 类选择器
 
 css:.elem{}
 
-heml:class="elem"
+html:class="elem"
 
 注：
 
@@ -1310,11 +2247,70 @@ css:div, p, span{}
 
 ### 后代  M N { }
 
+后代选取器匹配所有指定元素的后代元素。
+
+```
+    <style>
+        div p{
+            background: tomato;
+        }
+    </style>
+    
+<body>
+    <div>
+        <p>在div中</p>
+        <p>在div中</p>
+    </div>
+    <p>不在div中</p>
+    <p>不在div中</p>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-047-01](2020Web HTML CSS\01-047 层次选择器\01-047-01.png)
+
+实例： [01后代_new.html](2020Web HTML CSS\01-047 层次选择器\01后代_new.html) 
+
  [01后代.html](2020Web HTML CSS\01-047 层次选择器\01后代.html) 
 
 
 
 ### 父子  M > N { }
+
+与后代选择器相比，子元素选择器（Child selectors）只能选择作为某元素子元素的元素。
+
+```
+    <style>
+        div>p{
+            background: tomato;
+        }
+    </style>
+    
+<body>
+    <h2>标题2标题2</h2>
+    <div>
+        <h2>My name is Baakseng</h2>
+        <p>这才是儿子</p>
+        <span>123</span>
+        <p>这也是儿子</p>
+    </div>
+    <hr>
+    <div>
+        <span>
+            <p>这不是儿子，因为父元素是span</p>
+        </span>
+    </div>
+    <hr>
+    <p>木有父元素div</p>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-047-02](2020Web HTML CSS\01-047 层次选择器\01-047-02.png)
+
+实例： [02父子_new.html](2020Web HTML CSS\01-047 层次选择器\02父子_new.html) 
 
  [02父子.html](2020Web HTML CSS\01-047 层次选择器\02父子.html) 
 
@@ -1322,15 +2318,79 @@ css:div, p, span{}
 
 ### 兄弟  M ~ N { }  当前M下面的所有兄弟N标签
 
+普通兄弟选择器选取所有指定元素的相邻兄弟元素。
+
+```
+    <style>
+        div ~ h2{
+            background: tomato;
+        }
+    </style>
+   
+<body>
+    <div>
+        <h2>在div里</h2>
+        <h2>在div里</h2>
+    </div>
+    <h2>不在dvi里</h2>
+    <p>这只是一个段落</p>
+    <h2>不在dvi里</h2>
+    <hr>
+
+    <div>
+        <div></div>
+        <h2>在div里</h2>
+    </div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-047-03](2020Web HTML CSS\01-047 层次选择器\01-047-03.png)
+
+实例： [03兄弟_new.html](2020Web HTML CSS\01-047 层次选择器\03兄弟_new.html) 
+
  [03兄弟.html](2020Web HTML CSS\01-047 层次选择器\03兄弟.html) 
 
 
 
 ### 相邻  M + N { }  当前M下面相邻的N标签
 
+相邻兄弟选择器（Adjacent sibling selector）可选择紧接在另一元素后的元素，且二者有相同父元素。
+
+如果需要选择紧接在另一个元素后的元素，而且二者有相同的父元素，可以使用相邻兄弟选择器（Adjacent sibling selector）。
+
+
+
+```
+    <style>
+        div + h2{
+            background: tomato;
+        }
+    </style>
+    
+<body>
+    <h2>可惜这不是兄弟，前面木有div</h2>
+    <div>div</div>
+    <p>这是一个段落</p>
+    <h2>这是标题2，但是前面隔着P标签，无法使用css</h2>
+    <div>div</div>
+    <h2>我才是兄弟，因为前面紧邻div</h2>
+    <hr>
+    <div>div
+        <h2>这是标题2，在div里</h2>
+    </div>
+    <h2>我也才是兄弟</h2>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-047-04](2020Web HTML CSS\01-047 层次选择器\01-047-04.png)
+
+实例： [04相邻_new.html](2020Web HTML CSS\01-047 层次选择器\04相邻_new.html) 
+
  [04相邻.html](2020Web HTML CSS\01-047 层次选择器\04相邻.html) 
-
-
 
 ### 总结
 
@@ -1365,11 +2425,58 @@ $= : 结束匹配
 
 [ ] [ ] [ ] : 组合匹配
 
+```
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+        }
+        div[class]{
+            background: lightskyblue;
+        }
+        div[class*="rch"]{
+            background: lightsalmon;
+            /* sea rch button*/
+        }
+        div[class^="s"]{
+            background: lightseagreen;
+            /* s earchbutton */
+        }
+        div[class$="on"]{
+            background: brown;
+            /* searchbutt on */
+        }
+        [id]{
+            background: gray;
+        }
+        p[id]{
+            background: lightgray;
+        }
+    
+<body>
+    <div>1</div>
+    <div class="box">2</div>
+    <div class="search">3</div>
+    <div class="searchbutton">4</div>
+    <div class="123">5</div>
+    <div id="123">6</div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-048-01](2020Web HTML CSS\01-048 属性选择器\01-048-01.png)
+
+实例： [index.html](2020Web HTML CSS\01-048 属性选择器\index.html) 
+
+
+
 
 
 | 选择器                                                       | 描述                                                         |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| [[*attribute*\]](https://www.w3school.com.cn/cssref/selector_attribute.asp) | 用于选取带有指定属性的元素。                                 |
+| [[*attribute*\]](https://www.w3school.com.cn/cssref/selector_attribute.asp) | 用于选取带有指定**属性**的元素。                             |
 | [[*attribute*=*value*\]](https://www.w3school.com.cn/cssref/selector_attribute_value.asp) | 用于选取带有指定属性和值的元素。                             |
 | [[*attribute*~=*value*\]](https://www.w3school.com.cn/cssref/selector_attribute_value_contain.asp) | 用于选取属性值中包含指定词汇的元素。                         |
 | [[*attribute*\|=*value*\]](https://www.w3school.com.cn/cssref/selector_attribute_value_start.asp) | 用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。 |
@@ -1377,9 +2484,40 @@ $= : 结束匹配
 | [[*attribute*$=*value*\]](https://www.w3school.com.cn/cssref/selector_attr_end.asp) | 匹配属性值以指定值结尾的每个元素。                           |
 | [attribute*=value]                                           | 匹配属性值中包含指定值的每个元素。                           |
 
+```
+    <style>
+        [title] {
+            color: blue;
+        }
+        [title = w3c]{
+            color: brown;
+        }
+        [title~="gamer"]{
+            color: seagreen;
+        }
+        a[target=_blank]{
+            background: yellow;
+        }
+        a[href *= "taobao"]{
+            background: orange;
+        }
+    </style>
+<body>
+    <h2 title="helloworld">Hello World</h2>
+    <h2 title="w3c">Hello World</h2>
+    <h2 title="gamerwow12">Hello World</h2> <!-- 只能单词gamer才能显示seargreen颜色 -->
+    <h2 title="RO gamer">Hello World</h2>
+    <a href="http://www.baidu.com" target=_blank>Hello World</a>
+    <br>
+    <a href="http://www.taobao.com">Hello World</a>
+</body>
+```
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
 
-实例： [index.html](2020Web HTML CSS\01-048 属性选择器\index.html) 
+![01-048-02](2020Web HTML CSS\01-048 属性选择器\01-048-02.png)
+
+实例： [index2.html](2020Web HTML CSS\01-048 属性选择器\index2.html) 
 
 
 
@@ -1395,7 +2533,7 @@ M:伪类{}
 
  :active     鼠标按下时的样式  (可以添加给所有的标签)
 
-注：
+**注：**
 
 如果四个伪类都生效，一定要注意顺序：L V H A。
 
@@ -1409,11 +2547,67 @@ M:伪类{}
 
 :before 选择器向选定的元素前插入内容。
 
+```
+    <style>
+        .tupian{
+            width: 100px;
+            height: 100px;
+            background: url('./img/dog.jpg');
+            color: #ffffff;
+            position: relative;
+        }
+        .tupian::before{
+            content: " ";
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 5px;
+            background: tomato;
+        }
+    </style>
+    
+<body>
+    <div>
+        <div class="tupian">hello</div>
+    </div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-50-02](2020Web HTML CSS\01-050 after等伪类选择器\01-50-02.png)
+
+实例： [before.html](2020Web HTML CSS\01-050 after等伪类选择器\before.html) 
+
+
+
 :after 选择器向选定的元素之后插入内容。
 
-使用content属性即文本内容
+```
+    <style>
+        .tupian:after{
+            content: '  world';
+            color: white;
+            position: absolute;/*用这属性才能显示图片具体尺寸*/
+            width: 100px;
+            height: 100px;
+            background: url('./img/dog.jpg');
+        }
+    </style>
 
-实例： [after before.html](2020Web HTML CSS\01-050 after等伪类选择器\after before.html) 
+<body>
+    <div class="tupian">hello</div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-050-01](2020Web HTML CSS\01-050 after等伪类选择器\01-050-01.png)
+
+实例： [after.html](2020Web HTML CSS\01-050 after等伪类选择器\after.html) 
+
+使用content属性即文本内容
 
 
 
@@ -1425,6 +2619,47 @@ M:伪类{}
 
 :focus 选择器用于选取获得焦点的元素。接受键盘事件或其他用户输入的元素都允许 :focus 选择器。
 
+
+
+```
+        .box1:checked{
+            width: 100px;
+            height: 100px;
+
+        }
+        .box2:disabled{
+            width: 100px;
+            height: 100px;
+        }
+        .box3:focus{
+            height: 30px;
+            background: tomato;
+            border: 2px solid yellow;
+            box-shadow: 5px 5px 10px gray;
+            /* 点击内容框样式有变化 */
+        } 
+<body>
+    <p>box1</p>
+    <input class="box1" type="checkbox">
+    <input class="box1" type="checkbox" checked>
+    <input class="box1" type="checkbox">
+    <hr>
+    <p>box2</p>
+    <input class="box2" type="checkbox">
+    <input class="box2" type="checkbox" checked>
+    <input class="box2" type="checkbox" disabled><span>右边的打勾不了-_,-</span>
+    <hr>
+    <p>box3</p>
+    <span>用户名：</span><input class="box3" type="text">
+    <br>
+    <span> 密码：  </span>&nbsp;&nbsp;<input class="box3" type="password">
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-50-03](2020Web HTML CSS\01-050 after等伪类选择器\01-50-03.gif)
+
 实例： [checked disabled focus.html](2020Web HTML CSS\01-050 after等伪类选择器\checked disabled focus.html) 
 
 
@@ -1435,11 +2670,68 @@ nth-of-type() 选择器匹配属于父元素的特定类型的第 N 个子元素
 
 按照类型来计算，如果是class那么碰到不同类型的，单独一类，符合条件的选中。
 
+匹配同类型中的第n个同级兄弟元素。参数是元素的索引。索引从1开始。
+
+```
+    <style>
+        p:nth-of-type(3){
+            background: tomato;
+        }
+    </style>
+<body>
+    <h1>这是标题1</h1>
+    <p>This is 1st</p>
+    <p>This is 2nd</p>
+    <p>This is 3rd</p>
+    <p>This is 4th</p>
+    <p>This is 5th</p>
+    <p>This is 6th</p>
+    <p>This is 7th</p>
+    <p>This is 8th</p>
+    <p>This is 9th</p>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-050-01](2020Web HTML CSS\01-051 结构伪类选择器\01-050-01.png)
+
+实例： [nth-of-type().html](2020Web HTML CSS\01-051 结构伪类选择器\nth-of-type().html) 
+
 
 
 nth-child() 选择器匹配属于其父元素的第 N 个子元素，不论元素的类型。n 可以是数字、关键词或公式。
 
 按照个数来算。
+
+```
+    <style>
+        p:nth-child(2n){
+            background: tomato;
+        }
+    </style>
+    
+<body>
+    <h1>这是标题1</h1>
+    <h2>这是标题2</h2>
+    <p>this is 3nd</p>
+    <p>this is 4thd</p>
+    <p>this is 5th</p>
+    <p>this is 6th</p>
+    <p>this is 7th</p>
+    <p>this is 8th</p>
+    <p>this is 9th</p>
+    <p>this is 10th</p>
+    <p>this is 11th</p>
+    <p>this is 12th</p>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-050-02](2020Web HTML CSS\01-051 结构伪类选择器\01-050-02.png)
+
+实例：  [nth-child.html](2020Web HTML CSS\01-051 结构伪类选择器\nth-child.html) 
 
 
 
@@ -1473,17 +2765,78 @@ https://www.cnblogs.com/pssp/p/5991029.html
 
 选择属于其父元素的首个元素的每个元素。
 
+**提示:** 等同于 :nth-of-type(1)。
+
 
 
 last-of-type
 
 选择属于其父元素的最后元素的每个元素。
 
+**提示:** 和:nth-last-of-type(1)是一个意思。
 
 
- only-of-type
+
+only-of-type
 
 选择属于其父元素唯一的元素的每个元素。
+
+```
+    <style>
+        p:only-of-type{
+            background: tomato;
+        }
+    </style>
+    
+<body>
+    <div>
+        <p>这是一个段落</p>
+        <p>这是一个段落</p>
+    </div>
+    <hr>
+    <div>
+    	<h2>这是标题2</h2>
+        <p>这是一个段落</p>
+    </div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-050-03](2020Web HTML CSS\01-051 结构伪类选择器\01-050-03.png)
+
+实例： [only-of-type.html](2020Web HTML CSS\01-051 结构伪类选择器\only-of-type.html) 
+
+
+
+only-child
+
+选择器匹配属于父元素中唯一子元素的元素。
+
+```
+    <style>
+        p:only-child{
+            background: tomato;
+        }
+    </style>
+    
+<body>
+    <div>
+        <p>这是一个段落</p>
+    </div>
+    <hr>
+    <div>
+        <h2>这是标题2</h2>
+        <p>这是一个段落</p>
+    </div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-050-04](2020Web HTML CSS\01-051 结构伪类选择器\01-050-04.png)
+
+实例： [only-child.html](2020Web HTML CSS\01-051 结构伪类选择器\only-child.html) 
 
 
 
@@ -1557,7 +2910,7 @@ last-of-type
 | [:not(*selector*)](https://www.w3school.com.cn/cssref/selector_not.asp) | :not(p)               | 选择非 <p> 元素的每个元素。                         | 3    |
 | [::selection](https://www.w3school.com.cn/cssref/selector_selection.asp) | ::selection           | 选择被用户选取的元素部分。                          | 3    |
 
-
+参考链接：https://www.w3cschool.cn/cssref/css-selectors.html
 
 
 
@@ -1568,6 +2921,31 @@ last-of-type
 文字相关的样式可以被继承
 
 布局相关的样式不能被继承 ( 默认是不能继承的，但是可以设置继承属性 inherit 值 )
+
+```
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid tomato;
+            color: slateblue;
+            font-size: 30px;
+        }
+        p{
+            border: inherit;
+        }
+    </style>
+   
+<body>
+    <div>
+        <p>这是一个段落</p>
+    </div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-052-01](2020Web HTML CSS\01-052 CSS样式的继承\01-052-01.png)
 
 实例： [index.html](2020Web HTML CSS\01-052 CSS样式的继承\index.html) 
 
@@ -1587,6 +2965,40 @@ last-of-type
 
 内部样式与外部样式优先级相同，如果都设置了相同样式，那么后写的引入方式优先级高。
 
+```
+    <link rel="stylesheet" href="base.css">
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background: teal;
+        }
+    </style>
+```
+
+base.css里面的颜色为tomato
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-053-01](2020Web HTML CSS\01-053 单一样式的优先级\01-053-01.png)
+
+
+
+```
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background: teal;
+        }
+    </style>
+    <link rel="stylesheet" href="base.css">
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-053-02](2020Web HTML CSS\01-053 单一样式的优先级\01-053-02.png)
+
 实例： [index1.html](2020Web HTML CSS\01-053 单一样式的优先级\index1.html) 
 
 
@@ -1595,7 +3007,7 @@ last-of-type
 
 style行间 > id > class > tag > * > 继承
 
-注：
+**注：**
 
 |                 | 权重值 |
 | --------------- | ------ |
@@ -1614,7 +3026,32 @@ style行间 > id > class > tag > * > 继承
 
 !important
 
-提升样式优先级，非规范方式，不建议使用。( 不能针对继承的属性进行优先级的提升 )
+提升样式优先级，非规范方式，不建议使用。( **不能针对继承的属性进行优先级的提升** )
+
+```
+    <style>
+        #elem{
+            color: brown /* !important */;
+        }
+        *{
+            color: seagreen /* !important */;
+        }
+        body{
+            color: gray !important;
+            /* 不能针对继承的属性进行优先级的提升 */
+        }
+    </style>
+    
+<body>
+    <div id="elem" style="color: royalblue;">这是一个块</div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-054-01](2020Web HTML CSS\01-054 important群组等优先级\01-054-01.png)
+
+结果不是gray颜色的字体
 
 实例： [!important.html](2020Web HTML CSS\01-054 important群组等优先级\!important.html) 
 
@@ -1624,6 +3061,25 @@ style行间 > id > class > tag > * > 继承
 
 标签+类 > 单类 
 
+```
+    <style>
+        .box{
+            background: tomato;
+        }
+        div.box{
+            background: lightskyblue;
+        }
+    </style>
+    
+<body>
+    <div class="box">这是一个块</div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-054-02](2020Web HTML CSS\01-054 important群组等优先级\01-054-02.png)
+
 实例： [index1.html](2020Web HTML CSS\01-054 important群组等优先级\index1.html) 
 
 
@@ -1631,6 +3087,27 @@ style行间 > id > class > tag > * > 继承
 群组优先级
 
 群组选择器与单一选择器的优先级相同，靠后写的优先级高。
+
+```
+    <style>
+        div {
+            color: royalblue;
+        }
+        div,p {
+            color: seagreen;
+        }
+        /* 试试把div,p 和div位置调换看看 */
+    </style>
+    
+<body>
+    <div>这是一个块</div>
+    <p>这是一个段落</p>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-054-03](2020Web HTML CSS\01-054 important群组等优先级\01-054-03.png)
 
 实例： [index2.html](2020Web HTML CSS\01-054 important群组等优先级\index2.html) 
 
@@ -1684,7 +3161,7 @@ tag 1
 
 ## 01-056CSS盒子模型
 
-![20200511081748](\2020Web HTML CSS\01-056 CSS盒子模型\20200511081748.png)
+![20200511081748](2020Web HTML CSS\01-056 CSS盒子模型\20200511081748.png)
 
 组成 : content -> padding -> border -> margin
 
@@ -1791,15 +3268,13 @@ border-box : width、height -> content padding border
 
 如果上面盒子margin为30px，下面盒子margin为50px，那么这俩盒子间距为50px，所以取这两个中的最大值
 
-![20200511111929](\2020Web HTML CSS\01-058 盒模型之margin叠加问题\20200511111929.png)
-
-
+![20200511111929](2020Web HTML CSS\01-058 盒模型之margin叠加问题\20200511111929.png)
 
 设置margin:40px 又设置float:left
 
 左右间距是40pz+40px=80px
 
-![20200511112355](\2020Web HTML CSS\01-058 盒模型之margin叠加问题\20200511112355.png)
+![20200511112355](2020Web HTML CSS\01-058 盒模型之margin叠加问题\20200511112355.png)
 
 实例： [index.html](2020Web HTML CSS\01-058 盒模型之margin叠加问题\index.html) 
 
@@ -1843,6 +3318,34 @@ overflow的值不是visible
 
 1、利用BFC避免margin重叠。
 
+```
+    p {
+        color: #f55;
+        background: yellow;
+        width: 200px;
+        line-height: 100px;
+        text-align:center;
+        margin: 30px;
+    }
+    div{
+        overflow: hidden; 
+        /* 上面属性取消试试效果*/
+    }
+    
+    
+    <body>
+    <p>看看我的 margin是多少</p>
+    <div>
+        <p>看看我的 margin是多少</p>
+    </div>
+    我们可以设置，两个不同的BFC，也就是我们可以让把第二个p用div包起来，然后激活它使其成为一个BFC
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-058-01](2020Web HTML CSS\01-058 盒模型之margin叠加问题\01-058-01.png)
+
 实例： [BFC1.html](2020Web HTML CSS\01-058 盒模型之margin叠加问题\BFC1.html) 
 
 
@@ -1850,6 +3353,52 @@ overflow的值不是visible
 2、自适应两栏布局
 
 每个盒子的margin box的左边，与包含块border box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。
+
+```
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        width: 100%;
+        position: relative;
+    }
+    .left {
+        width: 100px;
+        height: 150px;
+        float: left;
+        background: rgb(139, 214, 78);
+        text-align: center;
+        line-height: 150px;
+        font-size: 20px;
+    }
+    .right {
+        height: 300px;
+        background: rgb(170, 54, 236);
+        text-align: center;
+        line-height: 300px;
+        font-size: 40px;
+    }
+</style>
+
+<body>
+    <div class="left">LEFT</div>
+    <div class="right">RIGHT</div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-058-02](2020Web HTML CSS\01-058 盒模型之margin叠加问题\01-058-02.png)
+
+LEFT块占据了RIGHT左上
+
+解决方法：在RIGHT块的元素里添加overflow: hidden;
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-058-03](2020Web HTML CSS\01-058 盒模型之margin叠加问题\01-058-03.png)
 
 实例： [BFC2.html](2020Web HTML CSS\01-058 盒模型之margin叠加问题\BFC2.html) 
 
@@ -1861,7 +3410,41 @@ overflow的值不是visible
 
 实例： [BFC3.html](2020Web HTML CSS\01-058 盒模型之margin叠加问题\BFC3.html) 
 
+```
+<style>
+    .par {
+        border: 5px solid rgb(91, 243, 30);
+        width: 300px;
+    }
+    .child {
+        border: 5px solid rgb(233, 250, 84);
+        width:100px;
+        height: 100px;
+        float: left;
+    }
+</style>
 
+<body>
+    <div class="par">
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-058-04](2020Web HTML CSS\01-058 盒模型之margin叠加问题\01-058-04.png)
+
+父元素不能被子元素撑满
+
+解决方法：在父元素里添加overflow: hidden;
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-058-05](2020Web HTML CSS\01-058 盒模型之margin叠加问题\01-058-05.png)
+
+实例： [BFC3.html](2020Web HTML CSS\01-058 盒模型之margin叠加问题\BFC3.html) 
 
 总结
 
@@ -1905,7 +3488,7 @@ margin传递的问题只会出现在嵌套的结构中，且只有margin-top会�
 
 显示效果：
 
-![20200511130236](\2020Web HTML CSS\01-059 盒模型之margin传递问题\20200511130236.png)
+![20200511130236](2020Web HTML CSS\01-059 盒模型之margin传递问题\20200511130236.png)
 
 却不能在大盒子里下调100px，连同大盒子也跟着下调100px，margin-left和marginright无这问题
 
@@ -1919,6 +3502,16 @@ margin传递的问题只会出现在嵌套的结构中，且只有margin-top会�
 
 2.给父容器加边框
 
+```
+border: 2px dashed brown;
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-059-01](2020Web HTML CSS\01-059 盒模型之margin传递问题\01-059-01.png)
+
+
+
 实例： [index1.html](2020Web HTML CSS\01-059 盒模型之margin传递问题\index1.html) 
 
 
@@ -1926,6 +3519,26 @@ margin传递的问题只会出现在嵌套的结构中，且只有margin-top会�
 3.margin换成padding。
 
 给父元素设置padding-top，然后调整高度，子元素去掉margin-top
+
+```
+    <style>
+        .box1{
+            width: 200px;
+            height: 100px;
+            background: tomato;
+            padding-top: 100px;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+        }
+    </style>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-059-02](2020Web HTML CSS\01-059 盒模型之margin传递问题\01-059-02.png)
 
 实例： [index2.html](2020Web HTML CSS\01-059 盒模型之margin传递问题\index2.html) 
 
@@ -1945,11 +3558,68 @@ margin自适应居中
 
 浏览器窗口自适应居中
 
+```
+<style>
+        .box-little{
+            width: 100px;
+            height: 100px;
+            background: royalblue;
+            /* margin-left: auto; */
+            /* margin-right: auto; */
+            margin: auto auto;
+            /* 只有左右才有效果，上下设置auto无效 */
+        }
+</style>
+
+<body>
+    <div class="box-little"></div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-060-01](2020Web HTML CSS\01-060 CSS盒子模型与扩展\01-060-01.png)
+
 实例： [index.html](2020Web HTML CSS\01-060 CSS盒子模型与扩展\index.html) 
+
+
+
+
 
 盒子内居中
 
+```
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            background: royalblue;
+            position: relative;
+        }
+        .box-little{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+            margin-left: 200px;
+            margin-right: auto;
+            position: absolute;
+        }
+    </style>
+
+<body>
+    <div class="box">
+        <div class="box-little">小盒子</div>
+    </div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-060-02](2020Web HTML CSS\01-060 CSS盒子模型与扩展\01-060-02.png)
+
 实例： [index2.html](2020Web HTML CSS\01-060 CSS盒子模型与扩展\index2.html) 
+
+
 
 
 
@@ -1957,17 +3627,57 @@ margin自适应居中
 
 width、height不设置的时候，对盒子模型的影响，会自动去计算容器的大小，节省代码。
 
+```
+    <style>
+        div{
+            color: white;
+        }
+        .box1{
+            width: 300px;
+            height: 300px;
+            background: seagreen;
+        }
+        .box2{
+            width: 100%;
+            height: 100px;
+            background: lightseagreen;
+            padding-left: 30px;
+        }
+    </style>
+
+<body>
+    <div class="box1">
+        <div class="box2">这是一些内容</div>
+    </div>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-060-03](2020Web HTML CSS\01-060 CSS盒子模型与扩展\01-060-03.png)
+
+box2因为设置了padding超出范围外了
+
+解决方法：给box2添加box-sizing: border-box;
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-060-04](2020Web HTML CSS\01-060 CSS盒子模型与扩展\01-060-04.png)
+
 实例： [index3.html](2020Web HTML CSS\01-060 CSS盒子模型与扩展\index3.html) 
 
 
 
+## 01-061 盒子模型的嵌套练习
+
 练习：
 
- [16_嵌套盒子的练习.html](2020Web HTML CSS\01-060 CSS盒子模型与扩展\16_嵌套盒子的练习.html)  这是采用测量方法参考设计图 缺点是改数值会坍塌
+![盒子模型](2020Web HTML CSS\01-061 盒子模型的嵌套练习\盒子模型.png)
 
- [test.html](2020Web HTML CSS\01-060 CSS盒子模型与扩展\test.html) 把最外面的盒子设置display:inline-block才能紧紧包含子元素 随便改数值都上下左右完美间距
+ [16_嵌套盒子的练习.html](2020Web HTML CSS\01-061 盒子模型的嵌套练习\16_嵌套盒子的练习.html) 这是采用测量方法参考设计图 缺点是改数值会坍塌
 
- [test1.html](2020Web HTML CSS\01-060 CSS盒子模型与扩展\test1.html) 
+ [test.html](2020Web HTML CSS\01-061 盒子模型的嵌套练习\test.html) 把最外面的盒子设置display:inline-block才能紧紧包含子元素 随便改数值都上下左右完美间距
+
+ [test1.html](2020Web HTML CSS\01-061 盒子模型的嵌套练习\test1.html) 
 
 
 
@@ -1977,7 +3687,7 @@ width、height不设置的时候，对盒子模型的影响，会自动去计算
 
 div p ul li h1.....
 
-独占一行
+**独占一行!!**
 
 支持所有样式
 
@@ -1999,7 +3709,9 @@ span a em strong img...
 
 所占的区域不一定是矩形
 
-内联标签之间会有空隙，原因：换行产生的
+内联标签之间会有空隙，**原因：换行产生的!!**
+
+
 
 ### 内联块 inline-block
 
@@ -2009,7 +3721,7 @@ input、select...
 
 
 
-注：布局一般用块标签，修饰文本一般用内联标签
+**注**：布局一般用块标签，修饰文本一般用内联标签
 
 
 
@@ -2031,7 +3743,7 @@ Embedded 嵌入的 内嵌
 
 Interactive 互动的 
 
-![20200512085313](\2020Web HTML CSS\01-063 按内容划分标签\20200512085313.png)
+![20200512085313](2020Web HTML CSS\01-063 按内容划分标签\20200512085313.png)
 
 
 
@@ -2090,13 +3802,25 @@ none  此元素不会被显示
             display: inline;
             background: tomato;
         }
+        .p3{
+            background: lightseagreen;
+        }
+        .p4{
+            display: block;
+            background: lightseagreen;
+        }
     </style>
     
     <body>
     <div class="p1">块1</div>
     <div class="p2">块1</div>
+    <hr>
+    <span class="p3">文本</span>
+    <span class="p4">文本</span>
 </body>
 ```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
 
 ![20200512093849](2020Web HTML CSS\01-065 display显示框类型\20200512093849.png)
 
@@ -2134,7 +3858,9 @@ none  此元素不会被显示
 </body>
 ```
 
-![20200512094809](\2020Web HTML CSS\01-065 display显示框类型\20200512094809.png)
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![20200512094809](2020Web HTML CSS\01-065 display显示框类型\20200512094809.png)
 
 实例： [index1.html](2020Web HTML CSS\01-065 display显示框类型\index1.html) 
 
@@ -2174,7 +3900,9 @@ visibility:hidden 占空间的隐藏
 </body>
 ```
 
-![20200512095126](\2020Web HTML CSS\01-065 display显示框类型\20200512095126.png)
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![20200512095126](2020Web HTML CSS\01-065 display显示框类型\20200512095126.png)
 
 实例： [index2.html](2020Web HTML CSS\01-065 display显示框类型\index2.html) 
 
@@ -2221,7 +3949,7 @@ table、tr、td
 </p> 这是错误写法
 ```
 
-![20200512095954](\2020Web HTML CSS\01-066 标签嵌套规范\20200512095954.png)
+![20200512095954](2020Web HTML CSS\01-066 标签嵌套规范\20200512095954.png)
 
 这么写法，控制台显示两个p标签 一个div标签
 
@@ -2247,6 +3975,27 @@ table、tr、td
 </a> 正确写法
 ```
 
+```
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background: royalblue;
+            color: white;
+        }
+    </style>
+
+<body>
+    <a href="http://www.baidu.com">
+        <div>会面向百度能找到工作 信不？点击这块试试</div>
+    </a>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-066-01](2020Web HTML CSS\01-066 标签嵌套规范\01-066-01.gif)
+
 实例： [index1.html](2020Web HTML CSS\01-066 标签嵌套规范\index1.html) 
 
 
@@ -2269,13 +4018,64 @@ overflow 属性规定当内容溢出元素框时发生的事情。
 
 visible  [visible.html](2020Web HTML CSS\01-067 overflow溢出隐藏\visible.html) 
 
+![01-067-01](2020Web HTML CSS\01-067 overflow溢出隐藏\01-067-01.png)
+
+
+
+
+
 hidden  [hidden.html](2020Web HTML CSS\01-067 overflow溢出隐藏\hidden.html) 
+
+![01-067-02](2020Web HTML CSS\01-067 overflow溢出隐藏\01-067-02.png)
+
+
 
 scroll  [scroll.html](2020Web HTML CSS\01-067 overflow溢出隐藏\scroll.html) 
 
+![01-067-03](2020Web HTML CSS\01-067 overflow溢出隐藏\01-067-03.gif)
+
+
+
 auto  [auto.html](2020Web HTML CSS\01-067 overflow溢出隐藏\auto.html) 
 
+![01-067-04](2020Web HTML CSS\01-067 overflow溢出隐藏\01-067-04.png)
+
+
+
 有图片的： [img.html](2020Web HTML CSS\01-067 overflow溢出隐藏\img.html) 
+
+```
+    <style>
+        .box{
+            width: 500px;
+            height: 300px;
+            border: 1px solid brown;
+            overflow: auto;
+        }
+
+        .box1{
+            width: 500px;
+            height: 300px;
+            border: 1px solid brown;
+        }
+    </style>
+
+<body>
+    <div class="box">
+        <img src="./img/01.jpg" alt="">
+    </div>
+    <div class="box">
+        <img src="./img/01.jpg" alt="" width="400px" height="auto">
+    </div>
+    <div class="box1">
+        <img src="./img/01.jpg" alt="" width="100%" height="100%">
+    </div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-067-05](2020Web HTML CSS\01-067 overflow溢出隐藏\01-067-05.png)
 
 
 
@@ -2284,6 +4084,45 @@ overflow-x、overflow-y
 x 属性规定是否对内容的左/右边缘进行裁剪 - 如果溢出元素内容区域的话。
 
 y 属性规定是否对内容的上/下边缘进行裁剪 - 如果溢出元素内容区域的话。
+
+```
+    <style>
+        .box{
+            width: 300px;
+            height: 200px;
+            border: 1px solid brown;
+            overflow-x: scroll;
+        }
+        td{
+            background: tomato;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <table width="600px">
+            <tr>
+                <td>热门</td>
+                <td>推荐</td>
+                <td>体育</td>
+                <td>娱乐</td>
+                <td>科技</td>
+                <td>财经</td>
+                <td>军事</td>
+                <td>地理</td>
+                <td>美术</td>
+                <td>色情</td>
+            </tr>
+        </table>    
+    </div>
+    <div class="box">雌火龙——里奥雷亚（リオレイア），是CAPCOM旗下热门游戏怪物猎人系列中登场的虚构怪物，怪物猎人初代封面怪物火龙（雄火龙）的雌性个体。</div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-067-06](2020Web HTML CSS\01-067 overflow溢出隐藏\01-067-06.gif)
 
 实例： [x y.html](2020Web HTML CSS\01-067 overflow溢出隐藏\x y.html) 
 
@@ -2295,17 +4134,83 @@ opacity : 0(透明 占空间) ~ 1(不透明)
 
 0.5(半透明)
 
-
-
 rgba()  a在 0 ~ 1区间内
 
 注：可以让指定的样式透明，而不影响其他样式
 
 注：占空间、所有的子内容也会透明
 
+```
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            opacity: 0.5;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            opacity: 0;
+            /* display: none; */
+            /* visibility: hidden; */
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+        }
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-068-01](2020Web HTML CSS\01-068 透明度与手势\01-068-01.png)
+
+
+
+```
+        span{
+            color: seagreen;
+        }
+        span.touming{
+            opacity: .5;
+        }
+        
+    <span>这是一个文本</span>
+    <span class="touming">这是一个文本</span>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-068-02](2020Web HTML CSS\01-068 透明度与手势\01-068-02.png)
+
+
+
+
+
+```
+        .box11{
+            width: 200px;
+            height: 200px;
+            background: rgb(111, 111, 111);
+        }
+        .box12{
+            width: 200px;
+            height: 200px;
+            background: rgba(111, 111  , 111, .5);
+        }
+        
+    <div class="box11">无透明</div>
+    <div class="box12">有设透明度</div>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-068-03](2020Web HTML CSS\01-068 透明度与手势\01-068-03.png)
+
 实例： [index.html](2020Web HTML CSS\01-068 透明度与手势\index.html) 
 
-练习：
+练习：两张图叠加在一起并互相隐约显示
 
  [test.html](2020Web HTML CSS\01-068 透明度与手势\test.html) 
 
@@ -2349,6 +4254,40 @@ defaule 默认
 
 准备图片：.cur、.ico
 
+```
+    <style>
+        .p1{
+            cursor: crosshair;
+        }
+        .box1{
+            width: 300px;
+            height: 50px;
+            background: tomato;
+        }
+        .p2{
+            cursor: help;
+        }
+        .p3{
+            cursor:url(./img/cursor.ico),auto;
+            /* auto为备用  */
+        }
+    </style>
+    
+    
+    <p>请把鼠标移动到单词或区域上，可以看到鼠标指针发生变化：</p>
+    <p class="p1">十字线十字线十字线</p>
+    <div class="p1 box1">十字线十字线</div>
+
+    <p class="p2">问号问号</p>
+    <div class="p2 box1">问号问号</div>
+
+    <p class="p3">其它光标图片其它光标图片</p>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-068-04](2020Web HTML CSS\01-068 透明度与手势\01-068-04.gif)
+
 实例： [index1.html](2020Web HTML CSS\01-068 透明度与手势\index1.html) 
 
 
@@ -2360,6 +4299,16 @@ min-width、max-width
 min-height、max-height
 
 注：强化对百分比单位的理解
+
+```
+max-width: 200px;
+```
+
+![01-069-01](2020Web HTML CSS\01-069 最大最小宽高\01-069-01.gif)
+
+上一段没设max-width，会随窗口尺寸变化而变化；
+
+下一段有设置max-width:200px
 
 实例： [index.html](2020Web HTML CSS\01-069 最大最小宽高\index.html) 
 
@@ -2376,6 +4325,27 @@ html,body{ height:100%;}
 .contrainer{ height:100%;}
 
 实例： [index1.html](2020Web HTML CSS\01-069 最大最小宽高\index1.html) 
+
+
+
+```
+    <style>
+        div{
+            max-width: 500px;
+            min-height: 200px;
+            background: url(./img/01.jpg);
+            background-size: 100% 100%;
+        }
+    </style>
+    
+<body>
+    <div></div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-069-02](2020Web HTML CSS\01-069 最大最小宽高\01-069-02.gif)
 
 练习： [test.html](2020Web HTML CSS\01-069 最大最小宽高\test.html) 
 
@@ -2407,9 +4377,13 @@ ul ->  margin : 上下 16px  padding : 左 40px
 
 a ->   text-decoration: underline;
 
+
+
 实例： [index.html](2020Web HTML CSS\01-070 CSS默认样式\index.html) 
 
 控制台查看body的默认样式
+
+![01-070-01](2020Web HTML CSS\01-070 CSS默认样式\01-070-01.png)
 
 
 
@@ -2638,7 +4612,7 @@ png等图片的切图流程：
 
 编辑-->首选项-->单位与标尺-->按下图修改即可：
 
-![01](\2020Web HTML CSS\01-073 PNG等图片切图流程\01.png)
+![01](2020Web HTML CSS\01-073 PNG等图片切图流程\01.png)
 
 
 
@@ -2646,29 +4620,29 @@ png等图片的切图流程：
 
 由于ps默认未启用标尺及智能参考线等，因此需要自行开启：
 
-![02](\2020Web HTML CSS\01-073 PNG等图片切图流程\02.png)
+![02](2020Web HTML CSS\01-073 PNG等图片切图流程\02.png)
 
 
 
 3、窗口设置
 
-![03](\2020Web HTML CSS\01-073 PNG等图片切图流程\03.png)
+![03](2020Web HTML CSS\01-073 PNG等图片切图流程\03.png)
 
 
 
 如果左侧工具栏未开启显示，则也可在此设置让其显示；另外需要提的是，信息面板需要一些额外的设置：
 
-![04](\2020Web HTML CSS\01-073 PNG等图片切图流程\04.png)
+![04](2020Web HTML CSS\01-073 PNG等图片切图流程\04.png)
 
 
 
 信息面板选项设置
 
-![05](\2020Web HTML CSS\01-073 PNG等图片切图流程\05.png)
+![05](2020Web HTML CSS\01-073 PNG等图片切图流程\05.png)
 
 4、新建文件存储预设
 
-![06](\2020Web HTML CSS\01-073 PNG等图片切图流程\06.png)
+![06](2020Web HTML CSS\01-073 PNG等图片切图流程\06.png)
 
 
 
@@ -2765,15 +4739,61 @@ float特性
 
 left right none(默认)
 
-实例：
 
- [index.html](2020Web HTML CSS\01-078 float浮动概念及原理\index.html) 
 
- [index1.html](2020Web HTML CSS\01-078 float浮动概念及原理\index1.html) 
+
+
+```
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+            float: left;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            float: left;
+        }
+        
+       .clear{
+            clear: both;
+        }
+        
+    <div class="box2">1</div>
+    <div class="box2">2</div>
+    <hr>
+    <div class="clear">
+        <div class="box3">1</div>
+        <div class="box3">2</div>
+        <div class="box3">3</div>
+    </div>
+```
+
+无添加clear: both;
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-078-01](2020Web HTML CSS\01-078 float浮动概念及原理\01-078-01.png)
+
+
+
+添加clear: both;
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-078-02](2020Web HTML CSS\01-078 float浮动概念及原理\01-078-02.png)
+
+实例： [index1.html](2020Web HTML CSS\01-078 float浮动概念及原理\index1.html) 
+
+
 
 父元素自适应已设浮动的子元素方法：
 
 给父元素添加overflow:hidden
+
+实例： [index.html](2020Web HTML CSS\01-078 float浮动概念及原理\index.html) 
 
 
 
@@ -2791,11 +4811,147 @@ float注意点
 
 主要给块元素添加，但也可以给内联元素添加。
 
-实例：
+
+
+```
+    <style>
+        .box{
+            border: 2px gray solid;
+        }
+        .box-little1{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+        }
+        .box-little2{
+            width: 300px;
+            height: 300px;
+            background: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box-little1"></div>
+        <div class="box-little2">火龙在和地面的敌人作战时，会灵活运用飞行能力展开空中袭击。就算在地面上，雄火龙的突进和火球也同样具有威胁危险度可以说更胜雌火龙。</div>
+    </div>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-079-01](2020Web HTML CSS\01-079 float注意点整理\01-079-01.png)
+
+
+
+给.box-little1(小红块)添加float:left
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-079-02](2020Web HTML CSS\01-079 float注意点整理\01-079-02.png)
+
+实例： [float.html](2020Web HTML CSS\01-079 float注意点整理\float.html) 
+
+
+
+
+
+```
+    <style>
+        .box{
+            border: 2px gray solid;
+        }
+        .box-little1{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            float: left;
+        }
+        .box-little2{
+            width: 300px;
+            height: 300px;
+            background: lightskyblue;
+        }
+        .box-little3{
+            background: lightseagreen;
+        }
+    </style>
+
+<body>
+    <div class="box">
+        <div class="box-little1"></div>
+        <div class="box-little2"></div>
+        <div class="box-little3">没有宽度的块</div>
+    </div>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-079-03](2020Web HTML CSS\01-079 float注意点整理\01-079-03.png)
+
+给box-little3(一行没设置宽度的绿块)添加float:left，变成脱离了
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-079-04](2020Web HTML CSS\01-079 float注意点整理\01-079-04.png)
+
+实例： [float1.html](2020Web HTML CSS\01-079 float注意点整理\float1.html) 
+
+
+
+```
+    <style>
+        ul{
+            width: 300px;
+            height: 300px;
+            background: lightyellow;
+            list-style: none;
+            border: 2px solid brown;
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            width: 100px;
+            height: 100px;
+            background: lightseagreen;
+            border: 2px solid seagreen;
+            box-sizing: border-box;
+            float: left;
+            color: white;
+        }
+        li:nth-of-type(1){
+            height: 120px;
+        }
+        li:nth-of-type(2){
+            height: 150px;
+        }
+    </style>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-079-05](2020Web HTML CSS\01-079 float注意点整理\01-079-05.png)
+
+第1、2块高度超出了，第4块被迫移到第3块下面，第5块也位移了。
+
+如果设置高度不超出，即
+
+![01-079-06](2020Web HTML CSS\01-079 float注意点整理\01-079-06.png)
+
+实例： [index1.html](2020Web HTML CSS\01-079 float注意点整理\index1.html) 
+
+
 
  [index.html](2020Web HTML CSS\01-079 float注意点整理\index.html) 
-
- [index1.html](2020Web HTML CSS\01-079 float注意点整理\index1.html) 
 
 
 
@@ -2804,6 +4960,46 @@ float注意点
 如何清除浮动
 
 上下排列：clear属性，表示清除浮动的，left、right、both
+
+```
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: lightseagreen;
+            float: left;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background: lightskyblue;
+            float: right;
+        }
+        .box3{
+            width: 300px;
+            height: 300px;
+            background: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-080-01](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-01.png)
+
+绿翰和蓝块分别添加float:left和float:right，然后脱离出来了，红块就自动移到前面空的位置
+
+如果想让红块不自动移上去，解决方法为给红块添加clear:both
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-080-02](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-02.png)
 
 实例： [index.html](2020Web HTML CSS\01-080 清除float浮动（上）\index.html) 
 
@@ -2815,13 +5011,113 @@ float注意点
 
 不推荐 , 不能把高度固定死，不适合做自适应的效果。
 
+```
+    <style>
+        .box1{
+            width: 200px;
+            border: 2px solid darkgray;
+        }
+        .box2{
+            width: 100px;
+            height: 200px;
+            background: darkseagreen;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-080-03](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-03.png)
+
+解决方法:
+
+给父元素添加高度200px，但是设置高度能避免浮动问题，不适合做自适应的效果。
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-080-04](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-04.png)
+
 实例： [index1.html](2020Web HTML CSS\01-080 清除float浮动（上）\index1.html) 
+
+
+
+
 
 ### 父元素浮动
 
 不推荐 , 因为父容器浮动也会影响到后面的元素。
 
+```
+    <style>
+        .box1{
+            width: 200px;
+            border: 2px solid darkgray;
+        }
+        .box2{
+            width: 100px;
+            height: 200px;
+            background: darkseagreen;
+            float: left;
+        }
+
+        .box3{
+            width: 500px;
+            height: 500px;
+            background: lightseagreen;
+            clear: both;
+        }
+    </style>
+    
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+
+    <div>333</div>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-080-05](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-05.png)
+
+给父元素box1添加float:left
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-080-06](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-06.png)
+
+
+
+如果添加后面元素.box3 宽200px 高200px 颜色lightseagreen
+
+```
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+
+    <div>333</div>
+    <div class="box3"></div>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-080-07](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-07.png)
+
+显然影响了后面元素，解决方法给.box3添加clear:both
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-080-08](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-08.png)
+
 实例： [index2.html](2020Web HTML CSS\01-080 清除float浮动（上）\index2.html) 
+
+
 
 ###  overflow : hidden
 
@@ -2829,29 +5125,129 @@ BFC规范 , 如果有子元素想溢出，那么会受到影响。
 
 实例： [index3..html](2020Web HTML CSS\01-080 清除float浮动（上）\index3..html) 
 
+
+
 ### display : inline-block
 
 BFC规范，不推荐，父容器会影响到后面的元素。
 
+```
+    <style>
+        .box1{
+            width: 200px;
+
+            border: 2px solid darkgray;
+            /* BFC规范，父容器会影响到后面的元素。 */
+        }
+        .box2{
+            width: 100px;
+            height: 200px;
+            background: darkseagreen;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    aaa
+    <!-- aaa受影响 -->
+</body>
+
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-080-09](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-09.png)
+
+给父元素添加display:inline-block
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-080-10](E:\Web前端\教程\2020Web HTML CSS\01-080 清除float浮动（上）\01-080-10.png)
+
 实例： [index4.html](2020Web HTML CSS\01-080 清除float浮动（上）\index4.html) 
+
+
 
 ### 设置空标签
 
 不推荐 , 会多添加一个标签。
 
+```
+    <style>
+        .box1{
+            width: 200px;
+            border: 2px solid darkgray;
+        }
+        .box2{
+            width: 100px;
+            height: 200px;
+            background: darkseagreen;
+            float: left;
+        }
+        .clear{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="clear"></div>
+        <!-- 这是一个空标签 -->
+    </div>
+    aaa
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-081-01](2020Web HTML CSS\01-081 清除float浮动（下）\01-081-01.png)
+
 实例：  [index5.html](2020Web HTML CSS\01-081 清除float浮动（下）\index5.html) 
+
+
+
+
 
 ###  after伪类
 
 推荐，是空标签的加强版，目前各大公司的做法。( clear属性只会操作块标签，对内联标签不起作用 )
 
 ```
-.clear:after{
+    <style>
+        .box1{
+            width: 200px;
+            border: 2px solid darkgray;
+        }
+        .box2{
+            width: 100px;
+            height: 200px;
+            background: darkseagreen;
+            float: left;
+        }
+        
+        .clear:after{
             content: '';
             clear: both;
             display: block;
-}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box1 clear">
+        <div class="box2"></div>
+    </div>
+    aaa
+</body>
 ```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-081-01](2020Web HTML CSS\01-081 清除float浮动（下）\01-081-01.png)
 
 实例： [index6.html](2020Web HTML CSS\01-081 清除float浮动（下）\index6.html) 
 
@@ -2861,7 +5257,13 @@ BFC规范，不推荐，父容器会影响到后面的元素。
 
 练习：利用浮动实现面面效果
 
+![float练习1](2020Web HTML CSS\01-082-83 flat制作页面小结构\float练习1.png)
+
  [test.html](2020Web HTML CSS\01-082-83 flat制作页面小结构\test.html) 
+
+
+
+![float练习2](2020Web HTML CSS\01-082-83 flat制作页面小结构\float练习2.jpg)
 
  [test2.html](2020Web HTML CSS\01-082-83 flat制作页面小结构\test2.html) 
 
@@ -2897,19 +5299,147 @@ relative
 
 使元素完全脱离文档流
 
+```
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: turquoise;
+            border: 1px solid lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" >1</div>
+    <div class="box" >2</div>
+    <div class="box" >3</div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-085-01](2020Web HTML CSS\01-085 absolute绝对定位\01-085-01.png)
+
+给第2块加上     
+
+```
+        #box2{
+            position: absolute;
+            top: 50px;
+            left: 30px;
+        }
+        
+        <div class="box" id="box2">2</div>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-085-02](2020Web HTML CSS\01-085 absolute绝对定位\01-085-02.png)
+
 实例： [index.html](2020Web HTML CSS\01-085 absolute绝对定位\index.html) 
+
+
+
+
 
 使内联元素支持宽高 （让内联具备块特性）
 
+```
+    <style>
+        #box1{
+            width: 200px;
+            height: 200px;
+            background: turquoise;
+        }
+        #box2{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">块</div>
+    <span id="box2">这是内联的</span>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-085-03](2020Web HTML CSS\01-085 absolute绝对定位\01-085-03.png)
+
+虽然给了span添加宽高分别100px，但是显示却不是100px*100px;
+
+添加position:absolute后
+
+```3
+        #box2{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            position: absolute;
+            top: 100px;
+            left: 30px;
+        }
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-085-04](2020Web HTML CSS\01-085 absolute绝对定位\01-085-04.png)
+
+内联元素可显示已设宽高
+
 实例： [index1.html](2020Web HTML CSS\01-085 absolute绝对定位\index1.html) 
+
+
 
 使块元素默认宽根据内容决定（让块具备内联的特性）
 
- [index2.html](2020Web HTML CSS\01-085 absolute绝对定位\index2.html) 
+```
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+            
+        }
+        .boxAbsolute{
+            background: tomato;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="boxAbsolute">这原来是一个块</div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-085-05](2020Web HTML CSS\01-085 absolute绝对定位\01-085-05.png)
+
+给.boxAbsolute添加position:absolute后
+
+```
+        .boxAbsolute{
+            background: tomato;
+            position: absolute;
+            top: 20px;
+        }
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-085-06](2020Web HTML CSS\01-085 absolute绝对定位\01-085-06.png)
+
+实例： [index2.html](2020Web HTML CSS\01-085 absolute绝对定位\index2.html) 
+
+
 
 如果有定位祖先元素相对于定位祖先元素发生偏移，没有定位祖先元素相对于整个文档发生偏移（绝对、相对、固定）
 
- [index3.html](2020Web HTML CSS\01-085 absolute绝对定位\index3.html) 
+实例： [index3.html](2020Web HTML CSS\01-085 absolute绝对定位\index3.html) 
 
 
 
@@ -2943,7 +5473,9 @@ relative
 </body>
 ```
 
-![20200514151139](\2020Web HTML CSS\01-085 absolute绝对定位\20200514151139.png)
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![20200514151139](2020Web HTML CSS\01-085 absolute绝对定位\20200514151139.png)
 
 444箱子使用position:absolute后脱离文档流，定位与浏览器窗口相对 top100px left100px
 
@@ -2969,6 +5501,22 @@ fixed：
 
 相对于整个浏览器窗口进行偏移，不受浏览器滚动条的影响
 
+```
+        .box-mid{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            position: fixed;
+            /* 完全脱离 无视父元素 跟浏览器窗口进行定位 */
+            top: 0px;
+            left: 100px;
+        }
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-086-01](2020Web HTML CSS\01-086 fixed和sticky及z-index\01-086-01.gif)
+
 实例： [fixed.html](2020Web HTML CSS\01-086 fixed和sticky及z-index\fixed.html) 
 
 
@@ -2977,7 +5525,42 @@ sticky黏性定位：
 
 新增的，在指定的位置，进行黏性操作。
 
+```
+    <style>
+        .top{
+            width: 100%;
+            background: black;
+            position: sticky;
+            top: 0;
+            top: 30px;
+            color: white;
+        }
+    </style>
+    
+<body>
+    <p>文本段落 文本段落</p>
+    <p>文本段落 文本段落</p>
+    .
+    .
+    .
+    <p>文本段落 文本段落</p>
+    <div class="top">文本段落 文本段落</div>
+    <p>文本段落 文本段落</p>
+    <p>文本段落 文本段落</p>
+    .
+    .
+    .
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-086-02](2020Web HTML CSS\01-086 fixed和sticky及z-index\01-086-02.gif)
+
 实例： [sticky.html](2020Web HTML CSS\01-086 fixed和sticky及z-index\sticky.html) 
+
+
+
+![01-086-03](2020Web HTML CSS\01-086 fixed和sticky及z-index\01-086-03.gif)
 
 练习： [sticky-test.html](2020Web HTML CSS\01-086 fixed和sticky及z-index\sticky-test.html) 
 
@@ -2991,7 +5574,7 @@ z-index定位层级。
 
 下图为默认z-index
 
-![20200514181836](\2020Web HTML CSS\01-086 fixed和sticky及z-index\20200514181836.png)
+![20200514181836](2020Web HTML CSS\01-086 fixed和sticky及z-index\20200514181836.png)
 
 
 
@@ -2999,7 +5582,7 @@ z-index定位层级。
 
 设置z-index后，如下图
 
-![20200514182125](\2020Web HTML CSS\01-086 fixed和sticky及z-index\20200514182125.png)
+![20200514182125](2020Web HTML CSS\01-086 fixed和sticky及z-index\20200514182125.png)
 
 
 
@@ -3030,13 +5613,15 @@ position取值
 
 参考淘宝顶部
 
-![20200514182548](\2020Web HTML CSS\01-087 定位实现下拉菜单\20200514182548.png)
+![20200514182548](2020Web HTML CSS\01-087 定位实现下拉菜单\20200514182548.png)
 
 
+
+![01-087-01](2020Web HTML CSS\01-087 定位实现下拉菜单\01-087-01.gif)
 
 方法：
 
-父元素分两部分，顶部一行字高度，列表弄几行
+父元素里分两部分，顶部一行字高度，列表弄几行
 
 父元素设置position:relative, 列表设置position:absolute并调整好位置
 
@@ -3047,6 +5632,8 @@ position取值
 鼠标移入列表内某个行 列表 li:hover{background:颜色}
 
 实例： [index.html](2020Web HTML CSS\01-087 定位实现下拉菜单\index.html) 
+
+
 
 练习： [test.html](2020Web HTML CSS\01-087 定位实现下拉菜单\test.html) 
 
@@ -3061,6 +5648,37 @@ position取值
 margin-top: - (子元素高度的一半)
 
 margin-left: - (子元素宽度的一半)
+
+```
+    <style>
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: 3px solid lightgray;
+            position: relative;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: turquoise;
+            position: absolute;    
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-088-01](2020Web HTML CSS\01-088 定位实现居中和装饰点\01-088-01.png)
 
 实例： [index.html](2020Web HTML CSS\01-088 定位实现居中和装饰点\index.html) 
 
@@ -3102,7 +5720,55 @@ text-overflow:ellipsis
 
 添加省略号来代表被修剪的文本
 
+```
+    <style>
+        div{
+            border: 1px solid lightgray;
+            width: 200px;
 
+            /* white-space: nowrap; */
+            /* 不让内容折行 */
+
+            /* overflow: hidden; */
+            /* 修剪掉溢出文本 */
+
+            /* text-overflow: ellipsis; */
+            /* 添加省略号来代表被修剪的文本 */
+        }
+    </style>
+
+<body>
+    <div>测试文字测试文字测试文字测试文字测试文字测试文字</div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-089-01](2020Web HTML CSS\01-089 CSS添加省略号\01-089-01.png)
+
+
+
+添加不让内容折行的代码:white-space: nowrap;
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-089-02](2020Web HTML CSS\01-089 CSS添加省略号\01-089-02.png)
+
+
+
+添加剪掉溢出文本的代码：overflow: hidden;
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-089-03](2020Web HTML CSS\01-089 CSS添加省略号\01-089-03.png)
+
+
+
+添加省略号来代表被修剪文本的代码：text-overflow: ellipsis;
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-089-04](2020Web HTML CSS\01-089 CSS添加省略号\01-089-04.png)
 
 实例： [index.html](2020Web HTML CSS\01-089 CSS添加省略号\index.html) 
 
@@ -3116,7 +5782,11 @@ CSS Sprite
 
 CSS雪碧也叫做CSS精灵，是一种网页图片应用处理方式。它允许你将一个页面涉及到的所有零星图片都包含到一张大图中去加载
 
+代码示例：
 
+```
+background: url(./sprite_icon.png) no-repeat -1px -596px;
+```
 
 好处：
 
@@ -3124,9 +5794,9 @@ CSS雪碧也叫做CSS精灵，是一种网页图片应用处理方式。它允�
 
 减少图片的请求次数，加快网页的打开
 
-![01](\2020Web HTML CSS\01-090 CSS精灵及好处\01.png)
+![01](2020Web HTML CSS\01-090 CSS精灵及好处\01.png)
 
-![02](\2020Web HTML CSS\01-090 CSS精灵及好处\02.png)
+![02](2020Web HTML CSS\01-090 CSS精灵及好处\02.png)
 
 
 
@@ -3146,7 +5816,7 @@ border-radius
 
 border-radius：10px  20px  30px 40px;
 
-![111](\2020Web HTML CSS\01-091 CSS圆角设置\111.png)
+![111](2020Web HTML CSS\01-091 CSS圆角设置\111.png)
 
 
 
@@ -3156,7 +5826,7 @@ border-radius：10px  20px  30px 40px;
 
 border-radius:10px  30px 60px; 
 
-![222](\2020Web HTML CSS\01-091 CSS圆角设置\222.png)
+![222](2020Web HTML CSS\01-091 CSS圆角设置\222.png)
 
 
 
@@ -3166,17 +5836,15 @@ border-radius:10px  30px 60px;
 
 border-radius:20px 40px;
 
-![333](\2020Web HTML CSS\01-091 CSS圆角设置\333.png)
+![333](2020Web HTML CSS\01-091 CSS圆角设置\333.png)
 
 
 
 
 
-![01](\2020Web HTML CSS\01-091 CSS圆角设置\01.png)
+![01](2020Web HTML CSS\01-091 CSS圆角设置\01.png)
 
 实例： [index.html](2020Web HTML CSS\01-091 CSS圆角设置\index.html) 
-
-
 
 
 
@@ -3186,7 +5854,7 @@ border-radius:20px 40px;
 
 border-radius:100px/40px;
 
-![1111](\2020Web HTML CSS\01-091 CSS圆角设置\1111.png)
+![1111](2020Web HTML CSS\01-091 CSS圆角设置\1111.png)
 
 
 
@@ -3200,7 +5868,7 @@ border-radius: 1-4 length|% / 1-4 length|%;
 
 border-radius : 50px 50px 50px 50px / 50px 50px 50px 50px;
 
-![02](\2020Web HTML CSS\01-091 CSS圆角设置\02.png)
+![02](2020Web HTML CSS\01-091 CSS圆角设置\02.png)
 
 4个值/4个值：
 
@@ -3226,7 +5894,7 @@ border-radius : 50px 50px 50px 50px / 50px 50px 50px 50px;
 
 egg： [egg.html](2020Web HTML CSS\01-091 CSS圆角设置\egg.html) 
 
-![2222](\2020Web HTML CSS\01-091 CSS圆角设置\2222.png)
+![2222](2020Web HTML CSS\01-091 CSS圆角设置\2222.png)
 
 
 
@@ -3289,6 +5957,21 @@ strong和b、em和i？
 strong 和 em 都是表示强调的标签，表现形态为文本加粗和斜体。b 和 i 标签同样也表示文本加粗和斜体。	
 区别在于，strong 和 em 是具备语义化的，而 b 和 i 是不具备语义化的。
 
+```
+<body>
+    <strong>文本1</strong>
+    <b>文本2</b>
+    <em>文本3</em>
+    <i>文本4</i>
+    <!-- 区别在于，strong 和 em 是具备语义化的，而 b 和 i 是不具备语义化的。 -->
+    <span>span</span>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-112-01](2020Web HTML CSS\01-112 b标签与i标签\01-112-01.png)
+
 实例： [index.html](2020Web HTML CSS\01-112 b标签与i标签\index.html) 
 
 
@@ -3298,9 +5981,37 @@ strong 和 em 都是表示强调的标签，表现形态为文本加粗和斜体
 ## 01-113 引用标签基本操作
 
 blockquote  :  引用大段的段落解释
-q  :  引用小段的短语解释
-abbr  :  缩写或首字母缩略词
+
 cite  :  引用著作的标题
+
+```
+    <P>
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+            For 50 years, WWF has been protecting the future of nature. The worlds leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+        </blockquote>
+    </P>
+```
+
+
+
+q  :  引用小段的短语解释
+
+```
+    <p>WWF's goal is to:
+        <q cite="123456">Build a future where people live in harmony with nature.</q>
+        We hope they succeed.
+    </p>
+```
+
+
+
+abbr  :  缩写或首字母缩略词
+
+```
+    <p>
+        <abbr title="World Health Organization">WHO</abbr>成立于1948年。
+    </p>
+```
 
 实例： [index.html](2020Web HTML CSS\01-113 引用标签基本操作\index.html) 
 
@@ -3317,6 +6028,14 @@ iframe 标签会创建包含另外一个文档的内联框架，有效地将另�
 New为HTML5新增的属性	
 
 应用场景：数据传输、共享代码，局部刷新、第三方介入等。
+
+代码示例：
+
+```
+<iframe class="iframe1" src="./other.html" frameborder="0" name="bowenshangmei" scrolling=""></iframe>
+```
+
+
 
 | 属性                                                         | 值                                                           | 描述                                                         |
 | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
@@ -3349,6 +6068,8 @@ New为HTML5新增的属性
 br 标签表示换行操作，而 wbr 标签表示软换行操作。
 提示：如果单词太长，或者您担心浏览器会在错误的位置换行，那么您可以使用  wbr  元素来添加 Word Break Opportunity（单词换行时机）
 
+![01-115-01](2020Web HTML CSS\01-115 br标签与wbr标签\01-115-01.gif)
+
 实例： [wbr.html](2020Web HTML CSS\01-115 br标签与wbr标签\wbr.html)  动一动浏览器宽度试试看
 
 
@@ -3359,12 +6080,12 @@ br 标签表示换行操作，而 wbr 标签表示软换行操作。
 
 **pre** 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。针对网页中的程序代码的显示效果。
 
-**注意：**<pre> 元素是块级元素，但是只能包含文本或行内元素，任何块级元素（常见为可以导致段落断开的标签：例如<title>、<p> 和<address> 标签）都不能位于 <pre> 元素中。
+**注意：**pre 元素是块级元素，但是只能包含文本或行内元素，任何块级元素（常见为可以导致段落断开的标签：例如title、p 和address 标签）都不能位于 pre 元素中。
 
 在 HTML 4.01 中，"width" 属性已废弃，不可使用。 HTML5 不支持"width"属性。
 
-**提示:** <pre> 标签的一个常见应用就是用来表示计算机的源代码。
-**提示：**<pre> 标签与 <code> 标签结合起来使用，可以获得更加精确的语义。
+**提示:** pre 标签的一个常见应用就是用来表示计算机的源代码。
+**提示：**pre 标签与code标签结合起来使用，可以获得更加精确的语义。
 
 
 
@@ -3381,6 +6102,28 @@ br 标签表示换行操作，而 wbr 标签表示软换行操作。
 | <samp>   | 定义样本文本。                                               |
 | <kbd>    | 定义键盘文本。它表示文本是从键盘上键入的。它经常用在与计算机相关的文档或手册中。 |
 | <var>    | 定义变量。您可以将此标签与 <pre>及 <code> 标签配合使用。     |
+
+```
+    <p>这是一段代码</p>
+    <pre>
+        <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en">
+            &lt;head>
+                &lt;meta charset="UTF-8">
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+                &lt;title>Document&lt;/title>
+                &lt;/head>
+            &lt;body>
+                hello world
+            &lt;/body>
+        </code>
+    </pre>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-116-01](2020Web HTML CSS\01-116 pre标签与code标签\01-116-01.png)
 
 实例： [index.html](2020Web HTML CSS\01-116 pre标签与code标签\index.html) 
 
@@ -3473,9 +6216,25 @@ object 标签可以表示一个外部资源，可以将其视为一个映像、�
 
 object 元素需要配合param 元素一起完成
 
-提示：param标签定义用于对象的 run-time 设置。
+**提示**：param标签定义用于对象的 run-time 设置。
 
-提示：不要对图像使用 object 标签，请使用 img 标签代替。
+**提示：**不要对图像使用 object 标签，请使用 img 标签代替。
+
+```
+<body>
+    <embed src="./img/flash.swf" type="">
+    <hr>
+    <object>
+        <param name="movie" value="./img/helloworld.swf">
+    </object>
+    <hr>
+    <object data="./img/helloworld.swf" type=""></object>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-118-01](2020Web HTML CSS\01-118 embed标签与object标签\01-118-01.png)
 
 实例： [ember object.html](2020Web HTML CSS\01-118 embed标签与object标签\ember object.html) 
 
@@ -3516,7 +6275,39 @@ audio标签表示嵌入音频文件，video标签表示嵌入视频文件。默�
 
 source标签为媒体元素（比如 video 和 audio）定义媒体资源。允许您规定两个视频/音频文件共浏览器根据它对媒体类型或者编解码器的支持进行选择。
 
+代码示例:
 
+```
+<audio src="./img/johann_sebastian_bach_air.mp3" controls muted loop></audio>
+```
+
+```
+<video src="./img/Intermission-Walk-in_512kb.mp4" controls muted>12341234</video>
+```
+
+
+
+以下为兼容性问题
+
+```
+<video controls>
+        <source src="./img/Intermission-Walk-in.ogv\"></source>
+</video>
+```
+
+```
+    <div style="position: relative; height:250px; overflow: hidden;">
+    
+        <video style="min-width:100%; min-height:100%;" loop="" playsinline="true" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-fullscreen="false" x5-video-player-type="h5" id="introvideo" autoplay="">
+                
+                <source src="http://shimmer.neusoft.edu.cn/h/www/media/intro2016.mp4" type="video/mp4">
+                
+                <source src="http://shimmer.neusoft.edu.cn/h/www/media/intro2016.webm" type="video/webm">
+                
+        </video>
+        
+    </div>
+```
 
 实例： [video audio.html](2020Web HTML CSS\01-119 video标签与audio标签\video audio.html) 
 
@@ -3524,12 +6315,28 @@ source标签为媒体元素（比如 video 和 audio）定义媒体资源。允�
 
 ## 01-120文字注解与文字方法
 
-<ruby> 标签定义 ruby 注释（中文注音或字符）。
+ruby 标签定义 ruby 注释（中文注音或字符）。
 在东亚使用，显示的是东亚字符的发音。
-将 <ruby> 标签与 <rt> 和 <rp> 标签一起使用：
-<ruby> 元素由一个或多个需要解释/发音的字符和一个提供该信息的 <rt> 元素组成，还包括可选的 <rp> 元素，定义当浏览器不支持 "ruby" 元素时显示的内容。
+将 ruby 标签与 rt>和 rp>标签一起使用：
+ruby 元素由一个或多个需要解释/发音的字符和一个提供该信息的 rt>元素组成，还包括可选的 rp 元素，定义当浏览器不支持 "ruby" 元素时显示的内容。
 
+```
+    <ruby>
+        汉 <rp>(</rp><rt>Hàn</rt><rp>)</rp>
+        字 <rp>(</rp><rt>Zì</rt><rp>)</rp>
+    </ruby>
+    <p>以上来自w3cschool实例</p>
+    <hr>
+    <ruby>
+        汉<rt>hàn</rt>
+        字<rt>zì</rt>
+    </ruby>
+    <p>以上来自千锋实例</p>
+```
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-120-01](2020Web HTML CSS\01-120 文字注解与文字方法\01-120-01.png)
 
 
 
@@ -3540,6 +6347,40 @@ bdo 指的是 bidi 覆盖（Bi-Directional Override）。
 bdo 标签用来覆盖默认的文本方向。
 bdo 标签必须配合 dir 属性使用。
 bdo 标签有 ltr 和 rtl 两个属性值，分别表示：从左到右显示文本和从右到左显示文本。
+
+```
+    <p>该段落文字从左到右显示。</p>
+    <p>
+        <bdo dir="rtl">该段落文字从右到左显示。</bdo>
+    </p> 
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-120-02](2020Web HTML CSS\01-120 文字注解与文字方法\01-120-02.png)
+
+
+
+采用CSS：
+
+```
+        span{
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+        
+        
+     <p>
+        里奥雷乌斯就是雄火龙。
+        <span>里奥雷乌斯</span>就是雄火龙
+    </p>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-120-03](2020Web HTML CSS\01-120 文字注解与文字方法\01-120-03.png)
+
+
 
 实例： [ruby rt与bdo.html](2020Web HTML CSS\01-120 文字注解与文字方法\ruby rt与bdo.html) 
 
@@ -3555,7 +6396,7 @@ link 标签最常见的用途是链接样式表。
 在 HTML 中，<link> 标签没有结束标签。
 在 XHTML 中，<link> 标签必须被正确地关闭。
 
-例：
+代码示例：
 
 ```
 <link rel="stylesheet" type="text/css" href="theme.css">	
@@ -3581,7 +6422,7 @@ meta 标签位于文档的头部，不包含任何内容。<meta> 标签的属�
 
 
 
-例：
+代码示例：
 
 ```
 <meta name="description" content="大连美团网精选大连美食餐厅,酒店预订,电影票,旅游景点,外卖订餐,大连团购信息,您可查询商家评价店铺信息。大连生活,下载美团官方APP ,吃喝玩乐1折起。">
@@ -3604,8 +6445,32 @@ meta 标签位于文档的头部，不包含任何内容。<meta> 标签的属�
 header : 页眉
 footer : 页脚
 main : 主体
+
 hgroup : 标题组合
+
 nav : 导航
+
+代码示例：
+
+```
+    <header> <!-- 页眉 -->
+        <hgroup> <!-- 标题组合 -->
+            <h1>主标题</h1>
+            <h2>副标题</h2>
+        </hgroup>
+        <nav> <!-- 导航 -->
+            <ul>
+                <li>首页</li>
+                <li>论坛</li>
+                <li>博客</li>
+                <li>下载</li>
+                <li>关于</li>
+            </ul>
+        </nav>
+    </header> 
+```
+
+
 
 **注**：header、footer、main 在一个网页中只能出现一次。
 
@@ -3622,6 +6487,62 @@ details / summary : 文档细节 / 文档标题
 progress / meter : 定义进度条 / 定义度量范围
 time : 定义日期或时间
 mark : 带有记号的文本
+
+```
+<main> <!-- 主体 -->
+	<article> <!-- 独立的内容 -->
+		<section> <!-- 区域 -->
+            <input type="text" list="elems">
+            <datalist id="elems"> <!-- 选项列表 -->
+            <option value="a"></option>
+                .
+                .
+            <option value="f"></option>
+            
+            <details> <!-- 文档细节 -->
+            	<summary> <!-- 文档标题 -->
+                        HTML
+                </summary>
+                    <P>超文本标记语言</P>
+                    <P>超文本标记语言</P>
+            </details>
+            
+            <progress min="0" max="10" value="5"></progress> <!-- 定义进度条 -->
+            
+            <meter min="0" max="100" value="80" low="10" high="60"></meter> <!-- 定义度量范围 -->
+            
+            <p>
+            	今天是<time title"1-1">元旦节</time>,放假啦。
+            </p>
+            <p>
+            	今天是<mark>元旦节</mark>,放假啦。
+            </p>
+		</section>
+		
+		<section> <!-- 区域 -->
+			<figure> <!-- 描述图像或视频 -->
+				<img src="./img/youku.jpg" alt="">
+			</figure>
+        	<figcaption> <!-- 描述图像或视频的标题部分 -->
+				新水果篮子❤️高甜
+				<br>
+				十二生肖恋上美少女！
+			</figcaption>
+        </section>
+        
+    </article>
+    
+    <aside> <!-- 辅助信息的内容 -->
+        ...
+	</aside>
+</main>	
+```
+
+```
+<footer>
+	页脚
+</footer>
+```
 
 实例： [index.html](2020Web HTML CSS\01-123 HTML5新语义化标签1-3\index.html) 
 
@@ -3640,6 +6561,8 @@ mark : 带有记号的文本
 ![01-12603](2020Web HTML CSS\01-126 表格扩展学习\01-12603.png)
 
 ![01-12604](2020Web HTML CSS\01-126 表格扩展学习\01-12604.png)
+
+
 
 斜线分类 : border / rotate
 
@@ -3661,6 +6584,27 @@ mark : 带有记号的文本
             left: -150px;
             top: -25px;
         }
+        
+        
+<body>
+	<table border="1">
+        <caption>天气预报</caption>
+        <colgroup>
+            <col span="2" style="background-color: lightblue;">
+            <col span="2" style="background-color:  tomato;">
+        </colgroup>
+        <tHead>
+            <tr>
+                <th colspan="2" >
+                    <div class="line">
+                        <em>详情</em>
+                        <span>日期</span>
+                    </div>
+                </th>
+                <th>天气情况</th>
+                <th>出行情况</th>
+            </tr>
+        </tHead>
 ```
 
 ![01-12605](2020Web HTML CSS\01-126 表格扩展学习\01-12605.png)
@@ -3707,6 +6651,8 @@ mark : 带有记号的文本
 	</body>
 ```
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
 ![01-127 01](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 01.png)
 
 ![01-127 02](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 02.png)
@@ -3742,7 +6688,7 @@ mark : 带有记号的文本
 </body>
 ```
 
-
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
 
 ![01-127 03](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 03.png)
 
@@ -3784,6 +6730,8 @@ mark : 带有记号的文本
 </body>
 ```
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
 ![01-127 05](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 05.png)
 
 鼠标移入【上传】按钮能显示“未选择任何文件”
@@ -3795,6 +6743,9 @@ mark : 带有记号的文本
 ## 01-128 表单扩展之新input控件
 
 新的input控件
+
+<input type="以下新控件">
+
 email  :  电子邮件地址输入框
 
 ![01](2020Web HTML CSS\01-128 表单扩展之新input控件\01.png)
@@ -3943,7 +6894,7 @@ autofocus  :  获取焦点
 
 required  :  不能为空
 
-空框提交会出现提示
+空框提交会出现提示框
 
 ![required](2020Web HTML CSS\01-129 表单扩展之新属性\required.png)
 
@@ -3963,7 +6914,7 @@ pattern  :  正则验证
 
 输入提交后如不符合格式会出现提示
 
-可参考链接：https://www.w3cschool.cn/rxoyts/或者其它
+可参考链接：https://www.w3cschool.cn/rxoyts/或者其它手册
 
 实例： [form_new2.html](2020Web HTML CSS\01-129 表单扩展之新属性\form_new2.html) 
 
@@ -4006,7 +6957,11 @@ legend  :  为fieldset元素定义标题
     </fieldset>
 ```
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
 ![fieldset legend](2020Web HTML CSS\01-131 表单扩展之标签\fieldset legend.png)
+
+
 
 
 
@@ -4026,6 +6981,8 @@ optgroup  :  定义选项组
         <option value="">茄子</option>
     </select>
 ```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
 
 ![optgroup](2020Web HTML CSS\01-131 表单扩展之标签\optgroup.png)
 
@@ -4078,11 +7035,17 @@ overflow 除了 visible 以外的值 (hidden、auto、scroll)
 </body>
 ```
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
 ![BFC](2020Web HTML CSS\01-132 BFC规范\BFC.png)
 
 红块设置了margin-bottom 30px 蓝块设置了margin-top 30px，可是两块纵向距离却不是30px+30px=60px，而是选取最大的30px
 
  [BFC1.html](2020Web HTML CSS\01-132 BFC规范\BFC1.html) 
+
+
+
+
 
 解决方法：
 
@@ -4107,8 +7070,6 @@ style部分添加
 
  [BFC2.html](2020Web HTML CSS\01-132 BFC规范\BFC2.html) 
 
-
-
 另一个方法：
 
 ```
@@ -4119,7 +7080,9 @@ style部分添加
 
  [BFC3.html](2020Web HTML CSS\01-132 BFC规范\BFC3.html) 
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
 
+![BFC2](2020Web HTML CSS\01-132 BFC规范\BFC2.png)
 
 
 
@@ -4147,15 +7110,19 @@ style部分添加
 </body>
 ```
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
 ![BFC4](2020Web HTML CSS\01-132 BFC规范\BFC4.png)
 
 本来想把小块在大块里向下移动50px，却连带大块也移下50px
 
-
-
 解决方法：父元素添加overflow:hidden
 
 或者父元素添加position:relative,子元素添加position absolute
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![BFC4-01](2020Web HTML CSS\01-132 BFC规范\BFC4-01.png)
 
  [BFC4.html](2020Web HTML CSS\01-132 BFC规范\BFC4.html) 
 
@@ -4184,6 +7151,8 @@ style部分添加
 </body>
 ```
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
 ![BFC5](2020Web HTML CSS\01-132 BFC规范\BFC5.png)
 
 无设高度的div1不能被已设float:left的div2撑满
@@ -4196,9 +7165,13 @@ style部分添加
 
 3.又或者添加display:inline-block
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
 ![BFC5-1](2020Web HTML CSS\01-132 BFC规范\BFC5-1.png)
 
  [BFC5.html](2020Web HTML CSS\01-132 BFC规范\BFC5.html) 
+
+
 
 
 
@@ -4227,6 +7200,8 @@ style部分添加
 </body>
 ```
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
 ![BFC6](2020Web HTML CSS\01-132 BFC规范\BFC6.png)
 
 小绿块把大绿块覆盖了
@@ -4234,6 +7209,10 @@ style部分添加
 解决方法：
 
 给div2添加overflow:hidden
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![BFC6-01](2020Web HTML CSS\01-132 BFC规范\BFC6-01.png)
 
  [BFC6.html](2020Web HTML CSS\01-132 BFC规范\BFC6.html) 
 
@@ -4282,6 +7261,8 @@ transition-property  :  规定设置过渡效果的CSS属性的名称。
 transition-duration  :  规定完成过渡效果需要多少秒或毫秒。
 transition-delay  :  定义过渡效果何时开始。
 
+代码示例：
+
 ```
         .box3{
             width: 100px;
@@ -4290,6 +7271,11 @@ transition-delay  :  定义过渡效果何时开始。
             transition-property: all;
             transition-duration: 2s;
             transition-delay: 2s; 
+        }
+        .box3:hover{
+            width: 200px;
+            height: 200px;
+            background: goldenrod;
         }
 ```
 
@@ -4320,19 +7306,88 @@ transition-timing-function  :  规定速度效果的速度曲线。
 
 ![01](2020Web HTML CSS\01-135 transition过渡基础语法\01.png)
 
-实例： [transition-timing-function.html](2020Web HTML CSS\01-135 transition过渡基础语法\transition-timing-function.html) 
+
 
 ![02](2020Web HTML CSS\01-135 transition过渡基础语法\02.png)
 
+在线工具：https://cubic-bezier.com/
+
+
+
+```
+        div{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-delay: 0s;
+            transition-timing-function: cubic-bezier(1,.2,.33,1.18);
+        }
+        div:hover{
+            width: 300px;
+            height: 300px;
+        }
+```
+
 ![gifhome_640x360_8s](2020Web HTML CSS\01-135 transition过渡基础语法\gifhome_640x360_8s.gif)
 
-在线工具：https://cubic-bezier.com/
+实例： [transition-timing-function.html](2020Web HTML CSS\01-135 transition过渡基础语法\transition-timing-function.html) 
+
+
 
 **注**：不要加到hover上
 
 
 
 ## 01-136 transition实例之过渡导航
+
+```
+    <style>
+        ul,li{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul{
+            width: 360px;
+        }
+        ul li{
+            width: 60px;
+            height: 70px;
+            float: left;
+            background: url(./img/aNavBg.png);
+            transition-property: all;
+            transition-duration: .3s;
+        }
+        ul li:nth-child(1){ background-position: 0 -70px;}
+        ul li:nth-child(2){ background-position: -60px -70px;}
+        ul li:nth-child(3){ background-position: -120px -70px;}
+        ul li:nth-child(4){ background-position: -180px -70px;}
+        ul li:nth-child(5){ background-position: -240px -70px;}
+        ul li:nth-child(6){ background-position: -300px -70px;}
+
+        ul li:nth-child(1):hover{ background-position: 0 0;}
+        ul li:nth-child(2):hover{ background-position: -60px 0;}
+        ul li:nth-child(3):hover{ background-position: -120px 0;}
+        ul li:nth-child(4):hover{ background-position: -180px 0;}
+        ul li:nth-child(5):hover{ background-position: -240px 0;}
+        ul li:nth-child(6):hover{ background-position: -300px 0;}
+    </style>
+    
+    <body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+```
+
+
 
 ![gifhome_640x360_6s](2020Web HTML CSS\01-136 transition实例之过渡导航\gifhome_640x360_6s.gif)
 
@@ -4346,11 +7401,107 @@ from:http://www.neusoft.edu.cn/
 
 ![test](2020Web HTML CSS\01-136 transition实例之过渡导航\test.gif)
 
-练习： [test.html](2020Web HTML CSS\01-136 transition实例之过渡导航\test.html) 
+
+
+```
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+a:visited{color: gray;}
+h2{
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.newsbox{
+    width: 600px;
+    height: auto;
+    padding-top: 50px;
+    overflow: hidden;
+    margin: 0 auto 0;
+}
+.newsbox .newsitem{
+    width: 300px;
+    height: 100px;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px 40px 20px 0px;
+    position: relative;
+}
+.newsbox .newsitem:hover{
+    color: skyblue;
+}
+.newsbox .newsitem p{
+    font-size: 10px;
+    color: gray;
+}
+.newsbox .newsitem::before{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: skyblue;
+    position: absolute;
+    top: 0;
+    transition: all .3s;
+}
+.newsbox .newsitem:hover::before{
+    width: 200px;
+}
+
+
+
+<body>
+    <div class="newsbox">
+        <a href="" title="大连东软信息学院第七届青年教师教学竞赛圆满落幕">
+            <div class="newsitem">
+                <h2>大连东软信息学院第七届青年教师教学竞赛圆满落幕</h2>
+                <p>2020.07.16 / 学校新闻</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="newsitem">
+                <h2>第十届全国大学生电子商务“创新、创意及创业”挑战赛大连东软信息学院校级答</h2>
+                <p>2020.07.16 / 学校新闻</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="newsitem">
+                <h2>大连东软信息学院入选汉萨大学联盟 2020 WURI RANKING产业应用类创新</h2>
+                <p>2020.07.16 / 学校新闻</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="newsitem">
+                <h2>我校顺利完成2020年毕业设计（论文）在线答辩工作</h2>
+                <p>2020.07.16 / 学校新闻</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="newsitem">
+                <h2>我校为海外留学学子、外籍教师、合作院校捐赠防疫物资</h2>
+                <p>2020.07.16 / 学校新闻</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="newsitem">
+                <h2>大连东软信息学院隆重举行2020届学生云毕业典礼</h2>
+                <p>2020.07.16 / 学校新闻</p>
+            </div>
+        </a>
+    </div>
+</body>
+```
+
+
 
 ![test](2020Web HTML CSS\01-136 transition实例之过渡导航\test.png)
 
-
+练习： [test.html](2020Web HTML CSS\01-136 transition实例之过渡导航\test.html) 
 
 
 
@@ -4387,11 +7538,15 @@ translateZ()   ( 3d )
     </style>
 ```
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
 ![translate](2020Web HTML CSS\01-137 transform位移与缩放\translate.gif)
 
 
 
 translate可设负数，transform: translate(-100px,20px);但会跨出父元素边框
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
 
 ![translate1](2020Web HTML CSS\01-137 transform位移与缩放\translate1.gif)
 
@@ -4415,12 +7570,341 @@ scaleZ()   (3d)
         }
 ```
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
 ![scale1](2020Web HTML CSS\01-137 transform位移与缩放\scale1.gif)
 
 
 
 scale(2,.5)
 
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
 ![scale2](2020Web HTML CSS\01-137 transform位移与缩放\scale2.gif)
 
 实例： [scale.html](2020Web HTML CSS\01-137 transform位移与缩放\scale.html) 
+
+
+
+
+
+## 01-138 transform旋转与斜切
+
+ rotate : 旋转 （ 旋转的值，单位是角度 deg ）
+
+rotateX  (3d)
+rotateY  (3d)
+rotateZ  ( 和rotate是等级关系，那正值按顺时针旋转，负值按逆时针旋转 )
+
+```
+        .box1:hover .box2{
+            background: skyblue;
+            /* transform: translate(-100px,20px); */
+            /* transform: scale(2,.5); */
+            transform: rotate(45deg);
+        }
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![rotate1](2020Web HTML CSS\01-138 transform旋转与斜切\rotate1.gif)
+
+
+
+```
+transform: rotateZ(90deg);
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![rotate2](2020Web HTML CSS\01-138 transform旋转与斜切\rotate2.gif)
+
+若设置900deg，会旋转多次到900deg为止。
+
+
+
+skew : 斜切
+skewX : 单位也是角度，正值向左倾斜，负值向右倾斜。
+skewY
+
+```
+transform: skew(45deg);
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![skew1](2020Web HTML CSS\01-138 transform旋转与斜切\skew1.gif)
+
+
+
+```
+transform: skew(180deg);
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![skew2](2020Web HTML CSS\01-138 transform旋转与斜切\skew2.gif)
+
+
+
+## transform总结
+
+| 值                                                           | 描述                                    |      |
+| ------------------------------------------------------------ | --------------------------------------- | ---- |
+| none                                                         | 定义不进行转换。                        |      |
+| matrix(*n*,*n*,*n*,*n*,*n*,*n*)                              | 定义 2D 转换，使用六个值的矩阵。        |      |
+| matrix3d(*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*) | 定义 3D 转换，使用 16 个值的 4x4 矩阵。 |      |
+| translate(*x*,*y*)                                           | 定义 2D 转换。                          |      |
+| translate3d(*x*,*y*,*z*)                                     | 定义 3D 转换。                          |      |
+| translateX(*x*)                                              | 定义转换，只是用 X 轴的值。             |      |
+| translateY(*y*)                                              | 定义转换，只是用 Y 轴的值。             |      |
+| translateZ(*z*)                                              | 定义 3D 转换，只是用 Z 轴的值。         |      |
+| scale(*x*[,*y*]?)                                            | 定义 2D 缩放转换。                      |      |
+| scale3d(*x*,*y*,*z*)                                         | 定义 3D 缩放转换。                      |      |
+| scaleX(*x*)                                                  | 通过设置 X 轴的值来定义缩放转换。       |      |
+| scaleY(*y*)                                                  | 通过设置 Y 轴的值来定义缩放转换。       |      |
+| scaleZ(*z*)                                                  | 通过设置 Z 轴的值来定义 3D 缩放转换。   |      |
+| rotate(*angle*)                                              | 定义 2D 旋转，在参数中规定角度。        |      |
+| rotate3d(*x*,*y*,*z*,*angle*)                                | 定义 3D 旋转。                          |      |
+| rotateX(*angle*)                                             | 定义沿着 X 轴的 3D 旋转。               |      |
+| rotateY(*angle*)                                             | 定义沿着 Y 轴的 3D 旋转。               |      |
+| rotateZ(*angle*)                                             | 定义沿着 Z 轴的 3D 旋转。               |      |
+| skew(*x-angle*,*y-angle*)                                    | 定义沿着 X 和 Y 轴的 2D 倾斜转换。      |      |
+| skewX(*angle*)                                               | 定义沿着 X 轴的 2D 倾斜转换。           |      |
+| skewY(*angle*)                                               | 定义沿着 Y 轴的 2D 倾斜转换。           |      |
+| perspective(*n*)                                             | 为 3D 转换元素定义透视视图。            |      |
+
+
+
+
+
+## 01-139 transform复合写法与注意点
+
+transform的注意事项：
+
+1.变形操作不会影响到其他元素。
+
+![01](2020Web HTML CSS\01-139 transform复合写法与注意点\01.gif)
+
+实例： [transform1.html](2020Web HTML CSS\01-139 transform复合写法与注意点\transform1.html) 
+
+
+
+2.变形操作只能添加给块元素，但是不能添加给内联元素。
+
+3.复合写法，可以同时添加多个变形操作。
+执行是有顺序的，先执行后面的操作，再执行前面的操作。
+translate会受到 rotate、scale、skew的影响
+
+```
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+            transform: translate(100px,0) scale(.5);
+            /* 先执行缩放后位移 */
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+            transform: scale(.5) translate(100px,0) ;
+             /* 先执行位移50px后缩放 */
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+            transform: scale(2) translate(100px,0) ;
+            /* 先执行位移200px后缩放 */
+        }
+    </style>
+    
+    <body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box3">4</div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01](2020Web HTML CSS\01-139 transform复合写法与注意点\01.png)
+
+实例： [transform2.html](2020Web HTML CSS\01-139 transform复合写法与注意点\transform2.html) 
+
+
+
+
+
+```
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+            transform: translate(100px,0) rotate(45deg);
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+            transform: rotate(45deg) translate(100px,0) ;
+        }
+
+    </style>
+    
+    <body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![03](2020Web HTML CSS\01-139 transform复合写法与注意点\03.png)
+
+实例： [transform3.html](2020Web HTML CSS\01-139 transform复合写法与注意点\transform3.html) 
+
+采用动图更为详细解释
+
+box2和box3分别添加transition: 1s;，然后添加以下代码：
+
+```
+        .box1:hover ~ .box2{
+            transform: translate(100px,0) rotate(45deg);
+        }
+        .box1:hover ~ .box3{
+            transform: rotate(45deg) translate(100px,0) ;
+        }
+```
+
+![02](2020Web HTML CSS\01-139 transform复合写法与注意点\02.gif)
+
+动图： [transform3 gif.html](2020Web HTML CSS\01-139 transform复合写法与注意点\transform3 gif.html) 
+
+
+
+
+
+4.transform-origin : 基点的位置
+x y z(3d)
+
+```
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            transition: 1s;
+        }
+        .box1:hover{
+            transform: rotate(180deg);
+        }
+    </style>
+
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-139-01](2020Web HTML CSS\01-139 transform复合写法与注意点\01-139-01.gif)
+
+
+
+如果给.box1元素添加transform-origin:0 0;
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-139-02](2020Web HTML CSS\01-139 transform复合写法与注意点\01-139-02.gif)
+
+可试试transform-origin不同数值
+
+实例： [transform4.html](2020Web HTML CSS\01-139 transform复合写法与注意点\transform4.html) 
+
+
+
+## 01-140 斜切的导航
+
+练习：
+
+斜切的导航
+
+```
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{
+            list-style: none;
+        }
+        ul{
+            width: 460px;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        ul li{
+            float: left;
+            width: 100px;
+            height: 26px;
+            line-height: 26px;
+            color: #ffffff;
+            text-align: center;
+            background: royalblue;
+            display: block;
+            margin: 0 10px 0;
+            transform: skew(-30deg);
+            
+        }
+        ul li span{
+            transform: skew(30deg);
+            display: block;
+        }
+        ul li:first-child{
+            padding-left: 10px;
+            margin-left: -10px;
+        }
+        ul li:last-child{
+            padding-right: 10px;
+            margin-right: -10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><span>首页</span></li>
+        <li><span>游戏新闻</span></li>
+        <li><span>种族职业</span></li>
+        <li><span>天赋装备</span></li>
+    </ul>
+</body>
+```
+
+<span style="background:#f60;color:white;padding:5px">运行结果</span>
+
+![01-140-01](2020Web HTML CSS\01-140 斜切的导航\01-140-01.png)
+
+练习： [nav_skew.html](2020Web HTML CSS\01-140 斜切的导航\nav_skew.html) 
+
+
+
+
+
+变形的列表（1）
+
+变形的列表（2）
