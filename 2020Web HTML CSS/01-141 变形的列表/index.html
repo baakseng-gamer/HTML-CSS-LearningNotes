@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        ul li{
+            list-style: none;
+            display: block;
+        }
+        img{
+            display: block;
+        }
+        .box{
+            width: 350px;
+            height: 650px;
+            margin: 50px auto;
+        }
+        .box h3{
+            width: 350px;
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 2px lightgray solid;
+            box-sizing: border-box;
+            /* background: lightseagreen; */
+        }
+        .box ul li{
+            width: 350px;
+            height: 150px;
+            border-bottom: 1px dashed lightgray;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .box ul li .box-photolist{
+            width: 180px;
+            height: 150px;
+            float: left;
+
+        }
+        .box ul li .box-photolist img{
+            width: 155px;
+            height: 105px;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        .box ul li .box-photolist .whiteborder{
+            width: 145px;
+            height: 95px;
+            border: 2px solid #fff;
+            /* background: lightgray; */
+            box-sizing: border-box;
+            position: absolute;
+            left: 15px;
+            top: 25px;
+            transition: .5s;
+            transform: rotate(-90deg) translate(145px,-35px);
+        }
+
+        .box ul li .box-photolist .box-phototext{
+            width: 155px;
+            font-size: 16px;
+            color: white;
+            /* background: tomato; */
+            position: absolute;
+            left: 10px;
+            top: 94px;
+            text-align: center;
+            transition: 1s;
+            transform: rotate(90deg) translate(125px,65px);
+        }
+
+        .box ul li:hover .whiteborder{
+            transform: rotate(0);
+        }
+        .box ul li:hover .box-phototext{
+            transform: rotate(0);
+        }
+
+        .box ul li a .box-titlelist{
+            width: 170px;
+            height: 150px;
+            float: left;
+            /* background: lightskyblue; */
+            padding: 30px 10px 0px 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+            line-height: 24px;
+            color: gray;
+        }
+        .box ul li a .box-titlelist:hover{
+            color: seagreen;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>学习累了？八卦一下</h3>
+        <ul>
+            <li>
+                <div class="box-photolist">
+
+                    <img src="./img/list_photo.png" alt="">
+                    <div class="whiteborder"></div>
+                    <div class="box-phototext">
+                        陌陌上市
+                    </div>
+                </div>
+
+                <a href="#01-141">
+                    <div class="box-titlelist">
+                        测试文字测试文字测试文字测试文字测试文字测试文字测试文字
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <div class="box-photolist">
+
+                    <img src="./img/list_photo.png" alt="">
+                    <div class="whiteborder"></div>
+                    <div class="box-phototext">
+                        陌陌上市
+                    </div>
+                </div>
+
+                <a href="#01-141">
+                    <div class="box-titlelist">
+                        测试文字测试文字测试文字测试文字测试文字测试文字测试文字
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <div class="box-photolist">
+
+                    <img src="./img/list_photo.png" alt="">
+                    <div class="whiteborder"></div>
+                    <div class="box-phototext">
+                        陌陌上市
+                    </div>
+                </div>
+
+                <a href="#01-141">
+                    <div class="box-titlelist">
+                        测试文字测试文字测试文字测试文字测试文字测试文字测试文字
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <div class="box-photolist">
+
+                    <img src="./img/list_photo.png" alt="">
+                    <div class="whiteborder"></div>
+                    <div class="box-phototext">
+                        陌陌上市
+                    </div>
+                </div>
+
+                <a href="#01-141">
+                    <div class="box-titlelist">
+                        测试文字测试文字测试文字测试文字测试文字测试文字测试文字
+                    </div>
+                </a>
+            </li>
+
+            
+        </ul>
+    </div>
+</body>
+</html>
