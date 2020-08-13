@@ -1,6 +1,4 @@
-**HTML CSS系列教程**
-
-
+*HTML CSS系列教程**
 
 
 
@@ -54,14 +52,14 @@ HTML CSS 切图流程 PC企业站布局 PC游戏站布局
 
 ## 01-002 什么是HTML和CSS
 
-HTML 是用来描述网页的一种语言。
+**HTML 是用来描述网页的一种语言。**
 
 - HTML 指的是超文本标记语言 (**H**yper **T**ext **M**arkup **L**anguage)
 - HTML 不是一种编程语言，而是一种**标记语言** (markup language)
 - 标记语言是一套**标记标签** (markup tag)
 - HTML 使用**标记标签**来描述网页
 
-CSS 概述
+**CSS 概述**
 
 - CSS 指层叠样式表 (*C*ascading *S*tyle *S*heets)
 - 样式定义**如何显示** HTML 元素
@@ -85,12 +83,10 @@ CSS 概述
 </html>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+**运行结果**：
 hello world
 
-
-
-实例： [index.html](2020Web HTML CSS\01-002 什么是 HTML和 CSS\index.html) 
+ [index.html](2020Web HTML CSS\01-002 什么是 HTML和 CSS\index.html) 
 
 
 
@@ -104,18 +100,18 @@ hello world
 
 设置：文件-> 首选项 -> 设置  ( 大小、是否换行 word wrap )
 创建文件、创建文件夹、重命名和删除、搜索
-        ctrl + s : 保存
-        ctrl + a : 全选
-        ctrl + x、ctrl + c、ctrl + v : 剪切、复制、粘贴
-        ctrl + z、ctrl + y : 撤销、前进
-        shift + end : 从头选中一行
-        shift + home : 从尾部选中一行
-        shift + alt + ↓ : 快速复制一行
-        alt + ↑或↓ : 快速移动一行
-        tab : 向后缩进
-        tab + shift : 向前缩进
-        多光标 : alt + 鼠标左键
-        ctrl + d : 选则相同元素的下一个
+ctrl + s : 保存
+ctrl + a : 全选
+ctrl + x、ctrl + c、ctrl + v : 剪切、复制、粘贴
+ctrl + z、ctrl + y : 撤销、前进
+shift + end : 从头选中一行
+shift + home : 从尾部选中一行
+shift + alt + ↓ : 快速复制一行
+alt + ↑或↓ : 快速移动一行
+tab : 向后缩进
+tab + shift : 向前缩进
+多光标 : alt + 鼠标左键
+ctrl + d : 选则相同元素的下一个
 
 操作练习： [index.html](2020Web HTML CSS\01-003 宇宙第一编辑器 VS Code\index.html) 
 
@@ -145,11 +141,11 @@ Chrome:以前是Webkit内核，现在是Blink内核；也称为Chromium
 
 UI设计师 : 设计稿
 web前端开发工程师(H5开发)
-    设计稿 -> 代码
-    数据库里的数据 -> 显示到页面
-    HTML + CSS
-        HTML : 结构
-        CSS : 样式
+设计稿 -> 代码
+数据库里的数据 -> 显示到页面
+HTML + CSS
+HTML : 结构
+CSS : 样式
 
 
 
@@ -192,12 +188,9 @@ JavaScript：行为
 </script>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+鼠标移入HTML+CSS一行会有动画重复次数的竖斜和变色效果
 
-![01](2020Web HTML CSS\01-006 web前端三大核心技术\01.gif)
-
-
-实例： [index.html](2020Web HTML CSS\01-006 web前端三大核心技术\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-006 web前端三大核心技术\index.html) 
 
 
 
@@ -229,31 +222,20 @@ HTML常见标签：http://www.html5star.com/manual/html5label-meaning/
 
 <标签 属性="值" 属性2="值2">
 ```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>&#9787;</h1>
-    <p>&lt;html&gt;</p>
-    <p>hello&nbsp;world¶</p>
-</body>
-</html>
+<header title="hello">hello world
+    <div>aaaa
+        <div title="四个b">bbbb</div>
+        <div>bbbb</div>
+        <div>bbbb</div>
+        <div>bbbb</div>
+    </div>
+    <div>aaaa</div>
+    <div>aaaa</div>
+    <div>aaaa</div>
+</header>
+<footer>hi HTML</footer>
 ```
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-<h1>&#9787;</h1>
-<p>&lt;html&gt;</p>
-<p>hello&nbsp;world¶</p>
-
-实例： [index.html](2020Web HTML CSS\01-007 基本结构与属性\index.html) 
-
-
-
-
+**运行结果**： [index.html](2020Web HTML CSS\01-007 基本结构与属性\index.html) 
 
 
 
@@ -266,6 +248,7 @@ HTML常见标签：http://www.html5star.com/manual/html5label-meaning/
 ``<!DOCTYPE html>``  文档声明 : 告诉浏览器这是一个html文件
 
 ``<html lang="en">`` html文件的最外层标签：包裹着所有html标签代码 lang="en"表示是一个英文网站, lang="zh-CN"表示一个中文网站
+
 ```
 <head>
     <meta charset="UTF-8">  元信息：是编写网页中的一些辅助信息 charset="UTF-8"国际编码，让网页不出现乱码的情况
@@ -275,12 +258,13 @@ HTML常见标签：http://www.html5star.com/manual/html5label-meaning/
 
 ```
 <body>
-	显示网页内容的区域
+	hello world
+	<!-- 显示网页内容的区域 -->
 </body>
 </html>
 ```
 
-实例：  [index.html](2020Web HTML CSS\01-008 HTML初始代码\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-008 HTML初始代码\index.html) 
 
 
 
@@ -311,11 +295,7 @@ HTML常见标签：http://www.html5star.com/manual/html5label-meaning/
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01](2020Web HTML CSS\01-009 HTML中的注释\01.png)
-
-实例： [index.html](2020Web HTML CSS\01-009 HTML中的注释\index.html) 
+**运行结果**：[index.html](2020Web HTML CSS\01-009 HTML中的注释\index.html) 
 
 
 
@@ -346,8 +326,6 @@ h5、h6标签在网页中不经常使用。
 
 段落 -> 双标签 : <p></p>
 
-
-
 ```
 <body>
     <h1>标题</h1>
@@ -360,13 +338,7 @@ h5、h6标签在网页中不经常使用。
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01](2020Web HTML CSS\01-011 标题与段落\01.png)
-
-实例： [index.html](2020Web HTML CSS\01-011 标题与段落\index.html) 
-
-
+**运行结果**： [index.html](2020Web HTML CSS\01-011 标题与段落\index.html) 
 
 
 
@@ -390,11 +362,7 @@ h5、h6标签在网页中不经常使用。
         <p>2015年10月8日，黄晓明和Angelababy在上海展览中心正式举办婚礼。上午8点，Angelababy工作室曝光了一两人的婚纱照，照片中，两人以巴黎地标建筑为背景，浪漫亲吻。</p>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![02](2020Web HTML CSS\01-011 标题与段落\02.png)
-
- 实例：[01_标题与段落.html](2020Web HTML CSS\01-011 标题与段落\01_标题与段落.html) 
+**运行结果**：[01_标题与段落.html](2020Web HTML CSS\01-011 标题与段落\01_标题与段落.html) 
 
 
 
@@ -418,8 +386,6 @@ h5、h6标签在网页中不经常使用。
 
 
 
-
-
 上标 :`` <sup></sup>``
 
 下标 : ``<sub></sub>``
@@ -428,7 +394,7 @@ h5、h6标签在网页中不经常使用。
 a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>H<sub>2</sub>O
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+**运行结果**：
 
 a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>H<sub>2</sub>O
 
@@ -444,13 +410,13 @@ a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>H<sub>2</sub>O
 促销： 原价<del>300</del>,现价<ins>100</ins>。
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+**运行结果**：
 
 促销： 原价<del>300</del>,现价<ins>100</ins>。
 
 
 
-实例： [index.html](2020Web HTML CSS\01-012 文件修饰标签\index.html) 
+ [index.html](2020Web HTML CSS\01-012 文件修饰标签\index.html) 
 
 
 
@@ -473,11 +439,7 @@ width、height : 图片的大小
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-013](2020Web HTML CSS\01-013 图片标签与图片属性\01-013.png)
-
-实例： [index.html](2020Web HTML CSS\01-013 图片标签与图片属性\index.html) 
+**运行结果**：[index.html](2020Web HTML CSS\01-013 图片标签与图片属性\index.html) 
 
 
 
@@ -485,8 +447,8 @@ width、height : 图片的大小
 
 ### 相对路径
 
-​	. 在路径中表示当前路径
- 	.. 在路径中表示上一级路径
+. 在路径中表示当前路径
+.. 在路径中表示上一级路径
 
 
 
@@ -519,7 +481,7 @@ target属性 : 可以改变链接打开的方式，默认情况下：在当前�
 
 base -> 单标签 ：作用就是改变链接的默认行为的。
 
-实例：
+
 
 ```
     <a href="http://www.baidu.com">访问百度</a>
@@ -528,27 +490,44 @@ base -> 单标签 ：作用就是改变链接的默认行为的。
     </a>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-015](2020Web HTML CSS\01-015 跳转连接\01-015.gif)
-
-实例： [index.html](2020Web HTML CSS\01-015 跳转连接\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-015 跳转连接\index.html) 
 
 
 
 还有其它实例：
 
- [index2.html](2020Web HTML CSS\01-015 跳转连接\index2.html) 
+base标签使用方法
 
- [test1.html](2020Web HTML CSS\01-015 跳转连接\test1.html) 
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base target="_blank"><!-- target="_blank"为新窗口打开 -->
+</head>
+<body>
+    <a href="http://www.baidu.com">访问百度</a>
+    <a href="http://www.baidu.com">访问百度</a>
+    <a href="http://www.baidu.com">访问百度</a>
+</body>
+</html>
+```
+
+**运行结果**： [index2.html](2020Web HTML CSS\01-015 跳转连接\index2.html) 
+
+
+
+
+
+练习： [test1.html](2020Web HTML CSS\01-015 跳转连接\test1.html) 
 
 返回上一级：
 
 ``<a href="#" onclick="javascript:history.back(-1);">上一级</a>``
 
 ``<a href="#" onclick="javascript:history.go(-1);">上一级</a> ``
-
-
 
 
 
@@ -582,11 +561,9 @@ base -> 单标签 ：作用就是改变链接的默认行为的。
 <p>模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落模拟的段落</p>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+**运行结果**： [index.html](2020Web HTML CSS\01-016 跳转锚点\index.html) 
 
-![01-016-1](2020Web HTML CSS\01-016 跳转锚点\01-016-01.gif)
 
-实例： [index.html](2020Web HTML CSS\01-016 跳转锚点\index.html) 
 
 
 
@@ -620,9 +597,7 @@ base -> 单标签 ：作用就是改变链接的默认行为的。
 
 ```
 
-
-
-实例： [index1.html](2020Web HTML CSS\01-016 跳转锚点\index1.html) 
+**运行结果**： [index1.html](2020Web HTML CSS\01-016 跳转锚点\index1.html) 
 
 
 
@@ -687,11 +662,7 @@ type属性 : 改变前面标记的样式( 一般都是用CSS去控制 )
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-018-01](2020Web HTML CSS\01-018 无序列表\01-018-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-018 无序列表\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-018 无序列表\index.html) 
 
 
 
@@ -704,9 +675,11 @@ type属性 : 改变前面标记的样式( 一般都是用CSS去控制 )
         }
         a:hover{
             color: #FF5151;
+            /* 鼠标划入时显示的效果 */
         }
         ul{
-            color: #BEBEBE;
+            color: #red;
+            /* 圆心变为红色 */
         }
     </style>
     
@@ -721,11 +694,7 @@ type属性 : 改变前面标记的样式( 一般都是用CSS去控制 )
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-018-02](2020Web HTML CSS\01-018 无序列表\01-018-02.gif)
-
-实例： [test1.html](2020Web HTML CSS\01-018 无序列表\test1.html) 
+**运行结果**： [test1.html](2020Web HTML CSS\01-018 无序列表\test1.html) 
 
 
 
@@ -788,11 +757,7 @@ type属性 : 改变前面标记的样式( 一般都是用CSS去控制 )
     </ol>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-019-01](2020Web HTML CSS\01-019 有序列表\01-019-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-019 有序列表\index.html) 
+**运行结果**：[index.html](2020Web HTML CSS\01-019 有序列表\index.html) 
 
 
 
@@ -820,11 +785,7 @@ type属性 : 改变前面标记的样式( 一般都是用CSS去控制 )
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-019-02](2020Web HTML CSS\01-019 有序列表\01-019-02.gif)
-
-实例： [test.html](2020Web HTML CSS\01-019 有序列表\test.html) 
+**运行结果**： [test.html](2020Web HTML CSS\01-019 有序列表\test.html) 
 
 
 
@@ -848,11 +809,7 @@ type属性 : 改变前面标记的样式( 一般都是用CSS去控制 )
     </dl>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-020-01](2020Web HTML CSS\01-020 定义列表\01-020-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-020 定义列表\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-020 定义列表\index.html) 
 
 
 
@@ -909,11 +866,7 @@ type属性 : 改变前面标记的样式( 一般都是用CSS去控制 )
     </ul>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-021-01](2020Web HTML CSS\01-021 嵌套列表\01-021-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-021 嵌套列表\index.html) 
+**运行结果**：[index.html](2020Web HTML CSS\01-021 嵌套列表\index.html) 
 
 
 
@@ -944,19 +897,9 @@ type属性 : 改变前面标记的样式( 一般都是用CSS去控制 )
     </dl>
 ```
 
+**运行结果**：[index1.html](2020Web HTML CSS\01-021 嵌套列表\index1.html) 
 
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-021-02](2020Web HTML CSS\01-021 嵌套列表\01-021-02.png)
-
-实例： [index1.html](2020Web HTML CSS\01-021 嵌套列表\index1.html) 
-
-
-
-
-
-![01-021-03](2020Web HTML CSS\01-021 嵌套列表\01-021-03.png)
 
 练习： [test.html](2020Web HTML CSS\01-021 嵌套列表\test.html) 
 
@@ -1005,17 +948,7 @@ valign : top、middle、bottom
     </table>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-022](2020Web HTML CSS\01-022 表格标签\01-022.png)
-
-实例： [index.html](2020Web HTML CSS\01-022 表格标签\index.html) 
-
-
-
-
-
-
+**运行结果**： [index.html](2020Web HTML CSS\01-022 表格标签\index.html) 
 
 
 
@@ -1068,11 +1001,7 @@ colspan ： 合并列
     </table>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-023-01](2020Web HTML CSS\01-023 表格属性\01-023-01.png)
-
-实例： [index1.html](2020Web HTML CSS\01-023 表格属性\index1.html) 
+**运行结果**： [index1.html](2020Web HTML CSS\01-023 表格属性\index1.html) 
 
 
 
@@ -1084,7 +1013,7 @@ valign ：上下对齐方式
 <tr align="right" valign="top"> 
 ```
 
-实例： [index.html](2020Web HTML CSS\01-023 表格属性\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-023 表格属性\index.html) 
 
 
 
@@ -1148,11 +1077,7 @@ valign ：上下对齐方式
     </form>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-024-01](2020Web HTML CSS\01-024 表单input标签\01-024-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-024 表单input标签\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-024 表单input标签\index.html) 
 
 
 
@@ -1232,7 +1157,7 @@ option属性
     </form>
 ```
 
-实例： [index.html](2020Web HTML CSS\01-025 表单相关标签\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-025 表单相关标签\index.html) 
 
 
 
@@ -1254,6 +1179,8 @@ option属性
 | size      | 规定输入字段的宽度（以字符计）。   |
 | step      | 规定输入字段的合法数字间隔。       |
 | value     | 规定输入字段的默认值。             |
+
+
 
 练习: [test.html](2020Web HTML CSS\01-025 表单相关标签\test.html) 
 
@@ -1293,11 +1220,7 @@ option属性
     </form>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-026-01](2020Web HTML CSS\01-026 表格表单组合实例\01-026-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-026 表格表单组合实例\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-026 表格表单组合实例\index.html) 
 
 
 
@@ -1341,8 +1264,6 @@ CSS注释：/*  CSS注释的内容  */
 
 
 
-
-
 内部样式在<style>标签内添加的样式  优点：可以复用代码
 
 ```
@@ -1359,7 +1280,7 @@ CSS注释：/*  CSS注释的内容  */
 
 区别：内部样式的代码可以复用、复合W3C的规范标准，进行让结构和样式分开处理。
 
-实例： [index.html](2020Web HTML CSS\01-029 内联样式与内部样式\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-029 内联样式与内部样式\index.html) 
 
 
 
@@ -1498,13 +1419,7 @@ fixed ( 背景位置是按照浏览器进行偏移的 )
     </style>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-032-01](2020Web HTML CSS\01-032 背景样式\01-032-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-032 背景样式\index.html) 
-
-
+**运行结果**：[index.html](2020Web HTML CSS\01-032 背景样式\index.html) 
 
 
 
@@ -1528,17 +1443,9 @@ fixed ( 背景位置是按照浏览器进行偏移的 )
     </style>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+窗口水平放大缩小试试效果
 
-小窗口:
-
-![01-032-02](2020Web HTML CSS\01-032 背景样式\01-032-02.png)
-
-大窗口：
-
-![01-032-03](2020Web HTML CSS\01-032 背景样式\01-032-03.png)
-
-实例： [index2.html](2020Web HTML CSS\01-032 背景样式\index2.html) 
+**运行结果**： [index2.html](2020Web HTML CSS\01-032 背景样式\index2.html) 
 
 
 
@@ -1578,11 +1485,11 @@ fixed ( 背景位置是按照浏览器进行偏移的 )
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+**运行结果**：
 
-![01-033-01](2020Web HTML CSS\01-033 背景实现视觉差效果\01-033-01.gif)
+滚动窗口上下试试效果
 
-实例： [test.html](2020Web HTML CSS\01-033 背景实现视觉差效果\test.html) 
+ [test.html](2020Web HTML CSS\01-033 背景实现视觉差效果\test.html) 
 
  [index.html](2020Web HTML CSS\01-033 背景实现视觉差效果\index.html) 
 
@@ -1671,11 +1578,7 @@ border-right-style等等
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-034-01](2020Web HTML CSS\01-034 CSS边框样式\01-034-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-034 CSS边框样式\index.html) 
+**运行结果**：[index.html](2020Web HTML CSS\01-034 CSS边框样式\index.html) 
 
 
 
@@ -1684,8 +1587,6 @@ border-right-style等等
 ### transparent
 
 background-color:transparent 无颜色，即透明
-
-
 
 ```
     <style>
@@ -1700,11 +1601,7 @@ background-color:transparent 无颜色，即透明
     </style>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-035-01](2020Web HTML CSS\01-035 边框实现三角形\01-035-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-035 边框实现三角形\index.html) 
+**运行结果**：[index.html](2020Web HTML CSS\01-035 边框实现三角形\index.html) 
 
 
 
@@ -2098,6 +1995,10 @@ break-word:(不是那么强烈的折行 ，会产生一些空白区域)
 
 实例： [index.html](2020Web HTML CSS\01-038-042 文本\index.html) 
 
+
+
+参考： [07_个人简介.html](2020Web HTML CSS\01-038-042 文本\07_个人简介.html) 
+
 练习： [test.html](2020Web HTML CSS\01-038-042 文本\test.html) 
 
 使用PS测量 取色等
@@ -2149,13 +2050,13 @@ weight style size/line-height family √
             color: lightgray;
         }
     </style>
+    
+<body>
+    <div>这是一段文字</div>
+</body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-043-01](2020Web HTML CSS\01-043 CSS复合样式\01-043-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-043 CSS复合样式\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-043 CSS复合样式\index.html) 
 
 
 
@@ -2189,9 +2090,21 @@ html:id="elem"
 
 class选择器 类选择器
 
-css:.elem{}
+css:
 
-html:class="elem"
+```
+.elem{....}
+```
+
+html:
+
+```
+<div class="elem">
+	...
+</div>
+```
+
+
 
 注：
 
@@ -2203,7 +2116,27 @@ class选择器是可以复用的。
 
 标签+类的写法
 
-实例： [index.html](2020Web HTML CSS\01-045 CLASS选择器及注意事项\index.html) 
+```
+.box1{
+            width: 300px;
+            height: 300px;
+        }
+        .box2{
+            
+            background: gold;
+        }
+        .box3{
+            border: 5px solid goldenrod;
+
+        }
+        .box4{
+            border-right: none;
+        }
+        
+<div class="box1 box2 box3 box4">这是一个块</div>
+```
+
+**运行结果**： [index.html](2020Web HTML CSS\01-045 CLASS选择器及注意事项\index.html) 
 
 
 
@@ -2266,11 +2199,7 @@ css:div, p, span{}
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-047-01](2020Web HTML CSS\01-047 层次选择器\01-047-01.png)
-
-实例： [01后代_new.html](2020Web HTML CSS\01-047 层次选择器\01后代_new.html) 
+**运行结果**：[01后代_new.html](2020Web HTML CSS\01-047 层次选择器\01后代_new.html) 
 
  [01后代.html](2020Web HTML CSS\01-047 层次选择器\01后代.html) 
 
@@ -2306,11 +2235,7 @@ css:div, p, span{}
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-047-02](2020Web HTML CSS\01-047 层次选择器\01-047-02.png)
-
-实例： [02父子_new.html](2020Web HTML CSS\01-047 层次选择器\02父子_new.html) 
+**运行结果**： [02父子_new.html](2020Web HTML CSS\01-047 层次选择器\02父子_new.html) 
 
  [02父子.html](2020Web HTML CSS\01-047 层次选择器\02父子.html) 
 
@@ -2344,11 +2269,7 @@ css:div, p, span{}
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-047-03](2020Web HTML CSS\01-047 层次选择器\01-047-03.png)
-
-实例： [03兄弟_new.html](2020Web HTML CSS\01-047 层次选择器\03兄弟_new.html) 
+**运行结果**： [03兄弟_new.html](2020Web HTML CSS\01-047 层次选择器\03兄弟_new.html) 
 
  [03兄弟.html](2020Web HTML CSS\01-047 层次选择器\03兄弟.html) 
 
@@ -2384,11 +2305,7 @@ css:div, p, span{}
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-047-04](2020Web HTML CSS\01-047 层次选择器\01-047-04.png)
-
-实例： [04相邻_new.html](2020Web HTML CSS\01-047 层次选择器\04相邻_new.html) 
+**运行结果**： [04相邻_new.html](2020Web HTML CSS\01-047 层次选择器\04相邻_new.html) 
 
  [04相邻.html](2020Web HTML CSS\01-047 层次选择器\04相邻.html) 
 
@@ -2464,11 +2381,7 @@ $= : 结束匹配
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-048-01](2020Web HTML CSS\01-048 属性选择器\01-048-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-048 属性选择器\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-048 属性选择器\index.html) 
 
 
 
@@ -2513,11 +2426,7 @@ $= : 结束匹配
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-048-02](2020Web HTML CSS\01-048 属性选择器\01-048-02.png)
-
-实例： [index2.html](2020Web HTML CSS\01-048 属性选择器\index2.html) 
+**运行结果**： [index2.html](2020Web HTML CSS\01-048 属性选择器\index2.html) 
 
 
 
@@ -2574,11 +2483,7 @@ M:伪类{}
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-50-02](2020Web HTML CSS\01-050 after等伪类选择器\01-50-02.png)
-
-实例： [before.html](2020Web HTML CSS\01-050 after等伪类选择器\before.html) 
+**运行结果**： [before.html](2020Web HTML CSS\01-050 after等伪类选择器\before.html) 
 
 
 
@@ -2601,25 +2506,19 @@ M:伪类{}
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-050-01](2020Web HTML CSS\01-050 after等伪类选择器\01-050-01.png)
-
-实例： [after.html](2020Web HTML CSS\01-050 after等伪类选择器\after.html) 
+**运行结果**： [after.html](2020Web HTML CSS\01-050 after等伪类选择器\after.html) 
 
 使用content属性即文本内容
 
 
 
- :checked、:disabled 、:focus 都是针对表单元素的 
+:checked、:disabled 、:focus 都是针对表单元素的 
 
 :checked 选择器匹配每个已被选中的 input 元素（只用于单选按钮和复选框）。
 
 :disabled 选择器匹配每个被禁用的元素（大多用在表单元素上）。
 
 :focus 选择器用于选取获得焦点的元素。接受键盘事件或其他用户输入的元素都允许 :focus 选择器。
-
-
 
 ```
         .box1:checked{
@@ -2656,11 +2555,9 @@ M:伪类{}
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+试试点击已设置的控件效果
 
-![01-50-03](2020Web HTML CSS\01-050 after等伪类选择器\01-50-03.gif)
-
-实例： [checked disabled focus.html](2020Web HTML CSS\01-050 after等伪类选择器\checked disabled focus.html) 
+**运行结果**： [checked disabled focus.html](2020Web HTML CSS\01-050 after等伪类选择器\checked disabled focus.html) 
 
 
 
@@ -2692,11 +2589,7 @@ nth-of-type() 选择器匹配属于父元素的特定类型的第 N 个子元素
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-050-01](2020Web HTML CSS\01-051 结构伪类选择器\01-050-01.png)
-
-实例： [nth-of-type().html](2020Web HTML CSS\01-051 结构伪类选择器\nth-of-type().html) 
+**运行结果**： [nth-of-type().html](2020Web HTML CSS\01-051 结构伪类选择器\nth-of-type().html) 
 
 
 
@@ -2727,17 +2620,13 @@ nth-child() 选择器匹配属于其父元素的第 N 个子元素，不论元�
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-050-02](2020Web HTML CSS\01-051 结构伪类选择器\01-050-02.png)
-
-实例：  [nth-child.html](2020Web HTML CSS\01-051 结构伪类选择器\nth-child.html) 
+**运行结果**： [nth-child.html](2020Web HTML CSS\01-051 结构伪类选择器\nth-child.html) 
 
 
 
 角标是从1开始的，1表示第一项，2表示第二项 | n值 表示从0到无穷大
 
-实例： [nth-child nth-of-type.html](2020Web HTML CSS\01-051 结构伪类选择器\nth-child nth-of-type.html) 
+
 
 详解：
 
@@ -2801,11 +2690,7 @@ only-of-type
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-050-03](2020Web HTML CSS\01-051 结构伪类选择器\01-050-03.png)
-
-实例： [only-of-type.html](2020Web HTML CSS\01-051 结构伪类选择器\only-of-type.html) 
+**运行结果**： [only-of-type.html](2020Web HTML CSS\01-051 结构伪类选择器\only-of-type.html) 
 
 
 
@@ -2832,11 +2717,7 @@ only-child
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-050-04](2020Web HTML CSS\01-051 结构伪类选择器\01-050-04.png)
-
-实例： [only-child.html](2020Web HTML CSS\01-051 结构伪类选择器\only-child.html) 
+**运行结果**：[only-child.html](2020Web HTML CSS\01-051 结构伪类选择器\only-child.html) 
 
 
 
@@ -2933,6 +2814,7 @@ only-child
         }
         p{
             border: inherit;
+            /* 继承了父元素的border属性 */
         }
     </style>
    
@@ -2943,11 +2825,7 @@ only-child
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-052-01](2020Web HTML CSS\01-052 CSS样式的继承\01-052-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-052 CSS样式的继承\index.html) 
+**运行结果**：[index.html](2020Web HTML CSS\01-052 CSS样式的继承\index.html) 
 
 
 
@@ -2978,11 +2856,11 @@ only-child
 
 base.css里面的颜色为tomato
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-053-01](2020Web HTML CSS\01-053 单一样式的优先级\01-053-01.png)
+运行结果为方块是teal(绿色)
 
 
+
+如果把link放到style后面
 
 ```
     <style>
@@ -2995,11 +2873,9 @@ base.css里面的颜色为tomato
     <link rel="stylesheet" href="base.css">
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+方块则为tomato(红色)
 
-![01-053-02](2020Web HTML CSS\01-053 单一样式的优先级\01-053-02.png)
-
-实例： [index1.html](2020Web HTML CSS\01-053 单一样式的优先级\index1.html) 
+**运行结果**： [index1.html](2020Web HTML CSS\01-053 单一样式的优先级\index1.html) 
 
 
 
@@ -3047,13 +2923,7 @@ style行间 > id > class > tag > * > 继承
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-054-01](2020Web HTML CSS\01-054 important群组等优先级\01-054-01.png)
-
-结果不是gray颜色的字体
-
-实例： [!important.html](2020Web HTML CSS\01-054 important群组等优先级\!important.html) 
+**运行结果**： [!important.html](2020Web HTML CSS\01-054 important群组等优先级\!important.html)  结果不是gray颜色的字体
 
 
 
@@ -3076,11 +2946,7 @@ style行间 > id > class > tag > * > 继承
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-054-02](2020Web HTML CSS\01-054 important群组等优先级\01-054-02.png)
-
-实例： [index1.html](2020Web HTML CSS\01-054 important群组等优先级\index1.html) 
+**运行结果**： [index1.html](2020Web HTML CSS\01-054 important群组等优先级\index1.html) 
 
 
 
@@ -3105,11 +2971,7 @@ style行间 > id > class > tag > * > 继承
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-054-03](2020Web HTML CSS\01-054 important群组等优先级\01-054-03.png)
-
-实例： [index2.html](2020Web HTML CSS\01-054 important群组等优先级\index2.html) 
+**运行结果**： [index2.html](2020Web HTML CSS\01-054 important群组等优先级\index2.html) 
 
 
 
@@ -3266,15 +3128,17 @@ border-box : width、height -> content padding border
 
 上下间距是40px，而不是40px+40px=80px
 
-如果上面盒子margin为30px，下面盒子margin为50px，那么这俩盒子间距为50px，所以取这两个中的最大值
+如果上面盒子margin为30px，下面盒子margin为50px，那么这俩盒子间距为50px，所以取这两个中的最大值。
 
-![20200511111929](2020Web HTML CSS\01-058 盒模型之margin叠加问题\20200511111929.png)
+<a href=".\2020Web HTML CSS\01-058 盒模型之margin叠加问题\20200511111929.png">图片示例</a>
+
+
 
 设置margin:40px 又设置float:left
 
 左右间距是40pz+40px=80px
 
-![20200511112355](2020Web HTML CSS\01-058 盒模型之margin叠加问题\20200511112355.png)
+<a href=".\2020Web HTML CSS\01-058 盒模型之margin叠加问题\20200511112355.png">图片示例</a>
 
 实例： [index.html](2020Web HTML CSS\01-058 盒模型之margin叠加问题\index.html) 
 
@@ -3316,6 +3180,8 @@ display的值是inline-block、table-cell、flex、table-caption或者inline-fle
 
 overflow的值不是visible
 
+
+
 1、利用BFC避免margin重叠。
 
 ```
@@ -3342,11 +3208,7 @@ overflow的值不是visible
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-058-01](2020Web HTML CSS\01-058 盒模型之margin叠加问题\01-058-01.png)
-
-实例： [BFC1.html](2020Web HTML CSS\01-058 盒模型之margin叠加问题\BFC1.html) 
+**运行结果**： [BFC1.html](2020Web HTML CSS\01-058 盒模型之margin叠加问题\BFC1.html) 
 
 
 
@@ -3388,19 +3250,11 @@ overflow的值不是visible
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-058-02](2020Web HTML CSS\01-058 盒模型之margin叠加问题\01-058-02.png)
-
-LEFT块占据了RIGHT左上
+LEFT绿块占据了RIGHT紫块左上
 
 解决方法：在RIGHT块的元素里添加overflow: hidden;
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-058-03](2020Web HTML CSS\01-058 盒模型之margin叠加问题\01-058-03.png)
-
-实例： [BFC2.html](2020Web HTML CSS\01-058 盒模型之margin叠加问题\BFC2.html) 
+**运行结果**： [BFC2.html](2020Web HTML CSS\01-058 盒模型之margin叠加问题\BFC2.html) 
 
 
 
@@ -3432,21 +3286,15 @@ LEFT块占据了RIGHT左上
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-058-04](2020Web HTML CSS\01-058 盒模型之margin叠加问题\01-058-04.png)
-
 父元素不能被子元素撑满
 
 解决方法：在父元素里添加overflow: hidden;
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+**运行结果**： [BFC3.html](2020Web HTML CSS\01-058 盒模型之margin叠加问题\BFC3.html) 
 
-![01-058-05](2020Web HTML CSS\01-058 盒模型之margin叠加问题\01-058-05.png)
 
-实例： [BFC3.html](2020Web HTML CSS\01-058 盒模型之margin叠加问题\BFC3.html) 
 
-总结
+**总结**
 
 BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。
 
@@ -3486,13 +3334,11 @@ margin传递的问题只会出现在嵌套的结构中，且只有margin-top会�
 </body>
 ```
 
-显示效果：
-
-![20200511130236](2020Web HTML CSS\01-059 盒模型之margin传递问题\20200511130236.png)
+<a href=".\2020Web HTML CSS\01-059 盒模型之margin传递问题\20200511130236.png">图片示例</a>
 
 却不能在大盒子里下调100px，连同大盒子也跟着下调100px，margin-left和marginright无这问题
 
-实例： [index.html](2020Web HTML CSS\01-059 盒模型之margin传递问题\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-059 盒模型之margin传递问题\index.html) 
 
 
 
@@ -3506,13 +3352,7 @@ margin传递的问题只会出现在嵌套的结构中，且只有margin-top会�
 border: 2px dashed brown;
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-059-01](2020Web HTML CSS\01-059 盒模型之margin传递问题\01-059-01.png)
-
-
-
-实例： [index1.html](2020Web HTML CSS\01-059 盒模型之margin传递问题\index1.html) 
+**运行结果**： [index1.html](2020Web HTML CSS\01-059 盒模型之margin传递问题\index1.html) 
 
 
 
@@ -3536,11 +3376,7 @@ border: 2px dashed brown;
     </style>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-059-02](2020Web HTML CSS\01-059 盒模型之margin传递问题\01-059-02.png)
-
-实例： [index2.html](2020Web HTML CSS\01-059 盒模型之margin传递问题\index2.html) 
+**运行结果**： [index2.html](2020Web HTML CSS\01-059 盒模型之margin传递问题\index2.html) 
 
 
 
@@ -3576,11 +3412,7 @@ margin自适应居中
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-060-01](2020Web HTML CSS\01-060 CSS盒子模型与扩展\01-060-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-060 CSS盒子模型与扩展\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-060 CSS盒子模型与扩展\index.html) 
 
 
 
@@ -3613,11 +3445,7 @@ margin自适应居中
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-060-02](2020Web HTML CSS\01-060 CSS盒子模型与扩展\01-060-02.png)
-
-实例： [index2.html](2020Web HTML CSS\01-060 CSS盒子模型与扩展\index2.html) 
+**运行结果**： [index2.html](2020Web HTML CSS\01-060 CSS盒子模型与扩展\index2.html) 
 
 
 
@@ -3639,6 +3467,7 @@ width、height不设置的时候，对盒子模型的影响，会自动去计算
         }
         .box2{
             width: 100%;
+            /* 100%的只能继承父元素的300px */
             height: 100px;
             background: lightseagreen;
             padding-left: 30px;
@@ -3651,27 +3480,17 @@ width、height不设置的时候，对盒子模型的影响，会自动去计算
     </div>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-060-03](2020Web HTML CSS\01-060 CSS盒子模型与扩展\01-060-03.png)
-
 box2因为设置了padding超出范围外了
 
 解决方法：给box2添加box-sizing: border-box;
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-060-04](2020Web HTML CSS\01-060 CSS盒子模型与扩展\01-060-04.png)
-
-实例： [index3.html](2020Web HTML CSS\01-060 CSS盒子模型与扩展\index3.html) 
+**运行结果**： [index3.html](2020Web HTML CSS\01-060 CSS盒子模型与扩展\index3.html) 
 
 
 
 ## 01-061 盒子模型的嵌套练习
 
-练习：
-
-![盒子模型](2020Web HTML CSS\01-061 盒子模型的嵌套练习\盒子模型.png)
+练习：<a href=".\2020Web HTML CSS\01-061 盒子模型的嵌套练习\盒子模型.png">练习要求图示</a>
 
  [16_嵌套盒子的练习.html](2020Web HTML CSS\01-061 盒子模型的嵌套练习\16_嵌套盒子的练习.html) 这是采用测量方法参考设计图 缺点是改数值会坍塌
 
@@ -3725,6 +3544,10 @@ input、select...
 
 
 
+实例： [index.html](2020Web HTML CSS\01-062 按类型划分标签\index.html) 
+
+
+
 
 
 ## 01-063 按内容划分标签
@@ -3743,9 +3566,7 @@ Embedded 嵌入的 内嵌
 
 Interactive 互动的 
 
-![20200512085313](2020Web HTML CSS\01-063 按内容划分标签\20200512085313.png)
-
-
+<a href=".\2020Web HTML CSS\01-063 按内容划分标签\20200512085313.png">按内容划分图示</a>
 
 详情:https://www.w3.org/TR/html5/dom.html
 
@@ -3820,11 +3641,7 @@ none  此元素不会被显示
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![20200512093849](2020Web HTML CSS\01-065 display显示框类型\20200512093849.png)
-
-实例： [index.html](2020Web HTML CSS\01-065 display显示框类型\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-065 display显示框类型\index.html) 
 
 
 
@@ -3858,11 +3675,7 @@ none  此元素不会被显示
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![20200512094809](2020Web HTML CSS\01-065 display显示框类型\20200512094809.png)
-
-实例： [index1.html](2020Web HTML CSS\01-065 display显示框类型\index1.html) 
+**运行结果**： [index1.html](2020Web HTML CSS\01-065 display显示框类型\index1.html) 
 
 
 
@@ -3900,11 +3713,7 @@ visibility:hidden 占空间的隐藏
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![20200512095126](2020Web HTML CSS\01-065 display显示框类型\20200512095126.png)
-
-实例： [index2.html](2020Web HTML CSS\01-065 display显示框类型\index2.html) 
+**运行结果**： [index2.html](2020Web HTML CSS\01-065 display显示框类型\index2.html) 
 
 
 
@@ -3926,8 +3735,6 @@ table、tr、td
 	<a href="#"></a>
 </div>
 ```
-
-
 
 
 
@@ -3992,11 +3799,7 @@ table、tr、td
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-066-01](2020Web HTML CSS\01-066 标签嵌套规范\01-066-01.gif)
-
-实例： [index1.html](2020Web HTML CSS\01-066 标签嵌套规范\index1.html) 
+**运行结果**： [index1.html](2020Web HTML CSS\01-066 标签嵌套规范\index1.html) 
 
 
 
@@ -4018,31 +3821,15 @@ overflow 属性规定当内容溢出元素框时发生的事情。
 
 visible  [visible.html](2020Web HTML CSS\01-067 overflow溢出隐藏\visible.html) 
 
-![01-067-01](2020Web HTML CSS\01-067 overflow溢出隐藏\01-067-01.png)
-
-
-
-
-
 hidden  [hidden.html](2020Web HTML CSS\01-067 overflow溢出隐藏\hidden.html) 
-
-![01-067-02](2020Web HTML CSS\01-067 overflow溢出隐藏\01-067-02.png)
-
-
 
 scroll  [scroll.html](2020Web HTML CSS\01-067 overflow溢出隐藏\scroll.html) 
 
-![01-067-03](2020Web HTML CSS\01-067 overflow溢出隐藏\01-067-03.gif)
-
-
-
 auto  [auto.html](2020Web HTML CSS\01-067 overflow溢出隐藏\auto.html) 
 
-![01-067-04](2020Web HTML CSS\01-067 overflow溢出隐藏\01-067-04.png)
 
 
 
-有图片的： [img.html](2020Web HTML CSS\01-067 overflow溢出隐藏\img.html) 
 
 ```
     <style>
@@ -4073,9 +3860,9 @@ auto  [auto.html](2020Web HTML CSS\01-067 overflow溢出隐藏\auto.html)
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+**运行结果**：
 
-![01-067-05](2020Web HTML CSS\01-067 overflow溢出隐藏\01-067-05.png)
+有图片的： [img.html](2020Web HTML CSS\01-067 overflow溢出隐藏\img.html) 
 
 
 
@@ -4120,11 +3907,7 @@ y 属性规定是否对内容的上/下边缘进行裁剪 - 如果溢出元素�
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-067-06](2020Web HTML CSS\01-067 overflow溢出隐藏\01-067-06.gif)
-
-实例： [x y.html](2020Web HTML CSS\01-067 overflow溢出隐藏\x y.html) 
+**运行结果**： [x y.html](2020Web HTML CSS\01-067 overflow溢出隐藏\x y.html) 
 
 
 
@@ -4162,10 +3945,6 @@ rgba()  a在 0 ~ 1区间内
         }
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-068-01](2020Web HTML CSS\01-068 透明度与手势\01-068-01.png)
-
 
 
 ```
@@ -4179,12 +3958,6 @@ rgba()  a在 0 ~ 1区间内
     <span>这是一个文本</span>
     <span class="touming">这是一个文本</span>
 ```
-
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-068-02](2020Web HTML CSS\01-068 透明度与手势\01-068-02.png)
-
-
 
 
 
@@ -4204,11 +3977,11 @@ rgba()  a在 0 ~ 1区间内
     <div class="box12">有设透明度</div>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
 
-![01-068-03](2020Web HTML CSS\01-068 透明度与手势\01-068-03.png)
 
-实例： [index.html](2020Web HTML CSS\01-068 透明度与手势\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-068 透明度与手势\index.html) 
+
+
 
 练习：两张图叠加在一起并互相隐约显示
 
@@ -4250,6 +4023,8 @@ defaule 默认
 | wait      | 此光标指示程序正忙（通常是一只表或沙漏）。                   |
 | help      | 此光标指示可用的帮助（通常是一个问号或一个气球）。           |
 
+
+
 实现自定义手势：
 
 准备图片：.cur、.ico
@@ -4284,11 +4059,9 @@ defaule 默认
     <p class="p3">其它光标图片其它光标图片</p>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+鼠标划入试试效果
 
-![01-068-04](2020Web HTML CSS\01-068 透明度与手势\01-068-04.gif)
-
-实例： [index1.html](2020Web HTML CSS\01-068 透明度与手势\index1.html) 
+**运行结果**： [index1.html](2020Web HTML CSS\01-068 透明度与手势\index1.html) 
 
 
 
@@ -4304,13 +4077,13 @@ min-height、max-height
 max-width: 200px;
 ```
 
-![01-069-01](2020Web HTML CSS\01-069 最大最小宽高\01-069-01.gif)
+
 
 上一段没设max-width，会随窗口尺寸变化而变化；
 
 下一段有设置max-width:200px
 
-实例： [index.html](2020Web HTML CSS\01-069 最大最小宽高\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-069 最大最小宽高\index.html) 
 
 
 
@@ -4343,11 +4116,9 @@ html,body{ height:100%;}
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+窗口水平缩放试效果
 
-![01-069-02](2020Web HTML CSS\01-069 最大最小宽高\01-069-02.gif)
-
-练习： [test.html](2020Web HTML CSS\01-069 最大最小宽高\test.html) 
+**运行结果**： [test.html](2020Web HTML CSS\01-069 最大最小宽高\test.html) 
 
 
 
@@ -4612,7 +4383,7 @@ png等图片的切图流程：
 
 编辑-->首选项-->单位与标尺-->按下图修改即可：
 
-![01](2020Web HTML CSS\01-073 PNG等图片切图流程\01.png)
+<a href=".\2020Web HTML CSS\01-073 PNG等图片切图流程\01.png">图示</a>
 
 
 
@@ -4620,29 +4391,29 @@ png等图片的切图流程：
 
 由于ps默认未启用标尺及智能参考线等，因此需要自行开启：
 
-![02](2020Web HTML CSS\01-073 PNG等图片切图流程\02.png)
+<a href=".\2020Web HTML CSS\01-073 PNG等图片切图流程\02.png">图示</a>
 
 
 
 3、窗口设置
 
-![03](2020Web HTML CSS\01-073 PNG等图片切图流程\03.png)
+<a href=".\2020Web HTML CSS\01-073 PNG等图片切图流程\03.png">图示</a>
 
 
 
 如果左侧工具栏未开启显示，则也可在此设置让其显示；另外需要提的是，信息面板需要一些额外的设置：
 
-![04](2020Web HTML CSS\01-073 PNG等图片切图流程\04.png)
+<a href=".\2020Web HTML CSS\01-073 PNG等图片切图流程\04.png">图示</a>
 
 
 
 信息面板选项设置
 
-![05](2020Web HTML CSS\01-073 PNG等图片切图流程\05.png)
+<a href=".\2020Web HTML CSS\01-073 PNG等图片切图流程\05.png">图示</a>
 
 4、新建文件存储预设
 
-![06](2020Web HTML CSS\01-073 PNG等图片切图流程\06.png)
+<a href=".\2020Web HTML CSS\01-073 PNG等图片切图流程\06.png">图示</a>
 
 
 
@@ -4741,8 +4512,6 @@ left right none(默认)
 
 
 
-
-
 ```
         .box2{
             width: 100px;
@@ -4759,6 +4528,7 @@ left right none(默认)
         
        .clear{
             clear: both;
+            /* 取消上面一行试效果 */
         }
         
     <div class="box2">1</div>
@@ -4771,21 +4541,7 @@ left right none(默认)
     </div>
 ```
 
-无添加clear: both;
-
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-078-01](2020Web HTML CSS\01-078 float浮动概念及原理\01-078-01.png)
-
-
-
-添加clear: both;
-
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-078-02](2020Web HTML CSS\01-078 float浮动概念及原理\01-078-02.png)
-
-实例： [index1.html](2020Web HTML CSS\01-078 float浮动概念及原理\index1.html) 
+**运行结果**： [index1.html](2020Web HTML CSS\01-078 float浮动概念及原理\index1.html) 
 
 
 
@@ -4837,19 +4593,9 @@ float注意点
     </div>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+给.box-little1(小红块)添加float:left试效果
 
-![01-079-01](2020Web HTML CSS\01-079 float注意点整理\01-079-01.png)
-
-
-
-给.box-little1(小红块)添加float:left
-
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-079-02](2020Web HTML CSS\01-079 float注意点整理\01-079-02.png)
-
-实例： [float.html](2020Web HTML CSS\01-079 float注意点整理\float.html) 
+**运行结果**： [float.html](2020Web HTML CSS\01-079 float注意点整理\float.html) 
 
 
 
@@ -4884,17 +4630,9 @@ float注意点
     </div>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+给box-little3(一行没设置宽度的绿块)添加float:left，变成脱离了，宽度根据内容大小决定
 
-![01-079-03](2020Web HTML CSS\01-079 float注意点整理\01-079-03.png)
-
-给box-little3(一行没设置宽度的绿块)添加float:left，变成脱离了
-
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-079-04](2020Web HTML CSS\01-079 float注意点整理\01-079-04.png)
-
-实例： [float1.html](2020Web HTML CSS\01-079 float注意点整理\float1.html) 
+**运行结果**： [float1.html](2020Web HTML CSS\01-079 float注意点整理\float1.html) 
 
 
 
@@ -4937,15 +4675,7 @@ float注意点
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-079-05](2020Web HTML CSS\01-079 float注意点整理\01-079-05.png)
-
 第1、2块高度超出了，第4块被迫移到第3块下面，第5块也位移了。
-
-如果设置高度不超出，即
-
-![01-079-06](2020Web HTML CSS\01-079 float注意点整理\01-079-06.png)
 
 实例： [index1.html](2020Web HTML CSS\01-079 float注意点整理\index1.html) 
 
@@ -4989,19 +4719,11 @@ float注意点
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-080-01](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-01.png)
-
-绿翰和蓝块分别添加float:left和float:right，然后脱离出来了，红块就自动移到前面空的位置
+绿块和蓝块分别添加float:left和float:right，然后脱离出来了，红块就自动移到前面空的位置
 
 如果想让红块不自动移上去，解决方法为给红块添加clear:both
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-080-02](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-02.png)
-
-实例： [index.html](2020Web HTML CSS\01-080 清除float浮动（上）\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-080 清除float浮动（上）\index.html) 
 
 
 
@@ -5032,19 +4754,13 @@ float注意点
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-080-03](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-03.png)
+.box1没设高度，不会被已设float:left;的box2撑满
 
 解决方法:
 
 给父元素添加高度200px，但是设置高度能避免浮动问题，不适合做自适应的效果。
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-080-04](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-04.png)
-
-实例： [index1.html](2020Web HTML CSS\01-080 清除float浮动（上）\index1.html) 
+**运行结果**： [index1.html](2020Web HTML CSS\01-080 清除float浮动（上）\index1.html) 
 
 
 
@@ -5082,19 +4798,11 @@ float注意点
     <div>333</div>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-080-05](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-05.png)
-
-给父元素box1添加float:left
-
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-080-06](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-06.png)
+给父元素box1添加float:left，方能被子元素撑满
 
 
 
-如果添加后面元素.box3 宽200px 高200px 颜色lightseagreen
+但是如果添加后面元素.box3 宽200px 高200px 颜色lightseagreen
 
 ```
     <div class="box1">
@@ -5105,17 +4813,9 @@ float注意点
     <div class="box3"></div>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-080-07](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-07.png)
-
 显然影响了后面元素，解决方法给.box3添加clear:both
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-080-08](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-08.png)
-
-实例： [index2.html](2020Web HTML CSS\01-080 清除float浮动（上）\index2.html) 
+**运行结果**： [index2.html](2020Web HTML CSS\01-080 清除float浮动（上）\index2.html) 
 
 
 
@@ -5157,17 +4857,9 @@ BFC规范，不推荐，父容器会影响到后面的元素。
 
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+解决方法给父元素添加display:inline-block
 
-![01-080-09](2020Web HTML CSS\01-080 清除float浮动（上）\01-080-09.png)
-
-给父元素添加display:inline-block
-
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-080-10](E:\Web前端\教程\2020Web HTML CSS\01-080 清除float浮动（上）\01-080-10.png)
-
-实例： [index4.html](2020Web HTML CSS\01-080 清除float浮动（上）\index4.html) 
+**运行结果**： [index4.html](2020Web HTML CSS\01-080 清除float浮动（上）\index4.html) 
 
 
 
@@ -5202,11 +4894,7 @@ BFC规范，不推荐，父容器会影响到后面的元素。
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-081-01](2020Web HTML CSS\01-081 清除float浮动（下）\01-081-01.png)
-
-实例：  [index5.html](2020Web HTML CSS\01-081 清除float浮动（下）\index5.html) 
+**运行结果**：  [index5.html](2020Web HTML CSS\01-081 清除float浮动（下）\index5.html) 
 
 
 
@@ -5245,11 +4933,7 @@ BFC规范，不推荐，父容器会影响到后面的元素。
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-081-01](2020Web HTML CSS\01-081 清除float浮动（下）\01-081-01.png)
-
-实例： [index6.html](2020Web HTML CSS\01-081 清除float浮动（下）\index6.html) 
+**运行结果**： [index6.html](2020Web HTML CSS\01-081 清除float浮动（下）\index6.html) 
 
 
 
@@ -5257,15 +4941,15 @@ BFC规范，不推荐，父容器会影响到后面的元素。
 
 练习：利用浮动实现面面效果
 
-![float练习1](2020Web HTML CSS\01-082-83 flat制作页面小结构\float练习1.png)
+<a href=".\2020Web HTML CSS\01-082-83 flat制作页面小结构\float练习1.png">练习要求图示1</a>
 
- [test.html](2020Web HTML CSS\01-082-83 flat制作页面小结构\test.html) 
+练习： [test.html](2020Web HTML CSS\01-082-83 flat制作页面小结构\test.html) 
 
 
 
-![float练习2](2020Web HTML CSS\01-082-83 flat制作页面小结构\float练习2.jpg)
+<a href=".\2020Web HTML CSS\01-082-83 flat制作页面小结构\float练习2.jpg">练习要求图示1</a>
 
- [test2.html](2020Web HTML CSS\01-082-83 flat制作页面小结构\test2.html) 
+练习： [test2.html](2020Web HTML CSS\01-082-83 flat制作页面小结构\test2.html) 
 
 
 
@@ -5316,9 +5000,7 @@ relative
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-085-01](2020Web HTML CSS\01-085 absolute绝对定位\01-085-01.png)
+结果显示是3个绿块并列排行
 
 给第2块加上     
 
@@ -5332,11 +5014,9 @@ relative
         <div class="box" id="box2">2</div>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+第2块脱离父元素了
 
-![01-085-02](2020Web HTML CSS\01-085 absolute绝对定位\01-085-02.png)
-
-实例： [index.html](2020Web HTML CSS\01-085 absolute绝对定位\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-085 absolute绝对定位\index.html) 
 
 
 
@@ -5364,10 +5044,6 @@ relative
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-085-03](2020Web HTML CSS\01-085 absolute绝对定位\01-085-03.png)
-
 虽然给了span添加宽高分别100px，但是显示却不是100px*100px;
 
 添加position:absolute后
@@ -5383,13 +5059,11 @@ relative
         }
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+变成脱离了的块级元素
 
-![01-085-04](2020Web HTML CSS\01-085 absolute绝对定位\01-085-04.png)
+**运行结果**： [index1.html](2020Web HTML CSS\01-085 absolute绝对定位\index1.html) 
 
-内联元素可显示已设宽高
 
-实例： [index1.html](2020Web HTML CSS\01-085 absolute绝对定位\index1.html) 
 
 
 
@@ -5415,9 +5089,7 @@ relative
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-085-05](2020Web HTML CSS\01-085 absolute绝对定位\01-085-05.png)
+boxAbsolute没设宽高，是一个高度跟内容决定而且宽度跟浏览器窗口决定的块级元素
 
 给.boxAbsolute添加position:absolute后
 
@@ -5429,11 +5101,9 @@ relative
         }
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+变成一个宽高跟内容决定的内联块级元素
 
-![01-085-06](2020Web HTML CSS\01-085 absolute绝对定位\01-085-06.png)
-
-实例： [index2.html](2020Web HTML CSS\01-085 absolute绝对定位\index2.html) 
+**运行结果**： [index2.html](2020Web HTML CSS\01-085 absolute绝对定位\index2.html) 
 
 
 
@@ -5473,10 +5143,6 @@ relative
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![20200514151139](2020Web HTML CSS\01-085 absolute绝对定位\20200514151139.png)
-
 444箱子使用position:absolute后脱离文档流，定位与浏览器窗口相对 top100px left100px
 
 练习： [test.html](2020Web HTML CSS\01-085 absolute绝对定位\test.html) 
@@ -5513,11 +5179,9 @@ fixed：
         }
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+滚动浏览器窗口试效果
 
-![01-086-01](2020Web HTML CSS\01-086 fixed和sticky及z-index\01-086-01.gif)
-
-实例： [fixed.html](2020Web HTML CSS\01-086 fixed和sticky及z-index\fixed.html) 
+**运行结果**： [fixed.html](2020Web HTML CSS\01-086 fixed和sticky及z-index\fixed.html) 
 
 
 
@@ -5552,15 +5216,11 @@ sticky黏性定位：
     .
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+滚动浏览器窗口试效果
 
-![01-086-02](2020Web HTML CSS\01-086 fixed和sticky及z-index\01-086-02.gif)
-
-实例： [sticky.html](2020Web HTML CSS\01-086 fixed和sticky及z-index\sticky.html) 
+**运行结果**： [sticky.html](2020Web HTML CSS\01-086 fixed和sticky及z-index\sticky.html) 
 
 
-
-![01-086-03](2020Web HTML CSS\01-086 fixed和sticky及z-index\01-086-03.gif)
 
 练习： [sticky-test.html](2020Web HTML CSS\01-086 fixed和sticky及z-index\sticky-test.html) 
 
@@ -5570,19 +5230,15 @@ z-index定位层级。
 
 默认层级为0
 
-嵌套时候的层级问题
+z-index数值不同会使覆盖不同，嵌套时候的层级问题
 
-下图为默认z-index
-
-![20200514181836](2020Web HTML CSS\01-086 fixed和sticky及z-index\20200514181836.png)
+默认z-index<a href=".\2020Web HTML CSS\01-086 fixed和sticky及z-index\20200514181836.png">默认图示</a>
 
 
 
 
 
-设置z-index后，如下图
-
-![20200514182125](2020Web HTML CSS\01-086 fixed和sticky及z-index\20200514182125.png)
+设置z-index后，<a href=".\2020Web HTML CSS\01-086 fixed和sticky及z-index\20200514182125.png">有设z-inde图示</a>
 
 
 
@@ -5611,15 +5267,7 @@ position取值
 
 ## 01-087 定位实现下拉菜单
 
-参考淘宝顶部
-
-![20200514182548](2020Web HTML CSS\01-087 定位实现下拉菜单\20200514182548.png)
-
-
-
-![01-087-01](2020Web HTML CSS\01-087 定位实现下拉菜单\01-087-01.gif)
-
-方法：
+参考淘宝顶部<a href=".\2020Web HTML CSS\01-087 定位实现下拉菜单\20200514182548.png">参考图示</a>
 
 父元素里分两部分，顶部一行字高度，列表弄几行
 
@@ -5632,8 +5280,6 @@ position取值
 鼠标移入列表内某个行 列表 li:hover{background:颜色}
 
 实例： [index.html](2020Web HTML CSS\01-087 定位实现下拉菜单\index.html) 
-
-
 
 练习： [test.html](2020Web HTML CSS\01-087 定位实现下拉菜单\test.html) 
 
@@ -5676,11 +5322,7 @@ margin-left: - (子元素宽度的一半)
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-088-01](2020Web HTML CSS\01-088 定位实现居中和装饰点\01-088-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-088 定位实现居中和装饰点\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-088 定位实现居中和装饰点\index.html) 
 
 
 
@@ -5742,35 +5384,7 @@ text-overflow:ellipsis
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-089-01](2020Web HTML CSS\01-089 CSS添加省略号\01-089-01.png)
-
-
-
-添加不让内容折行的代码:white-space: nowrap;
-
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-089-02](2020Web HTML CSS\01-089 CSS添加省略号\01-089-02.png)
-
-
-
-添加剪掉溢出文本的代码：overflow: hidden;
-
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-089-03](2020Web HTML CSS\01-089 CSS添加省略号\01-089-03.png)
-
-
-
-添加省略号来代表被修剪文本的代码：text-overflow: ellipsis;
-
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-089-04](2020Web HTML CSS\01-089 CSS添加省略号\01-089-04.png)
-
-实例： [index.html](2020Web HTML CSS\01-089 CSS添加省略号\index.html) 
+**运行结果**：  [index.html](2020Web HTML CSS\01-089 CSS添加省略号\index.html) 
 
 练习： [test.html](2020Web HTML CSS\01-089 CSS添加省略号\test.html) 
 
@@ -5794,9 +5408,11 @@ background: url(./sprite_icon.png) no-repeat -1px -596px;
 
 减少图片的请求次数，加快网页的打开
 
-![01](2020Web HTML CSS\01-090 CSS精灵及好处\01.png)
+<a href=".\2020Web HTML CSS\01-090 CSS精灵及好处\01.png">CSS Sprite图示1</a>
 
-![02](2020Web HTML CSS\01-090 CSS精灵及好处\02.png)
+<a href=".\2020Web HTML CSS\01-090 CSS精灵及好处\02.png">CSS Sprite图示2</a>
+
+
 
 
 
@@ -5968,11 +5584,7 @@ strong 和 em 都是表示强调的标签，表现形态为文本加粗和斜体
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-112-01](2020Web HTML CSS\01-112 b标签与i标签\01-112-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-112 b标签与i标签\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-112 b标签与i标签\index.html) 
 
 
 
@@ -6068,9 +5680,7 @@ New为HTML5新增的属性
 br 标签表示换行操作，而 wbr 标签表示软换行操作。
 提示：如果单词太长，或者您担心浏览器会在错误的位置换行，那么您可以使用  wbr  元素来添加 Word Break Opportunity（单词换行时机）
 
-![01-115-01](2020Web HTML CSS\01-115 br标签与wbr标签\01-115-01.gif)
-
-实例： [wbr.html](2020Web HTML CSS\01-115 br标签与wbr标签\wbr.html)  动一动浏览器宽度试试看
+实例： [wbr.html](2020Web HTML CSS\01-115 br标签与wbr标签\wbr.html)  动一动浏览器宽度看看每段文本的不同之处
 
 
 
@@ -6121,11 +5731,7 @@ br 标签表示换行操作，而 wbr 标签表示软换行操作。
     </pre>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-116-01](2020Web HTML CSS\01-116 pre标签与code标签\01-116-01.png)
-
-实例： [index.html](2020Web HTML CSS\01-116 pre标签与code标签\index.html) 
+**运行结果**： [index.html](2020Web HTML CSS\01-116 pre标签与code标签\index.html) 
 
 
 
@@ -6166,7 +5772,7 @@ area属性：
     </map>
 ```
 
-![rect-coords](2020Web HTML CSS\01-117 map标签与area标签\rect-coords.png)
+<a href=".\2020Web HTML CSS\01-117 map标签与area标签\rect-coords.png">矩形rect图像映射图示</a>
 
 实例： [map area1.html](2020Web HTML CSS\01-117 map标签与area标签\map area1.html) 
 
@@ -6182,7 +5788,7 @@ area属性：
     </map>
 ```
 
-![circle-coords](2020Web HTML CSS\01-117 map标签与area标签\circle-coords.png)
+<a href=".\2020Web HTML CSS\01-117 map标签与area标签\circle-coords.png">正圆circle图像映射图示</a>
 
 实例： [map area2.html](2020Web HTML CSS\01-117 map标签与area标签\map area2.html) 
 
@@ -6198,7 +5804,7 @@ area属性：
     </map>
 ```
 
-![poly-coords](2020Web HTML CSS\01-117 map标签与area标签\poly-coords.png)
+<a href=".\2020Web HTML CSS\01-117 map标签与area标签\poly-coords.png">多边形poly图像映射图示</a>
 
 实例： [map area3.html](2020Web HTML CSS\01-117 map标签与area标签\map area3.html) 
 
@@ -6232,11 +5838,7 @@ object 元素需要配合param 元素一起完成
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-118-01](2020Web HTML CSS\01-118 embed标签与object标签\01-118-01.png)
-
-实例： [ember object.html](2020Web HTML CSS\01-118 embed标签与object标签\ember object.html) 
+**运行结果**： [ember object.html](2020Web HTML CSS\01-118 embed标签与object标签\ember object.html) 
 
 
 
@@ -6334,9 +5936,7 @@ ruby 元素由一个或多个需要解释/发音的字符和一个提供该信�
     <p>以上来自千锋实例</p>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
 
-![01-120-01](2020Web HTML CSS\01-120 文字注解与文字方法\01-120-01.png)
 
 
 
@@ -6355,10 +5955,6 @@ bdo 标签有 ltr 和 rtl 两个属性值，分别表示：从左到右显示文
     </p> 
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-120-02](2020Web HTML CSS\01-120 文字注解与文字方法\01-120-02.png)
-
 
 
 采用CSS：
@@ -6376,13 +5972,7 @@ bdo 标签有 ltr 和 rtl 两个属性值，分别表示：从左到右显示文
     </p>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-120-03](2020Web HTML CSS\01-120 文字注解与文字方法\01-120-03.png)
-
-
-
-实例： [ruby rt与bdo.html](2020Web HTML CSS\01-120 文字注解与文字方法\ruby rt与bdo.html) 
+**运行结果**： [ruby rt与bdo.html](2020Web HTML CSS\01-120 文字注解与文字方法\ruby rt与bdo.html) 
 
 
 
@@ -6552,17 +6142,7 @@ mark : 带有记号的文本
 
 添加单线 : border-collapse : collapse
 
-![01-12601](2020Web HTML CSS\01-126 表格扩展学习\01-12601.png)
-
-![01-12602](2020Web HTML CSS\01-126 表格扩展学习\01-12602.png)
-
 隐藏空单元 : empty-cells : hide
-
-![01-12603](2020Web HTML CSS\01-126 表格扩展学习\01-12603.png)
-
-![01-12604](2020Web HTML CSS\01-126 表格扩展学习\01-12604.png)
-
-
 
 斜线分类 : border / rotate
 
@@ -6570,6 +6150,7 @@ mark : 带有记号的文本
         table .line{
             border-top: 50px solid tomato;
             border-left: 150px solid lightblue ;
+            /* 上面两行代码为添加斜线 */
             position: relative;
             color: #fff;
         }
@@ -6592,6 +6173,7 @@ mark : 带有记号的文本
         <colgroup>
             <col span="2" style="background-color: lightblue;">
             <col span="2" style="background-color:  tomato;">
+            <!-- 上面两行为列分组 -->
         </colgroup>
         <tHead>
             <tr>
@@ -6607,18 +6189,17 @@ mark : 带有记号的文本
         </tHead>
 ```
 
-![01-12605](2020Web HTML CSS\01-126 表格扩展学习\01-12605.png)
 
-列分组 : colgroup  / col
+
+cogroup /  col：列分组
 
 ```
             <col span="2" style="background-color: lightblue;">
             <col span="2" style="background-color:  tomato;">
+            <!-- 上面两行为列分组 -->
 ```
 
-![01-12606](2020Web HTML CSS\01-126 表格扩展学习\01-12606.png)
-
-实例： [table.html](2020Web HTML CSS\01-126 表格扩展学习\table.html) 
+**运行结果**： [table.html](2020Web HTML CSS\01-126 表格扩展学习\table.html) 
 
 
 
@@ -6651,13 +6232,7 @@ mark : 带有记号的文本
 	</body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-127 01](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 01.png)
-
-![01-127 02](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 02.png)
-
-实例： [form1.html](2020Web HTML CSS\01-127 表单扩展之美化控件\form1.html) 
+**运行结果**： [form1.html](2020Web HTML CSS\01-127 表单扩展之美化控件\form1.html)  点击黑框试效果
 
 
 
@@ -6688,15 +6263,9 @@ mark : 带有记号的文本
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-127 03](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 03.png)
-
-![01-127 04](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 04.png)
-
 但是鼠标移入【上传】按钮无显示“未选择任何文件”
 
-实例： [form2-1.html](2020Web HTML CSS\01-127 表单扩展之美化控件\form2-1.html) 
+**运行结果**： [form2-1.html](2020Web HTML CSS\01-127 表单扩展之美化控件\form2-1.html) 
 
 
 
@@ -6730,13 +6299,9 @@ mark : 带有记号的文本
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-127 05](2020Web HTML CSS\01-127 表单扩展之美化控件\01-127 05.png)
-
 鼠标移入【上传】按钮能显示“未选择任何文件”
 
-实例： [form2-2.html](2020Web HTML CSS\01-127 表单扩展之美化控件\form2-2.html) 
+**运行结果**： [form2-2.html](2020Web HTML CSS\01-127 表单扩展之美化控件\form2-2.html) 
 
 
 
@@ -6746,33 +6311,11 @@ mark : 带有记号的文本
 
 <input type="以下新控件">
 
-email  :  电子邮件地址输入框
+email  :  电子邮件地址输入框，如果输入后没带@会有提示框
 
-![01](2020Web HTML CSS\01-128 表单扩展之新input控件\01.png)
+url  :  网址输入框，如果漏http://或https://会出现格式不对的提示框
 
-
-
-url  :  网址输入框
-
-以下为格式不正确：
-
-![url01](2020Web HTML CSS\01-128 表单扩展之新input控件\url01.png)
-
-![url02](2020Web HTML CSS\01-128 表单扩展之新input控件\url02.png)
-
-格式正确如下图：
-
-![url03](2020Web HTML CSS\01-128 表单扩展之新input控件\url03.png)
-
-![url04](2020Web HTML CSS\01-128 表单扩展之新input控件\url04.png)
-
-
-
-number  :  数值输入框
-
-字母键盘无法输入，而且有箭头键用来加减数字
-
-
+mber  :  数值输入框，字母键盘无法输入，而且有箭头键用来加减数字
 
 range  :  滑动条
 
@@ -6780,49 +6323,39 @@ range  :  滑动条
 <input type="range" min="0" max="10" value="2">
 ```
 
-![range](2020Web HTML CSS\01-128 表单扩展之新input控件\range.png)
-
 
 
 date / month / week  :  日期控件
 
-![date month week](2020Web HTML CSS\01-128 表单扩展之新input控件\date month week.png)
+```
+        <p><input type="date"></p>
+        <p><input type="month"></p>
+        <p><input type="week"></p>
+```
 
-​	
 
-search  :  搜索框
 
-输入字符 框内右侧会显示叉号
+search  :  搜索框，输入字符 框内右侧会显示叉号
 
 ```
 <input type="search" placeholder="your keyword">
 ```
 
-![search](2020Web HTML CSS\01-128 表单扩展之新input控件\search.png)
-
 
 
 color  :  颜色控件
 
-![color](2020Web HTML CSS\01-128 表单扩展之新input控件\color.png)
-
-
-
-
-
 tel  :  电话号码输入框  ( 在移动端会默认调起数字键盘 )
-
-
 
 time  :  时间控件
 
-![time](2020Web HTML CSS\01-128 表单扩展之新input控件\time.png)
-
-
-
 **注意：**以上控件在不同浏览器或不同版本 显示有所区别
 
+实例： [form_new1.html](2020Web HTML CSS\01-128 表单扩展之新input控件\form_new1.html) 
 
+
+
+### 总结
 
 | 值                | 描述                                                         |
 | :---------------- | :----------------------------------------------------------- |
@@ -6852,8 +6385,6 @@ time  :  时间控件
 
 参考链接：https://www.w3cschool.cn/htmltags/att-input-type.html
 
-实例： [form_new1.html](2020Web HTML CSS\01-128 表单扩展之新input控件\form_new1.html) 
-
 
 
 ## 01-129 表单扩展之新属性
@@ -6865,11 +6396,7 @@ autocomplete  :  自动完成  默认 on  /  off
 <input type="text" name="username" >
 ```
 
-添加name="username"会出现下图所示：
-
-![autocomplete](2020Web HTML CSS\01-129 表单扩展之新属性\autocomplete.png)
-
-
+添加name="username"会出现下拉多个username的内容
 
 ```
 <input type="text" name="username" autocomplete="off">
@@ -6890,13 +6417,13 @@ autofocus  :  获取焦点
         <input type="submit">
 ```
 
-![autofocus](2020Web HTML CSS\01-129 表单扩展之新属性\autofocus.png)
 
-required  :  不能为空
 
-空框提交会出现提示框
+required  :  不能为空，空框提交会出现提示框
 
-![required](2020Web HTML CSS\01-129 表单扩展之新属性\required.png)
+```
+<input type="text" name="username" autocomplete="off" autofocus required>
+```
 
 
 
@@ -6957,9 +6484,7 @@ legend  :  为fieldset元素定义标题
     </fieldset>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![fieldset legend](2020Web HTML CSS\01-131 表单扩展之标签\fieldset legend.png)
+**运行结果**： [form_new4-1.html](2020Web HTML CSS\01-131 表单扩展之标签\form_new4-1.html) 
 
 
 
@@ -6982,11 +6507,7 @@ optgroup  :  定义选项组
     </select>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![optgroup](2020Web HTML CSS\01-131 表单扩展之标签\optgroup.png)
-
-实例： [form_new4.html](2020Web HTML CSS\01-131 表单扩展之标签\form_new4.html) 
+**运行结果**： [form_new4-2.html](2020Web HTML CSS\01-131 表单扩展之标签\form_new4-2.html) 
 
 
 
@@ -7035,13 +6556,9 @@ overflow 除了 visible 以外的值 (hidden、auto、scroll)
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![BFC](2020Web HTML CSS\01-132 BFC规范\BFC.png)
-
 红块设置了margin-bottom 30px 蓝块设置了margin-top 30px，可是两块纵向距离却不是30px+30px=60px，而是选取最大的30px
 
- [BFC1.html](2020Web HTML CSS\01-132 BFC规范\BFC1.html) 
+**运行结果**： [BFC1.html](2020Web HTML CSS\01-132 BFC规范\BFC1.html) 
 
 
 
@@ -7080,9 +6597,9 @@ style部分添加
 
  [BFC3.html](2020Web HTML CSS\01-132 BFC规范\BFC3.html) 
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+**运行结果**：两个块纵向距离为60px
 
-![BFC2](2020Web HTML CSS\01-132 BFC规范\BFC2.png)
+
 
 
 
@@ -7110,21 +6627,13 @@ style部分添加
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![BFC4](2020Web HTML CSS\01-132 BFC规范\BFC4.png)
-
 本来想把小块在大块里向下移动50px，却连带大块也移下50px
 
 解决方法：父元素添加overflow:hidden
 
 或者父元素添加position:relative,子元素添加position absolute
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![BFC4-01](2020Web HTML CSS\01-132 BFC规范\BFC4-01.png)
-
- [BFC4.html](2020Web HTML CSS\01-132 BFC规范\BFC4.html) 
+**运行结果**： [BFC4.html](2020Web HTML CSS\01-132 BFC规范\BFC4.html) 
 
 
 
@@ -7151,10 +6660,6 @@ style部分添加
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![BFC5](2020Web HTML CSS\01-132 BFC规范\BFC5.png)
-
 无设高度的div1不能被已设float:left的div2撑满
 
 解决方法：
@@ -7165,11 +6670,7 @@ style部分添加
 
 3.又或者添加display:inline-block
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![BFC5-1](2020Web HTML CSS\01-132 BFC规范\BFC5-1.png)
-
- [BFC5.html](2020Web HTML CSS\01-132 BFC规范\BFC5.html) 
+**运行结果**： [BFC5.html](2020Web HTML CSS\01-132 BFC规范\BFC5.html) 
 
 
 
@@ -7200,21 +6701,15 @@ style部分添加
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![BFC6](2020Web HTML CSS\01-132 BFC规范\BFC6.png)
-
 小绿块把大绿块覆盖了
+
+**运行结果**：
 
 解决方法：
 
 给div2添加overflow:hidden
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![BFC6-01](2020Web HTML CSS\01-132 BFC规范\BFC6-01.png)
-
- [BFC6.html](2020Web HTML CSS\01-132 BFC规范\BFC6.html) 
+**运行结果**： [BFC6.html](2020Web HTML CSS\01-132 BFC规范\BFC6.html) 
 
 
 
@@ -7249,9 +6744,7 @@ CSS3去兼容不同的浏览器，针对旧的浏览器做兼容，新浏览器�
 
 在前缀为-webkit-的浏览器（chrome safari等）打开或刷新会以2秒缓慢展现，但是在非-webkit-浏览器（如IE opera等)不会有这种动画展现
 
-![01](2020Web HTML CSS\01-134 浏览器内核与浏览器前缀\01.png)
-
-实例： [vendor-prefixe.html](2020Web HTML CSS\01-134 浏览器内核与浏览器前缀\vendor-prefixe.html) 
+**运行结果** [vendor-prefixe.html](2020Web HTML CSS\01-134 浏览器内核与浏览器前缀\vendor-prefixe.html) 
 
 
 
@@ -7279,7 +6772,7 @@ transition-delay  :  定义过渡效果何时开始。
         }
 ```
 
-![gifhome_640x360_20s](2020Web HTML CSS\01-135 transition过渡基础语法\gifhome_640x360_20s.gif)
+鼠标移入不同颜色的方块试效果
 
 实例： [transition.html](2020Web HTML CSS\01-135 transition过渡基础语法\transition.html) 
 
@@ -7304,11 +6797,11 @@ transition-timing-function  :  规定速度效果的速度曲线。
 | ease-in-out                   | 规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。 |
 | cubic-bezier(*n*,*n*,*n*,*n*) | 在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。 |
 
-![01](2020Web HTML CSS\01-135 transition过渡基础语法\01.png)
+<a href=".\2020Web HTML CSS\01-135 transition过渡基础语法\01.png">transition-timing-function属性图示</a>
 
 
 
-![02](2020Web HTML CSS\01-135 transition过渡基础语法\02.png)
+<a href=".\2020Web HTML CSS\01-135 transition过渡基础语法\02.png">在线工具的cubic-bezier图示</a>
 
 在线工具：https://cubic-bezier.com/
 
@@ -7330,9 +6823,9 @@ transition-timing-function  :  规定速度效果的速度曲线。
         }
 ```
 
-![gifhome_640x360_8s](2020Web HTML CSS\01-135 transition过渡基础语法\gifhome_640x360_8s.gif)
+运动轨迹变化
 
-实例： [transition-timing-function.html](2020Web HTML CSS\01-135 transition过渡基础语法\transition-timing-function.html) 
+**运行结果** [transition-timing-function.html](2020Web HTML CSS\01-135 transition过渡基础语法\transition-timing-function.html) 
 
 
 
@@ -7342,164 +6835,15 @@ transition-timing-function  :  规定速度效果的速度曲线。
 
 ## 01-136 transition实例之过渡导航
 
-```
-    <style>
-        ul,li{
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        ul{
-            width: 360px;
-        }
-        ul li{
-            width: 60px;
-            height: 70px;
-            float: left;
-            background: url(./img/aNavBg.png);
-            transition-property: all;
-            transition-duration: .3s;
-        }
-        ul li:nth-child(1){ background-position: 0 -70px;}
-        ul li:nth-child(2){ background-position: -60px -70px;}
-        ul li:nth-child(3){ background-position: -120px -70px;}
-        ul li:nth-child(4){ background-position: -180px -70px;}
-        ul li:nth-child(5){ background-position: -240px -70px;}
-        ul li:nth-child(6){ background-position: -300px -70px;}
+鼠标移入导航的过渡变化
 
-        ul li:nth-child(1):hover{ background-position: 0 0;}
-        ul li:nth-child(2):hover{ background-position: -60px 0;}
-        ul li:nth-child(3):hover{ background-position: -120px 0;}
-        ul li:nth-child(4):hover{ background-position: -180px 0;}
-        ul li:nth-child(5):hover{ background-position: -240px 0;}
-        ul li:nth-child(6):hover{ background-position: -300px 0;}
-    </style>
-    
-    <body>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</body>
-```
-
-
-
-![gifhome_640x360_6s](2020Web HTML CSS\01-136 transition实例之过渡导航\gifhome_640x360_6s.gif)
-
-实例： [transition-index.html](2020Web HTML CSS\01-136 transition实例之过渡导航\transition-index.html) 
+练习： [transition-index.html](2020Web HTML CSS\01-136 transition实例之过渡导航\transition-index.html) 
 
 
 
 练习列表边框收缩效果：
 
 from:http://www.neusoft.edu.cn/
-
-![test](2020Web HTML CSS\01-136 transition实例之过渡导航\test.gif)
-
-
-
-```
-*{
-    margin: 0;
-    padding: 0;
-}
-a{
-    text-decoration: none;
-}
-a:visited{color: gray;}
-h2{
-    font-size: 14px;
-    padding-bottom: 10px;
-}
-
-.newsbox{
-    width: 600px;
-    height: auto;
-    padding-top: 50px;
-    overflow: hidden;
-    margin: 0 auto 0;
-}
-.newsbox .newsitem{
-    width: 300px;
-    height: 100px;
-    float: left;
-    box-sizing: border-box;
-    padding: 10px 40px 20px 0px;
-    position: relative;
-}
-.newsbox .newsitem:hover{
-    color: skyblue;
-}
-.newsbox .newsitem p{
-    font-size: 10px;
-    color: gray;
-}
-.newsbox .newsitem::before{
-    content: "";
-    display: block;
-    width: 100px;
-    height: 2px;
-    background: skyblue;
-    position: absolute;
-    top: 0;
-    transition: all .3s;
-}
-.newsbox .newsitem:hover::before{
-    width: 200px;
-}
-
-
-
-<body>
-    <div class="newsbox">
-        <a href="" title="大连东软信息学院第七届青年教师教学竞赛圆满落幕">
-            <div class="newsitem">
-                <h2>大连东软信息学院第七届青年教师教学竞赛圆满落幕</h2>
-                <p>2020.07.16 / 学校新闻</p>
-            </div>
-        </a>
-        <a href="">
-            <div class="newsitem">
-                <h2>第十届全国大学生电子商务“创新、创意及创业”挑战赛大连东软信息学院校级答</h2>
-                <p>2020.07.16 / 学校新闻</p>
-            </div>
-        </a>
-        <a href="">
-            <div class="newsitem">
-                <h2>大连东软信息学院入选汉萨大学联盟 2020 WURI RANKING产业应用类创新</h2>
-                <p>2020.07.16 / 学校新闻</p>
-            </div>
-        </a>
-        <a href="">
-            <div class="newsitem">
-                <h2>我校顺利完成2020年毕业设计（论文）在线答辩工作</h2>
-                <p>2020.07.16 / 学校新闻</p>
-            </div>
-        </a>
-        <a href="">
-            <div class="newsitem">
-                <h2>我校为海外留学学子、外籍教师、合作院校捐赠防疫物资</h2>
-                <p>2020.07.16 / 学校新闻</p>
-            </div>
-        </a>
-        <a href="">
-            <div class="newsitem">
-                <h2>大连东软信息学院隆重举行2020届学生云毕业典礼</h2>
-                <p>2020.07.16 / 学校新闻</p>
-            </div>
-        </a>
-    </div>
-</body>
-```
-
-
-
-![test](2020Web HTML CSS\01-136 transition实例之过渡导航\test.png)
 
 练习： [test.html](2020Web HTML CSS\01-136 transition实例之过渡导航\test.html) 
 
@@ -7538,19 +6882,9 @@ translateZ()   ( 3d )
     </style>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![translate](2020Web HTML CSS\01-137 transform位移与缩放\translate.gif)
-
-
-
 translate可设负数，transform: translate(-100px,20px);但会跨出父元素边框
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![translate1](2020Web HTML CSS\01-137 transform位移与缩放\translate1.gif)
-
-实例： [translate.html](2020Web HTML CSS\01-137 transform位移与缩放\translate.html) 
+**运行结果**： [translate.html](2020Web HTML CSS\01-137 transform位移与缩放\translate.html) 
 
 
 
@@ -7566,23 +6900,15 @@ scaleZ()   (3d)
         .box1:hover .box2{
             background: skyblue;
             /* transform: translate(-100px,20px); */
-            transform: scale(2,2);
+            transform: scale(2);
         }
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+scale(2)相等于scale(2,2)
 
-![scale1](2020Web HTML CSS\01-137 transform位移与缩放\scale1.gif)
+scale(2,.5)就是宽度变成两倍，高度变成一半
 
-
-
-scale(2,.5)
-
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![scale2](2020Web HTML CSS\01-137 transform位移与缩放\scale2.gif)
-
-实例： [scale.html](2020Web HTML CSS\01-137 transform位移与缩放\scale.html) 
+**运行结果**： [scale.html](2020Web HTML CSS\01-137 transform位移与缩放\scale.html) 
 
 
 
@@ -7605,45 +6931,27 @@ rotateZ  ( 和rotate是等级关系，那正值按顺时针旋转，负值按逆
         }
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![rotate1](2020Web HTML CSS\01-138 transform旋转与斜切\rotate1.gif)
-
-
+正值为顺时针，负值为逆时针
 
 ```
 transform: rotateZ(90deg);
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
 
-![rotate2](2020Web HTML CSS\01-138 transform旋转与斜切\rotate2.gif)
 
 若设置900deg，会旋转多次到900deg为止。
 
 
 
 skew : 斜切
-skewX : 单位也是角度，正值向左倾斜，负值向右倾斜。
+skewX : 单位也是角度，正值为顶部向左倾斜，负值为顶部向右倾斜。
 skewY
 
 ```
 transform: skew(45deg);
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![skew1](2020Web HTML CSS\01-138 transform旋转与斜切\skew1.gif)
-
-
-
-```
-transform: skew(180deg);
-```
-
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![skew2](2020Web HTML CSS\01-138 transform旋转与斜切\skew2.gif)
+实例： [skew.html](2020Web HTML CSS\01-138 transform旋转与斜切\skew.html) 
 
 
 
@@ -7684,13 +6992,13 @@ transform的注意事项：
 
 1.变形操作不会影响到其他元素。
 
-![01](2020Web HTML CSS\01-139 transform复合写法与注意点\01.gif)
-
 实例： [transform1.html](2020Web HTML CSS\01-139 transform复合写法与注意点\transform1.html) 
 
 
 
 2.变形操作只能添加给块元素，但是不能添加给内联元素。
+
+
 
 3.复合写法，可以同时添加多个变形操作。
 执行是有顺序的，先执行后面的操作，再执行前面的操作。
@@ -7734,13 +7042,9 @@ translate会受到 rotate、scale、skew的影响
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+**运行结果**： [transform2.html](2020Web HTML CSS\01-139 transform复合写法与注意点\transform2.html) 
 
-![01](2020Web HTML CSS\01-139 transform复合写法与注意点\01.png)
-
-实例： [transform2.html](2020Web HTML CSS\01-139 transform复合写法与注意点\transform2.html) 
-
-
+<a href=".\2020Web HTML CSS\01-139 transform复合写法与注意点\01.png">运动轨迹</a>
 
 
 
@@ -7773,11 +7077,11 @@ translate会受到 rotate、scale、skew的影响
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
+**运行结果**： [transform3.html](2020Web HTML CSS\01-139 transform复合写法与注意点\transform3.html) 
 
-![03](2020Web HTML CSS\01-139 transform复合写法与注意点\03.png)
+<a href=".\2020Web HTML CSS\01-139 transform复合写法与注意点\03.png">运动轨迹</a>
 
-实例： [transform3.html](2020Web HTML CSS\01-139 transform复合写法与注意点\transform3.html) 
+
 
 采用动图更为详细解释
 
@@ -7792,7 +7096,7 @@ box2和box3分别添加transition: 1s;，然后添加以下代码：
         }
 ```
 
-![02](2020Web HTML CSS\01-139 transform复合写法与注意点\02.gif)
+鼠标移刀1号蓝块可看运动轨迹
 
 动图： [transform3 gif.html](2020Web HTML CSS\01-139 transform复合写法与注意点\transform3 gif.html) 
 
@@ -7823,17 +7127,11 @@ x y z(3d)
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-139-01](2020Web HTML CSS\01-139 transform复合写法与注意点\01-139-01.gif)
+以中心为基点旋转
 
 
 
 如果给.box1元素添加transform-origin:0 0;
-
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-139-02](2020Web HTML CSS\01-139 transform复合写法与注意点\01-139-02.gif)
 
 可试试transform-origin不同数值
 
@@ -7895,16 +7193,201 @@ x y z(3d)
 </body>
 ```
 
-<span style="background:#f60;color:white;padding:5px">运行结果</span>
-
-![01-140-01](2020Web HTML CSS\01-140 斜切的导航\01-140-01.png)
-
-练习： [nav_skew.html](2020Web HTML CSS\01-140 斜切的导航\nav_skew.html) 
+**运行结果**：[nav_skew.html](2020Web HTML CSS\01-140 斜切的导航\nav_skew.html) 
 
 
 
-
+## 01-141 变形的列表
 
 变形的列表（1）
 
+参考： [07_变形的列表.html](2020Web HTML CSS\01-141 变形的列表\07_变形的列表.html) 
+
+方法：采用overflow:hidden修剪掉框外的白框
+
+练习： [index.html](2020Web HTML CSS\01-141 变形的列表\index.html) 
+
+
+
 变形的列表（2）
+
+参考： [demo.html](2020Web HTML CSS\01-141 变形的列表\demo.html) 
+
+方法：
+
+文本框设置高度0px和overflow:hidden达到隐藏效果，:hover{height:xxpx;}，达到鼠标移入能显现出来
+
+背景颜色采用RGBA，A为透明度，这样文字不会被透明度所影响
+
+练习： [test1.html](2020Web HTML CSS\01-141 变形的列表\test1.html) 
+
+
+
+## 01-142 animation动画基础语法
+
+animation-name : 设置动画的名字 (自定义的)
+
+animation-duration : 动画的持续时间
+
+animation-delay : 动画的延迟时间
+
+animation-iteration-count : 动画的重复次数 ，默认值就是1 ，infinite无限次数
+
+
+
+animation-timing-function : 动画的运动形式
+
+| 值                            | 描述                                                        | 测试                                                         |
+| :---------------------------- | :---------------------------------------------------------- | :----------------------------------------------------------- |
+| linear                        | 动画从开始到结束具有相同的速度。                            | [测试](https://www.w3cschool.cn/statics/demosource/Playit/Playit2.html#linear) |
+| ease                          | 动画有一个缓慢的开始，然后快，结束慢。                      | [测试](https://www.w3cschool.cn/statics/demosource/Playit/Playit2.html#ease) |
+| ease-in                       | 动画有一个缓慢的开始。                                      | [测试](https://www.w3cschool.cn/statics/demosource/Playit/Playit2.html#ease-in) |
+| ease-out                      | 动画结束缓慢。                                              | [测试](https://www.w3cschool.cn/statics/demosource/Playit/Playit2.html#ease-out) |
+| ease-in-out                   | 动画具有缓慢的开始和慢的结束。                              | [测试](https://www.w3cschool.cn/statics/demosource/Playit/Playit2.html#ease-in-out) |
+| cubic-bezier(*n*,*n*,*n*,*n*) | 在立方贝塞尔函数中定义速度函数。 可能的值是从0到1的数字值。 |                                                              |
+
+代码示例：
+
+```
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            animation-name:myBox;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: 2;
+            animation-timing-function:ease;
+        }
+        
+        @keyframes myBox{
+            from{ transform: translate(0,0);}
+            to{ transform: translate(200px,0);}
+        }
+```
+
+
+
+可缩写为
+
+```
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            animation:myBox 4s 2s 2 ease
+        }
+```
+
+
+
+**注：**
+
+1.运动结束后，默认情况下会停留在起始位置。
+
+2.@keyframes :  from -> 0%   ,  to ->  100%
+
+```
+        @keyframes myBox{
+            from{ transform: translate(0,0);}
+            to{ transform: translate(200px,0);}
+        }
+```
+
+相等于
+
+```
+        @keyframes myBox{
+            0%{ transform: translate(0,0);}
+            100%{ transform: translate(200px,0);}
+        }
+```
+
+
+
+
+
+```
+        @keyframes myBox{
+            0%{ transform: translate(0,0);}
+            25%{ transform: translate(200px,0);}
+            50%{ transform: translate(200px,200px);}
+            75%{ transform: translate(0px,200px);}
+        }
+```
+
+**运行结果**：
+
+一个小红块环着内边缘移动
+
+实例： [animation.html](2020Web HTML CSS\01-142 animation动画基础语法\animation.html) 
+
+
+
+### 总结
+
+| 值                                                           | 说明                                                         |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| *[animation-name](https://www.w3cschool.cn/cssref/css3-pr-animation-name.html)* | 指定要绑定到选择器的关键帧的名称                             |
+| *[animation-duration](https://www.w3cschool.cn/cssref/css3-pr-animation-duration.html)* | 动画指定需要多少秒或毫秒完成                                 |
+| *[animation-timing-function](https://www.w3cschool.cn/cssref/css3-pr-animation-timing-function.html)* | 设置动画将如何完成一个周期                                   |
+| *[animation-delay](https://www.w3cschool.cn/cssref/css3-pr-animation-delay.html)* | 设置动画在启动前的延迟间隔。                                 |
+| *[animation-iteration-count](https://www.w3cschool.cn/cssref/css3-pr-animation-iteration-count.html)* | 定义动画的播放次数。                                         |
+| *[animation-direction](https://www.w3cschool.cn/cssref/css3-pr-animation-direction.html)* | 指定是否应该轮流反向播放动画。                               |
+| *[animation-fill-mode](https://www.w3cschool.cn/cssref/css3-pr-animation-fill-mode.html)* | 规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式。 |
+| *[animation-play-state](https://www.w3cschool.cn/cssref/css3-pr-animation-play-state.html)* | 指定动画是否正在运行或已暂停。                               |
+| initial                                                      | 设置属性为其默认值。 [阅读关于 *initial*的介绍。](https://www.w3cschool.cn/cssref/css-initial.html) |
+| inherit                                                      | 从父元素继承属性。 [阅读关于 *initinherital*的介绍。](https://www.w3cschool.cn/cssref/css-inherit.html) |
+
+
+
+
+
+## 01-143 划入划出的小图标
+
+参考： [09_划入划出的小图标.html](2020Web HTML CSS\01-143 划入划出的小图标\09_划入划出的小图标.html) 
+
+translate位移设置，透明度
+
+```
+        ul li:hover img{
+            animation-name: navList;
+            animation-duration: .5s;
+            animation-iteration-count: 1;
+        }
+        
+        @keyframes navList {
+            0%{ transform: translate(0,0);opacity: 1;}
+            60%{ transform: translate(0,-50px);opacity: 0;}
+            70%{ transform: translate(0,30px);}
+            100%{ transform: translate(0,0px);}
+        }
+```
+
+练习： [test.html](2020Web HTML CSS\01-143 划入划出的小图标\test.html) 
+
+
+
+## 01-144loading加载动画
+
+参考： [demo.html](2020Web HTML CSS\01-144loading加载动画\demo.html) 
+
+上面的参考采用了display: flex; justify-content:space-between;代码
+
+方法：圆角，无限重复次数，有规律的延时，结构伪类:nth-child，放大缩小过程
+
+```
+        #loading .circle:nth-child(1){animation-delay: 0s;}
+        #loading .circle:nth-child(2){animation-delay: .12s;}
+        #loading .circle:nth-child(3){animation-delay: .24s;}
+        #loading .circle:nth-child(4){animation-delay: .36s;}
+        #loading .circle:nth-child(5){animation-delay: .48s;}
+        
+        @keyframes Loading-circle{
+            0%{ transform: scale(1);}
+            50%{ transform: scale(1.8);}
+            100%{ transform: scale(1);}
+        }
+```
+
+练习： [loading.html](2020Web HTML CSS\01-144loading加载动画\loading.html) 
