@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        ul{list-style: none;}
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px black solid;
+            margin: 50px auto;
+            /* perspective:200px; */
+        }
+        .box ul{
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            position: relative;
+            transition: 3s;
+            transform-style: preserve-3d;
+            transform-origin: center center -50px;
+        }
+        .box ul li{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            line-height: 100px;
+            text-align: center;
+            color: #fff;
+            font-size: 26px;
+        }
+        .box ul li:nth-child(1){ background: tomato; left: 0; top: 0;}
+        /* 原地不动 */
+
+        .box ul li:nth-child(2){ background: brown; left: 100px; top: 0; 
+        transform-origin: left; transform: rotateY(90deg);}
+        /* 向右平移100px，transform-origin以第2块的左边线作为轴，然后向右翻转90度 */
+
+        .box ul li:nth-child(3){ background: lightseagreen; left: -100px; top: 0;
+        transform-origin: right; transform: rotateY(-90deg);}
+        /* 向左平移100px，transform-origin以第3块的右边线作为轴，然后向左翻转90度 */
+        
+        .box ul li:nth-child(4){ background: seagreen; left: 0; top: -100px;
+        transform-origin: bottom; transform: rotateX(90deg);}
+        /* 向上平移100px,transform-origin以第4块的底线作为轴，向上翻转90度 */
+
+        .box ul li:nth-child(5){ background: lightskyblue; left: 0; top: 100px;
+        transform-origin: top; transform: rotateX(-90deg);}
+        /* 向下平移100px,transform-origin以第4块的底线作为轴，向上翻转90度 */
+
+        .box ul li:nth-child(6){ background: tomato; left: 0; top: 0;
+        transform: translateZ(-100px) rotateY(180deg);
+        /* 向后100px,然后中心点翻转180度 */
+        }
+
+        .box:hover ul{
+            /* transform: rotateY(180deg); */
+            transform: rotateY(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+
+</body>
+</html>

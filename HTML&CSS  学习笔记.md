@@ -6982,7 +6982,9 @@ transform: skew(45deg);
 | skewY(*angle*)                                               | 定义沿着 Y 轴的 2D 倾斜转换。           |      |
 | perspective(*n*)                                             | 为 3D 转换元素定义透视视图。            |      |
 
+angle为角度，单位为deg
 
+参考链接：https://www.w3cschool.cn/cssref/pr-transform.html
 
 
 
@@ -7391,3 +7393,381 @@ translate位移设置，透明度
 ```
 
 练习： [loading.html](2020Web HTML CSS\01-144loading加载动画\loading.html) 
+
+
+
+## 01-145 animation动画扩展语法
+
+animation-fill-mode : 规定动画播放之前或之后，其动画效果是否可见。
+
+none (默认值) : 在运动结束之后回到初始位置，在延迟的情况下，让0%在延迟后生效
+backwards  :  在延迟的情况下，让0%在延迟前生效
+forwards  :  在运动结束的之后，停到结束位置
+both  :  backwards和forwards同时生效
+
+实例： [animation-fill-mode.html](2020Web HTML CSS\01-145 animation动画扩展语法\animation-fill-mode.html) 
+
+
+
+animation-direction：属性定义是否应该轮流反向播放动画。
+
+alternate  :  一次正向(0% ~ 100%)，一次反向(100% ~ 0%)
+reverse : 永远都是反向 , 从100%~0%
+normal (默认值) : 永远都是正向 , 从0%~100%
+
+实例： [animation-direction.html](2020Web HTML CSS\01-145 animation动画扩展语法\animation-direction.html) 
+
+
+
+## 01-146 animate.css动画库
+
+一款强大的预设css3动画库。
+
+官网地址：https://daneden.github.io/animate.css/
+
+
+
+基本使用：
+
+animated : 基类(基础的样式，每个动画效果都需要加)
+
+infinite : 动画的无限次数
+
+引用写法：
+
+1.本地连接：
+
+```
+<link rel="stylesheet" href="./css/animate.min.css">
+```
+
+
+
+2.连网连接
+
+```
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+```
+
+
+
+安装Animate.css之后，将该类animate__animated以及任何动画名称添加到元素中
+
+不要忘记 animate__前缀！
+
+代码示例：
+
+```
+<h1 class="animate__animated animate__bounce">An animated element</h1>
+```
+
+实例： [animate.html](2020Web HTML CSS\01-146 animate.css动画库\animate.html) 
+
+详细指南可访问官方：https://animate.style/
+
+
+
+
+
+## 01-147 3D基本语法及成像原理
+
+**三维坐标**
+
+<a href=".\2020Web HTML CSS\01-147 3D基本语法及成像原理\transform3d-01.png">如图所示</a>
+
+向上为-Y，向下为+Y，向左为-X，向右为+X，向前为+Z，向后为-Z。
+
+
+
+perspective : 离屏幕多远的距离去观察元素，值越大幅度越小，以像素计。
+
+
+
+**3D操作**
+
+rotateX() : 正值向上翻转
+
+实例： [trnasform3D-rotateX.html](2020Web HTML CSS\01-147 3D基本语法及成像原理\trnasform3D-rotateX.html) 
+
+在X轴上旋转
+
+
+
+rotateY() : 正值向右翻转
+
+实例： [trnasform3D-rotateY.html](2020Web HTML CSS\01-147 3D基本语法及成像原理\trnasform3D-rotateY.html) 
+
+在y轴上旋转
+
+
+
+translateZ() : 正值向前，负值向后
+
+ [trnasform3D-translateZ.html](2020Web HTML CSS\01-147 3D基本语法及成像原理\trnasform3D-translateZ.html) 
+
+
+
+backface-visibility : 背面隐藏
+
+| 值      | 描述                    |
+| ------- | ----------------------- |
+| visible | 默认值。 背面是可见的。 |
+| hidden  | 背面是不可见的。        |
+
+
+
+
+
+
+
+## 01-148 实现3D立方体
+
+transform-origin : x y z
+
+```
+ transform-origin: center center -50px;   （Z轴只能写数值，不能写单词）
+```
+
+
+
+transform-style : 3D空间
+flat  (默认值2d)、preserve-3d   (3d，产生一个三维空间)
+
+| 值          | 描述                       |
+| ----------- | -------------------------- |
+| flat        | 子元素将不保留其 3D 位置。 |
+| preserve-3d | 子元素将保留其 3D 位置。   |
+
+
+
+
+
+```
+        .box ul li:nth-child(1){ background: tomato; left: 0; top: 0;}
+        /* 原地不动 */
+
+        .box ul li:nth-child(2){ background: brown; left: 100px; top: 0; 
+        transform-origin: left; transform: rotateY(90deg);}
+        /* 向右平移100px，transform-origin以第2块的左边线作为轴，然后向右翻转90度 */
+
+        .box ul li:nth-child(3){ background: lightseagreen; left: -100px; top: 0;
+        transform-origin: right; transform: rotateY(-90deg);}
+        /* 向左平移100px，transform-origin以第3块的右边线作为轴，然后向左翻转90度 */
+        
+        .box ul li:nth-child(4){ background: seagreen; left: 0; top: -100px;
+        transform-origin: bottom; transform: rotateX(90deg);}
+        /* 向上平移100px,transform-origin以第4块的底线作为轴，向上翻转90度 */
+
+        .box ul li:nth-child(5){ background: lightskyblue; left: 0; top: 100px;
+        transform-origin: top; transform: rotateX(-90deg);}
+        /* 向下平移100px,transform-origin以第4块的底线作为轴，向上翻转90度 */
+
+        .box ul li:nth-child(6){ background: tomato; left: 0; top: 0;
+        transform: translateZ(-100px) rotateY(180deg);
+        /* 向后100px,然后中心点翻转180度 */
+        }
+        
+        
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+```
+
+鼠标移入.box试效果
+
+实例： [trnasform3D-scaleZ.html](2020Web HTML CSS\01-148 实现3D立方体\trnasform3D-scaleZ.html) 
+
+练习： [test.html](2020Web HTML CSS\01-148 实现3D立方体\test.html) 
+
+
+
+## 01-149 3D相关语法及扩展学习
+
+perspective-origin : 景深-基点位置，观察元素的角度。
+
+```
+perspective-origin: left; 
+/* 在左边看 */
+```
+
+或者
+
+```
+perspective-origin: bottom right;
+/* 在右下角往里面看 */
+```
+
+```
+perspective-origin: x-axis y-axis;
+```
+
+| 值       | 描述                                                         |
+| -------- | ------------------------------------------------------------ |
+| *x-axis* | 定义该视图在 x 轴上的位置。默认值：50%。可能的值：left center right length **% |
+| *y-axis* | 定义该视图在 y 轴上的位置。默认值：50%。可能的值：top center bottom length **% |
+
+实例： [perspective-origin.html](2020Web HTML CSS\01-149 3D相关语法及扩展学习\perspective-origin.html) 
+
+
+
+scaleZ() : 立体元素的厚度
+
+实例： [scaleZ.html](2020Web HTML CSS\01-149 3D相关语法及扩展学习\scaleZ.html) 
+
+
+
+**3D写法**
+scale3d() : 三个值 x y z
+translate3d() : 三个值 x y z
+rotate3d() : 四个值 0|1(x轴是否添加旋转角度)  0|1(y轴是否添加旋转角度)  0|1(z轴是否添加旋转角度)  deg；0为否，1为是。
+
+```
+opacity: .5;
+/* 采用透明度可看角度 */
+```
+
+实例： [3D写法.html](2020Web HTML CSS\01-149 3D相关语法及扩展学习\3D写法.html) 
+
+
+
+backface-visibility : 背面隐藏
+
+| 值      | 描述                    |
+| ------- | ----------------------- |
+| visible | 默认值。 背面是可见的。 |
+| hidden  | 背面是不可见的。        |
+
+上面有个html 3D写法.html设置了透明，导致可看到背面
+
+实例： [backface-visibility.html](2020Web HTML CSS\01-149 3D相关语法及扩展学习\backface-visibility.html) 
+
+
+
+### transform总结
+
+| 值                                                           | 描述                                    |      |
+| ------------------------------------------------------------ | --------------------------------------- | ---- |
+| none                                                         | 定义不进行转换。                        |      |
+| matrix(*n*,*n*,*n*,*n*,*n*,*n*)                              | 定义 2D 转换，使用六个值的矩阵。        |      |
+| matrix3d(*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*,*n*) | 定义 3D 转换，使用 16 个值的 4x4 矩阵。 |      |
+| translate(*x*,*y*)                                           | 定义 2D 转换。                          |      |
+| translate3d(*x*,*y*,*z*)                                     | 定义 3D 转换。                          |      |
+| translateX(*x*)                                              | 定义转换，只是用 X 轴的值。             |      |
+| translateY(*y*)                                              | 定义转换，只是用 Y 轴的值。             |      |
+| translateZ(*z*)                                              | 定义 3D 转换，只是用 Z 轴的值。         |      |
+| scale(*x*[,*y*]?)                                            | 定义 2D 缩放转换。                      |      |
+| scale3d(*x*,*y*,*z*)                                         | 定义 3D 缩放转换。                      |      |
+| scaleX(*x*)                                                  | 通过设置 X 轴的值来定义缩放转换。       |      |
+| scaleY(*y*)                                                  | 通过设置 Y 轴的值来定义缩放转换。       |      |
+| scaleZ(*z*)                                                  | 通过设置 Z 轴的值来定义 3D 缩放转换。   |      |
+| rotate(*angle*)                                              | 定义 2D 旋转，在参数中规定角度。        |      |
+| rotate3d(*x*,*y*,*z*,*angle*)                                | 定义 3D 旋转。                          |      |
+| rotateX(*angle*)                                             | 定义沿着 X 轴的 3D 旋转。               |      |
+| rotateY(*angle*)                                             | 定义沿着 Y 轴的 3D 旋转。               |      |
+| rotateZ(*angle*)                                             | 定义沿着 Z 轴的 3D 旋转。               |      |
+| skew(*x-angle*,*y-angle*)                                    | 定义沿着 X 和 Y 轴的 2D 倾斜转换。      |      |
+| skewX(*angle*)                                               | 定义沿着 X 轴的 2D 倾斜转换。           |      |
+| skewY(*angle*)                                               | 定义沿着 Y 轴的 2D 倾斜转换。           |      |
+| perspective(*n*)                                             | 为 3D 转换元素定义透视视图。            |      |
+
+angle为角度，单位为deg
+
+参考链接：https://www.w3cschool.cn/cssref/pr-transform.html
+
+
+
+练习
+
+四棱锥： [四棱锥quadrangular pyramid-test.html](2020Web HTML CSS\01-149 3D相关语法及扩展学习\四棱锥quadrangular pyramid-test.html) 
+
+3D轮播图： [slicebox-3dImageSlider.html](2020Web HTML CSS\01-149 3D相关语法及扩展学习\slicebox-3dImageSlider.html) 
+
+
+
+## 01-150 3D效果之旋转木马
+
+参考： [16_3D旋转木马效果.html](2020Web HTML CSS\01-150 3D效果之旋转木马\16_3D旋转木马效果.html) 
+
+方法：transform-style  transform-origin
+
+练习： [3Dcarousel.html](2020Web HTML CSS\01-150 3D效果之旋转木马\3Dcarousel.html) 
+
+
+
+## 01-151 3D效果之翻转图片
+
+参考： [17_3D图片翻转效果.html](2020Web HTML CSS\01-151 3D效果之翻转图片\17_3D图片翻转效果.html) 
+
+方法：正反面两张图都上transform，鼠标移入时:hover都设两张图
+
+练习： [test01-151.html](2020Web HTML CSS\01-151 3D效果之翻转图片\test01-151.html) 
+
+错误示范： [test01-151错误示范.html](2020Web HTML CSS\01-151 3D效果之翻转图片\test01-151错误示范.html) 鼠标移入时有稍微翻转不平滑
+
+
+
+翻书效果： [翻书.html](2020Web HTML CSS\01-151 3D效果之翻转图片\翻书.html) 
+
+上面采用animation动画
+
+自己练习： [test翻书.html](2020Web HTML CSS\01-151 3D效果之翻转图片\test翻书.html)  非动画
+
+
+
+## 01-152 背景尺寸 位置 裁切等
+
+backgrouns-size:背景图的尺寸大小
+
+| 值         | 描述                                                         |
+| :--------- | :----------------------------------------------------------- |
+| length     | 设置背景图片高度和宽度。第一个值设置宽度，第二个值设置的高度。如果只给出一个值，第二个是设置为"auto(自动)" |
+| percentage | 将计算相对于背景定位区域的百分比。第一个值设置宽度，第二个值设置的高度。如果只给出一个值，第二个是设置为"auto(自动)" |
+| cover      | 此时会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小。 |
+| contain    | 此时会保持图像的纵横比并将图像缩放成将适合背景定位区域的最大大小。 |
+
+实例： [background-size.html](2020Web HTML CSS\01-152 背景尺寸 位置 裁切等\background-size.html) 
+
+
+
+background-origin : 背景图的填充位置
+
+**注意**:如果背景图像background-attachment是"固定"(flex)，这个属性没有任何效果。
+
+| 值          | 描述                          |
+| ----------- | ----------------------------- |
+| padding-box | 背景图像填充框的相对位置 默认 |
+| border-box  | 背景图像边界框的相对位置      |
+| content-box | 背景图像的相对位置的内容框    |
+
+实例： [background-origin.html](2020Web HTML CSS\01-152 背景尺寸 位置 裁切等\background-origin.html) 
+
+
+
+background-clip属性指定背景绘制区域。
+
+| 值          | 说明                                             |
+| ----------- | ------------------------------------------------ |
+| border-box  | 默认值。背景绘制在边框方框内（剪切成边框方框）。 |
+| padding-box | 背景绘制在衬距方框内（剪切成衬距方框）。         |
+| content-box | 背景绘制在内容方框内（剪切成内容方框）。         |
+
+实例： [background-clip.html](2020Web HTML CSS\01-152 背景尺寸 位置 裁切等\background-clip.html) 
+
+
+
+缩写法
+
+```
+background:url() contgent-box padding-box
+```
+
+**注**：复合样式的时候，第一个是位置，第二个是裁切
+

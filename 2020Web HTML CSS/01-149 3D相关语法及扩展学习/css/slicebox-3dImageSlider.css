@@ -1,0 +1,133 @@
+*{margin: 0;padding: 0;}
+ul li{list-style: none;display: block;}
+img{display: block}
+
+body{background: #F1E5D9;}
+
+.button{
+    width: 100px;
+    height: 80px;
+    background: rgba(91, 91, 91, .2);
+    color: #fff;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 80px;
+    position: absolute;
+    left: 50%;
+    margin-left: 500px;
+    top:285px;
+    z-index: 1;
+}
+.box{
+    width: 800px;
+    height: 450px;
+    margin: 100px auto;
+    /* transform-style: preserve-3d; */
+    /* perspective: 4000px; */
+    /* perspective-origin: top right; */
+}
+.box ul{
+    width: 800px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: center center -400px;
+
+}
+/* .box:hover ul{
+    transform: rotateY(-90deg);
+} */
+.box ul li{
+    width: 800px;
+    height: 150px;
+    position: absolute;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    line-height: 150px;
+    /* opacity: .5; */
+    backface-visibility: hidden;
+}
+.box ul:nth-child(1){
+    transition: all 3s;
+}
+.box ul:nth-child(2){
+    transition: all 3s .2s;
+}
+.box ul:nth-child(3){
+    transition: all 3s .4s;
+}
+.box ul li:nth-child(1){
+    left: 0;top: 0;
+}
+.box ul li:nth-child(2){
+    left: 800px;top: 0;
+    transform-origin: left;
+    transform: rotateY(90deg);
+    
+}
+.box ul li:nth-child(3){
+    left: -800px;top: 0;
+    transform-origin: right;
+    transform: rotateY(-90deg);
+}
+.box ul li:nth-child(4){
+    left: 0;top: 0;
+    transform: translateZ(-800px) rotateY(180deg);
+}
+
+.box ul:nth-child(1) li:nth-child(1){
+    background: url(../img/01.jpg) 0px 0px no-repeat;
+    background-size: 800px 450px;
+}
+.box ul:nth-child(1) li:nth-child(2){
+    background: url(../img/02.jpg) 0px 0px no-repeat;
+    background-size: 800px 450px;
+}
+.box ul:nth-child(1) li:nth-child(3){
+    background: url(../img/03.jpg) 0px 0px no-repeat;
+    background-size: 800px 450px;
+}
+.box ul:nth-child(1) li:nth-child(4){
+    background: url(../img/04.jpg) 0px 0px no-repeat;
+    background-size: 800px 450px;
+}
+
+.box ul:nth-child(2) li:nth-child(1){
+    background: url(../img/01.jpg) 0px -150px no-repeat;
+    background-size: 800px 450px;
+}
+.box ul:nth-child(2) li:nth-child(2){
+    background: url(../img/02.jpg) 0px -150px no-repeat;
+    background-size: 800px 450px;
+}
+.box ul:nth-child(2) li:nth-child(3){
+    background: url(../img/03.jpg) 0px -150px no-repeat;
+    background-size: 800px 450px;
+}
+.box ul:nth-child(2) li:nth-child(4){
+    background: url(../img/04.jpg) 0px -150px no-repeat;
+    background-size: 800px 450px;
+}
+
+.box ul:nth-child(3) li:nth-child(1){
+    background: url(../img/01.jpg) 0px -300px no-repeat;
+    background-size: 800px 450px;
+}
+.box ul:nth-child(3) li:nth-child(2){
+    background: url(../img/02.jpg) 0px -300px no-repeat;
+    background-size: 800px 450px;
+}
+.box ul:nth-child(3) li:nth-child(3){
+    background: url(../img/03.jpg) 0px -300px no-repeat;
+    background-size: 800px 450px;
+}
+.box ul:nth-child(3) li:nth-child(4){
+    background: url(../img/04.jpg) 0px -300px no-repeat;
+    background-size: 800px 450px;
+}
+
+.button:active ~ .box ul{
+    transform: rotateY(-270deg);
+}

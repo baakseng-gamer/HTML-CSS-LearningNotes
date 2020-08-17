@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;}
+
+        ul{list-style: none;}
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px black solid;
+            margin: 50px auto;
+            perspective:200px;
+            perspective-origin: top right;
+        }
+        .box ul{
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            position: relative;
+            transition: 3s;
+            transform-style: preserve-3d;
+            transform-origin: center center -50px;
+            transform: rotate3d(1,1,1,30deg);
+
+        }
+        .box ul li{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            line-height: 100px;
+            text-align: center;
+            color: #fff;
+            font-size: 26px;
+
+            opacity: .5;
+            /* 采用透明度可看角度 */
+            backface-visibility:hidden;
+            /* 因为采用了opacity设置透明度能看到背面 */
+        }
+        .box ul li:nth-child(1){ background: tomato; left: 0; top: 0;}
+        .box ul li:nth-child(2){ background: brown; left: 100px; top: 0; 
+        transform-origin: left; transform: rotateY(90deg);}
+        .box ul li:nth-child(3){ background: lightseagreen; left: -100px; top: 0;
+        transform-origin: right; transform: rotateY(-90deg);}
+        .box ul li:nth-child(4){ background: seagreen; left: 0; top: -100px;
+        transform-origin: bottom; transform: rotateX(90deg);}
+        .box ul li:nth-child(5){ background: lightskyblue; left: 0; top: 100px;
+        transform-origin: top; transform: rotateX(-90deg);}
+        .box ul li:nth-child(6){ background: tomato; left: 0; top: 0;
+        transform: translateZ(-100px) rotateY(180deg);
+        }
+
+        .box:hover ul{
+            /* transform: rotateY(180deg); */
+            /* transform: rotateY(360deg); */
+            transform: rotate3d(1,1,1,300deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+
+</body>
+</html>

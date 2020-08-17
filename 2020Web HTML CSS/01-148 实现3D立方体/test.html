@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;}
+
+        ul{list-style: none;}
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px black solid;
+            margin: 50px auto;
+            perspective:300px;
+        }
+        .box ul{
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: 1s;
+            transform-origin: center center -50px;
+            /* 取消上面一行试效果 */
+
+        }
+        .box ul li{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            line-height: 100px;
+            text-align: center;
+            color: #fff;
+            font-size: 26px;
+        }
+        .box ul li:nth-child(1){ background: tomato; left: 0; top: 0;}
+        .box ul li:nth-child(2){ background: brown; left: 100px; top: 0; 
+        transform-origin: left; transform: rotateY(90deg);}
+        .box ul li:nth-child(3){ background: lightseagreen; left: -100px; top: 0;
+        transform-origin: right; transform: rotateY(-90deg);}
+        .box ul li:nth-child(4){ background: seagreen; left: 0; top: -100px;
+        transform-origin: bottom; transform: rotateX(90deg);}
+        .box ul li:nth-child(5){ background: lightskyblue; left: 0; top: 100px;
+        transform-origin: top; transform: rotateX(-90deg);}
+        .box ul li:nth-child(6){ background: tomato; left: 0; top: 0;
+        transform: translateZ(-100px) rotateY(180deg);}
+
+        .box:hover ul{
+            transform: rotateY(180deg);
+        }
+        .box-show{
+            width: 100px;
+            height: 100px;
+            background: royalblue;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            display: inline-block;
+        }
+        .left:hover ~ .box ul{
+            transform: rotateY(135deg);
+        }
+        .right:hover ~ .box ul{
+            transform: rotateY(-135deg);
+        }
+        .up:hover ~ .box ul{
+            transform: rotateX(-135deg);
+        }
+        .down:hover ~ .box ul{
+            transform: rotateX(135deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box-show left">left</div>
+    <div class="box-show right">right</div>
+    <div class="box-show up">up</div>
+    <div class="box-show down">down</div>
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+
+</body>
+</html>
