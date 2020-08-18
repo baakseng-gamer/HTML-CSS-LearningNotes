@@ -7771,3 +7771,316 @@ background:url() contgent-box padding-box
 
 **注**：复合样式的时候，第一个是位置，第二个是裁切
 
+
+
+
+
+## 01-153 线性渐变与径向渐变
+
+CSS3 线性渐变 linear-gradient
+
+创建一个线性渐变，必须至少定义两种颜色结点。颜色结点即您想要呈现平稳过渡的颜色。同时，也可以设置一个起点和一个方向（或一个角度）。
+
+ linear-gradient是值，需要添加到background-image属性上
+
+**语法**：
+
+```
+background: linear-gradient(direction, color-stop1,  color-stop2, ...);
+```
+
+
+
+direction为方向，默认是从上到下
+
+```
+        .box1{
+            background-image: linear-gradient(tomato,lightskyblue);
+            /* 默认从上到下 */
+        }
+        .box2{
+            background-image: linear-gradient(tomato,lightskyblue,lightseagreen);
+            /* 三种颜色  */
+        }
+        .box3{
+            background-image: linear-gradient(to top, tomato,lightskyblue);
+            /* 从下到上 */
+        }
+```
+
+实例： [linear-gradient.html](2020Web HTML CSS\01-153 线性渐变与径向渐变\linear-gradient.html) 
+
+
+
+对角angle
+
+**注**：渐变的0度是在页面在下边，正值会按照顺时针旋转，负值按逆时针旋转。
+
+```
+background-image: linear-gradient(45deg, tomato,lightskyblue);
+```
+
+实例： [linear-gradient-angle.html](2020Web HTML CSS\01-153 线性渐变与径向渐变\linear-gradient-angle.html) 
+
+<a href=".\2020Web HTML CSS\01-153 线性渐变与径向渐变\01-153-01.png">度数图示</a>
+
+
+
+百分比percentage
+
+在范围内多少百分比为中心轴
+
+<a href=".\2020Web HTML CSS\01-153 线性渐变与径向渐变\01-153-02.png">百分比图示</a>
+
+```
+background-image: linear-gradient(tomato 15%,lightskyblue 35%);
+```
+
+```
+background-image: linear-gradient(45deg, tomato 20%,lightskyblue 40%);
+```
+
+如果设两种颜色且各50%，无出现渐变效果
+
+实例： [linear-gradient-percentage.html](2020Web HTML CSS\01-153 线性渐变与径向渐变\linear-gradient-percentage.html) 
+
+
+
+CSS3渐变可以支持透明度 Transparency
+
+```
+background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+```
+
+实例： [linear-gradient-transparency.html](2020Web HTML CSS\01-153 线性渐变与径向渐变\linear-gradient-transparency.html) 
+
+
+
+重复的线性渐变
+
+repeating-linear-gradient() 函数用于重复线性渐变：
+
+```
+background-image: repeating-linear-gradient(tomato,lightskyblue 10%,lightseagreen 10%);
+```
+
+实例： [repeating-linear-gradient.html](2020Web HTML CSS\01-153 线性渐变与径向渐变\repeating-linear-gradient.html) 
+
+
+
+
+
+
+
+CSS3 径向渐变 radial-gradient 
+
+**语法**：
+
+```
+background: radial-gradient(center, shape size, start-color, ..., last-color);   
+```
+
+百分比值方法同上面的线性渐变一样
+
+重复的方法同上面的一样
+
+
+
+设置形状
+
+shape 参数定义了形状。它可以是值 circle 或 ellipse。其中，circle 表示圆形，ellipse 表示椭圆形。默认值是 ellipse。
+
+
+
+不同尺寸大小关键字的使用
+
+size 参数定义了渐变的大小。它可以是以下四个值：
+closest-side
+farthest-side
+closest-corner
+farthest-corner
+
+具体的网上查：https://www.w3cschool.cn/css3/oj26bfli.html
+
+
+
+径向渐变实例： [radial-gradient.html](2020Web HTML CSS\01-153 线性渐变与径向渐变\radial-gradient.html) 
+
+
+
+
+
+## 01-154 渐变的加载进度条
+
+参考： [20_渐变的进度条.html](2020Web HTML CSS\01-154 渐变的加载进度条\20_渐变的进度条.html) 
+
+方法：
+
+1.45度或to right top
+
+2.红25蓝25 蓝50红50 红75蓝75
+
+3.background-size1个数值为width的十分之一
+
+4.动画名 持续时间 重复次数 运动形式
+
+练习：
+
+ [text.html](2020Web HTML CSS\01-154 渐变的加载进度条\text.html) 
+
+ [发廊.html](2020Web HTML CSS\01-154 渐变的加载进度条\发廊.html) 白蓝红比例为2:1:1 采用animation方法
+
+
+
+鼠标划过渐变光斑
+
+参考： [一道光.html](2020Web HTML CSS\01-154 渐变的加载进度条\一道光.html) 
+
+方法：
+
+父元素设overflow:hidden，两个子元素，一个图片，另一个一道光；
+
+一道光-60度，渐变采用rgba；
+
+练习： [test1.html](2020Web HTML CSS\01-154 渐变的加载进度条\test1.html) 
+
+
+
+
+
+## 01-155 @font-face字体图标
+
+font-face是CSS3中的一个模块，他主要是把自己定义的Web字体嵌入到你的网页中。
+
+**好处**：
+1.可以非常方便的改变大小和颜色
+2.放大后不会失真
+3.减少请求次数和提高加载速度
+4.简化网页布局
+5.减少设计师和前端工程师的工作量
+6.可使用计算机没有提供的字体
+
+
+
+例：www.taobao.com
+
+右键 购物车 检查 查控制台
+
+<a href=".\2020Web HTML CSS\01-155 @font-face字体图标\01-155-01.png">淘宝网的购物车默认大小</a>
+
+<a href=".\2020Web HTML CSS\01-155 @font-face字体图标\01-155-02.png">淘宝网的购物车默认大小 控制台数值</a>
+
+
+
+添加字体大小：
+
+<a href=".\2020Web HTML CSS\01-155 @font-face字体图标\01-155-03.png">添加修改大小</a>
+
+<a href=".\2020Web HTML CSS\01-155 @font-face字体图标\01-155-04.png">不止字体，连购物车图标大小也变化</a>
+
+颜色也可以变化
+
+
+
+使用：@font-face语法
+
+```
+<style>
+        @font-face{
+            font-family:iconfont;
+            src:url(//at.alicdn.com/t/font_403341_n8tj33yn5peng66r.eot);
+            src:url(//at.alicdn.com/t/font_403341_n8tj33yn5peng66r.eot?#iefix) format('embedded-opentype'),url(//at.alicdn.com/t/font_403341_n8tj33yn5peng66r.woff) format('woff'),url(//at.alicdn.com/t/font_403341_n8tj33yn5peng66r.ttf) format('truetype'),url(//at.alicdn.com/t/font_403341_n8tj33yn5peng66r.svg#iconfont) format('svg')
+        }
+</style>
+```
+
+像.woff等文件都是做兼容平台处理的, mac、linux等。
+
+
+
+代码示例：
+
+```
+    <style>
+        @font-face{
+            font-family:hello;
+            src:url(https://at.alicdn.com/t/font_1401963178_8135476.eot);
+            src:url(https://at.alicdn.com/t/font_1401963178_8135476.eot?#iefix) format('embedded-opentype'),
+            url(https://at.alicdn.com/t/font_1401963178_8135476.woff) format('woff'),
+            url(https://at.alicdn.com/t/font_1401963178_8135476.ttf) format('truetype'),
+            url(https://at.alicdn.com/t/font_1401963178_8135476.svg#iconfont) format('svg')
+        }
+        div{
+            font-family: hello;
+        }
+        span{
+            font-family: hello;
+            font-size: 30px;
+            color: tomato;
+        }
+        .gouwuche::after{
+            content: "󰅈";
+            color: lightseagreen;
+        }
+    </style>
+```
+
+󰅈在hello字体里是购物车的图标
+
+能改变颜色大小等，伪类:before或:after等的content: "󰅈";也有效
+
+实例： [@font-face 字体图标.html](2020Web HTML CSS\01-155 @font-face字体图标\@font-face 字体图标.html) 
+
+
+
+
+
+
+
+
+
+
+
+## 01-156 iconfont矢量图标库
+
+阿里巴巴矢量图标库：
+https://www.iconfont.cn : 提供了大量免费的字体图标。
+
+从阿里巴巴矢量图标库随便挑下载后解压<a href=".\2020Web HTML CSS\01-156 iconfont矢量图标库\download.zip">安装包</a>
+
+解压后里面有html文件，打开可看说明。选后缀名为css、eot、svg、ttf、woff、woff2、js几个文件放到css文件夹里。具体说明可查看已下载的说明html文件
+
+可调大小，用font-size
+
+  [demo_index.html](2020Web HTML CSS\01-156 iconfont矢量图标库\下载来的iconfont\demo_index.html) 
+
+
+
+实例：
+
+ [iconfont单色.html](2020Web HTML CSS\01-156 iconfont矢量图标库\iconfont单色.html) 
+
+ [iconfont多色.html](2020Web HTML CSS\01-156 iconfont矢量图标库\iconfont多色.html) 单色的调大小在css里，多色的在<style>...</style>里设数值
+
+
+
+## 01-157 自定义字体图标
+
+自定义字体图标
+https://icomoon.io/app : 在线生成字体图标。
+
+按下左上角的【Import Icons】按钮，选择SVG文件上传，然后在右下区域，里面设置一下，然后按下【Download】按钮下载并解压；
+
+选择fonts文件夹和style.css放到css文件夹里，在html文件里引入，然后弄代码
+
+```
+<div class="icon-yuan"></div>
+```
+
+style.css里添加font-size调大小和调色
+
+实例： [iconfont.html](2020Web HTML CSS\01-157 自定义字体图标\iconfont.html) 
+
+
+
+参考网上各大网站，切换移动端里面有不少采用iconfont图标

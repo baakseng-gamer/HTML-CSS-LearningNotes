@@ -1,0 +1,37 @@
+{
+  "id": "2013139",
+  "name": "iconfontTest",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7865400",
+      "name": "草莓",
+      "font_class": "food-strawberry",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "4765722",
+      "name": "CI",
+      "font_class": "CI",
+      "unicode": "e77d",
+      "unicode_decimal": 59261
+    },
+    {
+      "icon_id": "4765723",
+      "name": "Dollar",
+      "font_class": "Dollar",
+      "unicode": "e77e",
+      "unicode_decimal": 59262
+    },
+    {
+      "icon_id": "4765724",
+      "name": "compass",
+      "font_class": "compass",
+      "unicode": "e77f",
+      "unicode_decimal": 59263
+    }
+  ]
+}

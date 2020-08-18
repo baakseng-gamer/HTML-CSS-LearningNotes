@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            border: 2px solid gray;
+        }
+        .box1{
+            background-image: linear-gradient(tomato,lightskyblue);
+            /* 默认从上到下 */
+        }
+        .box2{
+            background-image: linear-gradient(tomato,lightskyblue,lightseagreen);
+            /* 三种颜色  */
+        }
+        .box3{
+            background-image: linear-gradient(to top, tomato,lightskyblue);
+            /* 从下到上 */
+            /* to right 从左到右 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1 两种颜色 默认从上到下</div>
+    <div class="box2">2 三种颜色</div>
+    <div class="box3">3 两种颜色 to top就是从下到上</div>
+</body>
+</html>
