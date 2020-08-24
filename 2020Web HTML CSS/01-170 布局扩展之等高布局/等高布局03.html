@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #parent{
+            border: 10px solid black;
+            overflow: hidden;
+        }
+        #box1{
+            width: 100px;
+            background: tomato;
+            float: left;
+            margin-bottom: -2000px;
+            /* 如果负值很大很大，父元素会塌陷 */
+            padding-bottom: 2000px;
+        }
+        #box2{
+            width: 100px;
+            float: right;
+            background: skyblue;
+            margin-bottom: -2000px;
+            padding-bottom: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="box1">
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+            <p>1111111</p>
+        </div>
+
+        <div id="box2">
+            <p>2222222222</p>
+            <p>2222222222</p>
+            <p>2222222222</p>
+            <p>2222222222</p>
+            <p>2222222222</p>
+            <p>2222222222</p>
+            <p>2222222222</p>
+            <p>2222222222</p>
+            <p>2222222222</p>
+            <p>2222222222</p>
+            <p>2222222222</p>
+        </div>
+    </div>
+</body>
+</html>

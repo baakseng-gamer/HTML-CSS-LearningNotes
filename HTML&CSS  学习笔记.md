@@ -1,4 +1,4 @@
-*HTML CSS系列教程**
+**HTML CSS系列教程**
 
 
 
@@ -8084,3 +8084,596 @@ style.css里添加font-size调大小和调色
 
 
 参考网上各大网站，切换移动端里面有不少采用iconfont图标
+
+
+
+
+
+## 01-158 text-shadow文字阴影
+
+**语法**
+
+```
+text-shadow: h-shadow v-shadow blur color;
+```
+
+blur为可选，color也可选
+
+代码示例：
+
+```
+    <style>
+        .text1{
+            font-size: 50px;
+            color: tomato;
+            text-shadow: 10px 10px 10px brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="text1">Hello CSS3</div>
+</body>
+```
+
+多阴影
+
+```
+text-shadow: 10px 10px 10px seagreen,-10px -10px 10px gray;
+```
+
+示例：  [test-shadow01.html](2020Web HTML CSS\01-158 text-shadow文字阴影\test-shadow01.html) 
+
+
+
+## 01-159 box-shadow盒子阴影
+
+向框添加一个或多个阴影。
+
+**语法**
+
+```
+box-shadow: h-shadow v-shadow blur spread color inset;
+```
+
+| 值         | 描述                                     | 测试                                                         |
+| ---------- | ---------------------------------------- | ------------------------------------------------------------ |
+| *h-shadow* | 必需。水平阴影的位置。允许负值。         | [测试](https://www.w3cschool.cn/statics/demosource/css-box-shadow.html) |
+| *v-shadow* | 必需。垂直阴影的位置。允许负值。         | [测试](https://www.w3cschool.cn/statics/demosource/css-box-shadow.html) |
+| *blur*     | 可选。模糊距离。                         | [测试](https://www.w3cschool.cn/statics/demosource/css-box-shadow.html) |
+| *spread*   | 可选。阴影的尺寸。                       | [测试](https://www.w3cschool.cn/statics/demosource/css-box-shadow.html) |
+| *color*    | 可选。阴影的颜色。请参阅 CSS 颜色值。    | [测试](https://www.w3cschool.cn/statics/demosource/css-box-shadow.html) |
+| inset      | 可选。将外部阴影 (outset) 改为内部阴影。 | [测试](https://www.w3cschool.cn/statics/demosource/css-box-shadow.html) |
+
+可多阴影
+
+inset外部阴影改为内部阴影
+
+outset取消阴影
+
+**注**：盒子阴影的默认样色是黑色。
+**注**：默认就是外阴影，如果设置outset不起作用，可选的值只有inset表示内阴影。
+
+代码示例：
+
+```
+        .box3{
+            width: 300px;
+            height: 200px;
+            background: lightseagreen;
+            margin: 20px;
+            box-shadow: 10px 10px 10px 20px seagreen;
+        }
+```
+
+实例： [box-shadow01.html](2020Web HTML CSS\01-159 box-shadow盒子阴影\box-shadow01.html) 
+
+
+
+
+
+## 01-160 小米官网盒子阴影效果
+
+参考： [03_小米官网浮动效果.html](2020Web HTML CSS\01-160 小米官网盒子阴影效果\03_小米官网浮动效果.html) 
+
+方法：
+
+cursor、position:relative、top、transition持续时间、:hover{-3px;设阴影数值}
+
+练习： [testMI.html](2020Web HTML CSS\01-160 小米官网盒子阴影效果\testMI.html) 
+
+
+
+
+
+## 01-161 mask遮罩效果
+
+url repeat x y w h 多遮罩
+
+参考：https://www.17sucai.com/pins/demo-show?id=29701
+
+代码示例：
+
+```
+    <style>
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            background: url(./img/girl.jpg);
+            -webkit-mask: url(./img/love.png) no-repeat 100px 100px / 100px 100px;
+            transition: 2s;
+        }
+    </style>
+```
+
+或
+
+```
+-webkit-mask: url(./img/car.png) no-repeat center center / 200px 200px;
+```
+
+**注**：mask还没标准化，所以还要添加浏览器前缀
+
+直接打开html无效果，从VSCODE用Open In Deaufult Browser打开也无效果；
+
+只能从VSCODE用Open with Live Server打开才有效果，如图<a href=".\2020Web HTML CSS\01-161 mask遮罩效果\01-161-01.png">效果图</a>
+
+**注**：默认是x、y都平铺。
+
+实例：
+
+ [mask.html](2020Web HTML CSS\01-161 mask遮罩效果\mask.html) 
+
+ [mask01.html](2020Web HTML CSS\01-161 mask遮罩效果\mask01.html) 
+
+
+
+
+
+## 01-162 box-reflect倒影与scale负值
+
+box-reflect倒影
+
+**语法**
+
+box-reflect：none |  direction   offset  mask-box-image
+
+**取值**
+
+none:无倒影
+
+
+
+*direction*
+
+above：指定倒影在对象的上边
+below：指定倒影在对象的下边
+left：指定倒影在对象的左边
+right：指定倒影在对象的右边
+
+
+
+*offset*
+
+length：用长度值来定义倒影与对象之间的间隔。可以为负值
+percentage：用百分比来定义倒影与对象之间的间隔。可以为负值
+
+
+
+*mask-box-image*
+
+none：无遮罩图像
+url：使用绝对或相对地址指定遮罩图像。
+linear-gradient：使用线性渐变创建遮罩图像。
+radial-gradient：使用径向(放射性)渐变创建遮罩图像。
+repeating-linear-gradient：使用重复的线性渐变创建背遮罩像。
+repeating-radial-gradient：使用重复的径向(放射性)渐变创建遮罩图像。
+
+**注**：渐变不支持颜色渐变，只对透明度渐变
+
+
+
+代码示例：
+
+```
+        .box4{
+            width: 300px;
+            height: 300px;
+            margin-left: 100px;
+            background: url(./img/girl.jpg);
+            -webkit-box-reflect: 
+            right 10px 
+            linear-gradient(to right ,rgba(255,255,255,0) 50%,rgba(255,255,255,1))
+        }
+```
+
+
+
+扩展：利用scale为-1实现翻转。
+
+
+
+实例： [box-reflect01.html](2020Web HTML CSS\01-162 box-reflect倒影与scale负值\box-reflect01.html) 
+
+
+
+
+
+## 01-163 blur模糊与calc计算
+
+filter : blur() 模糊程度
+
+代码示例：
+
+```
+        .box1{
+            width: 400px;
+            height: 225px;
+            background: url(./img/mhw-little01.png) no-repeat;
+            filter: blur(2px);
+        }
+```
+
+实例：  [filter blur().html](2020Web HTML CSS\01-163 blur模糊与calc计算\filter blur().html) 
+
+
+
+calc四则运算
+
+代码示例：
+
+```
+ width: calc(100% + 100px);
+```
+
+实例： [calc.html](2020Web HTML CSS\01-163 blur模糊与calc计算\calc.html) 
+
+
+
+## 01-164 column分栏布局
+
+column-count : 分栏的个数
+column-width : 分栏的宽度 
+column-gap : 分栏的间距
+column-rule : 分栏的边线
+column-span : 合并分栏
+
+**注**：column-width和column-count不要一起去设置。
+
+代码示例：
+
+```
+        .box4{
+            width: 600px;
+            height: 400px;
+            border: 2px solid gray;
+            margin: 20px auto;
+            column-width: 100px;
+            column-gap: 40px;
+            column-rule:2px brown dashed;
+        }
+        .box4 h2{column-span: all;text-align: center;}
+```
+
+实例： [column.html](2020Web HTML CSS\01-164 column分栏布局\column.html) 
+
+
+
+## 01-165 伪元素概念与意义
+
+伪类与伪元素
+
+在CSS2.1中对伪类和伪元素的区别比较模糊。CSS3中对这两个概念做了相对较清晰地解释，并且在语法上也做了很明显的区分。
+CSS3中规定伪类由一个冒号开始，然后为伪类的名称；伪元素由两个冒泡开始，然后为伪元素的名称。
+
+
+
+伪类本质上是为了弥补常规CSS选择器的不足，以便获取到更多信息。通常表示获取不存在与DOM树中的信息，或获取不能被常规CSS选择器获取的信息。
+
+ : hover
+ : focus
+ : empty
+…
+
+
+
+伪元素本质上是创建了一个有内容的虚拟容器。这个容器不包含任何DOM元素，但是可以包含内容。另外，开发者还可以为伪元素定制样式。
+
+:: selection
+:: first-line   /    first-letter
+:: before     /     after 
+…
+
+实例： [column.html](2020Web HTML CSS\01-164 column分栏布局\column.html) 
+
+
+
+## 01-166 hack概念与CSS属性前缀法
+
+CSS Hack用来解决浏览器的兼容性问题，为不同版本的浏览器定制编写不同的CSS效果，使用每个浏览器单独识别的样式代码，控制浏览器的显示样式。
+
+Hack分类
+
+1.CSS属性前缀法
+
+| **前缀标识** | **兼容浏览器**       |
+| ------------ | -------------------- |
+| **_**        | IE6                  |
+| +、*         | IE6、IE7             |
+| \9           | IE6、IE7、IE8、IE9   |
+| \0           | IE8、IE9、IE10、IE11 |
+
+代码示例：
+
+```
+    <style>
+        .box{
+            width: 200px;height: 200px;
+            background: tomato;    
+            /* IE6 */
+            _background:skyblue;
+            /* IE6 7 */
+            /* +background: skyblue; */
+            /* IE6~9 */
+            /* background:skyblue\9; */
+            /* IE8~11 */
+            /* background:skyblue\0; */
+        }
+    </style>
+```
+
+用chrome打开则是红块，如果用IE6打开则是蓝块
+
+
+
+3.IE条件注释法
+
+
+
+## 01-167 选择器前缀法与IE条件注释法
+
+选择器前缀法是针对一些页面表现不一致或者需要特殊对待的浏览器，在CSS选择器前加上一些只有某些特定浏览器才能识别的前缀进行hack。
+
+2.选择器前缀法
+
+| **前缀标识** | **兼容浏览器**      |
+| ------------ | ------------------- |
+| *html        | IE6                 |
+| *+html       | IE7                 |
+| :root        | IE9以上及现代浏览器 |
+
+代码示例：
+
+```
+*html div{...}
+```
+
+```
+*+html div{...}
+```
+
+```
+:root div{...}
+```
+
+
+
+实例： [hack02.html](2020Web HTML CSS\01-167 选择器前缀法与IE条件注释法\hack02.html) 用IE打开则是红块 其他就是蓝块
+
+
+
+
+
+3.IE条件注释法
+
+这种方式是IE浏览器专有的Hack方式，微软官方推荐使用的hack方式。
+
+| **前缀标识**                    | **兼容浏览器** |
+| ------------------------------- | -------------- |
+| <!--[if IE]>…<![endif]-->       | IE             |
+| <!--[if IE 7]>…<![endif]-->     | IE7            |
+| <!--[if lte IE 7]>…<![endif]--> | IE7以下        |
+| <!--[if ! IE 7]>…<![endif]-->   | 非IE7          |
+
+IE10以上已经不支持注释法
+
+代码示例：
+
+```
+<body>
+    <!--[if IE]>
+    <div class="box">用IE打开就能显示出来，但是IE10以上不支持</div>
+    <![endif]-->
+</body>
+```
+
+实例： [hack03.html](2020Web HTML CSS\01-167 选择器前缀法与IE条件注释法\hack03.html) 
+
+
+
+## 01-168 IE低版本常见BUG
+
+由于旧浏览器在设计上有很多缺陷，导致一些BUG的产生，所以针对这些问题需要做出兼容处理。
+
+常见兼容问题
+1. 透明度
+2. 双边距
+3. 最小高度
+4. 图片边框
+
+具体的网上搜索
+
+实例： [10_IE常见BUG.html](2020Web HTML CSS\01-168 IE低版本常见BUG\10_IE常见BUG.html) 里面注释有具体说明
+
+
+
+## 01-169 渐进增强与优雅降级
+
+渐进增强 ：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。
+
+例如：IE6 7->IE11->CHROME->...
+
+
+
+优雅降级 ：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。
+
+
+
+
+
+## 01-170 布局扩展之等高布局
+
+利用margin-bottom负值与padding-bottom配合实现。
+
+有float浮动并用overflow:hidden解决高度塌陷问题
+
+ [等高布局.html](2020Web HTML CSS\01-170 布局扩展之等高布局\等高布局.html) 
+
+
+
+无浮动情况下，把第一个块设margin-bottom为负值，无设高度的父元素会纵向缩小。
+
+ [等高布局01.html](2020Web HTML CSS\01-170 布局扩展之等高布局\等高布局01.html) 
+
+
+
+根据上面文件的代码，负值改成很大很大的数值
+
+ [等高布局02.html](2020Web HTML CSS\01-170 布局扩展之等高布局\等高布局02.html) 
+
+
+
+父元素添加overflow:hidden，子元素设floa并输入内容，所以父元素高度按内容决定
+
+ [等高布局03.html](2020Web HTML CSS\01-170 布局扩展之等高布局\等高布局03.html) 
+
+
+
+
+
+## 01-171 布局扩展之双飞翼布局
+
+三列布局，左右固定，中间自适应
+
+左100px 中自适应 右150px
+
+参考： [12_双飞翼布局.html](2020Web HTML CSS\01-171 布局扩展之双飞翼布局\12_双飞翼布局.html) 
+
+块元素顺序：center left right且都有设高度数值
+
+CSS设置：
+
+center:  width:100% ,float:left
+
+left:  width:100px, float:left ,margin-left:100%，因为100%才能移到左侧
+
+right:  width:150px, float:left,  margin-left:-150px，因为-150px就是向左位移150px从而自动往上一行
+
+center的内容问题用margin:0px 150px 0px 100px解决
+
+实例： [双飞翼布局.html](2020Web HTML CSS\01-171 布局扩展之双飞翼布局\双飞翼布局.html) 
+
+
+
+上面的代码挺麻烦，采用calc方法解决
+
+块元素顺序为left center right且都设高度和float:left
+
+left固定宽度100px
+
+center用calc方法即width:calc(100% - 100px - 150px)
+
+right固定宽度150px
+
+ [test双飞翼布局.html](2020Web HTML CSS\01-171 布局扩展之双飞翼布局\test双飞翼布局.html) 
+
+
+
+1.BFC方式 
+
+2.定位
+
+3.浮动 ( 双飞翼布局、圣杯布局 )
+   margin负值
+
+4.flex弹性
+
+
+
+
+
+## 01-172 布局扩展之圣杯布局
+
+参考： [13_圣杯布局.html](2020Web HTML CSS\01-172 布局扩展之圣杯布局\13_圣杯布局.html) 
+
+左100px 中自适应 右150px
+
+块元素顺序：center, left, right
+
+3个左中右子元素的父元素设background颜色,margin 0 150px 0 100px
+
+左中右子元素均设高度200px
+
+center:  width:100%, float:left
+
+left: width:100px, float:left, position:relative, margin-left:100%, left-100px
+
+right: width:150px, float:left, position:relative, margin-left:-150px, right:-150px
+
+实例： [圣杯布局.html](2020Web HTML CSS\01-172 布局扩展之圣杯布局\圣杯布局.html) 
+
+
+
+
+
+## 01-173-183 PC端管理后台整页制作
+
+参考： [index.html](2020Web HTML CSS\01-173-183 PC端管理后台整页制作\正达管理后台首页\index.html)  [正达建筑内部管理平台_资料管理.psd](2020Web HTML CSS\01-173-183 PC端管理后台整页制作\正达建筑内部管理平台_资料管理.psd) 
+
+方法：
+
+左侧栏aside高度自适应布局:html body{height:100%;}
+
+去掉浏览器右侧的滚动条:html body{height:100%; overflow-y:hidden;}
+
+
+
+或者不用overflow-y:hidden的方法
+
+则aside设height:calc(100% - 85px);85px为header的高度。
+
+
+
+注意main布局是否与aside重合在一起，解决方法给main添加overflow:hidden。
+
+
+
+main_container添加overflow:auto即可有滚动条而不影响整体布局。
+
+
+
+批量上传：
+
+```
+<input type="file" multiple>
+```
+
+
+
+搜索框：
+
+父元素设边框，子元素input去掉边框 border:none，用text-indent把搜索文字往右移多少位移。
+
+去掉默认的搜索框outline: none;
+
+
+
+表格添加单线：
+
+table添加border-collapse:collapse;然后在tr里添加border-bottom
+
+
+
+**注**：源码的zl_footer的margin测量有误
+
+练习： [index.html](2020Web HTML CSS\01-173-183 PC端管理后台整页制作\index.html) 
