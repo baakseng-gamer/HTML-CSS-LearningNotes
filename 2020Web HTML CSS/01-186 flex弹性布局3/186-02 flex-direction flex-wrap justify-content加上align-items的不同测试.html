@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,h2,h3,h4,h5,h6{margin: 0;}
+        .box-little{
+            padding: 10px;
+            background: salmon;
+            display: inline-block;
+            border: 1px solid brown;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px dashed gray;
+            display: flex;
+        }
+
+        .f1{
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .f2{
+            flex-flow: row wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p>1 flex-flow:row wrap;<br>align-items:center<br>justify-content:space-evenly</p>
+    <div class="box f1">
+        <div class="box-little"><h1>1</h1></div>
+        <div class="box-little"><h1>22<br>22</h1></div>
+        <div class="box-little"><h1>333<br>33</h1></div>
+        <div class="box-little"><h1>444</h1></div>
+        <div class="box-little"><h1>55<br>55<br>55</h1></div>
+        <div class="box-little"><h1>6666<br>6666</h1></div>
+    </div>
+    <hr>
+    <p>2 flex-flow:试试不同值;<br>align-items:试试不同值<br>justify-content:试试不同值</p>
+    <div class="box f2">
+        <div class="box-little"><h1>1</h1></div>
+        <div class="box-little"><h1>22<br>22</h1></div>
+        <div class="box-little"><h1>333<br>33</h1></div>
+        <div class="box-little"><h1>444</h1></div>
+        <div class="box-little"><h1>55<br>55<br>55</h1></div>
+        <div class="box-little"><h1>6666<br>6666</h1></div>
+    </div>
+    <hr>
+</body>
+
+</html>

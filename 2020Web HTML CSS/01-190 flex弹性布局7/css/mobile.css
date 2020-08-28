@@ -1,0 +1,40 @@
+@media (max-width: 500px){
+    #menu-container .menu  label{
+        display: block;
+    }
+    
+    #check:checked ~ .yinying{
+        display: block;
+    }
+
+    #menu-container .menu ul.menu-pc{display: none;}
+    #logo{
+        margin-top: 0;
+    }
+    #search .search-con span:nth-of-type(1){
+        display: block;
+    }
+    #newscon{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    #newscon .newscon-Top{
+        margin: 0;
+    }
+    #newscon .newscon-Top .newscon-TopList{
+        border: none;
+    }
+    #newscon .newscon-Top .newscon-TopList img{
+        display: none;
+    }
+    #newscon .newscon-List{
+        margin-right:0;
+        width: 100%;
+    }
+    #newscon .newscon-Hotsearch{
+        display: none;
+    }
+    #footer{
+        display: none;
+    }
+}

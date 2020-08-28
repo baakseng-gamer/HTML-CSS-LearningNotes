@@ -1,0 +1,65 @@
+{
+  "id": "2030991",
+  "name": "01-190 百度弹性导航制作",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "练手",
+  "glyphs": [
+    {
+      "icon_id": "4956288",
+      "name": "取消",
+      "font_class": "quxiao",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "5766825",
+      "name": "列表-线条",
+      "font_class": "liebiao-xiantiao",
+      "unicode": "e6b5",
+      "unicode_decimal": 59061
+    },
+    {
+      "icon_id": "5093354",
+      "name": "相机",
+      "font_class": "xiangji",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "12290498",
+      "name": "麦克风2",
+      "font_class": "maikefeng",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "3521809",
+      "name": "新闻",
+      "font_class": "xinwen",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "4292378",
+      "name": "计算器",
+      "font_class": "jisuanqi",
+      "unicode": "e753",
+      "unicode_decimal": 59219
+    },
+    {
+      "icon_id": "8519512",
+      "name": "天气",
+      "font_class": "tianqi",
+      "unicode": "e6fc",
+      "unicode_decimal": 59132
+    },
+    {
+      "icon_id": "16803258",
+      "name": "icon-线-15",
+      "font_class": "icon-xian-15",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    }
+  ]
+}

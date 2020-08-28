@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            display: flex; 
+        }
+        .box1 > div{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+        }
+        .box2{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            display: flex; 
+            flex-wrap: wrap;
+        }
+        .box2 > div{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+        }
+        .box3{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            display: flex; 
+            flex-wrap: wrap-reverse;
+        }
+        .box3 > div{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+        }
+        .box4{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            display: flex; 
+            flex-wrap: wrap-reverse;
+            flex-direction: row-reverse;
+        }
+        .box4 > div{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+        }
+        .box5{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            display: flex; 
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .box5 > div{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+        }
+    </style>
+</head>
+<body>
+    <p>1 默认即flex-wrap:nowrap，不换行拆行的话 子块宽度会被压缩 子元素内容超多会撑到外边</p>
+    <div class="box1">
+        <div>1flksafjsafsadf</div>
+        <div>2flksafjsafsadf</div>
+        <div>3flksafjsafsadf</div>
+        <div>4flksafjsafsadf</div>
+        <div>5flksafjsafsadf</div>
+    </div>
+    <hr>
+    <p>2 flex-wrap:wrap</p>
+    <div class="box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <hr>
+    <p>3 flex-wrap:wrap-reverse</p>
+    <div class="box3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <hr>
+    <p>4 flex-wrap:wrap-reverse同时加flex-direction:row-reverse</p>
+    <div class="box4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <hr>
+    <p>5 flex-direction:column;<br>flex-wrap:wrap</p>
+    <div class="box5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <hr>
+</body>
+</html>
