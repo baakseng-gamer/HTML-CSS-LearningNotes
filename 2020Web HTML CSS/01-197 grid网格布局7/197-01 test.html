@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        h1,h2,h3,h4,h5,h6{margin: 0;padding: 0;font-size: 100%;font: inherit;}
+        ul li{list-style: none;}
+        #hotsearch-con{
+            width: 480px;
+            border: 2px solid lightgray;
+            margin: 20px;
+            padding: 16px;
+        }
+        #hotsearch-con h2{
+            width: 100%;
+            font-size: 20px;
+        }
+        #hotsearch-con .hotsearch-list{
+            width: 100%;
+            height: 600px;
+            display: grid;
+            margin-top: 16px;
+            grid-template-rows: repeat(4,1fr);
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            grid-template-areas: 
+                "a1 a2 a2"
+                "a3 a2 a2"
+                "a4 a4 a5"
+                "a6 a7 a7";
+        }
+
+        #hotsearch-con .hotsearch-list div:nth-child(1){grid-area: a1;}
+        #hotsearch-con .hotsearch-list div:nth-child(2){grid-area: a2;}
+        #hotsearch-con .hotsearch-list div:nth-child(3){grid-area: a3;background:linear-gradient(#F32972,#FE57A8);}
+        #hotsearch-con .hotsearch-list div:nth-child(4){grid-area: a4;}
+        #hotsearch-con .hotsearch-list div:nth-child(5){grid-area: a5;}
+        #hotsearch-con .hotsearch-list div:nth-child(6){grid-area: a6;}
+        #hotsearch-con .hotsearch-list div:nth-child(7){grid-area: a7;}
+        #hotsearch-con .hotsearch-list div:nth-child(1),
+        #hotsearch-con .hotsearch-list div:nth-child(2),
+        #hotsearch-con .hotsearch-list div:nth-child(4),
+        #hotsearch-con .hotsearch-list div:nth-child(5)
+        {background:linear-gradient(#1A83E7,#31ABF3);}
+        #hotsearch-con .hotsearch-list div:nth-child(n+6)
+        {background:linear-gradient(#D36903,#E7A91C);}
+        #hotsearch-con ul{
+            margin-top: 16px;
+            width: 100%;
+            display: inline-flex;
+            justify-content: flex-end;
+        }
+        #hotsearch-con ul li{
+            padding: 0 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="hotsearch-con">
+        <h2>今日上榜</h2>
+        <div class="hotsearch-list">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+        </div>
+        <ul>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+    </ul>
+    </div>
+    
+</body>
+</html>

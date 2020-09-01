@@ -472,6 +472,47 @@ div{$}*12
 
 
 
+### minmax()
+
+函数产生一个长度范围，表示长度就在这个范围之中。它接受两个参数，分别为最小值和最大值。
+
+```
+grid-template-columns: 1fr 1fr minmax(100px, 1fr);
+```
+
+上面代码中，minmax(100px, 1fr)表示列宽不小于100px，不大于1fr。
+
+
+
+### auto 关键字
+
+表示由浏览器自己决定长度。
+
+```
+grid-template-columns: 100px auto 100px;
+```
+
+上面代码中，第二列的宽度，基本上等于该列单元格的最大宽度，除非单元格内容设置了min-width，且这个值大于最大宽度。
+
+
+
+### 网格线的名称
+
+grid-template-columns属性和grid-template-rows属性里面，还可以使用方括号，指定每一根网格线的名字，方便以后的引用。
+
+```
+.container {
+  display: grid;
+  grid-template-columns: [c1] 100px [c2] 100px [c3] auto [c4];
+  grid-template-rows: [r1] 100px [r2] 100px [r3] auto [r4];
+}
+```
+
+上面代码指定网格布局为3行 x 3列，因此有4根垂直网格线和4根水平网格线。方括号里面依次是这八根线的名字。
+网格布局允许同一根线有多个名字，比如[fifth-line row-5]。
+
+
+
 ## 01-192 grid网格布局2
 
 ### grid-template-area
@@ -551,6 +592,18 @@ grid-template-rows，grid-template-columns和grid-template-areas属性的缩写�
 ```
 
 实例： [192-02 grid-template.html](2020Web HTML CSS\01-192 grid网格布局2\192-02 grid-template.html) 
+
+
+
+### **建议**
+
+grid-template 属性，grid 属性
+
+grid-template属性是grid-template-columns、grid-template-rows和grid-template-areas这三个属性的合并简写形式。
+
+grid属性是grid-template-rows、grid-template-columns、grid-template-areas、 grid-auto-rows、grid-auto-columns、grid-auto-flow这六个属性的合并简写形式。
+
+从易读易写的角度考虑，还是建议不要合并属性，所以这里就不详细介绍这两个属性了。.
 
 
 
@@ -635,13 +688,7 @@ place-content: <align-content> <justify-content>
 
 
 
-grid-template 属性，grid 属性
 
-grid-template属性是grid-template-columns、grid-template-rows和grid-template-areas这三个属性的合并简写形式。
-
-grid属性是grid-template-rows、grid-template-columns、grid-template-areas、 grid-auto-rows、grid-auto-columns、grid-auto-flow这六个属性的合并简写形式。
-
-从易读易写的角度考虑，还是建议不要合并属性，所以这里就不详细介绍这两个属性了。
 
 
 
@@ -719,3 +766,141 @@ grid-row: start-line>/ end-line;
 grid-column: 1 / span 2;
 grid-row: 1 / span 2;
 
+
+
+## 01-195 grid网格布局5
+
+### grid-area
+
+表示当前网格所占用的区域，名字和位置两种表示方法。
+
+指定项目放在哪一个区域。
+
+可用作grid-row-start、grid-column-start、grid-row-end、grid-column-end的合并简写形式，直接指定项目的位置。
+
+```
+.item {
+  grid-area: <row-start> / <column-start> / <row-end> / <column-end>;
+}
+```
+
+实例： [195-01 grid-area.html](2020Web HTML CSS\01-195 grid网格布局5\195-01 grid-area.html) 
+
+
+
+使用span也可以
+
+```
+.item-1 {
+  grid-area: grid-area: 2 / 2 / span 1 / span 3;
+}
+```
+
+上面代码中，1号项目位于e区域
+
+实例： [195-02 grid-area.html](2020Web HTML CSS\01-195 grid网格布局5\195-02 grid-area.html) 
+
+
+
+### justify-self ，align-self 和place-self
+
+justify-self属性设置单元格内容的水平位置（左中右），跟justify-items属性的用法完全一致，但只作用于单个项目。
+
+align-self属性设置单元格内容的垂直位置（上中下），跟align-items属性的用法完全一致，也是只作用于单个项目。
+
+```
+.item {
+  justify-self: start | end | center | stretch;
+  align-self: start | end | center | stretch;
+}
+```
+
+
+
+
+
+place-self属性是align-self属性和justify-self属性的合并简写形式。
+
+如果省略第二个值，place-self属性会认为这两个值相等。
+
+```
+place-self: <align-self> <justify-self>;
+```
+
+实例： [195-03 self.html](2020Web HTML CSS\01-195 grid网格布局5\195-03 self.html) 
+
+
+
+
+
+
+
+## 01-196 grid网格布局6
+
+grid案例
+
+1.骰子的点数
+
+参考： [7_骰子grid.html](2020Web HTML CSS\01-196 grid网格布局6\7_骰子grid.html) 
+
+练习采用结构伪类选择器：1、3、5即2n+1
+
+练习： [196-01 test-dice.html](2020Web HTML CSS\01-196 grid网格布局6\196-01 test-dice.html) 
+
+
+
+## 01-197 grid网格布局7
+
+2.百度搜索风云榜
+
+参考：
+
+<a href="2020Web HTML CSS\01-197 grid网格布局7\baidusearch.png">百度搜索风云榜图示</a>
+
+ [8_百度风云榜.html](2020Web HTML CSS\01-197 grid网格布局7\8_百度风云榜.html) 
+
+练习： [197-01 test.html](2020Web HTML CSS\01-197 grid网格布局7\197-01 test.html) 
+
+
+
+## 分享
+
+阮一峰 gridm网格布局
+
+http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html
+
+本地链接： [CSS Grid 网格布局教程 - 阮一峰的网络日志.html](2020Web HTML CSS\01-197 grid网格布局7\CSS Grid 网格布局教程 - 阮一峰的网络日志.html) 
+
+
+
+布局实例大全
+
+https://www.html.cn/archives/8635
+
+本地链接： [CSS Grid 布局示例大全-WEB前端开发.html](2020Web HTML CSS\01-197 grid网格布局7\CSS Grid 布局示例大全-WEB前端开发.html) 
+
+
+
+## 01-198 移动端之viewport视口
+
+1.移动端模拟器？
+切换平台之后，一定要重新刷新浏览器
+
+2.去访问一些网站的PC端和移动端？
+大一点的网站都是分开开发的，PC端一套代码，移动端端一套代码。
+访问淘宝网  ->   后端检测当前设备 -> 如果是PC端 -> www.taobao.com
+访问淘宝网  ->   后端检测当前设备 -> 如果是移动端 -> www.taobao.com重定向 -> h5.m.taobao.com
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+
+
+3.viewport视口？ 
+
+在移动端viewport视口就是浏览器显示页面内容的屏幕区域。在viewport中有两种视口，分别表示为， visual viewport（可视视口）和layout viewport（布局视口）。
+
+visual viewport 固定大小跟屏幕大小相同，在上面，而layout viewport 可改变大小，在下面。Layout viewport默认大小为980像素，可通过document.documentElement.clientWidth获取。
+
+现代网页需要将layout viewport设置成跟visual viewport等同大小，方便进行网页制作。

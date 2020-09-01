@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://cdpn.io/rachelandrew/fullembedgrid/NGWZLM?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - Grid by Example 25: justify-items</title>
+<style>
+body {
+  margin: 40px;
+  font: 80% Arial, Helvetica, sans-serif;
+  
+}
+
+.wrapper {
+  display: grid;
+  justify-items: center;
+  background: no-repeat url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/grid.png);
+    grid-gap: 10px;
+  grid-template-columns:  repeat(6, 150px);
+  grid-template-rows: repeat( 4, 150px);
+  background-color: #fff;
+  color: #444;
+}
+
+.box {
+  border: 1px solid #444;
+  padding: 20px;
+  font-size: 150%;
+}
+
+
+.a {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.b {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+}
+
+.c {
+  grid-column: 1 / 3;
+  grid-row: 3 /  6;
+}
+
+.d {
+  grid-column: 3 / 5;
+  grid-row: 3 / 6;
+}
+
+.e {
+  grid-column: 5 / 7;
+  grid-row: 1 / 6;
+  align-self: stretch;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="wrapper">
+<div class="box a">
+<p>This is box A. </p>
+</div>
+<div class="box b">
+<p>This is box B.</p>
+</div>
+<div class="box c">
+<p>This is box C.</p>
+</div>
+<div class="box d">
+<p>This is box D.</p>
+</div>
+<div class="box e">
+<p>Each of the boxes on the left has a grid area of 3 columns and 3 rows (we're counting the gutter col/row). </p>
+<p>The justify-items property is used to justify the content inside each grid-area.</p>
+<p>Other values of justify-items are:</p>
+<ul>
+<li>stretch</li>
+<li>start</li>
+<li>end</li>
+<li>center</li>
+</ul>
+</div>
+</div>
+<script src="./iframeRefreshCSS-e03f509ba0a671350b4b363ff105b2eb009850f34a2b4deaadaa63ed5d970b37.js.下载"></script>
+
+
+</body></html>

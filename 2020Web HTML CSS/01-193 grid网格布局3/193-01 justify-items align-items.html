@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            width: 500px;
+            height: 500px;
+            border: 1px dashed gray;
+            display: grid;
+
+        }
+        .con > div{
+            background: tomato;
+        }
+        .g2{
+            grid-template-rows: repeat(3 , 1fr);
+            grid-template-columns: repeat(3 , 1fr);
+            justify-items: start;
+        }
+        .g3{
+            grid-template-rows: repeat(3 , 1fr);
+            grid-template-columns: repeat(3 , 1fr);
+            justify-items: start;
+            align-items:end;
+        }
+    </style>
+</head>
+<body>
+    <p>1. 无设justify-items</p>
+    <div class="con">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <hr>
+    <p>2. justify-items:start</p>
+    <div class="con g2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <hr>
+    <p>3. justify-items:start<br>align-items:end</p>
+    <div class="con g3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <hr>
+</body>
+</html>

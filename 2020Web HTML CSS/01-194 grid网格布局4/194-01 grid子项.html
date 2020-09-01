@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            width: 500px;
+            height: 500px;
+            border: 1px dashed gray;
+            display: grid;
+            grid-template-rows: repeat(4 , 1fr);
+            grid-template-columns: repeat(4 , 1fr);
+
+        }
+        .con .box{
+            background: tomato;
+            width: 1fr;
+            height: 1fr;
+            
+        }
+        .g2{
+            grid-column-start: 2;
+            grid-column-end: 5;
+            /* grid-row-start: 1;
+            grid-row-end: 2; */
+        }
+        .g3{
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .g4{
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+    </style>
+</head>
+<body>
+    <p>1.默认位置，即全都为1</p>
+    <div class="con">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+
+    </div>
+    <hr>
+    <p>2.<br>
+        grid-column-start: 2;<br>
+        grid-column-end: 5;</p>
+    <div class="con">
+        <div class="box g2">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        
+
+    </div>
+    <hr>
+    <p>3.<br>
+        grid-column-start: 2;<br>
+        grid-column-end: 5;<br>
+        grid-row-start: 1;<br>
+        grid-row-end: 2; <br>
+        注意：加上grid-row-start和grid-row-end后第2块位置有变化；
+    </p>
+    <div class="con">
+        <div class="box g3">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <hr>
+    <p>4.测试用</p>
+    <div class="con">
+        <div class="box g4">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+
+    </div>
+    <hr>
+</body>
+</html>
