@@ -383,6 +383,16 @@ display:flex
 
 
 
+## 分享
+
+阮一峰
+
+http://www.ruanyifeng.com/blog/2015/07/flex-examples.html
+
+内有悬挂式布局
+
+
+
 ## 01-191 grid网格布局1
 
 Grid布局是一个二维的布局方法，纵横两个方向总是同时存在。
@@ -899,8 +909,418 @@ https://www.html.cn/archives/8635
 
 3.viewport视口？ 
 
-在移动端viewport视口就是浏览器显示页面内容的屏幕区域。在viewport中有两种视口，分别表示为， visual viewport（可视视口）和layout viewport（布局视口）。
+在移动端viewport视口就是浏览器显示页面内容的屏幕区域。在viewport中有两种视口，分别表示为， **visual viewport**（可视视口）和**layout viewport**（布局视口）。
 
 visual viewport 固定大小跟屏幕大小相同，在上面，而layout viewport 可改变大小，在下面。Layout viewport默认大小为980像素，可通过document.documentElement.clientWidth获取。
 
 现代网页需要将layout viewport设置成跟visual viewport等同大小，方便进行网页制作。
+
+
+
+```
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+</head>
+```
+
+第三行注释一下，即取消
+
+然后打开此页面，F12显示控制台，在Console一栏里输入document.documentElement.clientWidth后自动显示为980。
+
+
+
+通过meta标签进行设置，name属性指定viewport值，content属性进行视口配置。
+
+| **取值**          | **含义**                                                  |
+| ----------------- | --------------------------------------------------------- |
+| **width**         | 设置layout viewport的宽度特定值，device-width表示设备宽。 |
+| **height**        | 设置layout viewport的高度特定值，一般不进行设置。         |
+| **initial-scale** | 设置页面的初始缩放。                                      |
+| **minimum-scale** | 设置页面的最小缩放。                                      |
+| **maximum-scale** | 设置页面的最大缩放。                                      |
+| **user-scalable** | 设置页面能否进行缩放。                                    |
+
+看下面图片链接就懂了
+
+<a href="2020Web HTML CSS\01-198 移动端之viewport视口\01-198-01.png">Layout Viewport</a>
+
+<a href="2020Web HTML CSS\01-198 移动端之viewport视口\01-198-02.png">Visual Viewport</a>
+
+
+
+实例： [198-01 viewport.html](2020Web HTML CSS\01-198 移动端之viewport视口\198-01 viewport.html) 
+
+取消meta标签的viewport，然后控制台切换移动端试效果
+
+
+
+## 01-199-202 移动端流式布局整页制作1-4
+
+移动端适配方案
+
+1.百分比布局，也叫流式布局。代表网站：优酷、百度、天猫、腾讯。
+
+2.等比缩放布局，也叫rem布局。代表网站：网易、爱奇艺、淘宝、美团。
+
+<a href="2020Web HTML CSS\01-199-202 移动端流式布局整页制作1-4\01-199-01.png">两个布局对比</a>
+
+
+
+流式布局原则
+
+<a href="2020Web HTML CSS\01-199-202 移动端流式布局整页制作1-4\01-199-02.png">流式布局原则</a>
+
+好处： 大屏幕下显示更多的内容。 	
+坏处：宽屏下比例会有一些不协调。
+
+
+
+参考： [index.html](2020Web HTML CSS\01-199-202 移动端流式布局整页制作1-4\index.html) 
+
+<a href="2020Web HTML CSS\01-199-202 移动端流式布局整页制作1-4\lagou-1.png">拉勾上半页</a>
+
+<a href="2020Web HTML CSS\01-199-202 移动端流式布局整页制作1-4\lagou-2.png">拉勾下半页</a>
+
+没啥方法，就是取取色，测测量，还有字体大小的不同之行高的问题
+
+ [index移动端流式布局.html](2020Web HTML CSS\01-199-202 移动端流式布局整页制作1-4\index移动端流式布局.html) 
+
+
+
+## 01-203 rem单位及rem布局原理
+
+rem布局
+
+**单位**
+
+em : 是一个相对单位，1em等于当前元素或父元素的font-size值。
+
+rem : 是一个相对单位，1rem等于根元素的font-size值。
+
+vw / vh : 把屏幕分为100份，1vw等于屏幕宽的1%。 
+
+
+
+根元素一般是指html
+
+```
+    <style>
+        html{
+            font-size: 50px;
+        }
+        #con{
+            font-size: 30px;
+        }
+        #con .box1{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            border-left: 1em solid black;
+            border-right: 1rem solid black;
+            /* 1em=30px 相对于父元素的font-size */
+            /* rem -> root + em */
+        }
+    </style>
+</head>
+<body>
+    <div id="con">
+        <div class="box1"></div>
+    </div>
+</body>
+```
+
+结果是box1的左边框是1em即30px，右边框是1rem即50px
+
+实例： [203-01 rem.html](2020Web HTML CSS\01-203 rem单位及rem布局原理\203-01 rem.html) 
+
+
+
+
+
+## 01-204 js方式进行动态font-size设置
+
+案例：进入淘宝，并改为移动端iPhone6/7/8即375X667，在控制台上可发现一行代码
+
+```
+<html class="hairlines" style="font-size:100px;"......
+```
+
+切换到移动端iPhone6/7/8 Plus即141X736，html字体大小变成110.4px
+
+```
+<html class="hairlines" style="font-size:110.4px;"......
+```
+
+
+
+上面的html字体大小有变化，但是body的字体大小还是16px
+
+
+
+动态设置font-size：
+通过JS
+通过vw
+**注**：要给body重置一下font-size : 16px
+
+
+
+ 以下为通过JS动态设置html的font-size
+
+```
+        // layout viewport : document.documentElement.clientWidth
+        // iphone 6 : 375
+        // iphone 6 plus :414
+
+        // iphone 6 : document.documentElement.clientWidth / 3.75 -> 100
+        // iphone 6 plus : document.documentElement.clientWidth / 3.75 -> 110.4
+
+        var fontsize = document.documentElement.clientWidth / 3.75;
+
+        document.documentElement.style.fontSize = fontsize + 'px';
+```
+
+实例： [204 动态设置font-size.html](2020Web HTML CSS\01-204 js方式进行动态font-size设置\204 动态设置font-size.html) 
+
+
+
+VSCODE 扩展里有px to rem 可试用
+
+
+
+根据需求可调动态font-size
+
+
+
+
+
+
+
+## 01-205 vw单位进行动态fontsize设置
+
+vw / vh : 把屏幕分为100份，1vw等于屏幕宽的1%。 
+
+iphone 375 1vw -> 3.75
+iphone plus 414  1vw -> 4.14
+如果在iphone 下想等到100px , 我应该设置多少个vw呢？
+
+100/3.75=26.66666667，即26.66666667vw;
+
+
+
+可参考爱奇艺网站，控制台切换移动端iPhone6/7/8即375X667，然后看下html的font-size值。
+
+不管切换任何分辨率移动端，font-size还是26.66666667vw
+
+
+
+通过vw动态设置html的font-size
+
+```
+html{
+	font-size: 26.66666667vw;
+}
+```
+
+实例： [205 vw进行动态fontsize设置.html](2020Web HTML CSS\01-205 vw单位进行动态fontsize设置\205 vw进行动态fontsize设置.html) 
+
+
+
+
+
+## 01-206 移动端rem布局实战流程
+
+接上199-202的整页然后修改为rem布局（切换不同分辨率，内容大小也跟着变化）
+
+方法：
+
+1.给html添加font-size:26.66666667vw;
+
+2.别忘给body添加font-size:16px;
+
+3.利用VSCODE的插件px to rem，别忘配置一下px-to-rem转换数值（插件设置里弄）
+
+4.选择要切换rem的几行代码，按下alt+z能转换rem单位，如果要转回去为px单位，再按下alt+z即可；
+
+实例： [index移动端rem布局.html](2020Web HTML CSS\01-206 移动端rem布局实战流程\index移动端rem布局.html) 
+
+
+
+## 01-207 响应式布局之媒体查询语法
+
+**响应式布局**
+
+利用媒体查询，即media queries，可以针对不同的媒体类型定义不同的样式，从而实现响应式布局 。
+
+<a href="2020Web HTML CSS\01-207 响应式布局之媒体查询语法\207-01.png">不同设备分辨率的图示</a>注意一下内容排版
+
+| **取值** | **含义**                             |
+| -------- | ------------------------------------ |
+| all      | 用于所有设备。                       |
+| print    | 用于打印机和打印预览。               |
+| screen   | 用于电脑屏幕，平板电脑，智能手机等。 |
+| speech   | 应用于屏幕阅读器等发声设备。         |
+
+
+
+常见选项：
+
+and、not
+min-width、max-width
+orientation:portrait、orientation:landscape
+link
+
+
+
+### media
+
+代码示例：
+
+```
+        .box{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            transition: 0.25s;
+        }
+        @media all and (max-width: 500px){
+            .box{
+                background: skyblue;
+                }
+        }
+```
+
+当浏览器分辨率缩小到500px以下时，box背景色有变化
+
+
+
+
+
+```
+        @media all and (min-width: 600px) and (max-width: 700px){
+            .box{
+                background: skyblue;
+                }
+        }
+```
+
+600px~700px时背景色为蓝色
+
+
+
+```
+        @media  all and (min-width:600px){
+            .box{
+                background: skyblue;
+            }
+        }
+```
+
+宽度最低为600px以上时，颜色为skyblue;
+
+否则为tomato;
+
+
+
+```
+@media not  all and (max-width: 600px){
+	.box{
+		background: skyblue;
+	}
+}
+```
+
+非max-width:600px以下时，不是skyblue颜色
+
+
+
+
+
+```
+        @media  all and (max-width: 800px){
+            .box{
+                background: skyblue;
+                }
+        }
+        @media  all and (max-width: 500px){
+            .box{
+                background: lightseagreen;
+                }
+        }
+```
+
+800px以下时为skyblue颜色， 500px以下时为lightseagreen颜色
+
+
+
+实例： [207-01 media.html](2020Web HTML CSS\01-207 响应式布局之媒体查询语法\207-01 media.html) 
+
+
+
+
+
+### orientation
+
+orientation:portrait 竖向屏幕；指定输出设备中的页面可见区域高度大于或等于宽度
+
+orientation:landscape 横向屏幕
+
+代码示例：
+
+```
+        @media all and ( orientation: portrait){
+            .box{background: skyblue;}
+        }
+        @media all and ( orientation: landscape){
+            .box{background: lightseagreen;}
+        }
+```
+
+在移动端可切换横竖方向
+
+竖向时颜色为skyblue;
+
+横向时颜色为lightseagreen;
+
+实例： [207-02 orientation.html](2020Web HTML CSS\01-207 响应式布局之媒体查询语法\207-02 orientation.html) 
+
+
+
+### link方式处理响应式
+
+代码示例：
+
+```
+    <link rel="stylesheet" href="./css/base1.css" media="all and (min-width:600px)">
+    <link rel="stylesheet" href="./css/bsse2.css" media="all and (min-width:800px)">
+```
+
+最小宽度为600px时引入base1.css，颜色为黑色；
+
+最小宽度为800px时引入base2.css，颜色为灰色；
+
+600px以下颜色为tomato
+
+实例： [207-03 link.html](2020Web HTML CSS\01-207 响应式布局之媒体查询语法\207-03 link.html) 
+
+
+
+### 常见修改样式
+
+display
+float
+width
+注：响应式代码写到要适配的CSS后面。
+
+
+
+## 01-208 响应式布局之两种操作模式
+
+参考： [2_media.html](2020Web HTML CSS\01-208 响应式布局之两种操作模式\2_media.html) 
+
+
+
+
+
+## 01-209 响应式布局之实战导航菜单
