@@ -1324,3 +1324,396 @@ width
 
 
 ## 01-209 响应式布局之实战导航菜单
+
+参考小米官网的右侧导航栏，浏览器不同宽度会发生变化
+
+www.xiaomi.com
+
+ [index.html](2020Web HTML CSS\01-209 响应式布局之实战导航菜单\xiaomi\index.html) 
+
+
+
+
+
+方法：
+
+```
+<link rel="stylesheet" href="./iconfont/iconfont.css" />
+<link rel="stylesheet" href="./css/subnav-little.css" media="all and (max-width:1500px)" />
+<link rel="stylesheet" href="./css/subnav-large.css" media="all and (min-width:1500.01px)" />
+```
+
+有文字段的根据宽度变化采用display:none或display:block;
+
+练习： [209-01 test-xiaomi.html](2020Web HTML CSS\01-209 响应式布局之实战导航菜单\209-01 test-xiaomi.html) 
+
+
+
+## 01-210 bootstrap4之containers
+
+Bootstrap 是全球最受欢迎的前端开源工具库，它支持 Sass 变量和 mixin、响应式栅格系统、自带大量组件和众多强大的 **JavaScript 插件**。基于 Bootstrap 提供的强大功能，能够让你快速设计并自定义你的网站。
+
+Bootstrap 是一套用于 HTML、CSS 和 JS 开发的开源工具集。利用我们提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、**基于 jQuery 的强大的插件系统**，能够快速为你的想法开发出原型或者构建整个 app 。
+
+**Bootstrap4 与 Bootstrap3之区别**
+Bootstrap4 是 Bootstrap 的最新版本，与 Bootstrap3 相比拥有了更多的具体的类以及把一些有关的部分变成了相关的组件。同时 Bootstrap.min.css 的体积减少了40%以上。
+Bootstrap4 放弃了对 IE8 以及 iOS 6 的支持，现在仅仅支持 IE9 以上 以及 iOS 7 以上版本的浏览器。如果对于其中需要用到以前的浏览器，那么请使用 Bootstrap3。
+
+
+
+版本4：https://v4.bootcss.com/ 
+
+版本3：https://3.bootcss.com/ 
+
+| Bootstrap3               | Bootstrap4                                       |
+| ------------------------ | ------------------------------------------------ |
+| Less                     | Sass语言编写                                     |
+| 4种栅格类                | 5种栅格类                                        |
+| 使用px为单位             | 使用rem和em为单位（除部分margin和padding使用px） |
+| 使用push和pull向左右移动 | 偏移列通过offset-类设置                          |
+| 使用float的布局方式      | 选择弹性盒模型（flexbox）                        |
+
+
+
+**Bootstrap 特点**
+Bootstrap 非常流行，得益于它非常实用的功能和特点。主要核心功能特点如下：
+(1).跨设备、跨浏览器
+可以兼容所有现代浏览器，包括比较诟病的 IE7、8。当然，本课程不再考虑 IE9 以下
+浏览器。
+(2).响应式布局
+不但可以支持 PC 端的各种分辨率的显示，还支持移动端 PAD、手机等屏幕的响应式切
+换显示。
+(3).提供的全面的组件
+Bootstrap 提供了实用性很强的组件，包括：导航、标签、工具条、按钮等一系列组
+件，方便开发者调用。
+(4).内置 jQuery 插件
+Bootstrap 提供了很多实用性的 jquery 插件，这些插件方便开发者实现 Web 中各种
+常规特效。
+(5).支持 HTML5、CSS3
+HTML5 语义化标签和 CSS3 属性，都得到很好的支持。
+(6).支持 LESS 动态样式
+LESS 使用变量、嵌套、操作混合编码，编写更快、更灵活的 CSS。它和 Bootstrap 能
+很好的配合开发。
+
+
+
+**Bootstrap4特点**
+新增网格层适配了移动端；
+全面引入ES6新特性（重写所有JavaScript插件）；
+css文件减少了至少40%；
+所有文档都用Markdown编辑器重写；
+放弃对IE8的支持
+
+
+
+**具体文档可浏览网站查询！！！**
+
+VSCODE可以用Bootstrap 4, Font awesome 4, Font Awesome 5 Free & Pro snippets for Visual studio code这个插件，敲代码可提示！
+
+
+
+### containers
+
+意思是容器
+
+container-fluid
+Responsive breakpoints
+
+…
+
+|                    | 超小屏幕 <576px | 小屏幕 ≥576px | 中等屏幕 ≥768px | 大屏幕 ≥992px | 超大屏幕 ≥1200px |
+| ------------------ | --------------- | ------------- | --------------- | ------------- | ---------------- |
+| `.container`       | 100%            | 540px         | 720px           | 960px         | 1140px           |
+| `.container-sm`    | 100%            | 540px         | 720px           | 960px         | 1140px           |
+| `.container-md`    | 100%            | 100%          | 720px           | 960px         | 1140px           |
+| `.container-lg`    | 100%            | 100%          | 100%            | 960px         | 1140px           |
+| `.container-xl`    | 100%            | 100%          | 100%            | 100%          | 1140px           |
+| `.container-fluid` | 100%            | 100%          | 100%            | 100%          | 100%             |
+
+
+
+代码示例：
+
+```
+    <div class="container bg-primary text-white">AAA</div>
+    <div class="container-fluid">BBB</div>
+```
+
+源文件已预设：
+
+```
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+.
+.
+.
+
+```
+
+实例： [210-01 bootstrap.html](2020Web HTML CSS\01-210 bootstrap4之containers\210-01 bootstrap.html) 
+
+浏览器不同宽度试效果，还有缩放比例也有效 
+
+
+
+具体的可翻阅：https://getbootstrap.net/docs/layout/overview/
+
+
+
+
+
+## 01-211 bootstrap4之grid上
+
+### Grid system
+
+翻译为栅格系统
+
+Grid options
+Responsive classes
+Gutters
+Alignment
+Reordering
+Offsetting
+
+....
+
+具体的可翻阅https://getbootstrap.net/docs/layout/grid/
+
+
+
+代码示例：
+
+```
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        [class*=col]{
+            border: 1px dashed gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col bg-info">AAA</div>
+            <div class="col bg-info">BBB</div>
+            <div class="col bg-info">CCC</div>
+        </div>
+        <div class="row">
+            <div class="col-sm bg-info">AAA</div>
+            <div class="col-sm bg-info">BBB</div>
+            <div class="col-sm bg-info">CCC</div>
+        </div>
+    </div>
+</body>
+</html>
+```
+
+两行三列
+
+第一行无论屏幕宽度如何一直都是3列；
+
+第二行即col-sm在屏幕为540px以下时由三列变成三行，一共四行
+
+试试调浏览器横向宽度
+
+实例： [211-01 bootstrap-grid.html](2020Web HTML CSS\01-211 bootstrap4之grid上\211-01 bootstrap-grid.html) 
+
+
+
+**栅格选项**
+
+Bootstrap使用ems或rems来定义大多数属性的规格大小、px用于全局层面网格断点和容器宽度（因为浏览器和设备的宽度是以像素px为单位，且不会随字体大小而变化）。
+
+通过一个简单的表格查看Bootstrap的网格系统在各种屏幕和设备上的细节约定：
+
+|                       | 超小屏幕 (新增规格)<576px | 小屏幕 次小屏≥576px | 中等屏幕 窄屏≥768px | 大屏幕 桌面显示器≥992px | 超大屏幕 大桌面显示器≥1200px |
+| --------------------- | ------------------------- | ------------------- | ------------------- | ----------------------- | ---------------------------- |
+| `.container` 最大宽度 | None (auto)               | 540px               | 720px               | 960px                   | 1140px                       |
+| 类前缀                | `.col-`                   | `.col-sm-`          | `.col-md-`          | `.col-lg-`              | `.col-xl-`                   |
+| 列（column）数        | 12                        |                     |                     |                         |                              |
+| 列间隙                | 30px (每列两侧各15px)     |                     |                     |                         |                              |
+| 可嵌套性              | Yes                       |                     |                     |                         |                              |
+| 可排序性              | Yes                       |                     |                     |                         |                              |
+
+
+
+
+
+
+
+## 01-212 bootstrap4之grid下
+
+主要讲的是Alignment
+
+可翻阅https://getbootstrap.net/docs/layout/grid/#vertical-alignment
+
+
+
+实例： [212-01 bootstrap grid.html](2020Web HTML CSS\01-212 bootstrap4之grid下\212-01 bootstrap grid.html) 
+
+
+
+## 01-213 bootstrap4之content
+
+### Content
+
+意思是内容
+
+Reboot
+Typography
+Code
+Images
+Tables
+Figures
+
+.....
+
+详细的可翻阅：https://getbootstrap.net/docs/content/reboot/组里几个内容
+
+
+
+## 01-214 bootstrap4之components
+
+### components
+
+组件的意思
+
+Alerts
+Badge
+Breadcrumb
+Buttons
+Button group
+Card
+
+.....
+
+实例： [214-01 components alert.html](2020Web HTML CSS\01-214 bootstrap4之components\214-01 components alert.html) 
+
+具体可翻阅：https://getbootstrap.net/docs/components/alerts/
+
+
+
+## 01-215 bootstrap4之utilities
+
+### utilities
+
+公共样式的意思
+
+Borders
+Clearfix
+Close icon
+Colors
+Display
+Embed
+
+.....
+
+可翻阅：https://getbootstrap.net/docs/utilities/borders/
+
+
+
+
+
+## 01-216-219 bootstrap个人博客整页制作
+
+参考： [index.html](2020Web HTML CSS\01-216-219 bootstrap个人博客整页制作\example\index.html) 
+
+https://getbootstrap.com/docs/4.5/examples/blog/
+
+
+
+```
+<a href="#" class="stretch-link">XXXXXX</a>
+```
+
+扩大可点击范围，扩大至此元素的父元素
+
+
+
+
+
+.role
+
+1、用于表示一个普通的标签，使之语义化，方便浏览器对其具体功能进行识别。比如：
+
+```
+<div role="button"></div>
+```
+
+也即是将div元素转换为button按钮功能进行使用；
+
+
+
+```
+<div role="navigation"></div>
+```
+
+把div元素转换为navigation导航功能使用；
+
+
+
+```
+<div role="checkbox" aria-checked="checked"></div>
+```
+
+把div元素转换为checkbox复选框功能使用；
+
+
+
+```
+<a role="button" class="btn btn-default" href="#" >链接</a>
+```
+
+把a链接元素转换为button按钮功能使用。
+
+
+
+2、
+
+```
+<button role="button"></button>
+```
+
+这种情况之下，role就可以省略，因为在此处是没有意义的，本身button就已经是button按钮。
+
+
+
+
+
+
+
+练习： [216 blog-bootstrap.html](2020Web HTML CSS\01-216-219 bootstrap个人博客整页制作\216 blog-bootstrap.html) 
+

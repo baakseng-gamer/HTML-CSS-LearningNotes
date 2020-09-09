@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        .container::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 20px;
+        }
+        [class*=col]{
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    1
+    <div class="container text-white">
+        <div class="row">
+            <div class="col bg-info">col 1 of 3</div>
+            <div class="col bg-info">col 1 of 3</div>
+            <div class="col bg-info">col 1 of 3</div>
+        </div>
+    </div>
+    2
+    <div class="container text-white">
+        <div class="row">
+            <div class="col bg-info">
+                col 1 of3&lt;br&gt;
+                <br>
+                1
+            </div>
+            <div class="col bg-info">col 1 of 3</div>
+            <div class="col bg-info">col 1 of 3</div>
+        </div>
+    </div>
+    3
+    <div class="container text-white">
+        <div class="row">
+            <div class="col-sm bg-success">col-sm 1 of 3</div>
+            <div class="col-sm bg-success">col-sm 1 of 3</div>
+            <div class="col-sm bg-success">col-sm 1 of 3</div>
+        </div>
+    </div>
+    4
+    <div class="container text-white">
+        <div class="row">
+            <div class="col-lg bg-success">col-lg 1 of 3</div>
+            <div class="col-lg bg-success">col-lg 1 of 3</div>
+            <div class="col-lg bg-success">col-lg 1 of 3</div>
+        </div>
+    </div>
+    5
+    <div class="container text-white">
+        <div class="row">
+            <div class="col bg-warning">1 of 2</div>
+            <div class="col bg-warning">1 of 2</div>
+        </div>
+    </div>
+    6
+    <div class="container text-white">
+        <div class="row">
+            <div class="col bg-secondary">col 1 of 3</div>
+            <div class="col-6 bg-secondary">col-6 1 of 3</div>
+            <div class="col bg-secondary">col 1 of 3</div>
+        </div>
+    </div>
+    7
+    <div class="container text-white">
+        <div class="row">
+            <div class="col bg-secondary">col 1 of 3</div>
+            <div class="col-5 bg-secondary">col-5 1 of 3</div>
+            <div class="col bg-secondary">col 1 of 3</div>
+        </div>
+    </div>
+    8
+    <div class="container text-white">
+        <div class="row">
+            <div class="col-4 bg-secondary">col-4 1 of 3</div>
+            <div class="col-8 bg-secondary">col-8 1 of 3</div>
+        </div>
+    </div>
+    9
+    <div class="container text-white">
+        <div class="row">
+            <div class="col-4 bg-secondary">col-4 1 of 3</div>
+            <div class="col-6 bg-secondary">col-6 1 of 3</div>
+        </div>
+    </div>
+    10 可变宽度的弹性空间 左右都绑定栅格数2
+    <div class="container text-white">
+        <div class="row">
+            <div class="col col-lg-2 bg-info">col col-lg-2</div>
+            <div class="col col-md-auto bg-info">col col-md-auto</div>
+            <div class="col col-lg-2 bg-info">col col-lg-2</div>
+        </div>
+    </div>
+    11 可变宽度的弹性空间 右栏绑定栅格数2
+    <div class="container text-white">
+        <div class="row">
+            <div class="col bg-info">col</div>
+            <div class="col col-md-auto bg-info">col col-md-auto</div>
+            <div class="col col-lg-2 bg-info">col col-lg-2</div>
+        </div>
+    </div>
+    12 原本一行四列，但是第二行后面添加w-100
+    <div class="container text-white">
+        <div class="row">
+            <div class="col bg-danger">col 1 of 4</div>
+            <div class="col bg-danger">col 1 of 4 </div>
+            <div class="w-100"></div>
+            <div class="col bg-danger">col 1 of 4</div>
+            <div class="col bg-danger">col 1 of 4</div>
+        </div>
+    </div>
+    <!-- sm、md、lg、xl -->
+</body>
+</html>
