@@ -1,0 +1,21 @@
+.box {
+  width: 100px;
+  height: 100px;
+}
+/*
+    多行注释，就是CSS的注释方式，会被编译出来 
+*/
+.box2 {
+  width: 123px;
+  height: 123px;
+  font-size: 16px;
+  background: tomato;
+  margin: auto;
+}
+.box3 {
+  width: 100%;
+}
+.box6 {
+  height: 456px;
+  width: 456px;
+}

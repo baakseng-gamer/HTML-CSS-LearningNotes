@@ -1,0 +1,15 @@
+.box {
+    width: 200px;
+    height: 200px;;
+}
+
+.line{
+    display: inline;
+}
+.color{
+    color: tomato;
+}
+.box2 {
+    @extend .line;
+    @extend .color;
+}

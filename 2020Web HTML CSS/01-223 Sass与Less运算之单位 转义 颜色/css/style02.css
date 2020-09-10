@@ -1,0 +1,14 @@
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.box1 {
+  width: 400px;
+}
+
+.box2 {
+  font: 20px / 1.5;
+  padding: 13.33333px;
+  color: #020404;
+}

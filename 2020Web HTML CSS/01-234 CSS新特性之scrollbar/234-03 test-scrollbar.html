@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        ul , li{list-style: none;}
+        img{display: block;}
+        .con {
+            width: 600px;
+            border: 1px solid lightgray;
+            padding: 20px;
+            overflow-x: scroll;
+            margin: 50px auto;
+        }
+        .con .imgcon{
+            display: flex;
+        }
+        .con .imgcon li{
+            margin-right: 10px;
+        }
+        .con .imgcon img{
+            width: 300px;
+            height: auto;
+        }
+        .con::-webkit-scrollbar {
+            height: 6px;
+        }
+        .con::-webkit-scrollbar-thumb{
+            background: lightgray;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <ul class="imgcon">
+            <li>
+                <img src="./img/mhw-little01.png" alt="">
+            </li>
+            <li>
+                <img src="./img/mhw-little02.png" alt="">
+            </li>
+            <li>
+                <img src="./img/mhw-little03.png" alt="">
+            </li>
+            <li>
+                <img src="./img/mhw-little04.png" alt="">
+            </li>
+            <li>
+                <img src="./img/mhw-little05.png" alt="">
+            </li>
+            <li>
+                <img src="./img/mhw-little06.png" alt="">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

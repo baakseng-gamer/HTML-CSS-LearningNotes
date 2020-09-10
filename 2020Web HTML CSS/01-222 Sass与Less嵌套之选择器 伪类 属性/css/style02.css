@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.con1 {
+  background: tomato;
+}
+
+.con1:hover {
+  background: lightblue;
+}
+
+.con2 {
+  background: gray;
+}
+
+.con2 p {
+  font-size: 10px;
+  font-weight: bold;
+  font-family: 宋体;
+}

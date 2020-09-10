@@ -1,0 +1,34 @@
+.box{
+    width: 100px;
+    height: 100px;
+}
+
+// 单行注释，不会被编译出来
+
+/*
+    多行注释，就是CSS的注释方式，会被编译出来 
+*/
+@number : 666px;
+@number123 : 123px;
+@number16 : 16px;
+@color1 : tomato;
+@key : margin;
+@i : 3;
+
+.box2{
+    width: @number123;
+    height: @number123;
+    font-size: @number16;
+    background: @color1;
+    @{key} : auto;
+}
+
+.box@{i}{
+    width: 100%;
+}
+
+.box6{
+    height: @number;
+    @number : 456px;
+    width: @number;
+}

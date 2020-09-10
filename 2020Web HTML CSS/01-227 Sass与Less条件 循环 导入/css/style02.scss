@@ -1,0 +1,29 @@
+.box {
+    width: 200px;
+    height: 200px;;
+}
+
+$count : 5;
+
+.box11 { 
+    @if($count > 4) {
+        width : 100px + $count;
+    }
+    @else{
+        width : 10px + $count;
+    }
+}
+
+@for $abc from 0 through 3 {
+    .box-#{$abc}{
+        width : 100px + $abc;
+    }
+}
+
+@for $def from 0 to 3 {
+    .con#{$def}{
+        width : 100px + $def;
+    }
+}
+
+@import './reset.scss';

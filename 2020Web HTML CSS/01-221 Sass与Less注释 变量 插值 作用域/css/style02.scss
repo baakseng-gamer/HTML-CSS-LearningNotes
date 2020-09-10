@@ -1,0 +1,30 @@
+.box {
+    width: 200px;
+    height: 200px;;
+}
+
+// 单行注释
+/*
+    多行注释
+*/
+$number : 666px;
+$number100 : 100px;
+$number20 : 20px;
+$key : margin;
+$i : 5;
+.box{
+    width: $number100;
+    height: $number100;
+    font-size: $number20;
+    #{$key} : auto;
+}
+
+.box#{$i}{
+    width: 200px;
+}
+
+.box6{
+    height: $number;
+    $number : 369px;
+    width: $number;
+}
