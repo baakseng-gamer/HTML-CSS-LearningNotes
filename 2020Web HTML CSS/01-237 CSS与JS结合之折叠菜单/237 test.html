@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style:none;}
+        img{display: block;}
+        a{text-decoration: none;color: inherit;}
+        #menu{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            perspective: 500px;
+            position: relative;
+        }
+        #list{
+            width: 200px;
+            height: 50px;
+            background: lightseagreen;
+            margin: 30px auto;
+            transform: rotateY(-30deg);
+            transform-style: preserve-3d;
+            /* 使该元素保留其3D位置 */
+        }
+        #list div{
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            transform-origin:top;
+            transform: rotateX(180deg);
+            transform-style: preserve-3d;
+            margin-top: 10px;
+        }
+        #list > div{
+            position: relative;
+            top: 50px;
+        }
+        #menu > div:last-child{
+            width: 200px;
+            height: 60px;
+            background: lightseagreen;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            margin-left: -100px;
+            transform: rotateY(-30deg);
+            border: 2px solid gray;
+            box-sizing: border-box;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btn">展开</button>
+    <div id="menu">
+        <div id="list">
+            <div>
+                第一项
+                <div>第二项
+                    <div>
+                        第三项
+                        <div>第四项
+                            <div>第五项
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div></div>
+    </div>
+
+    <script>
+        var btn = document.getElementById("btn");
+        var list = document.getElementById("list");
+        var listItems = list.getElementsByTagName("div");
+  
+        btn.onclick = function () {
+          for (var i = 0; i < listItems.length; i++) {
+            listItems[i].style.transition = "1s " + i * 150 + "ms";
+            listItems[i].style.transform = "rotateX(0)";
+          }
+        };
+      </script>
+</body>
+</html>

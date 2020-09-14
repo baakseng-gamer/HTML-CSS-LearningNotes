@@ -1209,6 +1209,17 @@ transition-property  :  规定设置过渡效果的CSS属性的名称。
 transition-duration  :  规定完成过渡效果需要多少秒或毫秒。
 transition-delay  :  定义过渡效果何时开始。
 
+
+
+### transform-style
+
+指定嵌套元素是怎样在三维空间中呈现。
+
+| 值          | 描述                       |
+| :---------- | :------------------------- |
+| flat        | 子元素将不保留其 3D 位置。 |
+| preserve-3d | 子元素将保留其 3D 位置。   |
+
 代码示例：
 
 ```
@@ -1447,17 +1458,18 @@ angle为角度，单位为deg
 
 transform的注意事项：
 
-1.变形操作不会影响到其他元素。
+### 1.变形操作不会影响到其他元素。
 
 实例： [transform1.html](2020Web HTML CSS\01-139 transform复合写法与注意点\transform1.html) 
 
 
 
-2.变形操作只能添加给块元素，但是不能添加给内联元素。
+### 2.变形操作只能添加给块元素，但是不能添加给内联元素。
 
 
 
-3.复合写法，可以同时添加多个变形操作。
+#### 3.复合写法，可以同时添加多个变形操作。
+
 执行是有顺序的，先执行后面的操作，再执行前面的操作。
 translate会受到 rotate、scale、skew的影响
 
@@ -1561,7 +1573,9 @@ box2和box3分别添加transition: 1s;，然后添加以下代码：
 
 
 
-4.transform-origin : 基点的位置
+### 4.transform-origin
+
+基点的位置
 x y z(3d)
 
 ```
@@ -1593,6 +1607,17 @@ x y z(3d)
 可试试transform-origin不同数值
 
 实例： [transform4.html](2020Web HTML CSS\01-139 transform复合写法与注意点\transform4.html) 
+
+
+
+### 5.transform-style
+
+指定嵌套元素是怎样在三维空间中呈现。
+
+| 值          | 描述                       |
+| :---------- | :------------------------- |
+| flat        | 子元素将不保留其 3D 位置。 |
+| preserve-3d | 子元素将保留其 3D 位置。   |
 
 
 
@@ -1935,13 +1960,13 @@ infinite : 动画的无限次数
 
 
 
-perspective : 离屏幕多远的距离去观察元素，值越大幅度越小，以像素计。
+**perspective** : 离屏幕多远的距离去观察元素，值越大幅度越小，以像素计。
 
 
 
 **3D操作**
 
-rotateX() : 正值向上翻转
+**rotateX()** : 正值向上翻转
 
 实例： [trnasform3D-rotateX.html](2020Web HTML CSS\01-147 3D基本语法及成像原理\trnasform3D-rotateX.html) 
 
@@ -1949,7 +1974,7 @@ rotateX() : 正值向上翻转
 
 
 
-rotateY() : 正值向右翻转
+**rotateY()** : 正值向右翻转
 
 实例： [trnasform3D-rotateY.html](2020Web HTML CSS\01-147 3D基本语法及成像原理\trnasform3D-rotateY.html) 
 
@@ -1957,13 +1982,13 @@ rotateY() : 正值向右翻转
 
 
 
-translateZ() : 正值向前，负值向后
+**translateZ()** : 正值向前，负值向后
 
  [trnasform3D-translateZ.html](2020Web HTML CSS\01-147 3D基本语法及成像原理\trnasform3D-translateZ.html) 
 
 
 
-backface-visibility : 背面隐藏
+**backface-visibility** : 背面隐藏
 
 | 值      | 描述                    |
 | ------- | ----------------------- |
@@ -1978,7 +2003,7 @@ backface-visibility : 背面隐藏
 
 ## 01-148 实现3D立方体
 
-transform-origin : x y z
+**transform-origin** : x y z
 
 ```
  transform-origin: center center -50px;   （Z轴只能写数值，不能写单词）
@@ -1986,7 +2011,7 @@ transform-origin : x y z
 
 
 
-transform-style : 3D空间
+**transform-style** : 3D空间
 flat  (默认值2d)、preserve-3d   (3d，产生一个三维空间)
 
 | 值          | 描述                       |
