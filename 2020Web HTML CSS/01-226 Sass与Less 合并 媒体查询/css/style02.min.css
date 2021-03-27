@@ -1,1 +1,0 @@
-.box{width:200px;height:200px}.box2{background:url(a.png),url(b.png)}.box3{transform:scale(2),rotate(30deg)}.box4{transform:scale(2) rotate(30deg)}.box5{width:100px}@media all and (min-width: 768px){.box5{width:600px}}@media all and (min-width: 1440px){.box5{width:900px}}
