@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://www.cnblogs.com/dolphinX/p/4087816.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <meta property="og:description" content="在做多语言页面，接触过阿利伯语、希伯来语的同学肯定了解书写方向的重要性，包括我们五四运动前的书写顺序也是从右到左的。css中 `unicode-bidi`和`direction`属性决定了HTML或X">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>direction和unicode-bidi - 谦行 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="https://common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./direction和unicode-bidi - 谦行 - 博客园_files/blog-common.min.css">
+    <link id="MainCss" rel="stylesheet" href="./direction和unicode-bidi - 谦行 - 博客园_files/bundle-bluesky.min.css">
+    <link type="text/css" rel="stylesheet" href="./direction和unicode-bidi - 谦行 - 博客园_files/custom.css">
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./direction和unicode-bidi - 谦行 - 博客园_files/bundle-bluesky-mobile.min.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/dolphinX/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/dolphinX/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/dolphinX/wlwmanifest.xml">
+    <script async="" src="./direction和unicode-bidi - 谦行 - 博客园_files/analytics.js.下载"></script><script>
+        var currentBlogId = 101421;
+        var currentBlogApp = 'dolphinX';
+        var cb_enable_mathjax = false;
+        var isLogined = true;
+        var isBlogOwner = false;
+        var skinName = 'BlueSky';
+        var visitorUserId = '95f36653-f99c-4d5a-6142-08d8383836fc';
+    </script>
+        <script>
+            var currentPostDateAdded = '2014-11-10 06:35';
+        </script>
+    <script src="./direction和unicode-bidi - 谦行 - 博客园_files/jquery-2.2.0.min.js.下载"></script>
+    <script src="./direction和unicode-bidi - 谦行 - 博客园_files/blog-common.min.js.下载"></script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/dolphinX/"><img id="blogLogo" src="./direction和unicode-bidi - 谦行 - 博客园_files/logo.gif" alt="返回主页"></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/dolphinX/">Samaritan</a>
+</h1>
+<h2>
+It always seems impossible until it's done.
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/dolphinX/">
+首页</a>
+</li>
+<li>
+
+
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E8%B0%A6%E8%A1%8C">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/dolphinX/rss/">订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+123&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+1736</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/dolphinX/p/4087816.html">
+    <span>direction和unicode-bidi</span>
+    
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p>在做多语言页面，接触过阿利伯语、希伯来语的同学肯定了解书写方向的重要性，包括我们五四运动前的书写顺序也是从右到左的。css中 <code>unicode-bidi</code>和<code>direction</code>属性决定了HTML或XML文字渲染方向，两个属性结合使用可以改变文字书写顺序</p>
+<!--more-->
+<h1 id="direction">direction</h1>
+<p>direction属性有三个值</p>
+<ol>
+<li><code>inherit</code> 使用父元素的设置</li>
+<li><code>ltr</code> 默认值，left to right，从左到右</li>
+<li><code>rtl</code> right to left 从右到左</li>
+</ol>
+<p>我们默认的书写顺序是从左到右的，不用做特殊设置，但是对于阿拉伯语是从右到左的，这时候就需要设置direction属性来正确展示了</p>
+<p>防止浏览器重写<code>text-align</code>我们做一下默认设置</p>
+<div style="direction:rtl;text-align: initial;">
+طهيس يس تآخت تهات يس وريتتآن فروم ريغت تو لآفت تهات يس وسآد
+</div>
+<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"direction:rtl;text-align: initial;"</span>&gt;</span>
+	طهيس يس تآخت تهات يس وريتتآن فروم ريغت تو لآفت تهات يس وسآد    
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>对应的也有个html属性dir可以设置</p>
+<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">"rtl"</span> <span class="hljs-attr">dtyle</span>=<span class="hljs-string">"text-align: initial;"</span>&gt;</span>
+	طهيس يس تآخت تهات يس وريتتآن فروم ريغت تو لآفت تهات يس وسآد    
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<div dir="rtl" style="text-align: initial;">
+		طهيس يس تآخت تهات يس وريتتآن فروم ريغت تو لآفت تهات يس وسآد    
+</div>
+<p>direction属性局定了默认的书写顺序这是和<code>text-align</code>的区别，后者是对其方向，书写书写顺序不变</p>
+<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"direction: rtl;text-align: initial;"</span>&gt;</span>1 2 3 4 5 6。<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"text-align:right;"</span>&gt;</span>1 2 3 4 5 6。<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<div style="direction: rtl;text-align: initial;">1 2 3 4 5 6。</div>
+<div style="text-align:right;">1 2 3 4 5 6。</div>
+<h1 id="unicode-bidi">unicode-bidi</h1>
+<p>貌似有direction就可以应付书写方向的问题了，<code>unicode-bidi</code>是做什么的呢？</p>
+<p>浏览器通常根据<code>lang</code>属性或者特殊的<code>font-family</code>决定书写方向，但是如果一句话中同时包括两种方向的文案的时候就需要用到unicode-bidi属性了</p>
+<p>unicode-bidi 有三个广泛支持的值</p>
+<ol>
+<li><code>normal</code> 原来是什么顺序就使用什么顺序</li>
+<li><code>embed</code> 作用于inline元素，direction属性的值指定嵌入层，在对象内部进行隐式重排序</li>
+<li><code>bidi-override</code> 严格按照direction属性的值重排序。忽略隐式双向运算规则</li>
+</ol>
+<p>说实话这么解释我也看不懂，看个例子</p>
+<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"direction:rtl;text-align: initial;"</span>&gt;</span>this is a test<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"direction:rtl;unicode-bidi:bidi-override;text-align: initial;"</span>&gt;</span>
+	this is a test
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"direction:rtl;unicode-bidi:bidi-override;text-align: initial;"</span>&gt;</span>
+	this <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"unicode-bidi:embed;"</span>&gt;</span>is a<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> test
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<div style="direction:rtl;text-align: initial;">this is a test</div>
+<div style="direction:rtl;text-align: initial;unicode-bidi:bidi-override;">this is a test</div>
+<div style="direction:rtl;text-align: initial;unicode-bidi:bidi-override;">this <span style="unicode-bidi:embed;">is a</span> test</div>
+<p>第一行就是简单的右对齐，文字不会倒着写（阿拉伯语会，后面有解释）</p>
+<p>第二行两个属性结合使用，不但右对左书写而且真的是从右到左书写了，这才是正经的阿拉伯语写法</p>
+<p>第三行的效果奇妙之处在于在第二行的基础上加了样式<code>unicode-bidi:embed;</code>不会倒着写了，按着正常的书写顺序在写</p>
+<h1 id="小疑惑">小疑惑</h1>
+<p>为什么对于阿拉伯语只设置<code>direction</code>就能正确展示了，但是英文单词却只有右对齐效果，不会从右到左书写，只有设置了<code>unicode-bidi:bidi-override;</code>才好使呢</p>
+<p>这和具体语言有关，对于阿拉伯语和希伯来语自动就好使了，单个数字、字母浏览器不能判断语言就用rtl默认设置了，英语等还是使用默认的左到右的方式，只能用<code>unicode-bidi</code>重写</p>
+<p>在声明的时候指定语言为阿拉伯语页面会自动书写顺序rtl</p>
+<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"ar"</span>&gt;</span>
+</code></pre>
+<h1 id="参考">参考</h1>
+<p><a href="http://css-tricks.com/almanac/properties/u/unicode-bidi/">unicode-bidi</a></p>
+<p><a href="http://css-tricks.com/almanac/properties/d/direction/">direction</a></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block"><div id="BlogPostCategory">
+    分类: 
+            <a href="https://www.cnblogs.com/dolphinX/category/503848.html" target="_blank">CSS</a></div>
+
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(4087816,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow(&#39;0c473040-b30a-e111-b7b9-842b2b196315&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./direction和unicode-bidi - 谦行 - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./direction和unicode-bidi - 谦行 - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/dolphinX/" target="_blank"><img src="./direction和unicode-bidi - 谦行 - 博客园_files/20170112205800.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/dolphinX/">谦行</a><br>
+            <a href="https://home.cnblogs.com/u/dolphinX/followees/">关注 - 14</a><br>
+            <a href="https://home.cnblogs.com/u/dolphinX/followers/">粉丝 - 3629</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;0c473040-b30a-e111-b7b9-842b2b196315&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(4087816,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">2</span>
+    </div>
+    <div class="buryit" onclick="votePost(4087816,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/dolphinX/p/4085075.html" class="p_n_p_prefix">« </a> 上一篇：    <a href="https://www.cnblogs.com/dolphinX/p/4085075.html" title="发布于 2014-11-10 09:37">CSS3 滤镜</a>
+    <br>
+    <a href="https://www.cnblogs.com/dolphinX/p/4087817.html" class="p_n_p_prefix">» </a> 下一篇：    <a href="https://www.cnblogs.com/dolphinX/p/4087817.html" title="发布于 2014-11-11 08:35">CSS 实现打字效果</a>
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2014-11-10 18:35</span>&nbsp;
+<a href="https://www.cnblogs.com/dolphinX/">谦行</a>&nbsp;
+阅读(<span id="post_view_count">3911</span>)&nbsp;
+评论(<span id="post_comment_count">2</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=4087816" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(4087816);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="./direction和unicode-bidi - 谦行 - 博客园_files/highlight.min.js.下载"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 101421, cb_blogApp = 'dolphinX', cb_blogUserGuid = '0c473040-b30a-e111-b7b9-842b2b196315';
+    var cb_entryId = 4087816, cb_entryCreatedDate = '2014-11-10 18:35', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder">
+
+<div id="comment_pager_top">
+    
+</div>
+
+<br>
+<div class="feedback_area_title">评论列表</div>
+<div class="feedbackNoItems"><div class="feedbackNoItems"></div></div>	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;
+
+<span class="comment_actions">
+    <a href="javascript:void(0);" onclick="return ReplyComment(3394174, &#39;gntBX+foGb1gTzrFB/Co+h7Wb55QoVzb+rnQgrm7y7lkADuzRmaMYw==&#39;)">
+        回复
+    </a>
+    <a href="javascript:void(0);" onclick="return QuoteComment(3394174, &#39;gntBX+foGb1gTzrFB/Co+h7Wb55QoVzb+rnQgrm7y7lkADuzRmaMYw==&#39;)">
+        引用
+    </a>
+    
+    
+</span>
+
+
+				</div>
+				
+<a href="https://www.cnblogs.com/dolphinX/p/4087816.html#3394174" class="layer">#1楼</a>
+<a name="3394174" id="comment_anchor_3394174"></a>
+
+ 
+<span class="comment_date">2016-03-29 09:52</span>
+
+ 
+
+            <a id="a_comment_author_3394174" href="https://home.cnblogs.com/u/923679/" target="_blank">么么虎</a>
+
+			</div>
+			<div class="feedbackCon">
+				
+<div id="comment_body_3394174" data-format-type="Ubb" class="blog_comment_body cnblogs-ubb">
+    例子举得非常好,一看就明白了...官方文档描述太扯犊子了
+</div>
+        <div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3394174, &#39;Digg&#39;, this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(3394174, &#39;Bury&#39;, this.parentElement, false);">
+                反对(0)
+            </a>
+        </div>
+        
+
+			</div>
+		</div>
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;
+
+<span class="comment_actions">
+    <a href="javascript:void(0);" onclick="return ReplyComment(3904925, &#39;gRqbcuVkpbST5nDy6wGr6cY3xMG5l90b1PU2GV04aYVKqRofeQxJsg==&#39;)">
+        回复
+    </a>
+    <a href="javascript:void(0);" onclick="return QuoteComment(3904925, &#39;gRqbcuVkpbST5nDy6wGr6cY3xMG5l90b1PU2GV04aYVKqRofeQxJsg==&#39;)">
+        引用
+    </a>
+    
+    
+</span>
+
+
+				</div>
+				
+<a href="https://www.cnblogs.com/dolphinX/p/4087816.html#3904925" class="layer">#2楼</a>
+<a name="3904925" id="comment_anchor_3904925"></a>
+
+        <span id="comment-maxId" style="display:none">3904925</span>
+        <span id="comment-maxDate" style="display:none">2018/2/6 下午4:07:50</span>
+ 
+<span class="comment_date">2018-02-06 16:07</span>
+
+ 
+
+            <a id="a_comment_author_3904925" href="https://www.cnblogs.com/sstone/" target="_blank">花溪的小石头</a>
+
+			</div>
+			<div class="feedbackCon">
+				
+<div id="comment_body_3904925" data-format-type="Ubb" class="blog_comment_body cnblogs-ubb">
+    官方写的就是扯犊子。<br>这篇简单易懂，不错
+</div>
+        <div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3904925, &#39;Digg&#39;, this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(3904925, &#39;Bury&#39;, this.parentElement, false);">
+                反对(0)
+            </a>
+        </div>
+        
+
+			</div>
+		</div>
+
+<div id="comment_pager_bottom">
+    
+</div>
+
+
+</div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/dolphinX/p/4087816.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/dolphinX/p/4087816.html#top">返回顶部</a></div>
+    <div id="comment_form_container" style="visibility: visible;"><script type="text/javascript" src="./direction和unicode-bidi - 谦行 - 博客园_files/mention.js.下载"></script>
+<div id="commentform_title">发表评论</div>
+<span id="tip_comment" style="color:Red"></span>
+<div class="commentbox_main comment_textarea">
+    <div class="commentbox_title">
+        <div class="commentbox_title_left">
+            <span id="btn_edit_comment" class="commentbox_tab active" title="编辑评论">编辑</span>
+            <span id="btn_preview_comment" class="commentbox_tab" title="Markdown 预览">预览</span>
+        </div>
+        <div class="commentbox_title_right">
+            <span id="ubb_bold" class="comment_icon" alt="粗体" title="添加粗体(Ctrl + B)">
+                <svg class="comment_svg" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="evenodd">
+                        <path d="m13.221 19c1.4414 0 2.5793-0.27451 3.3759-0.82353 0.92931-0.66667 1.4034-1.7059 1.4034-3.1176 0-0.94118-0.22759-1.7059-0.66379-2.2549-0.45517-0.56863-1.119-0.94118-2.0103-1.1176 0.68276-0.27451 1.1948-0.64706 1.5552-1.1569 0.36034-0.54902 0.55-1.2157 0.55-2 0-1.0588-0.36034-1.902-1.0621-2.5294-0.75862-0.66667-1.8207-1-3.1672-1h-6.2017v14h6.2207zm-0.82196-8h-3.3987v-4h3.4367c0.91139 0 1.557 0.15686 1.9747 0.47059 0.37975 0.29412 0.58861 0.78431 0.58861 1.451 0 0.72549-0.20886 1.2549-0.58861 1.5882-0.39873 0.31373-1.0633 0.4902-2.0127 0.4902zm0.52612 6h-3.9249v-4h3.9855c1.052 0 1.8208 0.16216 2.3064 0.48649 0.46532 0.32432 0.70809 0.84685 0.70809 1.5856 0 0.72072-0.3237 1.2252-0.9711 1.5495-0.50578 0.25225-1.2139 0.37838-2.104 0.37838z" fill-rule="nonzero" stroke-width=".35"></path>
+                    </g>
+                </svg>
+            </span>
+            <span id="ubb_url" class="comment_icon" title="添加链接(Ctrl + K)" alt="链接">
+                <svg class="comment_svg comment_svg_stroke" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="evenodd">
+                        <g transform="translate(4 4)" fill-rule="nonzero" stroke-width=".4">
+                            <path d="m6.304 9.696c-0.288-0.288-0.512-0.608-0.704-0.992-0.16-0.32-0.032-0.704 0.288-0.864 0.32-0.16 0.704-0.032 0.864 0.288 0.128 0.224 0.256 0.448 0.448 0.64 0.928 0.928 2.432 0.928 3.36 0l3.36-3.328c0.928-0.928 0.928-2.432 0-3.36s-2.432-0.928-3.36 0l-2.272 2.272c-0.256 0.256-0.64 0.256-0.896 0-0.256-0.256-0.256-0.64 0-0.896l2.272-2.272c1.44-1.44 3.744-1.44 5.184 0 1.44 1.44 1.44 3.744 0 5.184l-3.36 3.296c-0.704 0.704-1.632 1.088-2.592 1.088-0.928 0-1.856-0.352-2.592-1.056z"></path>
+                            <path d="m3.776 15.808c-0.992 0-1.888-0.384-2.592-1.056-1.44-1.44-1.44-3.744 0-5.184l3.328-3.328c1.44-1.44 3.744-1.44 5.184 0 0.288 0.288 0.544 0.64 0.736 1.024 0.16 0.32 0 0.704-0.32 0.864-0.32 0.16-0.704 0-0.864-0.32-0.128-0.256-0.288-0.48-0.48-0.672-0.928-0.928-2.432-0.928-3.36 0l-3.296 3.328c-0.928 0.928-0.928 2.432 0 3.36 0.448 0.448 1.056 0.704 1.664 0.704 0.608 0 1.248-0.256 1.664-0.704l2.112-2.112c0.256-0.256 0.64-0.256 0.896 0s0.256 0.64 0 0.896l-2.112 2.112c-0.672 0.704-1.568 1.088-2.56 1.088z"></path>
+                        </g>
+                    </g>
+                </svg>
+            </span>
+            <span id="ubb_code" class="comment_icon" title="添加代码(Ctrl + `)" alt="代码">
+                <svg class="comment_svg comment_svg_stroke" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="evenodd">
+                        <g transform="translate(16 6)" stroke-linecap="round" stroke-width="2">
+                            <line x1=".5" x2="4.5" y1=".7" y2="6.3"></line>
+                            <line transform="translate(2.5 9.1) scale(1 -1) translate(-2.5 -9.1)" x1=".5" x2="4.5" y1="6.3" y2="11.9"></line>
+                        </g>
+                        <g transform="translate(3 6.1)" stroke-linecap="round" stroke-width="2">
+                            <line transform="translate(2.5 3.5) scale(-1 1) translate(-2.5 -3.5)" x1=".5" x2="4.5" y1=".7" y2="6.3"></line>
+                            <line transform="translate(2.5 9.1) scale(-1) translate(-2.5 -9.1)" x1=".5" x2="4.5" y1="6.3" y2="11.9"></line>
+                        </g>
+                        <path transform="translate(12 12.5) scale(1 -1) translate(-12 -12.5)" d="m10.778 7.1249c0.50008-0.11366 0.9978 0.16911 1.1643 0.64128l0.032406 0.11223 2 8.8c0.1224 0.53855-0.21496 1.0744-0.75351 1.1968-0.50008 0.11366-0.9978-0.16911-1.1643-0.64128l-0.032406-0.11223-2-8.8c-0.1224-0.53855 0.21496-1.0744 0.75351-1.1968z" fill-rule="nonzero" stroke-width=".25"></path>
+                    </g>
+                </svg>
+            </span>
+            <span id="ubb_quote" class="comment_icon" title="添加引用(Ctrl + Q)" alt="引用">
+                <svg class="comment_svg" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="evenodd">
+                        <g transform="translate(5 4)" fill-rule="nonzero" stroke-width=".25">
+                            <path d="m5.0013 15v-5.2702h-2.8008c-0.13413-3.3762 1.2004-6.2143 4.0009-8.5135l-1.2-1.2163c-3.335 2.2996-5.0013 5.8119-5.0013 10.54v4.4595h5.0013-1.285e-5zm8.7987 0v-5.2702h-2.8008c-0.13453-3.3762 1.2-6.2143 4.0009-8.5135l-1.2-1.2163c-3.335 2.2996-5.0013 5.8119-5.0013 10.54v4.4595h5.0013-1.28e-5z"></path>
+                        </g>
+                    </g>
+                </svg>
+            </span>
+            <span id="ubb_img" class="comment_icon" alt="图片" title="上传图片(Ctrl + I)">
+                <svg class="comment_svg" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <g fill-rule="evenodd">
+                        <g transform="translate(3 3.8)" fill-rule="nonzero">
+                            <path d="m14.1 0.58235h-11.2c-1.32 0-2.4 1.0482-2.4 2.3294v10.871c0 1.2812 1.08 2.3294 2.4 2.3294h11.2c1.32 0 2.4-1.0482 2.4-2.3294v-10.871c0-1.2812-1.08-2.3294-2.4-2.3294zm0.7 13.569-3.63-3.4165 1.33-1.2909c0.21-0.20382 0.59-0.20382 0.8 0l1.6 1.5529v2.7856c0 0.13588-0.04 0.26206-0.1 0.36882zm-11.9-12.016h11.2c0.44 0 0.8 0.34941 0.8 0.77647v5.8915l-0.47-0.45618c-0.84-0.825-2.22-0.825-3.07 0l-1.35 1.3103-2.39-2.2421c-0.85-0.825-2.22-0.825-3.05-0.019412l-2.48 2.2615v-6.7456c0.01-0.42706 0.37-0.77647 0.81-0.77647zm-0.8 11.647v-1.9897l3.6-3.2806c0.21-0.20382 0.58-0.21353 0.81 0.0097059l6.43 6.0371h-10.04c-0.44 0-0.8-0.33971-0.8-0.77647z"></path>
+                            <ellipse cx="10.5" cy="6.4059" rx="1" ry="1"></ellipse>
+                        </g>
+                    </g>
+                </svg>
+            </span>
+        </div>
+    </div>
+    <div style="display:none">
+        <span id="comment_edit_id"></span>
+        <span id="span_parentcomment_id"></span>
+        <span id="span_parent_id"></span>
+        <span id="span_comment_replyto"></span>
+        <span id="span_comment_posted"></span>
+        <span id="span_current_user_id">95f36653-f99c-4d5a-6142-08d8383836fc</span>
+    </div>
+    <textarea id="tbCommentBody" placeholder="支持 Markdown"></textarea>
+    <div id="tbCommentBodyPreview" class="feedbackCon" style="display: none">
+        <div id="tbCommentBodyPreviewBody" class="blog_comment_body comment_preview cnblogs-markdown"></div>
+    </div>
+    <div class="commentbox_footer">
+        <a class="comment_option">Markdown 帮助</a>
+        <span id="btn_comment_options" class="comment_option">
+            <input id="ubb_auto_completion" class="inline_middle" type="checkbox">
+            <label class="inline_middle" for="ubb_auto_completion">自动补全</label>
+        </span>
+    </div>
+</div>
+<p id="commentbox_opt">
+    <input id="btn_comment_submit" type="button" class="comment_btn" title="提交评论(Ctrl + Enter)" value="提交评论">
+    <span id="span_comment_canceledit" style="display:none"><a href="javascript:void(0);" onclick="return CancelCommentEdit()">不改了</a></span>
+    <a href="javascript:void(0);" onclick="return logout();">退出</a>
+            <a id="commentbox_opt_sub" href="javascript:void(0);" title="订阅后有新评论时会邮件通知您" onclick="commentManager.Subscribe()">订阅评论</a>
+</p>
+<div id="tip_comment2" style="color:Red"></div>
+<p>[Ctrl+Enter快捷键提交]</p>
+<script>var commentEditor = initCommentEditor("tbCommentBody");</script>
+</div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1592365906576-0" style="width: 300px; height: 250px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1592366332455-0" style="width: 468px; height: 60px;"></div>
+    </div>
+    <div id="under_post_kb">
+<div class="itnews c_ad_block">
+    <b>最新 IT 新闻</b>:
+    <br>
+ ·              <a href="https://news.cnblogs.com/n/668996/" target="_blank">苹果对使用梨logo的小型企业Prepear提起诉讼</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/668995/" target="_blank">AMD已经在开发RDNA4架构GPU 最快2022年问世</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/668994/" target="_blank">她在31岁去世，却获得"永生"，留下的遗产正在造福我们</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/668993/" target="_blank">科学家使用“量子数据”为量子计算机加速</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/668992/" target="_blank">微软或在本月揭晓Xbox Series X的系统架构信息</a>
+            <br>
+    » <a href="https://www.cnblogs.com/news/" title="IT 新闻" target="_blank">更多新闻...</a>
+</div></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverT2();
+        deliverC1C2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem"><!--done-->
+<h3 class="catListTitle">公告</h3>
+
+<div id="blog-news">
+    
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/dolphinX/">
+            谦行
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/dolphinX/" title="入园时间：2011-11-09">
+            8年9个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/dolphinX/followers/">
+            3629
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/dolphinX/followees/">
+            14
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow(&#39;0c473040-b30a-e111-b7b9-842b2b196315&#39;)">+加关注</a></div>
+        <script>getFollowStatus('0c473040-b30a-e111-b7b9-842b2b196315');</script>
+    </div>
+</div>
+
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn">
+<!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    
+</div>
+
+<!-- 常用链接 -->
+
+
+<!-- 最新随笔 -->
+<div id="sidebar_recentposts" class="sidebar-block">
+    <div class="catListEssay">
+<h3 class="catListTitle">最新随笔</h3>
+<ul>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/dolphinX/p/13450670.html">1.极简 Node.js 入门 - 1.4 NPM &amp; package.json</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/dolphinX/p/13444211.html">2.极简 Node.js 入门 - 1.3 调试</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/dolphinX/p/13437846.html">3.极简 Node.js 入门 - 1.2 模块系统</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/dolphinX/p/13432671.html">4.极简 Node.js 入门 - 1.1 Node.js 是什么、性能有优势？</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/dolphinX/p/13413893.html">5.为什么 2020 还要学 Node.js</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/dolphinX/p/12589132.html">6.从技术到管理 —— 初做主管一定要避开的坑</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/dolphinX/p/12083727.html">7.前端入门应该知道的</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/dolphinX/p/9893056.html">8.如果我是一线技术主管</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/dolphinX/p/7715268.html">9.Puppeteer: 更友好的 Headless Chrome Node API</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/dolphinX/p/6376615.html">10.NodeJS Stream 五：双工流</a>
+
+                </li>
+			
+
+</ul>
+</div>
+
+
+</div>
+
+
+<!-- 我的标签 -->
+
+
+<!-- 积分与排名 -->
+<div id="sidebar_scorerank" class="sidebar-block">
+    <div class="catListBlogRank">
+<h3 class="catListTitle">积分与排名</h3>
+<ul>
+	<li class="liScore">
+		积分 -	
+361569
+	</li>
+	<li class="liRank">
+		排名 -	
+1042
+	</li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+    
+        <div id="sidebar_postcategory" class="catListPostCategory sidebar-block">
+            <h3 class="catListTitle">
+                
+
+随笔分类
+<span style="font-size:11px;font-weight:normal">(122)</span>
+
+
+            </h3>
+
+
+            <ul>
+
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/389048.html" rel="" target="">
+    ASP.NET(5)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/503848.html" rel="" target="">
+    CSS(21)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/519616.html" rel="" target="">
+    ECMAScript5(5)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/530314.html" rel="" target="">
+    HTML(9)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/347116.html" rel="" target="">
+    JavaScript Core(23)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/532015.html" rel="" target="">
+    JavaScript应用(8)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/530304.html" rel="" target="">
+    jQuery(5)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/540916.html" rel="" target="">
+    node.js(15)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/517487.html" rel="" target="">
+    PHP step by step(2)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/517466.html" rel="" target="">
+    Web综合(9)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/459660.html" rel="" target="">
+    设计模式(3)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/514895.html" rel="" target="">
+    我所理解的OOP(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/525268.html" rel="" target="">
+    杂谈(10)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/category/514894.html" rel="" target="">
+    自备JavaScript库(6)
+</a>
+ 
+
+                        </li>
+
+            </ul>
+
+
+        </div>
+        <div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+            <h3 class="catListTitle">
+                
+
+随笔档案
+<span style="font-size:11px;font-weight:normal">(123)</span>
+
+
+            </h3>
+
+
+            <ul>
+
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2020/08.html" rel="" target="">
+    2020年8月(5)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2020/03.html" rel="" target="">
+    2020年3月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2019/12.html" rel="" target="">
+    2019年12月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2018/11.html" rel="" target="">
+    2018年11月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2017/10.html" rel="" target="">
+    2017年10月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2017/02.html" rel="" target="">
+    2017年2月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2017/01.html" rel="" target="">
+    2017年1月(4)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2016/06.html" rel="" target="">
+    2016年6月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2016/05.html" rel="" target="">
+    2016年5月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2016/02.html" rel="" target="">
+    2016年2月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2016/01.html" rel="" target="">
+    2016年1月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2015/04.html" rel="" target="">
+    2015年4月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2015/03.html" rel="" target="">
+    2015年3月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2014/11.html" rel="" target="">
+    2014年11月(10)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2014/01.html" rel="" target="">
+    2014年1月(8)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2013/12.html" rel="" target="">
+    2013年12月(13)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2013/11.html" rel="" target="">
+    2013年11月(9)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2013/10.html" rel="" target="">
+    2013年10月(17)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2013/09.html" rel="" target="">
+    2013年9月(15)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2013/08.html" rel="" target="">
+    2013年8月(22)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2013/04.html" rel="" target="">
+    2013年4月(3)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2012/11.html" rel="" target="">
+    2012年11月(3)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2012/10.html" rel="" target="">
+    2012年10月(2)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/dolphinX/archive/2012/09.html" rel="" target="">
+    2012年9月(1)
+</a>
+ 
+
+                        </li>
+
+            </ul>
+
+
+        </div>
+
+</div>
+
+<!-- 最新评论 -->
+
+
+
+
+<!-- 阅读排行榜 -->
+
+
+<!-- 评论排行榜 -->
+
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+    
+<div id="topdigg_posts_wrap">
+    <div class="catListView">
+        <h3 class="catListTitle">推荐排行榜</h3>
+        <div id="TopDiggPostsBlock">
+            <ul style="word-break: break-all">
+                        <li>
+                            <a href="https://www.cnblogs.com/dolphinX/p/3510346.html">
+                                1. 找工作的一些感悟——前端小菜的成长(346)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/dolphinX/p/3460545.html">
+                                2. 简单理解Socket(105)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/dolphinX/p/3347677.html">
+                                3. 了解了这些才能开始发挥jQuery的威力(79)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/dolphinX/p/3486214.html">
+                                4. JavaScript 正则表达式上——基本语法(75)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/dolphinX/archive/2012/09/29/2708763.html">
+                                5. JavaScript 闭包究竟是什么(75)
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2020 谦行
+<br><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+
+</body></html>

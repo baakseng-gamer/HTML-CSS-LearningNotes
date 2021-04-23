@@ -1,0 +1,23 @@
+.postBody blockquote, .postCon blockquote{
+    border: none;
+    border-left: solid 2px #999;
+    padding: 0 0 0 10px;
+    width: auto;
+    background: none;
+    color: #999;
+}
+
+#cnblogs_post_body h2{
+    border-bottom: solid 1px #ddd;
+}
+
+.postTitle, .postTitl2, .entrylistPosttitle{
+    font-size: 30px;
+    border-left: none;
+    padding-left: 0;
+}
+
+#cnblogs_post_body h4{
+    color: #333;
+    background: #fff;
+}

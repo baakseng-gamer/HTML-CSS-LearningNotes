@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 1400px;
+            height: 800px;
+            background-image: url(./img/1.jpg);
+            background-attachment: fixed;
+            
+        }
+        #div2{
+            width: 1400px;
+            height: 800px;
+            background-image: url(./img/2.jpg);
+            background-attachment: fixed;
+        }
+        #div3{
+            width: 1400px;
+            height: 800px;
+            background-image: url(./img/3.jpg);
+            /* background-attachment: fixed; */
+        }
+        table{
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <table border="1px" cellpadding="30px" cellspacing="30">
+            <caption>天气预报</caption>
+            <col width="250px"><!-- 每列宽度 -->
+            <col width="250px">
+            <col width="250px">
+            <col width="250px">
+            
+            <thead>
+                <tr align="right" valign="top"> 
+                    <th colspan="2">日期</th><!-- 占两列 -->
+                    <th>天气情况</th>
+                    <th>出行情况</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">2020年5月7日</td><!-- 占两行 -->
+                    <td  style="box-shadow: 5px 5px 15px lightskyblue;">白天</td>
+                    <td><img src="./img/tianqi_1.png" alt=""></td>
+                    <td>适合出行</td>
+                </tr>
+                <tr>
+                    
+                    <td style="box-shadow: 5px 5px 15px black;">夜晚</td>
+                    <td><img src="./img/tianqi_2.png" alt=""></td>
+                    <td>需带伞</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">2020年5月8日</td><!-- 占两行 -->
+                    <td  style="box-shadow: 5px 5px 15px lightskyblue;">白天</td>
+                    <td><img src="./img/tianqi_1.png" alt=""></td>
+                    <td>适合出行</td>
+                </tr>
+                <tr>
+           
+                    <td style="box-shadow: 5px 5px 15px black;">夜晚</td>
+                    <td><img src="./img/tianqi_2.png" alt=""></td>
+                    <td>需带伞</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">2020年5月9日</td><!-- 占两行 -->
+                    <td  style="box-shadow: 5px 5px 15px lightskyblue;">白天</td>
+                    <td><img src="./img/tianqi_1.png" alt=""></td>
+                    <td>适合出行</td>
+                </tr>
+                <tr>
+    
+                    <td style="box-shadow: 5px 5px 15px black;">夜晚</td>
+                    <td><img src="./img/tianqi_2.png" alt=""></td>
+                    <td>需带伞</td>
+                </tr>
+            </tbody>
+            <tfoot>
+    
+    
+            </tfoot>
+        </table>
+    </div>
+    <div id="div2">
+        <form action="" method="http;//www.abc.com">
+            <table border="1" cellpadding="30px">
+                <tr>
+                    <td rowspan="4">总体信息</td>
+                    <td colspan="2" align="center">用户注册</td>
+                </tr>
+                <tr>
+                    <td align="right">用户名：</td>
+                    <td>
+                        <input type="text" name="user" placeholder="请输入用户名">
+                    </td>
+    
+                </tr>
+                <tr>
+                    <td align="right">密码：</td>
+                    <td>
+                        <input type="password" name="pwd" placeholder="请输入密码">
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="提交">
+                        &nbsp;
+                        <input type="reset" value="重置">
+                    </td>
+    
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div id="div3">
+        <form action="" method="http;//www.abc.com">
+            <table border="1" cellpadding="30px">
+                <tr>
+                    <td rowspan="4">总体信息</td>
+                    <td colspan="2" align="center">用户注册</td>
+                </tr>
+                <tr>
+                    <td align="right">用户名：</td>
+                    <td>
+                        <input type="text" name="user" placeholder="请输入用户名">
+                    </td>
+    
+                </tr>
+                <tr>
+                    <td align="right">密码：</td>
+                    <td>
+                        <input type="password" name="pwd" placeholder="请输入密码">
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="提交">
+                        &nbsp;
+                        <input type="reset" value="重置">
+                    </td>
+    
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
