@@ -1,17 +1,9 @@
-# 028 css样式的继承
-
-视频序号052
-
-***
-
-文字相关和布局相关的区别：
-
-* 文字相关的样式可以被继承。
-* 布局相关的样式不能被继承 ( 默认是不能继承的，但是可以设置继承属性 inherit 值 )。
-
-示例：
-
-```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
         div{
             width: 300px;
@@ -25,16 +17,10 @@
             /* 继承了父元素的border属性 */
         }
     </style>
-
+</head>
 <body>
     <div>
         <p>这是一个段落</p>
     </div>
 </body>
-```
-
-运行结果：
-
-![02801](img/02801.png)
-
-实例： [02801jicheng.html](02801jicheng.html) 
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color: white;
+        }
+        .box1{
+            width: 300px;
+            height: 300px;
+            background: seagreen;
+            
+        }
+        .box2{
+            width: 100%;
+            /* 100%的只能继承父元素的300px */
+            height: 100px;
+            background: lightseagreen;
+            padding-left: 30px;
+            box-sizing: border-box; 
+            /* 取消上面一行试效果 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">这是一些内容</div>
+    </div>
+</body>
+</html>

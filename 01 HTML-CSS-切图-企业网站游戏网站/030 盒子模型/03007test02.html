@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #top{
+            width: 100%;
+            height: 60px;
+            background: brown;
+        }
+
+        #banner{
+            width: 1000px;
+            height: 300px;
+            /* background: tomato; */
+            margin: auto;
+            position: relative;
+        }
+        #banner .list{
+            width: 250px;
+            height: 20%;
+            background: darkred;
+           
+        }
+        #banner .list-right{
+            width: 745px;
+            height: 300px;
+            background: darksalmon;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        #boxtop{
+            width: 100%;
+            height: 500px;
+            background: lightseagreen;
+            position: relative;
+
+        }
+        #boxtop .boxtop-little{
+            width: 300px;
+            height: 450px;
+            background: lightgray;
+        }
+
+        #boxtop .middle{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -225px;
+        }
+        
+        #boxtop .left{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -225px;
+            margin-left: -460px;
+        }
+        #boxtop .right{
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            margin-top: -225px;
+            margin-right: -460px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top"></div>
+    <div id="banner">
+        <div class="list">012</div>
+        <div class="list">345</div>
+        <div class="list">678</div>
+        <div class="list">901</div>
+        <div class="list">234</div>
+        <div class="list-right">aaa</div>
+    </div>
+    <div id="boxtop">
+        <div class="boxtop-little left">aaa</div>
+        <div class="boxtop-little middle">aaa</div>
+        <div class="boxtop-little right">aaa</div>
+    </div>
+</body>
+</html>
