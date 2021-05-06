@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tupian{
+            width: 100px;
+            height: 100px;
+            background: url('./img/dog.jpg');
+            color: #ffffff;
+            position: relative;
+        }
+        .tupian::before{
+            content: " ";
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 5px;
+            background: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="tupian">hello</div>
+    </div>
+</body>
+</html>
