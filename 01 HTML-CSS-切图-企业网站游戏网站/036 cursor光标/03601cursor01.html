@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1{
+            cursor: crosshair;
+        }
+        .box1{
+            width: 300px;
+            height: 50px;
+            background: tomato;
+        }
+        .p2{
+            cursor: help;
+        }
+        .p3{
+            cursor:url(./img/cursor.ico),auto;
+            /* auto为备用  */
+        }
+    </style>
+</head>
+<body>
+    <p>请把鼠标移动到单词或区域上，可以看到鼠标指针发生变化：</p>
+    <p class="p1">十字线十字线十字线</p>
+    <div class="p1 box1">十字线十字线</div>
+
+    <p class="p2">问号问号</p>
+    <div class="p2 box1">问号问号</div>
+
+    <p class="p3">其它光标图片其它光标图片</p>
+</body>
+</html>

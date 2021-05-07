@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!-- saved from url=(0052)https://meyerweb.com/eric/tools/css/reset/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>CSS Tools: Reset CSS</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://meyerweb.com/favicon.ico">
+<link rel="home" href="http://meyerweb.com/" title="Home">
+<link rel="openid.server" href="http://www.myopenid.com/server">
+<link rel="openid.delegate" href="http://emeyer.myopenid.com/">
+<meta name="google-site-verification" content="I_JFi4WrY6bW7AE2ya5sSlruVvgvrIeRa1IsqO0GB78">
+<link rel="alternate" type="application/rss+xml" title="Thoughts From Eric" href="https://meyerweb.com/eric/thoughts/rss2/full">
+<link rel="alternate" type="application/rss+xml" title="Thoughts From Eric (only technical posts)" href="https://meyerweb.com/eric/thoughts/category/tech/rss2/full">
+<link rel="alternate" type="application/rss+xml" title="Thoughts From Eric (only personal posts)" href="https://meyerweb.com/eric/thoughts/category/personal/rss2/full">
+<link rel="alternate" type="application/rss+xml" title="Excuse of the Day" href="https://meyerweb.com/feeds/excuse/rss20.xml">
+<link rel="stylesheet" href="./CSS Tools_ Reset CSS_files/meyerweb.css" type="text/css">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@meyerweb">
+<meta name="twitter:title" content="meyerweb.com">
+<meta name="twitter:description" content="The web home of Eric A. Meyer, CSS guy; and his wife Kathryn, doctor of nursing.">
+<meta name="twitter:url" content="https://meyerweb.com/">
+<meta name="twitter:image" content="https://meyerweb.com/ui/i/heart/663399love.png">
+<meta name="twitter:image:width" content="192">
+<meta name="twitter:image:height" content="192">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://meyerweb.com/ui/i/heart/663399love.png">
+<style type="text/css">
+pre {border: 1px solid;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="tools">
+
+<header role="banner" id="sitemast">
+<a href="https://meyerweb.com/">meyerweb.com</a>
+<nav role="navigation" aria-label="page" id="skiplinks">
+<a href="https://meyerweb.com/eric/tools/css/reset/index.html#main">Main content</a>
+<a href="https://meyerweb.com/eric/tools/css/reset/index.html#navigate">Navigation links</a>
+<a href="https://meyerweb.com/eric/tools/css/reset/index.html#footer">Footer</a>
+</nav>
+</header>
+
+<nav role="navigation" aria-label="site" id="navigate">
+<ul id="navlinks">
+<li id="archLink"><a href="https://meyerweb.com/eric/thoughts/">Post Archives</a></li>
+<li id="cssLink"><a href="https://meyerweb.com/eric/css/">CSS Work</a></li>
+<li id="toolsLink"><a href="https://meyerweb.com/eric/tools/">Toolbox</a></li>
+<li id="writeLink"><a href="https://meyerweb.com/eric/writing.html">Writing</a></li>
+<li id="speakLink"><a href="https://meyerweb.com/eric/talks/">Speaking</a></li>
+<li id="otherLink"><a href="https://meyerweb.com/other/">Other Stuff</a></li>
+<li id="aboutsite"><a href="https://meyerweb.com/ui/about.html">About this site</a></li>
+</ul>
+</nav>
+
+<div id="main">
+
+<h1>CSS Tools: Reset CSS</h1>
+<p>
+The goal of a reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins and font sizes of headings, and so on.  The general reasoning behind this was <a href="http://meyerweb.com/eric/thoughts/2007/04/18/reset-reasoning/">discussed in a May 2007 post</a>, if you're interested.  Reset styles quite often appear in CSS frameworks, and the original "meyerweb reset" found its way into <a href="http://code.google.com/p/blueprintcss/">Blueprint</a>, among others.
+</p>
+<p>
+The reset styles given here are intentionally very generic.  There isn't any default color or background set for the <code>body</code> element, for example.  I don't particularly recommend that you just use this in its unaltered state in your own projects.  It should be tweaked, edited, extended, and otherwise tuned to match your specific reset baseline.  Fill in your preferred colors for the page, links, and so on.
+</p>
+<p>
+In other words, this is a starting point, not a self-contained black box of no-touchiness.
+</p>
+<p>
+If you want to use my reset styles, then feel free!  It's all explicitly in the public domain (I have to formally say that or else people ask me about licensing).  You can grab <a href="https://meyerweb.com/eric/tools/css/reset/reset.css">a copy of the file</a> to use and tweak as fits you best.  If you're more of the copy-and-paste type, or just want an in-page preview of what you'll be getting, here it is.
+</p>
+
+<pre class="css"><code>/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+</code></pre>
+
+
+<h2>Previous Versions</h2>
+<ol>
+<li><a href="https://meyerweb.com/eric/tools/css/reset/reset200802.css">v1.0 (200802)</a></li>
+</ol>
+
+<h2>Acknowledgments</h2>
+<p>
+Thanks to <a href="http://www.paulchaplin.com/">Paul Chaplin</a> for the <code>blockquote</code> / <code>q</code> rules.
+</p>
+
+</div>
+
+<footer id="global">
+
+<div>
+
+<div id="archipelago">
+<h4>Identity Archipelago</h4>
+<ul>
+<li><a rel="me" href="https://twitter.com/meyerweb"><img src="./CSS Tools_ Reset CSS_files/twitter.png" alt="Twitter"></a></li>
+<li><a rel="me" href="https://github.com/meyerweb"><img src="./CSS Tools_ Reset CSS_files/github.png" alt="GitHub"></a></li>
+<li><a rel="me" href="https://flickr.com/photos/meyerweb/"><img src="./CSS Tools_ Reset CSS_files/flickr.png" alt="Flickr"></a></li>
+<li><a rel="me" href="https://dribbble.com/meyerweb"><img src="./CSS Tools_ Reset CSS_files/dribbble.png" alt="Dribbble"></a></li>
+<li><a rel="me" href="https://facebook.com/meyerweb"><img src="./CSS Tools_ Reset CSS_files/facebook.png" alt="Facebook"></a></li>
+<li><a rel="me" href="https://www.linkedin.com/in/meyerweb"><img src="./CSS Tools_ Reset CSS_files/linkedin.png" alt="LinkedIn"></a></li>
+</ul>
+</div>
+
+<div id="excuse">
+<!--?php include ($_SERVER["DOCUMENT_ROOT"] . '/feeds/excuse/current.html') ?-->
+<div class="panel" id="excuse">
+<h4>The <a href="https://meyerweb.com/feeds/excuse/">excuse of the day</a> is</h4>
+<p>someone turned on mod_rewrite</p>
+</div>
+
+</div>
+
+<div class="sosumi">
+All contents of this site, unless otherwise noted, are ©1993-<!--?php echo date('Y') ?-->2020 <strong>Eric A. and Kathryn S. Meyer</strong>.  All Rights Reserved.</div>
+
+<div id="wordpress" class="credits">"<a href="https://meyerweb.com/eric/thoughts/">Thoughts From Eric</a>" is powered by <a href="http://wordpress.org/">WordPress</a>.  Most of the rest of the site is hand-authored.</div>
+
+<div id="design" class="credits">The ink-sketch images used in this site’s design are adapted from <a href="https://archive.org/search.php?query=creator%3A%22Mori%2C+Yu%CC%84zan%2C+-1917%22">Yūzan Mori’s <cite><dfn title="In English: Wave Forms">Hamonshū</dfn></cite>, Volumes 1-3</a>, published in 1903 and made available for public use by the <a href="https://library.si.edu/">Smithsonian Libraries</a> and the <a href="https://archive.org/">Internet Archive</a>.</div>
+
+</div>
+
+</footer>
+
+
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div></body></html>
