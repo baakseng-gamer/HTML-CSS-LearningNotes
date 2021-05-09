@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            border: 2px solid darkgray;
+            float: left;
+            /* 父元素设置float，但是会影响后面的元素 */
+        }
+        .box2{
+            width: 100px;
+            height: 200px;
+            background: darkseagreen;
+            float: left;
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background: lightseagreen;
+            /* clear: both; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+
+    <div>333</div>
+    <div class="box3"></div>
+    <!-- 后面的元素受影响 不得不设置clear:both -->
+</body>
+</html>
