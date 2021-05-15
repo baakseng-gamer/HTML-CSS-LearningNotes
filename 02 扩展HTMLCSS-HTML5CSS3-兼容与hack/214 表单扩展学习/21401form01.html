@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label input{
+            display: none;
+        }
+        label input:checked + div{
+            background-position: 0 0;
+        }
+        label div{
+            width: 28px;
+            height: 28px;
+            background: url(./img/checkbox.png) 0 -28px;
+        }
+    </style>
+</head>
+<body>
+    <label>
+        <input type="checkbox">
+        <div></div>
+    </label>
+</body>
+</html>
