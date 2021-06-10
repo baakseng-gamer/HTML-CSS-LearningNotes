@@ -9,7 +9,7 @@
 - [3 transition-delay 可负数](#3-transition-delay-可负数)
 - [4 transition-timing-function 时间曲线](#4-transition-timing-function-时间曲线)
 - [5. 导航实例](#5-导航实例)
-- [6. 文章实例](#6-文章实例)
+- [6. 文章列表实例](#6-文章列表实例)
 
 
 ***
@@ -243,7 +243,7 @@ d    <style>
 
 
 
-# 6. 文章实例
+# 6. 文章列表实例
 
 css
 
