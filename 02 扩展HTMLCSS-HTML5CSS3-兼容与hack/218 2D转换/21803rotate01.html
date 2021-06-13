@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid gray;
+            position: relative;
+            margin: 50px auto;
+        }
+        .box1{
+            width: 120px;
+            height: 120px;
+            background: lightskyblue;
+            opacity: 0.5;
+        }
+        .rotate2d{
+            transform: rotate(30deg);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">原始</div>
+        <div class="box1 rotate2d">rotate(30deg)</div>
+    </div>
+</body>
+</html>

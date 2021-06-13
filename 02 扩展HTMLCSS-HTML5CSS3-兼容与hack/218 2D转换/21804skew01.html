@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px dashed gray;
+            margin: 20px auto;
+        }
+        .littlebox{
+            width: 100px;
+            height: 100px;
+            background: lightseagreen;
+        }
+        .skewN1{
+            transform: skew(30deg);
+        }
+        .skewN2{
+            transform: skew(-30deg);
+        }
+        .skewXY{
+            transform: skew(30deg, 15deg);
+        }
+        .skewX{
+            transform: skewX(15deg);
+        }
+        .skewY{
+            transform: skewY(15deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="littlebox">origin</div>
+    </div>
+    <div class="box">
+        <div class="littlebox skewN1">skew(30deg)</div>
+        <div class="littlebox skewN2">skew(-30deg)</div>
+    </div>
+    <div class="box">
+        <div class="littlebox skewXY"></div>
+        <div>skew(30deg, 15deg)</div>
+    </div>
+    <div class="box">
+        <div class="littlebox skewX"></div>
+        <div>skewX(15deg)</div>
+        <div>等同于skew(15deg)</div>
+    </div>
+    <div class="box">
+        <div class="littlebox skewY">skewY(15deg)</div>
+    </div>
+</body>
+</html>

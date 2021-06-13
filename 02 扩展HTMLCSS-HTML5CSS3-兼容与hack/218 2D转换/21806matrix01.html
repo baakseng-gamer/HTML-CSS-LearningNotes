@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+
+        div#myDiv1 {
+            -ms-transform: matrix(1, -0.3, 0, 1, 0, 0);
+            /* IE 9 */
+            transform: matrix(1, -0.3, 0, 1, 0, 0);
+            /* 标准语法 */
+        }
+
+        div#myDiv2 {
+            -ms-transform: matrix(1, 0, 0.5, 1, 150, 0);
+            /* IE 9 */
+            transform: matrix(1, 0, 0.5, 1, 150, 0);
+            /* 标准语法 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>matrix() 方法</h1>
+    <p>matrix() 方法将所有 2D 转换方法组合为一个。</p>
+
+    <div>
+        这是一个普通的 div 元素。
+    </div>
+
+    <div id="myDiv1">
+        使用 matrix() 方法。
+    </div>
+
+    <div id="myDiv2">
+        matrix() 方法的另一种用法。
+    </div>
+
+</body>
+
+</html>

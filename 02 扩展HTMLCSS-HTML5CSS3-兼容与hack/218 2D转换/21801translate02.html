@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px dashed gray;
+        }
+        .littlebox{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+        }
+        .tX{
+            transform: translateX(50px);
+        }
+        .tY{
+            transform: translateY(-20px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="littlebox">origin</div>
+    </div>
+    <div class="box">
+        <div class="littlebox tX">translateX(50px)</div>
+    </div>
+    <div class="box">
+        <div class="littlebox tY">translateY(-20px)</div>
+    </div>
+</body>
+</html>

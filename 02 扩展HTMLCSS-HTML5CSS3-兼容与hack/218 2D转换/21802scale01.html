@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px dashed gray;
+            margin: 20px auto;
+        }
+        .littlebox{
+            width: 100px;
+            height: 100px;
+            background: skyblue;
+        }
+        .scaleN{
+            transform: scale(1.2);
+        }
+        .scaleXY{
+            transform: scale(0.5, 1.2);
+        }
+        .scaleX{
+            transform: scaleX(1.3);
+        }
+        .scaleY{
+            transform: scaleY(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="littlebox">origin</div>
+    </div>
+    <div class="box">
+        <div class="littlebox scaleN">scale(1.2)</div>
+    </div>
+    <div class="box">
+        <div class="littlebox scaleXY"></div>
+        <br>
+        <div>scale(0.5, 1.2)</div>
+    </div>
+    <div class="box">
+        <div class="littlebox scaleX"></div>
+        <div>scaleX(1.3)</div>
+        <div>等同于scale(1.3, 1)</div>
+    </div>
+    <div class="box">
+        <div class="littlebox scaleY"></div>
+        <br>
+        <div>scaleY(1.2)</div>
+        <div>等同于scale(1, 1.2)</div>
+    </div>
+</body>
+</html>
