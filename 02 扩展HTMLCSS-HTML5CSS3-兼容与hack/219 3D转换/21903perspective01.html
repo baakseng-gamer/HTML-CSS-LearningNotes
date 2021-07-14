@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px black solid;
+            margin: 50px auto;
+            perspective: 200px;
+            /* 取消 perspective属性 试效果 */
+        }
+        .box-little{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            margin: 100px;
+            transition: 1s;
+            transform: rotateX(0);
+        }
+
+        .box:hover .box-little{
+            transform: rotateX(180deg);
+            /* transform: rotateX(90deg); */
+            /* transform: rotateX(45deg); */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box-little">
+            AAAAA
+        </div>
+    </div>
+</body>
+</html>
