@@ -1,9 +1,9 @@
-# 041 position定位
+# 141 position定位
 
 视频序号084-088
 
 目录
-- [041 position定位](#041-position定位)
+- [141 position定位](#141-position定位)
 - [1. static 静态定位](#1-static-静态定位)
 - [2. relative 相对定位](#2-relative-相对定位)
 - [3. absolute 绝对定位](#3-absolute-绝对定位)
@@ -65,7 +65,7 @@ position 属性的五个值：
 </body>
 ```
 
-实例： [04101position01.html](04101position01.html) 
+实例：  [14101position01.html](14101position01.html) 
 
 
 
@@ -99,9 +99,9 @@ position 属性的五个值：
 </body>
 ```
 
-![04101](img/04101.png)
+![1410201](img/1410201.png)
 
-实例： [04102position01.html](04102position01.html) 
+实例：  [14102position01.html](14102position01.html) 
 
 
 
@@ -139,7 +139,7 @@ position 属性的五个值：
 </body>
 ```
 
-![04102](img/04102.png)
+![1410301-01](img/1410301-01.png)
 
 3个绿块并列地排行。
 
@@ -155,11 +155,11 @@ position 属性的五个值：
         <div class="box" id="box2">2</div>
 ```
 
-![04103](img/04103.png)
+![1410301-02](img/1410301-02.png)
 
 第2块脱离了父元素。
 
-实例： [04103position01.html](04103position01.html) 
+实例：  [14103position01.html](14103position01.html) 
 
 
 
@@ -194,15 +194,15 @@ position 属性的五个值：
 </body>
 ```
 
-![04104](img/04104.png)
+![1410302-01](img/1410302-01.png)
 
 给内联元素 span box2 添加 position: absolute;后：
 
-![04105](img/04105.png)
+![1410302-02](img/1410302-02.png)
 
 添加后可支持宽高分别为 100px。
 
-实例： [04103position02.html](04103position02.html) 
+实例：  [14103position02.html](14103position02.html) 
 
 
 
@@ -232,15 +232,15 @@ position 属性的五个值：
 
 boxAbsolute没设宽高，是一个高度跟内容决定而且宽度跟浏览器窗口决定的块级元素。
 
-![04106](img/04106.png)
+![1410303-01](img/1410303-01.png)
 
 给 .boxAbsolute添加position:absolute 后：
 
-![04107](img/04107.png)
+![1410303-02](img/1410303-02.png)
 
 变成一个宽高跟内容决定的内联块级元素。
 
-实例： [04103position03.html](04103position03.html) 
+实例：  [14103position03.html](14103position03.html) 
 
 
 
@@ -310,9 +310,9 @@ boxAbsolute没设宽高，是一个高度跟内容决定而且宽度跟浏览器
 </body>
 ```
 
-![04108](img/04108.png)
+![1410304](img/1410304.png)
 
-实例： [04103position04.html](04103position04.html) 
+实例： [14103position04.html](14103position04.html) 
 
 
 
@@ -369,11 +369,11 @@ boxAbsolute没设宽高，是一个高度跟内容决定而且宽度跟浏览器
 </body>
 ```
 
-![04109](img/04109.gif)
+![1410401](img/1410401.gif)
 
 滚动浏览器窗口试效果。
 
-实例： [04104position01.html](04104position01.html) 
+实例：  [14104position01.html](14104position01.html) 
 
 
 
@@ -428,15 +428,15 @@ boxAbsolute没设宽高，是一个高度跟内容决定而且宽度跟浏览器
     .
 ```
 
-![04110](img/04110.gif)
+![1410501](img/1410501.gif)
 
 滚动浏览器窗口试效果。
 
-实例： [04105position01.html](04105position01.html) 
+实例：  [14105position01.html](14105position01.html) 
 
 
 
-stycky 练习： [04105position02.html](04105position02.html) 
+stycky 练习：  [14105position02.html](14105position02.html) 
 
 
 
@@ -450,13 +450,13 @@ z-index属性指定了一个元素的堆叠顺序（哪个元素应该放在前�
 
 无设定 z-index时：
 
-![04111](img/04111.png)
+![1410601-01](img/1410601-01.png)
 
 使不同元素设定 z-index 不同数值后：
 
-![04112](img/04112.png)
+![1410601-02](img/1410601-02.png)
 
-实例： [04106position01.html](04106position01.html) 
+实例：  [14106position01.html](14106position01.html) 
 
 
 
@@ -468,7 +468,7 @@ z-index属性指定了一个元素的堆叠顺序（哪个元素应该放在前�
 
 参考淘宝顶部图示：鼠标划入时就出现下拉菜单。
 
-![04113](img/04113.png)
+![1410701](img/1410701.png)
 
 父元素里分两部分，顶部一行字高度，列表弄几行
 
@@ -480,7 +480,7 @@ z-index属性指定了一个元素的堆叠顺序（哪个元素应该放在前�
 
 鼠标移入列表内某个行 列表 li:hover{background:颜色}
 
-练习： [04107test01.html](04107test01.html) 
+练习： [14107test01.html](14107test01.html) 
 
 
 
@@ -523,9 +523,9 @@ margin-left: - (子元素宽度的一半)
 </body>
 ```
 
-![04114](img/04114.png)
+![1410702](img/1410702.png)
 
-实例：  [04107test02.html](04107test02.html) 
+实例：   [14107test02.html](14107test02.html) 
 
 
 
@@ -535,9 +535,9 @@ margin-left: - (子元素宽度的一半)
 
 在CSS里的\#main ul li 一行改动
 
-原版本：  [02_新浪的小结构.html](02_新浪的小结构.html) 
+原版本：   [14107demo01.html](14107demo01.html) 
 
-改完后： [04107test03.html](04107test03.html) 添加了:before{...}
+改完后：  [14107test03.html](14107test03.html) 添加了:before{...}
 
 
 

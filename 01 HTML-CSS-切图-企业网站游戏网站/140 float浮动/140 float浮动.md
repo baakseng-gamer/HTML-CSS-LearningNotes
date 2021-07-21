@@ -1,9 +1,9 @@
-# 040 float浮动
+# 140 float浮动
 
 视频序号078-083
 
 目录
-- [040 float浮动](#040-float浮动)
+- [140 float浮动](#140-float浮动)
 - [1. float浮动概念及原理](#1-float浮动概念及原理)
 - [2. float注意点整理](#2-float注意点整理)
 - [3. 清除浮动](#3-清除浮动)
@@ -78,13 +78,13 @@
 
 **不设 clear : both; 时**
 
-![04001](img/04001.png)
+![1400101](img/1400101.png)
 
 **有设 clear : both; 时**
 
-![04002](img/04002.png)
+![1400102](img/1400102.png)
 
-实例： [04001float01.html](04001float01.html) 
+实例：  [14001float01.html](14001float01.html) 
 
 
 
@@ -96,7 +96,7 @@
 overflow:hidden
 ```
 
-实例： [04001float02.html](04001float02.html) 
+实例：  [14001float02.html](14001float02.html) 
 
 
 
@@ -147,13 +147,13 @@ overflow:hidden
 
 .box-little1 不设 float : left;时
 
-![04003](img/04003.png)
+![1400201-01](img/1400201-01.png)
 
 有设 float : left;时
 
-![04004](img/04004.png)
+![1400201-02](img/1400201-02.png)
 
-实例： [04002float01.html](04002float01.html) 
+实例：  [14002float01.html](14002float01.html) 
 
 
 
@@ -191,15 +191,17 @@ overflow:hidden
 </body>
 ```
 
-若把 .box-little3 的 float:left; 取消，运行结果如下图：![04005](img/04005.png)
+若把 .box-little3 的 float:left; 取消，运行结果如下图：
+
+![1400202-01](img/1400202-01.png)
 
 添加 float:left; 如图：
 
-![04006](img/04006.png)
+![1400202-02](img/1400202-02.png)
 
 添加float:left，变成脱离了，宽度根据内容大小决定。
 
-实例： [04002float02.html](04002float02.html) 
+实例：  [14002float02.html](14002float02.html) 
 
 
 
@@ -249,11 +251,11 @@ overflow:hidden
 
 运行结果：
 
-![04007](img/04007.png)
+![1400203](img/1400203.png)
 
 第1块和第2块高度超出了，第4块被迫移到第3块下面，第5块也位移了。
 
-实例： [04002float03.html](04002float03.html) 
+实例：  [14002float03.html](14002float03.html) 
 
 
 
@@ -298,13 +300,13 @@ overflow:hidden
 
 .box1 没有 float:left; 时：
 
-![04008](img/04008.png)
+![1400204-01](img/1400204-01.png)
 
 有 float: left; 时：
 
-![04009](img/04009.png)
+![1400204-02](img/1400204-02.png)
 
-实例： [04002float04.html](04002float04.html) 
+实例：  [14002float04.html](14002float04.html) 
 
 
 
@@ -357,13 +359,13 @@ overflow:hidden
 
 绿块和蓝块分别添加float:left和float:right，然后脱离出来了，红块就自动移到前面空的位置。
 
-![04010](img/04010.png)
+![1400301-01](img/1400301-01.png)
 
 如果想让红块不自动移上去，解决方法为给红块添加 clear:both。
 
-![04011](img/04011.png)
+![1400301-02](img/1400301-02.png)
 
-实例： [04003float01.html](04003float01.html) 
+实例：  [14003float01.html](14003float01.html) 
 
 
 
@@ -398,13 +400,13 @@ overflow:hidden
 
 .box1 无设定高度：
 
-![04012](img/04012.png)
+![1400302-01](img/1400302-01.png)
 
 有高度并设定 200px：
 
-![04013](img/04013.png)
+![1400302-02](img/1400302-02.png)
 
-实例： [04003float02.html](04003float02.html) 
+实例：  [14003float02.html](14003float02.html) 
 
 
 
@@ -450,17 +452,17 @@ overflow:hidden
 
 父元素 .box1 无浮动（即 float:left;）：
 
-![04014](img/04014.png)
+![1400303-01](img/1400303-01.png)
 
 添加了浮动（float:left）：
 
-![04015](img/04015.png)
+![1400303-02](img/1400303-02.png)
 
 方能被子元素撑满。
 
 但是如果添加后面元素.box3 宽200px 高200px 颜色lightseagreen：
 
-![04016](img/04016.png)
+![1400303-03](img/1400303-03.png)
 
 这样会影响后面的元素。
 
@@ -475,9 +477,9 @@ overflow:hidden
         }
 ```
 
-![04017](img/04017.png)
+![1400303-04](img/1400303-04.png)
 
-实例： [04003float03.html](04003float03.html) 
+实例：  [14003float03.html](14003float03.html) 
 
 
 
@@ -512,9 +514,9 @@ overflow:hidden
 </body>
 ```
 
-![04018](img/04018.png)
+![1400304](img/1400304.png)
 
-实例： [04003float04.html](04003float04.html) 
+实例：  [14003float04.html](14003float04.html) 
 
 
 
@@ -551,9 +553,9 @@ overflow:hidden
 </body>
 ```
 
-![04019](img/04019.png)
+![1400305](img/1400305.png)
 
-实例： [04003float05.html](04003float05.html) 
+实例： [14003float05.html](14003float05.html) 
 
 
 
@@ -590,9 +592,9 @@ overflow:hidden
 </body>
 ```
 
-![04020](img/04020.png)
+![1400306](img/1400306.png)
 
-实例： [04003float06.html](04003float06.html) 
+实例：  [14003float06.html](14003float06.html) 
 
 
 
@@ -629,8 +631,6 @@ overflow:hidden
 </body>
 ```
 
-![04020](img/04020.png)
-
 实例： [04003float07.html](04003float07.html) 
 
 
@@ -639,23 +639,23 @@ overflow:hidden
 
 练习1：
 
-![04004float练习1](04004float练习1.png)
+![1400401](img/1400401.png)
 
- [04004test01.html](04004test01.html) 
+ [14004test01.html](14004test01.html) 
 
 
 
 练习2：
 
-![04004float练习2](04004float练习2.jpg)
+![1400402](img/1400402.jpg)
 
- [04004test02.html](04004test02.html) 
+ [14004test02.html](14004test02.html) 
 
 
 
 参考答案：
 
- [06_浮动的练习.html](06_浮动的练习.html) 
+ [14004demo.html](14004demo.html) 
 
 
 

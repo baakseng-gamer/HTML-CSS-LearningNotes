@@ -1,4 +1,4 @@
-# 036 cursor光标
+# 136 cursor光标
 
 视频序号068
 
@@ -73,4 +73,4 @@ cursor 属性定义了鼠标指针放在一个元素边界范围内时所用的�
 
 鼠标划入不同的区域试试效果。
 
-实例： [03601cursor01.html](03601cursor01.html) 
+实例：  [13601cursor01.html](13601cursor01.html) 

@@ -1,9 +1,9 @@
-# 034 overflow溢出与隐藏
+# 134 overflow溢出与隐藏
 
 视频序号067
 
 目录
-- [034 overflow溢出与隐藏](#034-overflow溢出与隐藏)
+- [134 overflow溢出与隐藏](#134-overflow溢出与隐藏)
 - [1. visible 默认值，溢出](#1-visible-默认值溢出)
 - [2. hidden 内容会被修剪，其余不可见](#2-hidden-内容会被修剪其余不可见)
 - [3. scroll 内容会被修剪，但滚动条可查其余内容](#3-scroll-内容会被修剪但滚动条可查其余内容)
@@ -43,11 +43,11 @@ overflow 属性规定当内容溢出元素框时发生的事情。
 
 运行结果：
 
-![03401](img/03401.png)
+![1340101](img/1340101.png)
 
 visible 为 overflow 的默认值，文字溢出边框外了。
 
-实例：  [03401overflow01.html](03401overflow01.html) 
+实例：   [13401overflow01.html](13401overflow01.html) 
 
 
 
@@ -59,11 +59,11 @@ overflow:hidden;
 
 运行结果：
 
-![03402](img/03402.png)
+![1340201](img/1340201.png)
 
 内容会被修剪，其余不可显示。
 
-实例： [03402overflow01.html](03402overflow01.html) 
+实例：  [13402overflow01.html](13402overflow01.html) 
 
 
 
@@ -73,12 +73,12 @@ overflow:hidden;
 overflow:scroll;
 ```
 
-![03403](img/03403.png)
+![1340301](img/1340301.png)
 
 * 内容过多则会出现滚动条，以便查看剩下内容。
 * 内容小于边框，则不出现滚动条。
 
-实例： [03403overflow01.html](03403overflow01.html) 
+实例：  [13403overflow01.html](13403overflow01.html) 
 
 
 
@@ -88,14 +88,14 @@ overflow:scroll;
 overflow:auto;
 ```
 
-![03404](img/03404.png)
+![1340401](img/1340401.png)
 
 和 scroll 的区别：
 
 * 内容过多则会出现滚动条框与滚动条。
-* 内容小于边框，不会出现滚动条框，注意是滚动条框
+* 内容小于边框，不会出现滚动条框，注意是不会出现滚动条框。
 
-实例： [03404overflow01.html](03404overflow01.html) 
+实例：  [13404overflow01.html](13404overflow01.html) 
 
 
 
@@ -132,13 +132,13 @@ overflow:auto;
 </body>
 ```
 
-![03405](img/03405.png)
+![1340501](img/1340501.png)
 
 1. 第一张图片没设定宽高，方框只能在图片左上角显示，右边和下边出现滚动条。
 2. 第二张图片宽高小于方框，无滚动条。
 3. 第三张图片宽高分别设定100%，则铺满方框。
 
-实例： [03405overflow01.html](03405overflow01.html) 
+实例：  [13405overflow01.html](13405overflow01.html) 
 
 
 
@@ -185,9 +185,9 @@ y 属性规定是否对内容的上/下边缘进行裁剪 - 如果溢出元素�
 </body>
 ```
 
-![03406](img/03406.png)
+![1340601](img/1340601.png)
 
-实例： [03406overflow01.html](03406overflow01.html) 
+实例：  [13406overflow01.html](13406overflow01.html) 
 
 
 

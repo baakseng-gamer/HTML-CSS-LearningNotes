@@ -1,7 +1,7 @@
-# 032 display显示
+# 132 display显示
 
 视频序号065
-- [032 display显示](#032-display显示)
+- [132 display显示](#132-display显示)
 - [1.display的属性值](#1display的属性值)
 - [2.display:none 与 visibility:hidden 的区别](#2displaynone-与-visibilityhidden-的区别)
 
@@ -53,9 +53,9 @@ none  此元素不会被显示
 
 运行结果：
 
-![03201](img/03201.png)
+![1320101](img/1320101.png)
 
-实例： [03201display01.html](03201display01.html) 
+实例：  [13201display01.html](13201display01.html) 
 
 
 
@@ -92,9 +92,9 @@ none  此元素不会被显示
 
 运行结果：
 
-![03202](img/03202.png)
+![1320102](img/1320102.png)
 
-实例： [03201display02.html](03201display02.html) 
+实例：  [13201display02.html](13201display02.html) 
 
 
 
@@ -132,6 +132,6 @@ visibility:hidden 占空间的隐藏
 
 运行结果：
 
-![03203](img/03203.png)
+![1320201](img/1320201.png)
 
-实例： [03202display01.html](03202display01.html) 
+实例：  [13202display01.html](13202display01.html) 
