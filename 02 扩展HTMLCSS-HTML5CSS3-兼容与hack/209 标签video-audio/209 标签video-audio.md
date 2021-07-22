@@ -137,6 +137,6 @@ HTML5 的新标签。
 </body>
 ```
 
-![20901](img/20901.png)
+![2090401](img/2090401.png)
 
 实例： [20904biaoqian01.html](20904biaoqian01.html) 

@@ -39,7 +39,7 @@ embed 嵌入html页面实例：
 
 运行结果：
 
-![20801](img/20801.png)
+![2080101](img/2080101.png)
 
 实例： [20801biaoqian01.html](20801biaoqian01.html)  [20801ohter01.html](20801ohter01.html) 
 
