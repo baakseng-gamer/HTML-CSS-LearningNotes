@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color: #fff;
+            width: 300px;
+            height: 300px;
+            border: 2px solid gray;
+        }
+        .box1{
+
+            background-image: radial-gradient(tomato,royalblue);
+        }
+        .box2{
+            background-image: radial-gradient(tomato 5%,royalblue 15%,lightseagreen 60%);
+        }
+        .box3{
+            background-image: repeating-radial-gradient(tomato,royalblue 10%,lightseagreen 10%);
+        }
+        .box4{
+            width: 300px;
+            height: 200px;
+            background-image: radial-gradient(circle, tomato, royalblue, lightseagreen);
+        }
+        .box5{
+            width: 300px;
+            height: 200px;
+            background-image: radial-gradient(ellipse, tomato, royalblue, lightseagreen);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1两种颜色</div>
+    <div class="box2">2三种颜色 带百分比则分布不均匀</div>
+    <div class="box3">3重复</div>
+    <div class="box4">4正圆</div>
+    <div class="box5">5椭圆</div>
+</body>
+</html>
