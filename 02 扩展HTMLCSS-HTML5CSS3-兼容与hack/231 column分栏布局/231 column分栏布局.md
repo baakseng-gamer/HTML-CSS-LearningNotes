@@ -49,6 +49,6 @@ column-span : 合并分栏
         .box4 h2{column-span: all;text-align: center;}
 ```
 
-![2310000](img/2310000.png)
+![2310001](img/2310001.png)
 
  [23101column01.html](23101column01.html) 
