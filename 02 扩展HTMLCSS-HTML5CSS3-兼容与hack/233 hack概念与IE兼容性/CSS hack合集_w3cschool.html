@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://www.w3cschool.cn/lugfe/lugfe-vxfp25zq.html -->
+<html><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>CSS hack合集_w3cschool</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="CSS hack合集">
+<meta name="description" content="      本来已经抛弃IE6|7|8了，可是最近发现要考虑IE兼容性的网站还是有不少的，所以这两天了解了一下CSS HACK，在这里简单地总结一下！1、何为HACK？简单的说，HACK就是只有特定浏览器才能识别这段hack代码。Hack也可以说是让前端最为头疼的问题，_来自CSS3学习笔记 by TG，w3cschool编程狮。">
+<link href="./CSS hack合集_w3cschool_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./CSS hack合集_w3cschool_files/iconfont.css">
+<link rel="stylesheet" href="./CSS hack合集_w3cschool_files/w3.css">
+<link rel="stylesheet" href="./CSS hack合集_w3cschool_files/style-kn-project-view.css" type="text/css">
+<link rel="stylesheet" href="./CSS hack合集_w3cschool_files/style-theme.css" type="text/css">
+
+<link rel="stylesheet" href="./CSS hack合集_w3cschool_files/feedback.css">
+<script src="./CSS hack合集_w3cschool_files/push.js.下载"></script><script src="./CSS hack合集_w3cschool_files/hm.js.下载"></script><script src="./CSS hack合集_w3cschool_files/jquery-1.8.3.min.js.下载" type="text/javascript"></script>
+<script src="./CSS hack合集_w3cschool_files/feedback.js.下载" type="text/javascript"></script>
+<script src="./CSS hack合集_w3cschool_files/backmore.js.下载" type="text/javascript"></script>
+<link rel="stylesheet" href="./CSS hack合集_w3cschool_files/project_1.css">
+<link rel="stylesheet" href="./CSS hack合集_w3cschool_files/project.css">
+<link href="./CSS hack合集_w3cschool_files/default.css" rel="stylesheet" type="text/css">
+<script src="./CSS hack合集_w3cschool_files/highlight.pack.js.下载" type="text/javascript"></script>
+<link rel="shortcut icon" href="https://7n.w3cschool.cn/statics/images/favicon.ico">
+<script src="./CSS hack合集_w3cschool_files/jquery-1.8.3.min.js.下载" type="text/javascript"></script>
+<script src="./CSS hack合集_w3cschool_files/jquery.slimscroll.1.38.min.js.下载" type="text/javascript"></script>
+<script src="./CSS hack合集_w3cschool_files/project.leftbox.js.下载" type="text/javascript"></script><style>.left-container {width:NaNpx;}.left-drager{left:NaNpx;}.main-container{margin-left:NaNpx;}#pro-footer{margin-left:NaNpx;}.space-tools-section{width:NaNpx;}</style>
+<script src="./CSS hack合集_w3cschool_files/share.js.下载"></script><script charset="utf-8" src="chrome-extension://jgphnjokjhjlcnnajmfjlacjnjkhleah/js/btype.js"></script><script type="text/javascript" charset="utf-8" src="chrome-extension://jgphnjokjhjlcnnajmfjlacjnjkhleah/js/chrome.js"></script><link rel="stylesheet" href="./CSS hack合集_w3cschool_files/share_style0_16.css"></head><div id="screen-shader" style="            transition: opacity 0.1s ease 0s;             z-index: 2147483647;            margin: 0;             border-radius: 0;             padding: 0;             background: #fab760 !important;             pointer-events: none;             position: fixed;             top: -10%;             right: -10%;             width: 120%;             height: 120%;             opacity: 0.3200;            mix-blend-mode: multiply;             display: none;        "></div>
+
+<body style="cursor: url(&quot;chrome-extension://jlgkpaicikihijadgifklkbpdajbkhjo/image/cursors/009@2.png&quot;), default;">
+<!-- 教程内容页 未登录 -->
+<div id="full-height-container" class="project-container color-theme-white">
+<!--控制本地颜色主题样式-->
+<script type="text/javascript">
+var tempColor = $.cookie("color");
+if (tempColor != undefined) {
+$("#full-height-container").addClass(tempColor);
+}
+</script>
+<!-- 教程内容页头部 -->
+<!--header start-->
+<div id="header" class="header-with-search pro_header">
+<div id="header_item">
+<!-- 顶部广告 -->
+<div id="topbanner" style="display: none;">
+<div class="close-topbox close_top_ad">
+<i class="i-icon i-icon-close i-icon-close-thin"></i>
+</div>
+</div> 
+<!-- 右侧悬浮标广告 -->
+<div id="rfbanner" style=""><p><a href="https://www.w3cschool.cn/activity/newcomer?fcode=web_rightfloat_ad" target="_blank"><img src="./CSS hack合集_w3cschool_files/1605859745864647.png" alt="新人礼活动" width="115"></a></p><div class="close-rfbox"><i class="i-icon i-icon-close i-icon-close-thin"></i></div></div>
+
+<div id="header_index">
+<div id="header-l">
+<a href="https://www.w3cschool.cn/" title="w3cschool" class="logo"><img src="./CSS hack合集_w3cschool_files/logonew2.png" alt="w3cschool"></a>
+<ul class="header-menu">
+<li><a href="https://www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程</a></li>
+<li><a href="https://www.w3cschool.cn/courses/" title="编程课程">编程课程</a></li>
+<li><a href="https://www.w3cschool.cn/codecamp/" title="编程实战">编程实战</a></li> 
+<li><a href="https://www.w3cschool.cn/exam/" title="编程题库">编程题库</a></li>
+<li><a href="https://123.w3cschool.cn/webtools" target="_blank" title="w3cschool在线工具集合">在线工具</a></li>
+<li><a href="https://www.w3cschool.cn/vip?fcode=headermenu" title="VIP会员" class="header-menu-vip ">VIP会员<i class="hot-icon">
+HOT</i></a></li>
+</ul>
+</div>
+
+<div class="fr h-right">
+<div class="fl mobile">
+<a class="link" href="https://www.w3cschool.cn/download" target="_blank" title="App下载">
+<i class="i-icon i-icon-mobile"></i>App下载
+</a>
+<div class="dropdown">
+<div class="dropdown-inner">
+<div class="text-center dropdown-content">
+<div class="qrcode">
+<img src="./CSS hack合集_w3cschool_files/app-qrcode2.png" alt="APP二维码" width="150" height="150">
+<p>扫码下载编程狮APP</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="fl sig-box"><div><a class="link" href="https://www.w3cschool.cn/register?refer=/lugfe/lugfe-vxfp25zq.html">注册</a><span class="sep">|</span><a class="link" href="https://www.w3cschool.cn/login?refer=/lugfe/lugfe-vxfp25zq.html">登录</a></div></div>
+</div>
+
+<div class="fr searchbox">
+<form action="https://www.w3cschool.cn/search" target="_self">
+<input type="text" name="w" class="box" id="searched_content" placeholder="输入关键字搜索...">
+<button type="submit" class="button"></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="register-Box" id="register-Box" style="display: none;">
+<div class="register-Box-content">
+<div class="register-Box-top">
+<span class="register-Box-title">注册成功</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<div class="register-Box-info">
+<div class="register-Box-left" style="float: left;">
+<img class="register-cover" src="./CSS hack合集_w3cschool_files/avatar_14.jpg">
+</div>
+<div class="register-Box-right">
+
+<p class="register-userinfo-title">
+<i class="usertype-ico-1"></i><span>W3Cschool</span>
+</p>
+<p class="register-userinfo-info">恭喜您成为首批注册用户</p>
+<p class="register-userinfo-info">获得88经验值奖励</p>
+<button class="search-s" onclick="closeDialogBox(this)" id="registerSubmit">马上体验</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+var apppath = '/lugfe/lugfe-vxfp25zq.html';
+var domain  = '//www.w3cschool.cn';
+</script>
+<!--header end-->
+<div id="m-splitter">
+<div class="m-splitter-left left-container" style="width: 270px; height: 1167px;">
+<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: inherit; height: 1167px;"><div class="fixed-sidebar mscroller" style="width: inherit; height: 1167px; overflow: hidden;">
+<div class="splitter-sidebar">
+<div class="sidebar-space-info">
+<a href="https://www.w3cschool.cn/lugfe" title="CSS3学习笔记 by TG">
+<div class="sidebar-pro-wrapper">
+<div class="sidebar-pro-container">
+<div class="sidebar-pro-img">
+<span><img class="pimg-cover" alt="CSS3学习笔记 by TG" src="./CSS hack合集_w3cschool_files/cover_lugfe.jpg"></span>
+</div>
+</div>
+</div>
+<div class="pro-name-container">
+<div class="sidebar-pro-name">
+<span>CSS3学习笔记 by TG</span>
+</div>
+</div>
+</a>
+</div>
+<div class="sidebar-pro-nav">
+<ul class="page-sidebar-menu">
+<li class="pro-m">
+<a class="btn-thumbs-up" href="javascript:;" onclick="isProjectLike()">
+<i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>
+</a>
+</li>
+<li class="pro-m">
+<a id="hbstar" href="javascript:;" onclick="isProjectStar()" data-type="star"><i class="icon-star-empty"></i> <span>收藏</span></a>
+</li>
+<li class="pro-m">
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox bdshare-button-style0-16" data-cmd="more" data-bd-bind="1628397408398"><i class="icon-share"></i> 分享</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-menu">
+<ul>
+<li class="nav-item"><a href="https://www.w3cschool.cn/lugfe/list/" title="更多文章"><i class="icon-bookmark-empty"></i> <span class="nav-item-label">更多文章</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 start-->
+<div class="sidebar-nav">
+<ul class="treeth">
+<li class="active sidebar-nav-tree" target="sidebar-tree-content"><a href="javascript:;" class="text" title="目录"><i class="icon icon-th-list"></i> <span class="title">目录</span></a></li>
+<li class="sidebar-nav-search" target="search-box"><a href="javascript:;" class="text" title="搜索"><i class="icon icon-search"></i> <span class="title">搜索</span></a></li>
+<li class="sidebar-nav-star" target="stars-box"><a href="javascript:;" class="text" title="书签"><i class="icon icon-bookmark"></i> <span class="title">书签</span></a></li>
+</ul>
+</div>
+<!--左侧栏导航 end-->
+<div style="clear:both"></div>
+<div class="sidebar-content">
+<div class="sidebar-tree">
+<div class="sidebar-tree-content">
+<div class="dd" id="nestable_handbook" data-tid="101078" data-id="handbook">
+<ol class="dd-list">
+
+<li class="dd-item" data-id="lugfe-i2yt25yr">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-i2yt25yr.html" title="CSS3 Animation动画">CSS3 Animation动画</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-bd5q25ys">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-bd5q25ys.html" title="css3 Gradient渐变">css3 Gradient渐变</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-nr9u25yt">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-nr9u25yt.html" title="CSS3滤镜">CSS3滤镜</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-s8ec25yu">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-s8ec25yu.html" title="CSS3  Transform 2D和3D转换">CSS3  Transform 2D和3D转换</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-7qmo25yv">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-7qmo25yv.html" title="CSS3 Transition">CSS3 Transition</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-mq7t25yw">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-mq7t25yw.html" title="CSS3 Background">CSS3 Background</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-361m25yx">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-361m25yx.html" title="常用-webkit前缀属性合集">常用-webkit前缀属性合集</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-37rn25yy">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-37rn25yy.html" title="常用浏览器私有属性小技巧">常用浏览器私有属性小技巧</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-xsir25yz">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-xsir25yz.html" title="CSS实现单行、多行文本溢出显示省略号（…）">CSS实现单行、多行文本溢出显示省略号（…）</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-q5lk25z0">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-q5lk25z0.html" title="用css3实现立方体">用css3实现立方体</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-mbr525z1">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-mbr525z1.html" title="CSS3被人忽略的强大属性">CSS3被人忽略的强大属性</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-n6l925z2">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-n6l925z2.html" title="用CSS3来制作倒影（box">用CSS3来制作倒影（box</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-4csv25z3">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-4csv25z3.html" title="::selection">::selection</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-k7ef25z7">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-k7ef25z7.html" title="clip 和 clip">clip 和 clip</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-3l6a25z8">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-3l6a25z8.html" title="必须了解的CSS函数">必须了解的CSS函数</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-g96x25z9">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-g96x25z9.html" title="CSS3的贝塞尔曲线（cubic">CSS3的贝塞尔曲线（cubic</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-t3js25za">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-t3js25za.html" title="meta标签的理解">meta标签的理解</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-ngyw25zb">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-ngyw25zb.html" title="纯css3开发的checkbox、radio和switch">纯css3开发的checkbox、radio和switch</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-uoks25zc">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-uoks25zc.html" title="你应该知道的CSS小技巧">你应该知道的CSS小技巧</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-ruvb25zd">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-ruvb25zd.html" title="有趣的CSS像素">有趣的CSS像素</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-enai25ze">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-enai25ze.html" title="瞧瞧CSS3的混合模式">瞧瞧CSS3的混合模式</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-vfmc25zf">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-vfmc25zf.html" title="CSS API整理复习">CSS API整理复习</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-zn7925zg">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-zn7925zg.html" title="CSS3-条件判断（@supports）">CSS3-条件判断（@supports）</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-5jo225zh">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-5jo225zh.html" title="谈谈CSS3的长度单位（vh、vw、rem）">谈谈CSS3的长度单位（vh、vw、rem）</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-3ani25zi">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-3ani25zi.html" title="浅谈CSS3多列布局">浅谈CSS3多列布局</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-6lwy25zj">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-6lwy25zj.html" title="CSS3 object-fit和object-position">CSS3 object-fit和object-position</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-t1kv25zk">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-t1kv25zk.html" title="必须了解的CSS变量（var）">必须了解的CSS变量（var）</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-okv725zl">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-okv725zl.html" title="CSS魔法">CSS魔法</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-6vyb25zm">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-6vyb25zm.html" title="理解CSS3 Animation中的steps()">理解CSS3 Animation中的steps()</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-tjln25zn">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-tjln25zn.html" title="深入了解box-shadow">深入了解box-shadow</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-h1pd25zo">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-h1pd25zo.html" title="关于CSS一些细节问题">关于CSS一些细节问题</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-ckg225zp">
+<div class="dd-content  ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-ckg225zp.html" title="CSS：Grid布局">CSS：Grid布局</a>
+</div>
+<ol class="dd-list">
+
+</ol></li>
+<li class="dd-item" data-id="lugfe-vxfp25zq">
+<div class="dd-content   active ">
+<i class="ic-folder-open2"></i>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-vxfp25zq.html" title="CSS hack合集">CSS hack合集</a>
+</div>
+<ol class="dd-list">
+
+</ol>
+</li>
+
+</ol>
+</div>
+</div>
+<!--  sidebar-tree-content end  -->
+<div class="search-box hide1">
+<div id="knsearch" class="tab-pane">
+<div class="knsearch-input">
+<input type="text" placeholder="搜索手册内容" name="w" class="input-s">
+<button class="knsearchbtn">搜索</button>
+<!--<button class="kncleanbtn">清空</button>-->
+</div>
+<div class="searchres">
+</div>
+<div class="sidebar-tree-dict"></div>
+</div>
+</div>
+<div class="stars-box hide1">
+<div id="kncollect" class="tab-pane">
+<ul class="dd-list">
+<li class="nostar">请登录查看</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- <div class="space-tools-section">
+<div class="tools-button">
+<a href="" class="expand-collapse-trigger"></a>
+</div>
+</div> -->
+</div><div class="slimScrollBar" style="background: rgb(161, 178, 189); width: 7px; position: absolute; top: 4px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 1223px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+</div>
+<div class="splitter-handle left-drager" style="left: 270px;">
+<div class="left-dragger-c splitter-handle-highlight"></div>
+</div>
+<div id="pro-mian" class="main-container font0" style="margin-left: 270px;">
+<div class="project-body">
+<div class="portlet-title pro-title" style="width: 957px; left: 287px;">
+<div class="set-btn-group font-settings pull-left">
+<a href="https://www.w3cschool.cn/lugfe/lugfe-vxfp25zq.html#" class="expand-collapse-trigger" title="折叠/展开"><i class="icon-th-list"></i></a>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-vxfp25zq.html#" class="toggle-dropdown-size" title="字体大小设置"><i class="icon-font"></i></a>
+<a href="https://www.w3cschool.cn/lugfe/lugfe-vxfp25zq.html#" class="toggle-dropdown-background" title="夜间模式"><i class="w3c-icon w3c-icon-night" style="display: contents;"></i></a>
+<!-- 视觉主题字体大小设置 -->
+<div class="set-dropdown-menu set-size docblur" style="display:none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons font-opt">
+<button class="button size font-reduce" font="reduce" title="缩小字体">A</button>
+<button class="button size font-enlarge" font="enlarge" title="放大字体">A</button>
+</div>
+</div>
+<!-- 视觉主题背景颜色设置 -->
+<div class="set-dropdown-menu set-background docblur" style="display: none;">
+<div class="dropdown-caret">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+</div>
+<div class="buttons bg-color">
+<button class="button theme background-day" color="color-theme-white" title="默认模式">默认</button>
+<button class="button theme" color="color-theme-sepia" title="护眼模式">护眼</button>
+<button class="button theme background-night" color="color-theme-night" title="夜间模式">夜间</button>
+</div>
+</div>
+</div>
+<div class="kn-btn-group pull-right">
+<span id="content-head-viewcount" class="viewcount-btn"><i class="icon-eye-open"></i> <span>阅读(3.5k)</span></span>
+<a id="knstar" href="javascript:;" onclick="isstar()" data-type="star"><i class="icon-bookmark-empty"></i> <span>书签</span></a>
+<a class="btn-thumbs-up" href="javascript:;" onclick="islike()"><i class="icon-thumbs-up"></i> <span id="likestatus">赞</span>(<span id="likecount">2</span>)</a>
+<a href="javascript:;" title="分享" class="share-btn  popup_more bdsharebuttonbox bdshare-button-style0-16" data-cmd="more" data-bd-bind="1628397408398"><i class="icon-share"></i> 分享</a>
+<a href="https://www.w3cschool.cn/edit/lugfe/lugfe-vxfp25zq" rel="nofollow"><i class="icon-edit"></i> <span>我要纠错</span></a>
+</div>
+</div>
+<div id="pro-mian-header">
+<div class="content-top">
+<h1>CSS hack合集</h1>
+</div>
+<div class="kn-infomation" title="创建于:2017-06-19 18:45:13">2018-06-19 18:45 更新</div>
+<!--                 <div class="kn-infomation">
+由&nbsp;<span>TG</span>&nbsp;创建， 最后一次修改&nbsp;<span>2017-06-19</span>
+</div>  -->
+</div>
+<div class="content-bg">
+<div class="content-intro view-box ">&nbsp; &nbsp; &nbsp; 本来已经抛弃IE6|7|8了，可是最近发现要考虑IE兼容性的网站还是有不少的，所以这两天了解了一下<code>CSS HACK</code>，在这里简单地总结一下！<div><br></div><div><br></div><div><b>1、何为HACK？</b></div><div><br></div><div>简单的说，HACK就是只有特定浏览器才能识别这段hack代码。Hack也可以说是让前端最为头疼的问题，因为要写N多种兼容代码。当然，IE是最让人蛋疼的。<br></div><div><br></div><div>一般来说，<code>CSS HACK</code>有3种表现形式：</div><div><ul><li><code>CSS属性前缀法</code>：：比如 IE6能识别下划线"_"和星号" * "，IE7能识别星号" * "，但不能识别下划线"_"，IE6~IE10都认识"\9"，但firefox对前面三个都不能认识。</li><li><code>CSS选择器前缀法</code>：比如 IE6能识别*html .class{}，IE7能识别*+html .class{}或者*:first-child+html .class{}。</li><li><code>IE条件注释法</code>：针对所有IE， <code>&lt;!--[if IE]&gt;IE浏览器显示的内容 &lt;![endif]--&gt;</code>。比如：针对IE6及以下版本： &lt;!--[if lt IE 6]&gt;只在IE6-显示的内容 &lt;![endif]--&gt;。这类Hack不仅对CSS生效，对写在判断语句里面的所有代码都会生效(注：IE10+已经不再支持条件注释)。</li></ul></div><div><br></div><div>下面将对这三种形式一一分析！</div><div><br></div><div><b>2、CSS 属性前缀法</b></div><div><br></div><div>这里提供一个测试实例（所有下面的代码都可以在这个实例里找到）：<a href="http://ghmagical.com/iframe/modal/code/:css:cssHack" rel="external nofollow" target="_blank" style="font-size: 1.8rem;">测试实例</a></div><div><br></div><div>（1）IE6（_）</div><div><pre><code class="hljs css"><p><span class="hljs-selector-class">.test1</span> { <span class="hljs-attribute">_color</span>: red; }</p></code></pre></div><div><br></div><div>（2）IE7及其以下版本（*）</div><div><br></div><div>如下设置，IE7及其以下版本中都会生效：</div><div><pre><code class="hljs"><p>.test2 { *color: yellow; }</p></code></pre></div><div>如果是在选择器上设置，则只会在IE6中生效：</div><div><pre><code class="hljs css"><p>*<span class="hljs-selector-tag">html</span> <span class="hljs-selector-class">.test</span> { <span class="hljs-attribute">color</span>: gold; }</p></code></pre></div><div><br></div><div>（3）IE6/IE7/IE8（\9）</div><div><br></div><div>网上的资料说只有IE6/IE7/IE8中生效，可是经测试，在IE9/IE10中也同样生效（如果知道原因的，请告知）：</div><div><pre><code class="hljs css"><p><span class="hljs-selector-class">.test3</span> { <span class="hljs-attribute">color</span>: purple\<span class="hljs-number">9</span>; }</p></code></pre></div><div><br></div><div>（4）IE8/IE9/IE10/IE11（\0）</div><div><br></div><div>在IE8/IE9/IE10/IE11中生效：</div><div><pre><code class="hljs css"><p><span class="hljs-selector-class">.test4</span> { <span class="hljs-attribute">color</span>: green\<span class="hljs-number">0</span>; }</p></code></pre></div><div><br></div><div>（5）IE6（-）</div><div><br></div><div>在IE6中生效：</div><div><pre><code class="hljs css"><p><span class="hljs-selector-class">.test5</span> { <span class="hljs-attribute">-color</span>: pink; }</p></code></pre></div><div><br></div><div>（6）IE6/IE7（+）</div><div><br></div><div>在IE6/IE7中生效：</div><div><pre><code class="hljs"><p>.test6 { +color: gold; }</p></code></pre></div><div><br></div><div>（7）IE6/IE7（*+）</div><div><br></div><div>如果在类的属性上加，会在IE6/IE7都生效：</div><div><pre><code class="hljs"><p>.test7 { *+color: blue; }</p></code></pre></div><div><br></div><div>如果在选择器上加，只会在IE7生效：</div><div><pre><code class="hljs css"><p>*+<span class="hljs-selector-tag">html</span> <span class="hljs-selector-class">.test</span> { <span class="hljs-attribute">color</span>: black; }</p></code></pre></div><div><br></div><div>（8）!important</div><div><br></div><div>除了IE6，其他浏览器中都生效：</div><div><pre><code class="hljs css"><p><span class="hljs-selector-class">.test8</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span> <span class="hljs-meta">!important</span>; }</p></code></pre></div><div><br></div><div>（9）IE9/IE10（\9\0）</div><div><pre><code class="hljs css"><p><span class="hljs-selector-class">.test9</span> { <span class="hljs-attribute">color</span>: orange\<span class="hljs-number">9</span>\<span class="hljs-number">0</span>; }</p></code></pre></div><div><br></div><div> 一般写HACK的顺序：从最新版本到低版本，比如：新版本、IE（10/9/8）、IE（7/6）</div><div><pre><code class="hljs markdown"><p>color: black; &nbsp;/<span class="hljs-bullet">* 所有 *</span>/</p><p>color: white !important; /<span class="hljs-bullet">* 除了IE6外 *</span>/</p><p>color: orange\9\0; /<span class="hljs-bullet">* IE 9/10 *</span>/</p><p>color: green\0; &nbsp;/<span class="hljs-bullet">* IE 8/9/10 *</span>/</p><p><span class="hljs-emphasis">*color: yellow; &nbsp; /*</span> IE6/7 <span class="hljs-emphasis">*/</span></p><p><span class="hljs-emphasis">+color: gold; &nbsp;/*</span> IE6/7 <span class="hljs-emphasis">*/</span></p><p><span class="hljs-emphasis">*</span>+color: blue; /<span class="hljs-bullet">* IE6/7 *</span>/</p><p>_color: red; &nbsp;/<span class="hljs-bullet">* IE6 *</span>/</p></code></pre></div><div><br></div><div><b>3、CSS选择器前缀法</b></div><div><br></div><div>（1）*</div><div><br></div><div>只在IE6中生效：</div><div><pre><code class="hljs css"><p>*<span class="hljs-selector-tag">html</span> <span class="hljs-selector-class">.test21</span> { <span class="hljs-attribute">color</span>: gold; }<br></p></code></pre></div><div><br></div><div>（2）*+</div><div><br></div><div>只在IE7中生效：</div><div><pre><code class="hljs css"><p>*+<span class="hljs-selector-tag">html</span> <span class="hljs-selector-class">.test22</span> { <span class="hljs-attribute">color</span>: blue; }<br></p></code></pre></div><div><br></div><div>（3）IE6/IE7
+<br></div><div>在IE6/IE7中生效：</div><div><pre><code class="hljs css"><p>@<span class="hljs-keyword">media</span> screen\<span class="hljs-number">9</span> { &nbsp;&nbsp;</p><p>&nbsp; <span class="hljs-selector-class">.test23</span> { <span class="hljs-attribute">color</span>: purple; } &nbsp;</p><p>}<br></p></code></pre>
+（4）IE6/IE7/IE8
+<br></div><div>在IE6/IE7/IE8中生效：</div><div><pre><code class="hljs css"><p>@<span class="hljs-keyword">media</span> \<span class="hljs-number">0s</span>creen\,screen\<span class="hljs-number">9</span> { &nbsp;&nbsp;</p><p>&nbsp; <span class="hljs-selector-class">.test24</span> { <span class="hljs-attribute">color</span>: gold; } &nbsp;</p><p>}<br></p></code></pre>
+ （5）IE8
+<br></div><div>在IE8中生效：</div><div><pre><code class="hljs css"><p>@<span class="hljs-keyword">media</span> \<span class="hljs-number">0s</span>creen { &nbsp;&nbsp;</p><p>&nbsp; <span class="hljs-selector-class">.test25</span> { <span class="hljs-attribute">color</span>: orange; } &nbsp;</p><p>}<br></p></code></pre>
+（6）IE8/IE9/IE10/IE11</div><div><br></div><div>在IE8/IE9/IE10/IE11中生效：
+<pre><code class="hljs css"><p>@<span class="hljs-keyword">media</span> screen\<span class="hljs-number">0</span> { &nbsp;&nbsp;</p><p>&nbsp; <span class="hljs-selector-class">.test26</span> { <span class="hljs-attribute">color</span>: green; } &nbsp;</p><p>}<br></p></code></pre>
+（7）IE9/IE10/IE11
+<br></div><div>在IE9/IE10/IE11中生效：</div><div><pre><code class="hljs css"><p>@<span class="hljs-keyword">media</span> screen and (min-width: <span class="hljs-number">0</span>\<span class="hljs-number">0</span>) { &nbsp;&nbsp;</p><p>&nbsp; <span class="hljs-selector-class">.test27</span> { <span class="hljs-attribute">color</span>: red; } &nbsp;</p><p>}<br></p></code></pre></div><div><br></div><div><b>4、条件注释</b></div><div><br></div><div>下面的N表示版本。</div><div><br></div><div>（1）IE</div><div><pre><code class="hljs xml"><p><span class="hljs-comment">&lt;!--[if IE]&gt; 所有IE中生效&nbsp;&lt;![endif]--&gt;</span></p></code></pre></div><div><br></div><div>（2）IE N</div><div><br></div><div>比如：只在IE 7中生效：</div><div><pre><code class="hljs xml"><p><span class="hljs-comment">&lt;!--[if IE 7]&gt; &nbsp;只在IE7生效 &lt;![endif]--&gt;</span></p></code></pre></div><div><br></div><div>注意：版本之间要留空格，比如：IE7是无效的，应该是IE 7。</div><div><br></div><div>（3）gt</div><div><br></div><div>gt符号表示大于运算符。比如：在IE7以上（不包含IE7）生效</div><div><pre><code class="hljs xml"><p><span class="hljs-comment">&lt;!--[if gt IE 6]&gt; &nbsp;在IE6以上生效 &lt;![endif]--&gt;</span></p></code></pre></div><div><br></div><div>（4）! </div><div><br></div><div>!符号表示非运算符。比如：在IE 6上不生效</div><div><pre><code class="hljs xml"><p><span class="hljs-comment">&lt;!--[if ! IE 6]&gt; &nbsp;在IE6上不生效（非IE6生效） &lt;![endif]--&gt;</span></p></code></pre></div><div><br></div><div>也可以这样（所有IE都不生效）：</div><div><pre><code class="hljs xml"><p><span class="hljs-comment">&lt;!--[if ! IE]&gt; &nbsp;所有IE中都不生效（非IE生效） &lt;![endif]--&gt;</span></p></code></pre></div><div><br></div><div>（5）lt</div><div><br></div><div>lt符号表示小于运算符。比如：IE6以下（不包含IE6）版本</div><div><pre><code class="hljs xml"><p><span class="hljs-comment">&lt;!--[if lt IE 6]&gt; &nbsp;IE6以下可生效 &lt;![endif]--&gt;</span></p></code></pre></div><div><br></div><div>（6）lte</div><div><br></div><div>lte符号表示小于或等于运算符：</div><div><pre><code class="hljs xml"><p><span class="hljs-comment">&lt;!--[if lte IE 6]&gt; &nbsp;IE6及IE6以下可生效 &lt;![endif]--&gt;</span></p></code></pre></div><div><br></div><div>（7） gte</div><div><br></div><div>gte符号表示大于或等于运算符：</div><div><pre><code class="hljs xml"><p><span class="hljs-comment">&lt;!--[if gte IE 6]&gt; &nbsp;IE6及IE6以上可生效 &lt;![endif]--&gt;</span></p></code></pre></div><div><br></div><div>（8）&amp;</div><div><br></div><div>&amp;符号表示AND运算符：</div><div><pre><code class="hljs xml"><p><span class="hljs-comment">&lt;!--[if (gt IE 6)&amp;(lt IE 8)]&gt; IE6版本以上且IE8版本以下可生效&nbsp;&lt;![endif]--&gt;</span></p></code></pre></div><div><br></div><div>（9） |</div><div><br></div><div>|符号表示OR运算符：</div><div><pre><code class="hljs xml"><p><span class="hljs-comment">&lt;!--[if (IE 6)|(IE 7)]&gt; &nbsp;IE6或IE7可生效 &lt;![endif]--&gt;</span></p></code></pre></div><div><br></div><div>注：IE10+已经不再支持条件注释。</div><div><br></div><div><b>5、针对其他浏览器的HACK</b></div><div><br></div><div>（1）针对火狐</div><div><br></div><div>只在火狐中有效：</div><div><pre><code class="hljs css"><p>@-<span class="hljs-keyword">moz</span>-<span class="hljs-keyword">document</span> url-prefix() {</p><p>&nbsp; <span class="hljs-selector-class">.test</span> { <span class="hljs-attribute">color</span>: red; }</p><p>}</p></code></pre></div><p><br></p><p>（2）支持所有Gecko内核的浏览器（包括火狐）</p><p><br></p><pre><code class="hljs css"><p>*&gt;<span class="hljs-selector-class">.test</span> { <span class="hljs-attribute">color</span>: blue; }</p></code></pre><p><br></p><p>（3）针对Webkit内核浏览器</p><p><br></p><pre><code class="hljs java"><p><span class="hljs-meta">@media</span> <span class="hljs-function">all <span class="hljs-title">and</span> <span class="hljs-params">(min-width:<span class="hljs-number">0</span>px)</span> </span>{ color: purple; }<br></p></code></pre><p><br></p><p><b>6、CSS选择器的优先级</b></p><p><br></p><p>相同权值情况下，CSS样式的优先级是：就近原则（也就是相同权值的，后设置的优先）：</p><pre><code class="hljs javascript"><p>.a { color: red; }</p><p>.b { color: blue; }</p><p><br></p><p>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"b a"</span>&gt;我会是蓝色的，而不是红色&lt;<span class="hljs-regexp">/div&gt;</span></p></code></pre><p>&nbsp; &nbsp;</p><p>优先级规则：</p><p></p><ul><li>内联样式 &gt; 嵌入样式  &gt; 外部样式 &nbsp;&nbsp;</li><li>ID（100）  &gt;  类选择符（10）  &gt;  标签（1） &gt;  通配选择器（*）</li><li>在支持<code>!important</code>的情况下，其优先级最高。</li></ul><p></p><p><br></p><p>参考文章：</p><p></p><ul><li><a href="http://www.webdevout.net/css-hacks" rel="external nofollow" target="_blank">CSS Hacks</a><br></li><li><a href="http://blog.csdn.net/kongjiea/article/details/42641177" rel="external nofollow" target="_blank">css hack全解，最齐全的ie css hack方式讲解</a><br></li><li><a href="http://browserhacks.com/" rel="external nofollow" target="_blank">Browserhacks</a><br></li><li><a href="https://www.paulirish.com/2009/browser-specific-css-hacks/" rel="external nofollow" target="_blank">Browser CSS Hacks</a><br></li></ul><p></p><p><br></p><p>如果发现有错误，欢迎在下方评论区指正！</p><p><br></p><p><br></p></div>
+<div style="clear:both"></div>
+</div>
+<!--控制本地字体主题样式-->
+<script type="text/javascript">
+var tempFontsize = $.cookie("fontsize");
+if (tempFontsize != undefined) {
+$("#pro-mian").addClass(tempFontsize);
+}
+</script>
+<!--我要赞赏-->
+<div class="project-sq"></div>
+<!--我要赞赏结束-->
+<!--我要评价-->
+<div id="evaluate-box"><span id="evaluates">以上内容是否对您有帮助：</span><span class="star_score"><span title="根本没帮助"></span><span title="文档较差"></span><span title="文档一般"></span><span title="文档不错"></span><span title="文档很好"></span></span></div>
+<div id="evaluatesContent" style="display: none;">
+<div id="evaluate_title">在文档使用的过程中是否遇到以下问题：</div>
+<ul>
+<li><input type="checkbox" value="内容错误" class="evaluateSelect"><span class="content_1">内容错误</span></li>
+<li><input type="checkbox" value="更新不及时" class="evaluateSelect"><span class="content_1">更新不及时</span></li>
+<li><input type="checkbox" value="链接错误" class="evaluateSelect"><span class="content_1">链接错误</span></li>
+<li><input type="checkbox" value="缺少代码/图片示列" class="evaluateSelect"><span class="content_1">缺少代码/图片示列</span></li>
+<li><input type="checkbox" value="太简单/步骤待完善" class="evaluateSelect"><span class="content_1">太简单/步骤待完善</span></li>
+<li><input type="checkbox" value="其他" class="evaluateSelect"><span><span class="content_1">其他</span></span></li>
+</ul>
+<div class="comment-box" id="">
+<p style="color:#686868; margin-bottom: 15px;">更多建议：</p>
+<textarea class="comment-txt form-input" placeholder="请详细描述在文档使用中遇到的问题或改进建议" id="otheradvise"></textarea>
+<div class="comment-box-btn">
+<a href="javascript:;" class="comment-btn" onclick="submitEvaluate()" data-score="1" id="submitEvaluate">提交建议</a>
+</div>
+</div>
+</div>
+<!--评价结束-->
+<div class="content-links">
+<div class="previous-link">← <a href="https://www.w3cschool.cn/lugfe/lugfe-ckg225zp.html" title="上一篇：CSS：Grid布局">CSS：Grid布局</a></div>
+</div>
+<!--练习、出题、写笔记-->
+<div class="project-operation">
+<div style="margin-right: 15px;">
+<a href="javascript:;" class="op-btn note-btn" onclick="openNote()"><i class="icon-pencil"></i>写笔记</a>
+</div>
+<div style="margin-left: 15px;">
+<a href="javascript:;" class="op-btn note-btn" onclick="showSupplemen()"><i class="icon-pencil"></i>我要补充</a>
+</div>
+</div>
+<!--横版广告放置-->
+<div class="abox-item"><div class="abox-content"><a href="https://www.w3cschool.cn/article/2933225.html?fcode=abox_workview1" target="_blank"><img src="./CSS hack合集_w3cschool_files/1627293103335066.png" height="100%/" alt=""></a>    </div></div><!-- 笔记列表 -->
+<div class="notelist-box" style="display:none">
+<div class="notelist-head" onclick="openNoteList(this)">
+<span class="notelist-title">精选笔记</span>
+<i class="icon-circle-arrow-up"></i>
+</div>
+<div class="notelist-content" id="notelist_content" style="display: none;">
+</div>
+</div>
+<!--相关推荐|wiki推荐-->
+<!--相关推荐|wiki推荐 结束-->
+</div>
+<div class="navigation-box">
+<a href="https://www.w3cschool.cn/lugfe/lugfe-ckg225zp.html" title="上一篇：CSS：Grid布局" class="navigation navigation-prev" style="left: 270px;"><i class="icon-chevron-left"></i></a>
+</div>
+  </div>
+<div id="pro-footer" style="margin-left: 270px;">
+<div class="s-footer">
+<div class="s-footer-bottom">
+<p>Copyright©2021&nbsp;<a href="https://www.w3cschool.cn/" target="_blank" title="w3cschool">w3cschool</a>编程狮<span>|</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow" class="footer-record">闽ICP备15016281号-3</a><span>|</span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35020302033924" target="_blank" rel="nofollow"><i class="beian"></i>闽公网安备35020302033924号</a></p>
+<p>违法和不良信息举报电话：173-0602-2364<span>|</span><a href="mailto:jubao@eeedong.com">举报邮箱：jubao@eeedong.com</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 侧边小部件 -->
+<div class="side-widget" style="bottom: 160px;">
+<div class="side-widget-container side-widget-flexible">
+<div class="side-widget-flexible-inner">
+<div class="side-widget-item onlinenote" data-module="page">
+<div class="widget-icon"></div>
+<div>在线笔记</div>
+</div>
+<div class="side-widget-item app">
+<div class="widget-icon"></div>
+<div>App下载</div>
+<div class="widget-popover">
+<div class="widget-popover-inner">
+<div class="img"><img src="./CSS hack合集_w3cschool_files/app-qrcode2.png" alt="App下载" width="140" height="140"></div>
+<p>扫描二维码</p>
+<p>下载编程狮App</p>
+</div>
+</div>
+</div>
+<div class="side-widget-item wechat">
+<div class="widget-icon"></div>
+<div>公众号</div>
+<div class="widget-popover">
+<div class="widget-popover-inner">
+<div class="img"><img src="./CSS hack合集_w3cschool_files/mp-qrcode.png" alt="微信公众号" width="140" height="140"></div>
+<p>编程狮公众号</p>
+</div>
+</div>
+</div>
+<div class="side-widget-item feedback" data-module="page" onclick="showDialogBox(this)">
+<div class="widget-icon"></div>
+<div>意见反馈</div>
+</div>
+<div class="side-widget-item side-widget-flexible-triger up">
+<div class="widget-icon"></div>
+</div>
+</div>
+</div>
+<div class="side-widget-container">
+<div class="side-widget-item backtop" data-visibility="50" style="display: none;">
+<div class="widget-icon"></div>
+</div>
+</div>
+</div>
+
+<div class="feedback-Box" style="display: none;">
+<div class="feedback-Box-content" style="width: 800px;">
+<div class="feedback-Box-top">
+<span class="feedback-Box-title">意见反馈</span>
+<span onclick="closeDialogBox(this)" class="feedback-Box-close">X</span>
+</div>
+<ul>
+<li class="feedback-box">
+<div id="feedbackRadio" type="radio" name="feedbackType" data-value="0" style=""> 意见反馈：</div>
+<textarea name="reportInfo" id="elmaaa" class="feedback-text" rows="15" placeholder="请留下您宝贵的意见反馈吧。" style="width: 700px;height:200px;overflow:auto;"></textarea>
+<p>联系方式：</p>
+<input type="text" placeholder="留个联系方式呗..." name="reportAddress" class="radio-text" id="reportAddress" style="height: 30px;width: 200px;">
+</li>
+</ul>
+<button class="search-s" onclick="dialogSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+
+<div id="note-start" style="display: none"></div>
+
+<div id="detail" style="display:none;">
+<div id="note-Dialog" class="note-Dialog">
+<div class="note-Box-content">
+<div class="ntitlebox">
+<input type="text" placeholder="" name="ntitle" class="ntitle" id="ntitle">
+</div>
+<div id="editorarea">
+<textarea name="ncontent" id="ncontent" class="ncontent" rows="15" placeholder="" style="width: 700px;height:200px;overflow:auto;"></textarea>
+</div>
+<p></p>
+<a class="closenote" href="https://www.w3cschool.cn/my/note" target="_blank">查看完整版笔记</a>
+<button class="notesubmit" id="notesubmit">保存</button>
+<button class="notebtn pull-right closenote" style="margin:20px 0">关闭</button>
+</div>
+</div>
+</div>
+
+<button class="feedback-btn feedback-btn-gray" style="display: inline-block;">教程纠错</button>
+<button class="feedback-btn feedback-btn-gray" style="display: none;">教程纠错</button>
+
+<div class="report-Box" style="display: none;">
+<div class="report-Box-content">
+<div class="report-Box-top">
+<span class="report-Box-title">违规举报</span>
+<span onclick="closeReportBox(this)" class="report-Box-close">X</span>
+</div>
+<ul>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="1" checked="checked"> 广告等垃圾信息
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="2"> 不友善内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="3"> 违反法律法规的内容
+</li>
+<li class="radio-box">
+<input id="reportRadio" type="radio" name="reportType" value="4"> 不宜公开讨论的政治内容
+</li>
+<li class="radio-box" onclick="reportOther(this)">
+<input id="reportRadio" type="radio" name="reportType" value="0"> 其他
+<input type="text" class="radio-text" name="reportInfo" value="" placeholder="请填写您的举报理由。">
+</li>
+</ul>
+<button class="search-s" onclick="reportSubmit(this)" id="reportSubmit">提交</button>
+</div>
+</div>
+<div class="widget-body" data-type="project"></div>
+<div class="pay-area" data-static="//www.w3cschool.cn/statics"></div>
+<div class="dialog-area"></div>
+
+<div id="tryframebox" class="tryframebox" style="display: none;">
+
+<div class="tryframebox-inner">
+<iframe id="tryframe" class="tryframebox" name="tryframe" width="100%" height="100%" style="border: none;" src="./CSS hack合集_w3cschool_files/saved_resource.html"></iframe>
+<span class="closeifream" style="font-size: 30px;"><i class="i-icon i-icon-close-circle" width="20px" height="20px"></i> </span>
+</div>
+
+</div>
+<style>
+.closeifream{
+position: absolute;
+top: 0;
+right: -48px;
+z-index: 9999999;
+color: #fff;
+cursor: pointer;
+}
+</style>
+<script src="./CSS hack合集_w3cschool_files/shCore.min.js.下载" type="text/javascript"></script>
+<script src="./CSS hack合集_w3cschool_files/commonfooter.js.下载" type="text/javascript"></script>
+<script src="./CSS hack合集_w3cschool_files/project.view.js.下载" type="text/javascript"></script>
+<script src="./CSS hack合集_w3cschool_files/ajaxdo.core.js.下载" type="text/javascript"></script>
+<!-- <script src="//www.w3cschool.cn/statics/js/paypraise.js" type="text/javascript"></script> -->
+
+<script>
+$(function () {
+var sideWidgetFlexible = $('.side-widget-flexible');
+var sideWidgetFlexibleInner = sideWidgetFlexible.find('.side-widget-flexible-inner');
+var sideWidgetFlexibleTrigger = sideWidgetFlexible.find('.side-widget-flexible-triger');
+sideWidgetFlexibleTrigger.on('click', function () {
+var _this = $(this);
+if (_this.hasClass('up')) {
+sideWidgetFlexible.css({
+height: sideWidgetFlexibleInner.height(),
+overflow: 'visible'
+});
+_this.removeClass('up').addClass('down');
+} else {
+sideWidgetFlexible.css({
+height: 60,
+overflow: 'hidden'
+});
+_this.removeClass('down').addClass('up');
+}
+})
+})
+</script>
+<script>
+var kn = {
+kename:'lugfe-vxfp25zq',
+pename:'lugfe',
+ismenu:'0',
+ktitle:'CSS hack合集',
+ktype:'kn',
+original:'0',
+uid:'0',
+};
+var book = {
+pename:'lugfe',
+bookname:'CSS3学习笔记 by TG'
+
+};
+
+var Gvar = {
+activityflag: ''
+};
+
+if (tempColor == 'color-theme-night') {
+$('.toggle-dropdown-background').find('.w3c-icon').addClass('w3c-icon-day').removeClass('w3c-icon-night');
+}
+
+checkword = getUrlParam('checkword');
+if(checkword){
+  var htmls = $('#pro-mian').html();
+  htmls = htmls.replace(new RegExp(checkword, 'g'), '<span class="checkword" style="background-color: skyblue;">$&</span>');
+  $('#pro-mian').html(htmls);
+setTimeout(function(){
+$('html').animate({scrollTop: $('.checkword').offset().top - 95}, 500);
+  }, 0)
+}
+//获取url中的参数
+function getUrlParam(name) {
+var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+
+var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+if (r != null) {
+return window.decodeURIComponent(r[2]);
+}
+
+return null; //返回参数值
+}
+function isProjectLike(){
+
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+$.ajaxdo({
+url: "/project/islike/lugfe.html",
+type: "post",
+dataType: 'json',
+data: {},
+sync: false,
+success: function (data) {
+if (data.statusCode == 200) {
+$('.avatar-list').find('p').remove();
+$('.avatar-list').append('<a href="javascript:;" title="' + data.data + '"><img src="https://7n.w3cschool.cn/attachments/avatar2/avatar_' + data.data + '.jpg" title=""></a>');
+var likecount = $("#likecount").text() * 1 + 1;
+$("#likecount").html(likecount);
+$(".btn-thumbs-up i").attr('class','icon-thumbs-up isdone');
+$("#likestatus").html('已赞');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+function isProjectStar(){
+if(kn.uid == '' || kn.uid == '0'){
+toastr.warning("您还未登录,请先登录!",'',{"positionClass": "toast-top-center"});
+return;
+}
+var type = $('#hbstar').attr('data-type');
+$.ajaxdo({
+url: "/project/star/lugfe.html",
+type: "post",
+dataType: 'json',
+data: {},
+success: function (data) {
+if(data.statusCode == 200){
+if (type == 'star') {
+$('#hbstar').html('<i class="icon-star isdone"></i><span>已收藏</span>');
+$('#hbstar').attr('data-type','rstar');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+} else {
+$('#hbstar').html('<i class="icon-star"></i><span>收藏</span>');
+$('#hbstar').attr('data-type','star');
+toastr.success(data.message,'',{"positionClass": "toast-top-center"});
+}
+}else{
+toastr.warning(data.message,'',{"positionClass": "toast-top-center"});
+}
+}
+});
+}
+$(function(){
+
+var contentMain = document.getElementById('pro-mian');
+// 监听网页的copy(复制)事件
+contentMain.addEventListener('copy', function (event) {
+// clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+var clipboardData = event.clipboardData || window.clipboardData;
+var tipWxLogin = sessionStorage.getItem('tipWxLogin');
+// 如果未复制或者未剪切，则return出去
+if (!clipboardData) return;
+if(tipWxLogin == 1) return;
+// Selection 对象，表示用户选择的文本范围或光标的当前位置。
+var text = window.getSelection().toString();
+var qrparams = {
+title: "复制成功!",
+tip: "<h4>登录后体验更佳!</h4>",
+refer: window.location.pathname,
+channel: 'lesson_copy_wx_scanner',
+};
+wechatqr(qrparams);
+sessionStorage.setItem('tipWxLogin',1);
+});
+
+if(kn.kename != ''){
+ var lastviewUrl = '//'+window.location.host+'/'+kn.pename+'/'+kn.kename+'.html';
+localStorage.setItem("lastview_"+kn.pename, lastviewUrl);
+}
+
+$(document).on("click",function(){
+$(".docblur").hide();
+});
+
+$(".onlinenote").show();
+
+if(location.hash !== ""){ // 修复锚点定位失效的问题
+setTimeout(function(){
+location.href=location.hash;
+},300);
+}
+
+if(Gvar.activityflag > 0){ // 开启了活动
+$.ajax({
+url:"/getActivity",
+type:"get",
+dataType:"json",
+success:function(msg){
+function loadad(content){
+var tpl = '<div class="activiey-area">'+
+'<div class="activiey-bg"></div>'+
+'<div class="activiey-main">'+
+'<span class="close-btn"></span> <div style="max-height:500px;max-width:570px;">'+content+'</div></div>'+
+'</div>';
+
+$("body").append(tpl);
+
+$(".activiey-main .close-btn").on("click",function(){
+$(".activiey-area").hide();
+});
+
+}
+if(msg.statusCode < 300){
+console.log(msg.data);
+// 写入cookie
+$.cookie("activity_showed", 1);
+loadad(msg.data.wincontent);
+toastr.success(msg.message);
+}else{
+toastr.warning(msg.message);
+}
+}
+});
+}
+var kename = kn.kename;
+var fid    = "0";
+var uid = '0';
+$(document).on('keyup',function(e){
+var keyCode = e.keyCode;
+var prev,next;
+if(keyCode == 37){ // 上一篇
+prev = $(".navigation-prev");
+if(prev.length > 0 && !prev.is(":hidden")){
+location.href = prev.attr("href");
+}
+}
+if(keyCode == 39){ // 下一篇
+next = $(".navigation-next");
+if(next.length > 0 && !next.is(":hidden")){
+location.href = next.attr("href");
+}
+}
+});
+/*开启计时 准备记录积分*/
+var vcreditfull = $.cookie('ypre_vcreditfull');
+//console.log(vcreditfull);
+if(vcreditfull == undefined && uid != '0' && uid != ''){
+setTimeout(function(){
+$.ajax({
+url:"/project/setViewCredit",
+type:"post",
+data:{kename:kename},
+dataType:"json",
+success:function(msg){
+var statusCode = {
+'200':'success',
+'400':'warning',
+};
+var toastrType = statusCode[msg.statusCode];
+if(msg.statusCode == 300 || msg.statusCode == 400){
+return;
+}
+toastr[toastrType](msg.message);
+}
+});
+},30000);
+}
+
+hljs.initHighlightingOnLoad();//高亮代码
+window._bd_share_config={"common":{"bdSnsKey":{},bdPopupOffsetTop:"5"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='https://7n.w3cschool.cn/plugins/baidushare/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+});
+$(".toggle-dropdown").on('click',function(e){
+e.stopPropagation();
+if ($(this).next().is(":hidden")){
+$(this).next().show();
+}else{
+$(this).next().hide();
+}
+});
+
+$('.toggle-dropdown-size').on('click', function (e) {
+e.stopPropagation();
+toggleSetMenu('.set-size');
+})
+
+$('.toggle-dropdown-background').on('click', function (e) {
+e.stopPropagation();
+toggleSetMenu('.set-background');
+})
+
+function toggleSetMenu(selectElement) {
+if (selectElement == '.set-background') {
+if ($('.toggle-dropdown-background').find('.w3c-icon').hasClass('w3c-icon-day')) {
+$('.toggle-dropdown-background').find('.w3c-icon').addClass('w3c-icon-night').removeClass('w3c-icon-day');
+$('.background-day').click();
+$('.toggle-dropdown-background').attr('title', '夜间模式');
+} else {
+$('.toggle-dropdown-background').find('.w3c-icon').addClass('w3c-icon-day').removeClass('w3c-icon-night');
+$('.background-night').click();
+$('.toggle-dropdown-background').attr('title', '日间模式');
+}
+} else {
+if ($(selectElement).is(":hidden")) {
+$(selectElement).show().siblings('.docblur').hide();
+} else {
+$(selectElement).hide();
+}
+}
+};
+
+$(".set-dropdown-menu").on("click",function(e){
+e.stopPropagation();
+});
+function getviewkn(){
+var usernamestr ='';
+$.ajax({
+url:"/my/knowledge/getViewkn?pename="+book.pename,
+dataType:"json",
+success:function(msg){
+var objli,objtt;
+for(var p in msg){
+objli = $("#nestable_handbook").find(".dd-item[data-id='"+msg[p]['kename']+"']");
+if(objli.attr("ismenu") != 1){
+objli.addClass("readed").find("a").attr("title","上次浏览时间:("+msg[p]['lasttime']+")");
+}
+}
+}
+});
+}
+function openNote(){
+$(".onlinenote").trigger("click");
+}
+</script>
+<script type="text/javascript">
+// 如果需要给后台返值的话，返回 $(".star_score span.select").size()的值即可。
+$(function(){
+//生成5个星星
+var starCheck=['根本没帮助','文档较差','文档一般','文档不错','文档很好'];
+for(var i=0;i < starCheck.length;i++){
+var _html = '<span title="'+ starCheck[i] +'"></span>';
+$(".star_score").append(_html);
+}
+//鼠标滑过，星星背景图片改成选中图片
+$(".star_score span").hover(function(){
+var index = $(this).index();
+for(var i = 0; i <=index; i++){
+$(".star_score span").eq(i).addClass("active");
+}
+//鼠标移除去掉激活效果
+},function(){
+$(".star_score span").removeClass("active");
+});
+var tourist =- parseInt(10000000*Math.random());//给游客随机id
+//星星点击，这颗星星之前的所有星星加上选中效果
+$(".star_score span").on("click",function(){
+var x = $(this).index();
+$(".star_score span").removeClass('select');
+for (var i = 0; i <= x; i++) {
+$(".star_score span").eq(i).addClass('select');
+};
+evaluate(x+1);
+});
+})
+function evaluate(scores){
+if(scores<4){
+$('#evaluatesContent').show();
+$('#submitEvaluate').attr('data-score',scores);
+return false;
+}else{
+$('#evaluatesContent').hide();
+evaluateSubmit(scores);
+}
+}
+function evaluateSubmit(scores,advise=''){
+var pid   = '4129';
+var aid   =  '101078';
+var uid   = 0;
+//alert(aid);
+$.ajax({
+url:"/index/evaluate",
+type:"post",
+data:{
+score : scores,
+pid   : pid,
+aid   : aid,
+uid   : uid,
+title : book.bookname,
+mintitle:kn.ktitle,
+advise : advise
+},
+dataType:"json",
+success:function(msg){
+if(msg.statusCode==200){
+toastr.success(msg.message);
+}else{
+toastr.error(msg.message);
+}
+}
+});
+}
+
+function submitEvaluate(){
+var score = $('#submitEvaluate').attr('data-score');
+var advise='';
+$.each($('.evaluateSelect'),function(){
+if(this.checked){
+advise=$(this).val()+','+advise;
+}
+});
+var otheradvise = $('#otheradvise').val();
+advise=advise+otheradvise;
+evaluateSubmit(score,advise);
+
+}
+function openNoteList(obj){
+var display=$('#notelist_content').css('display');
+if(display=='none'){
+$(obj).children('i').addClass('icon-circle-arrow-up');
+$(obj).children('i').removeClass('icon-circle-arrow-down');
+$('#notelist_content').show();
+}else{
+$(obj).children('i').addClass('icon-circle-arrow-down');
+$(obj).children('i').removeClass('icon-circle-arrow-up');
+$('#notelist_content').hide();
+}
+}
+getNotelist();
+//笔记点赞
+function islikeNote(obj,kmid){
+toastr.warning('请先登录');
+}
+$("#pro-mian").on("click", "[showtry]", function(e){
+e.stopPropagation();
+e.preventDefault();
+
+var url = $(this).attr('href');
+kn.tryurl = url;
+showtry(url+"?stype=nohead");
+
+});
+function showtry(url){
+$("#tryframebox").show();
+$("#tryframe").attr("src",url);
+}
+function hidetry(){
+if(! $("#tryframebox").is(":hidden")){
+
+$("html").css("overflow-y","auto");
+// $("#tryframebox").animate({"right":"-3000px"},function(){
+
+$("#tryframebox").hide();
+// });
+}
+
+}
+$(document).on("click",function(){
+$(".docblur").hide();
+hidetry();
+});
+//打开补充内容
+function showSupplemen(){
+toastr.warning('请先登录');
+}
+
+$('.closeifream').click( function (){
+$(this).parents('#supplementbox').hide();
+})
+</script>
+
+</body></html>
