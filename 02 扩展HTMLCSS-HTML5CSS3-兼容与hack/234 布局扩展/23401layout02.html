@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            border: 10px solid black;
+        }
+        #box1{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            /* margin-bottom: -50px; */
+            /* margin-bottom: -00px; */
+            /* margin-bottom: -100px; */
+            /* margin-bottom: -105px; */
+            margin-bottom: -150px;
+            /* 如果负值很大很大，父元素会塌陷 */
+        }
+        #box2{
+            width: 100px;
+            height: 100px;
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="box1"></div>
+
+        <div id="box2"></div>
+    </div>
+</body>
+</html>
